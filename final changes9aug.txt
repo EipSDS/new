@@ -1,0 +1,81 @@
+*step1 
+Title: Hi my name is (YOUR NAME) and I will be assisting you today.
+In case we get disconnected, what is the best phone number to reach you? ---------   Done
+
+*step2: new tab
+Tab name : Intro
+questiont: When do you need policy by?   calendar date from 
+questiont: Are you the owner?   radio button radio button dont highlight let the user pick 
+questiont: Is the owner also the driver?   radio button radio button dont highlight let the user pick 
+questiont: How many vehicles do you need to add?   drop down 1 to 10			-----------done
+ 
+*step 3 DOT :Title: what is your DOT number													-----done
+
+*step 4 MC: As it is      -------done
+
+*step 5 :Policy Agent code needs to be removed          --------done
+*Remove : Does the insured ever transport passengers for hire? ---done
+*Remove: Payments Options    ------done
+
+
+*contact info needs to be auto filled from Named Insured(s) to Financial Responsibility section...they can also be changed if needed.  ----------------------------done
+
+*Step13: Thank you page
+Thank You for your time. We will proceed in further verification and keep you posted
+This message can be changed later but put as it is now..             ---------------------------------Done
+
+in business type there should all be values which are listed on https://sbr1.foragentsonly.com/c6/sbr001/web.aqar/C2General.aspx?applicationContextIndex=0&landingId=AVsTn5wFs9jg3QmmGucgKs4BAgMESG8N47D5hxdonvRKpbs0avoIJW0/BZhpo9ZhNT3xY06xJHYhp7xElgfAooALzF/tkg4S29y/RLU/mCdSgtannAdB7L/aIlTnW8eM3H9MhCge7UJ/8ZUe2Ej789HJ5vUcWZwx4BbQ46QpVYp3I5tOQ79nPCEBp/xsysCed8jnoxwy3avJeSTle1d1HKx11r8jhaQxBpKcqFYZLnGsiDBPEi8V1hFZE1H2LdY7FgyGOMC7LpYjD2pGppzMx69p3Ai8T3VekP/rQAwsGjH2aFfwNpuhyiZrmZpL2EHA/bq39NJx6j/ftJuSe8M+S8BBQrxNteKZj1T/t+GEm7jobSrpgLdAirui+LM30Xu8eC7LtIa3+Wj4KfV80VRyPCP2+kw9&syncId=38a2ee89-8e0b-4272-9b29-f22a4fe4cdc6&handshakeId=4426ad7d-76b0-6757-5541-7e8f435ffb33&transactionName=EQ#
+
+
+
+Specify Commodities Hauled:
+there should be exact same options in the dropdown(multi select)whcich are on step 11.all titles and selected options will be shown on step 11 instead of all..
+
+
+
+Step6  : Vehicle:
+
+
+On add/edit box should be bigger as much as possible.
+If trailer clicked:
+Remove: Gross weight
+Remove: Longest Trip(One Way Miles)
+Remove: City of Destination(Of Longest Haul)
+Remove: Enter Make
+Remove:Enter Model
+Remove: Body Style
+Remove: Radius (One Way)
+Below Garaging ZIP Code
+Needs to be added:
+What is the Full VIN Number? What is the value of this trailer?
+If non-owned trailer: What is the value needed for the non-owned trailer?
+
+If the customer states they need State Filings and are in CA or TX, ask for either CA Number or TXDOT number. 
+
+Step7: Driver 
+Named Insured(s) info should be populated from genral sectiont only if the person is the owner of the vehicle in step2..
+edit option should remain
+Add/edit box should be bigger.
+
+
+
+
+_______________________________________________________________________________________________
+
+Loss payee question:
+Is there a loss payee for this vehicle / trailer? Please provide the full name and Address.
+
+Adding a Trailer
+What is the Full VIN Number? What is the value of this trailer?
+If  non-owned trailer: What is the value needed for the non-owned trailer?
+
+If the customer states they need State Filings and are in CA or TX, ask for either CA Number or TXDOT number. 
+
+Coverages
+Do you need $1,000,000 Combined Single Limit for Auto Liability?
+Do you need a Limit of $100,000 for the Motor Truck CArgo?
+If they need a limit other than $100K for MTC, options are: $150,000, $250,000, $300,000, $500,000. All deductibles should be selected at $2,500.
+Do you need Trailer Interchange coverage? If so, do you know the limit required? 
+Quote Trailer Interchange on Progressive with Limit of $30,000 and a deductible of $2,000 as the basic option. 
+
+DOT# can help us determine the type of Carrier: Common (Auth. For Hire), Contract (Usually the customer tells us this), Private (Private Property, etc.)

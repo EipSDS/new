@@ -1,0 +1,1081 @@
+<html>
+<head>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<style>
+/*custom font*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+/*basic reset*/
+* {
+margin: 0;
+padding: 0;
+}
+html {
+height: 100%;
+/*Image only BG fallback*/
+background: url('http://thecodeplayer.com/uploads/media/gs.png');
+/*background = gradient + image pattern combo*/
+background: linear-gradient(rgba(196, 102, 0, 0.2), rgba(155, 89, 182, 0.2)),  url('http://thecodeplayer.com/uploads/media/gs.png');
+}
+body {
+font-family: montserrat, arial, verdana;
+}
+/*form styles*/
+#msform {
+width: 400px;
+margin: 50px auto;
+text-align: center;
+position: relative;
+}
+#msform fieldset {
+background: white;
+border: 0 none;
+border-radius: 3px;
+box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+padding: 20px 30px;
+box-sizing: border-box;
+width: 80%;
+margin: 0 10%;
+/*stacking fieldsets above each other*/
+position: absolute;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+padding: 15px;
+border: 1px solid #ccc;
+border-radius: 3px;
+margin-bottom: 10px;
+width: 100%;
+box-sizing: border-box;
+font-family: montserrat;
+color: #2C3E50;
+font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+width: 100px;
+background: #27AE60;
+font-weight: bold;
+color: white;
+border: 0 none;
+border-radius: 1px;
+cursor: pointer;
+padding: 10px 5px;
+margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+font-size: 15px;
+text-transform: uppercase;
+color: #2C3E50;
+margin-bottom: 10px;
+}
+.fs-subtitle {
+font-weight: normal;
+font-size: 13px;
+color: #666;
+margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+margin-bottom: 30px;
+overflow: hidden;
+/*CSS counters to number the steps*/
+counter-reset: step;
+}
+#progressbar li {
+list-style-type: none;
+color: white;
+text-transform: uppercase;
+font-size: 9px;
+width: 33.33%;
+float: left;
+position: relative;
+}
+#progressbar li:before {
+content: counter(step);
+counter-increment: step;
+width: 20px;
+line-height: 20px;
+display: block;
+font-size: 10px;
+color: #333;
+background: white;
+border-radius: 3px;
+margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+content: '';
+width: 100%;
+height: 2px;
+background: white;
+position: absolute;
+left: -50%;
+top: 9px;
+z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+/*connector not needed before the first step*/
+content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+background: #27AE60;
+color: white;
+}
+</style>
+<title></title>
+</head>
+
+<body>
+<h1 style="margin-top:150px" align="center"></h1>
+<!-- multistep form -->
+<form id="msform">
+<!-- progressbar -->
+<ul id="progressbar">
+<li class="active">General</li>
+<li>Vehicles</li>
+<li>Drivers</li>
+<li>Violations</li>
+<li>Underwriting</li>
+</ul>
+<!-- fieldsets -->
+<fieldset>
+ <h3 style="margin-bottom: 16px; margin-top:16px;">Policy</h3>
+                	<div class="form-row">
+                        <div class="form-holder w-100">
+                         <label>Agent Code:<label>				
+						 <select><option selected="selected" value="77743">77743 (GIVESURANCE INS SVCS)</option>
+                     </select>
+                        </div>
+
+                	</div>
+                    <div class="form-row">
+                        <div class="form-holder w-100">
+                       <label>Policy Effective Date:<label><input type="text" class="form-control" value="07/24/2019">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-holder w-100">
+						<label>Is the customer currently insured with Progressive Commercial Auto?</label>
+                            <input type="radio" name="q">Yes
+							<input type="radio" name="q" checked>No
+							<h3 style="margin-bottom: 16px; margin-top:16px;">Business Type</h3>
+							<input type="text" class="form-control" placeholder="Business Type:">
+							<label>Does the insured ever transport passengers for hire?</label>
+							 <input type="radio" name="w">Yes
+							<input type="radio" name="w" >NO
+					      <h3 style="margin-bottom: 16px; margin-top:16px;">Business Organization Structure</h3>
+						  <label>Structure:</label>
+							 <input type="radio" name="Structure">Individual/Sole Proprietor
+							<input type="radio" name="Structure" >Partnership
+							<input type="radio" name="Structure" >Corporation or LLC
+					   <div class="form-holder w-100">
+                        <label>Do you have a DBA?<label>
+						<input type="radio" name="DBA">Yes
+							<input type="radio" name="DBA" >NO
+						</div>
+						<div class="form-holder w-100">
+						 <h3 style="margin-bottom: 16px; margin-top:16px;">US Department of Transportation (USDOT) Registration</h3>
+						<label>USDOT# associated with the insured's business  :  <label>
+						<label>   3298365<label>
+						</div>
+						<div class="form-holder w-100">
+						<label>USDOT Assigned to: <label>
+						<label>  AZAF LOGISTICS LLC1331 BRIARWOOD BLVD GOSHEN, IN 46526<label>
+						</div>
+						<div class="form-holder w-100">
+						<label>Does the information assigned to this USDOT# match the insured's business?<label>	
+                        <input type="radio" name="Does">Yes
+						<input type="radio" name="Does" >NO
+						</div>
+						
+				  <div class="form-holder w-100">
+				 <h3 style="margin-bottom: 16px; margin-top:16px;">Named Insured(s)</h3>
+          <label>First Name:<label><input type="text" class="form-control" name="firstname" placeholder="First Name..">
+          <label>Middle Initial:<label><input type="text" class="form-control" name="middleinitial" placeholder="Middle Initial:..">
+		  <label>Last Name:<label><input type="text" class="form-control" name="lastname" placeholder="Last Name:.">
+		 <div class="form-holder w-100 ">
+		  <label>Suffix:<label>
+		  <select class="form-control">
+  <option value="none">--None--</option>
+  <option value="jr">jr</option>
+  <option value="Sr">Sr</option>
+  <option value="|">|</option>
+  <option value="||">||</option>
+  <option value="|||">|||</option>
+  <option value="|V">|V</option>
+         </select>
+		 </div>
+		 <label>Date of Birth:<label>
+		 <input type="date" class="form-control" name="dob">
+		 <div class="form-holder w-100 ">
+		 <label>Designate Spouse as a Named Insured?<label>
+		                <input type="radio" name="Spouse">Yes
+						<input type="radio" name="Spouse" >NO
+						</div>
+				  <div class="form-holder w-100">
+				 <h3 style="margin-bottom: 16px; margin-top:16px;">Contact Information</h3>
+			<label>Insured's Phone:<label>
+			<input type="text" class="form-control" name="mobile">
+			<label>E-mail Address:<label>
+			<input type="email" class="form-control" name="email">
+			<label>Mailing Address:<label>
+			<input type="text" class="form-control" name="emailaddress" placeholder=" 1331 BRIARWOOD BLVD " >
+			<label>City:<label>
+			<input type="text" class="form-control" name="city" placeholder="GOSHEN" >
+			<label>State:<label>
+       <select class="form-control">
+  				<option value="AL">Alabama</option>
+				<option value="AK">Alaska</option>
+				<option value="AZ">Arizona</option>
+				<option value="AR">Arkansas</option>
+				<option value="CA">California</option>
+				<option value="CO">Colorado</option>
+				<option value="CT">Connecticut</option>
+				<option value="DE">Delaware</option>
+				<option value="FL">Florida</option>
+				<option value="GA">Georgia</option>
+				<option value="HI">Hawaii</option>
+				<option value="ID">Idaho</option>
+				<option value="IL">Illinois</option>
+				<option selected="selected" value="IN">Indiana</option>
+				<option value="IA">Iowa</option>
+				<option value="KS">Kansas</option>
+				<option value="KY">Kentucky</option>
+				<option value="LA">Louisiana</option>
+				<option value="ME">Maine</option>
+				<option value="MD">Maryland</option>
+				<option value="MA">Massachusetts</option>
+				<option value="MI">Michigan</option>
+				<option value="MN">Minnesota</option>
+				<option value="MS">Mississippi</option>
+				<option value="MO">Missouri</option>
+				<option value="MT">Montana</option>
+				<option value="NE">Nebraska</option>
+				<option value="NV">Nevada</option>
+				<option value="NH">New Hampshire</option>
+				<option value="NJ">New Jersey</option>
+				<option value="NM">New Mexico</option>
+				<option value="NY">New York</option>
+				<option value="NC">North Carolina</option>
+				<option value="ND">North Dakota</option>
+				<option value="OH">Ohio</option>
+				<option value="OK">Oklahoma</option>
+				<option value="OR">Oregon</option>
+				<option value="PA">Pennsylvania</option>
+				<option value="PR">Puerto Rico</option>
+				<option value="RI">Rhode Island</option>
+				<option value="SC">South Carolina</option>
+				<option value="SD">South Dakota</option>
+				<option value="TN">Tennessee</option>
+				<option value="TX">Texas</option>
+				<option value="UT">Utah</option>
+				<option value="VT">Vermont</option>
+				<option value="VI">Virgin Islands</option>
+				<option value="VA">Virginia</option>
+				<option value="WA">Washington</option>
+				<option value="DC">Washington DC</option>
+				<option value="WV">West Virginia</option>
+				<option value="WI">Wisconsin</option>
+				<option value="WY">Wyoming</option>
+				</select>
+			<label>ZIP Code:<label>
+			<input type="text" class="form-control" name="zipcode" placeholder="46526-0000" >	
+				  <div class="form-holder w-100">
+				 <h3 style="margin-bottom: 16px; margin-top:16px;">Financial Responsibility</h3>			
+				 <h4 style="margin-bottom: 16px; margin-top:16px;">Company Owner Information</h4>			
+				<label>First Name:<label><input type="text" class="form-control" name="firstname" placeholder="First Name..">
+				<label>Middle Initial:<label><input type="text" class="form-control" name="middleinitial" placeholder="Middle Initial:..">
+				<label>Last Name:<label><input type="text" class="form-control" name="lastname" placeholder="Last Name:.">
+				<div class="form-holder w-100 ">
+				<label>Suffix:<label>
+				<select class="form-control">
+				<option value="none">--None--</option>
+				<option value="jr">jr</option>
+				<option value="Sr">Sr</option>
+				<option value="|">|</option>
+				<option value="||">||</option>
+				<option value="|||">|||</option>
+				<option value="|V">|V</option>
+				</select>
+				</div>
+				<label>Date of Birth:<label>
+				<input type="date" class="form-control" name="dob">
+				<label>Home Address:<label><input type="text" class="form-control" name="homeddress">
+						
+						<label>City:<label>
+			<input type="text" class="form-control" name="coumpanycity" >
+			<label>State:<label>
+       <select class="form-control">
+  				<option value="AL">Alabama</option>
+				<option value="AK">Alaska</option>
+				<option value="AZ">Arizona</option>
+				<option value="AR">Arkansas</option>
+				<option value="CA">California</option>
+				<option value="CO">Colorado</option>
+				<option value="CT">Connecticut</option>
+				<option value="DE">Delaware</option>
+				<option value="FL">Florida</option>
+				<option value="GA">Georgia</option>
+				<option value="HI">Hawaii</option>
+				<option value="ID">Idaho</option>
+				<option value="IL">Illinois</option>
+				<option value="IN">Indiana</option>
+				<option value="IA">Iowa</option>
+				<option value="KS">Kansas</option>
+				<option value="KY">Kentucky</option>
+				<option value="LA">Louisiana</option>
+				<option value="ME">Maine</option>
+				<option value="MD">Maryland</option>
+				<option value="MA">Massachusetts</option>
+				<option value="MI">Michigan</option>
+				<option value="MN">Minnesota</option>
+				<option value="MS">Mississippi</option>
+				<option value="MO">Missouri</option>
+				<option value="MT">Montana</option>
+				<option value="NE">Nebraska</option>
+				<option value="NV">Nevada</option>
+				<option value="NH">New Hampshire</option>
+				<option value="NJ">New Jersey</option>
+				<option value="NM">New Mexico</option>
+				<option value="NY">New York</option>
+				<option value="NC">North Carolina</option>
+				<option value="ND">North Dakota</option>
+				<option value="OH">Ohio</option>
+				<option value="OK">Oklahoma</option>
+				<option value="OR">Oregon</option>
+				<option value="PA">Pennsylvania</option>
+				<option value="PR">Puerto Rico</option>
+				<option value="RI">Rhode Island</option>
+				<option value="SC">South Carolina</option>
+				<option value="SD">South Dakota</option>
+				<option value="TN">Tennessee</option>
+				<option value="TX">Texas</option>
+				<option value="UT">Utah</option>
+				<option value="VT">Vermont</option>
+				<option value="VI">Virgin Islands</option>
+				<option value="VA">Virginia</option>
+				<option value="WA">Washington</option>
+				<option value="DC">Washington DC</option>
+				<option value="WV">West Virginia</option>
+				<option value="WI">Wisconsin</option>
+				<option value="WY">Wyoming</option>
+				</select>
+			<label>ZIP Code:<label>
+			<input type="text" class="form-control" name="zipcode"  >
+			<label>Social Security Number:<label>
+			</div>
+						</div>
+						</div>
+						</div>
+						</div>
+<input type="button" name="next" class="next action-button" value="Next" />
+</fieldset>
+
+<fieldset>
+<!-- SECTION 2 -->
+                	<h3>Vehicals</h3>
+					<div class="container">
+						<div class="row">
+						<div class="col-sm-2">Vehicle <button class="btn">Add</button></div>
+						<div class="col-sm -1" >Year Make Model</div>
+						<div class="col-sm -1" >VIN</div>
+						<div class="col-md -1" >Category</div>
+						<div class="col-md -1" >Radius</div>
+						<div class="col-md -1" >Value</div>
+						<div class="col-md -1" >Loss Payee</div>
+						<div class="col-md -1" >butn</div>
+						</div>
+						<div class="row">
+						<div class="col-sm-2">1 of 3 <button type="button" class="btn " data-toggle="modal" data-target="#myModalEdit">Edit</button></div>
+						<div class="col-sm -1" >2015 Frht 125</div>
+						<div class="col-sm -1" >3AKJG LDV1F SGT2830</div>
+						<div class="col-md -1" >Truck - Truck Tractor</div>
+						<div class="col-md -1" >500</div>
+						<div class="col-md -1" >$50,000</div>
+						<div class="col-md -1" >No</div>
+						<div class="col-md -1" ><button type="button" class="btn">Delete</button></div>
+						</div>
+						<!-- Modal -->
+						  <div class="modal fade" id="myModal" role="dialog">
+							<div class="modal-dialog modal-lg">
+							  <div class="modal-content">
+									<div class="modal-body">
+									  <div class="container">
+											<div class="row">
+												<div class="col-sm-4" style="background-color:lightgrey;">Type
+												</div>
+												<div class="col-sm-8">
+													<div class="radio">
+														<label><input type="radio" name="optradio" >1981 or newer vehicle</label>
+													</div>
+													<div class="radio">
+														<label><input type="radio" name="optradio">1980 or older vehicle</label>
+													</div>
+													<div class="radio disabled">
+														<label><input type="radio" name="optradio">Trailer</label>
+													</div>
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">VIN
+												</div>
+												<div class="col-sm-8">
+													<input type="text" class="" id="input">
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">VIN Order Status:
+												</div>
+												<div class="col-sm-8">
+													<input type="text" class="" value="Not Ordered" id="input">
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Category:
+												</div>
+												<div class="col-sm-8">
+													<div class="form-group">
+													  <select class="" id="">
+														<option></option>
+														<option>Bus</option>
+														<option>Car</option>
+														<option>Cargo Van</option>
+														<option>Hearse</option>
+														<option>Limousine</option>
+														<option>Mini Van</option>
+														<option>Moter Home</option>
+														<option>Passenger Van</option>
+														<option>Pickup Truck</option>
+														<option>Sport Utility Vehicle</option>
+														<option>Truck</option>
+														<option>Emergency Vehicle</option>
+														<option>Military Vehicle</option>
+													  </select>
+													</div>
+												</div>
+											</div>											
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Year:
+												</div>
+												<div class="col-sm-8">
+													<div class="form-group">
+													  <select class="" id="">
+														<option></option>
+														<option>2020</option>
+														<option>2019</option>
+														<option>2018</option>
+														<option>2017</option>
+														<option>2016</option>
+														<option>2015</option>
+														<option>2014</option>
+														<option>2013</option>
+														<option>2012</option>
+														<option>2011</option>
+														<option>2010</option>
+														<option>2009</option>
+														<option>2008</option>
+													  </select>
+													</div>
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Make:
+												</div>
+												<div class="col-sm-8">
+													<div class="form-group">
+													  <select class="" id="">
+														<option></option>
+														<option>Chevrolet</option>
+														<option>Dina</option>
+														<option>Egle Transit</option>
+														<option>Ford</option>
+														<option>GMC</option>
+														<option>International</option>
+														<option>Motor Couch Ind Inc</option>
+														<option>New Flyer</option>
+														<option>Nova</option>
+														<option>Fahrzeugwerke </option>
+														<option>Ontario</option>
+														<option>Orion</option>
+														<option>Not Listed</option>
+													  </select>
+													</div>
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Enter Model:
+												</div>
+												<div class="col-sm-8">
+													<input type="text" class="" id="input">
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Body Style:
+												</div>
+												<div class="col-sm-8">
+													<div class="form-group">
+													  <select class="" id="">
+														<option></option>
+														<option>N/A</option>
+													  </select>
+													</div>
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Garaging ZIP Code:
+												</div>
+												<div class="col-sm-8">
+													<input type="text" class="" id="input">
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Radius (One Way):
+												</div>
+												<div class="col-sm-8">
+													<div class="form-group">
+													  <select class="" id="">
+														<option></option>
+														<option>500 miles</option>
+														<option>Unlimited miles</option>
+													  </select>
+													</div>
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Number of Passengers:
+												</div>
+												<div class="col-sm-8">
+													<label class="radio-inline"><input type="radio" name="optradio">Seats have been removed</label>
+													<label class="radio-inline"><input type="radio" name="optradio">16 to 60</label>
+													<label class="radio-inline"><input type="radio" name="optradio">61 or more</label>
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Wheel Chair Lift?
+												</div>
+												<div class="col-sm-8">
+													<label class="radio-inline"><input type="radio" name="optradio" >Yes</label>
+													<label class="radio-inline"><input type="radio" name="optradio">No</label>
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Loss Payee:
+												</div>
+												<div class="col-sm-8">
+													<div class="form-group">
+													  <select class="" id="">
+														<option>None</option>
+														<option>Loss Payee Not Listed</option>
+														<option>AEA Credit Union</option>
+														<option>Alabama Central CU</option>
+														<option>Alaska USA FCU</option>
+														<option>American General Finance</option>
+														<option>American Trust</option>
+														<option>Ameriserv Financial</option>
+														<option>AHFC (Loan) (American Honda)</option>
+														<option>American Suzuki Auto Credit (Lease)</option>
+														<option>American Suzuki Auto Credit (Loan) </option>
+														<option>AmeriCredit</option>
+														<option>AM South Dealer (Lease)</option>
+														<option>AM South Dealer (Loan)</option>
+													  </select>
+													</div>
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Add another vehicle/trailer?
+												</div>
+												<div class="col-sm-8">
+													<label class="radio-inline"><input type="radio" name="optradio" >Yes</label>
+													<label class="radio-inline"><input type="radio" name="optradio">No</label>
+												</div>
+											</div>
+									  </div>
+									  
+									</div>
+								<div class="modal-footer text-center" >
+								  <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+								  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						<!-- model End-->
+						<!--  Edit Modal -->
+						  <div class="modal fade" id="myModalEdit" role="dialog">
+							<div class="modal-dialog modal-lg">
+							  <div class="modal-content">
+									<div class="modal-body">
+									  <div class="container">
+											<div class="row">
+												<div class="col-sm-4" style="background-color:lightgrey;">Type
+												</div>
+												<div class="col-sm-8">
+													<div class="radio">
+														<label><input type="radio" name="optradio" checked>1981 or newer vehicle</label>
+													</div>
+													<div class="radio">
+														<label><input type="radio" name="optradio">1980 or older vehicle</label>
+													</div>
+													<div class="radio disabled">
+														<label><input type="radio" name="optradio">Trailer</label>
+													</div>
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">VIN
+												</div>
+												<div class="col-sm-8">
+													<input type="text" class="" id="input">
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">VIN Order Status:
+												</div>
+												<div class="col-sm-8">
+													<input type="text" class="" value="Not Ordered" id="input">
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Category:
+												</div>
+												<div class="col-sm-8">
+													<div class="form-group">
+													  <select class="" id="">
+														<option></option>
+														<option>Bus</option>
+														<option value="car" selected>Car</option>
+														<option>Cargo Van</option>
+														<option>Hearse</option>
+														<option>Limousine</option>
+														<option>Mini Van</option>
+														<option>Moter Home</option>
+														<option>Passenger Van</option>
+														<option>Pickup Truck</option>
+														<option>Sport Utility Vehicle</option>
+														<option>Truck</option>
+														<option>Emergency Vehicle</option>
+														<option>Military Vehicle</option>
+													  </select>
+													</div>
+												</div>
+											</div>											
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Year:
+												</div>
+												<div class="col-sm-8">
+													<div class="form-group">
+													  <select class="" id="">
+														<option></option>
+														<option>2020</option>
+														<option>2019</option>
+														<option selected>2018</option>
+														<option>2017</option>
+														<option>2016</option>
+														<option>2015</option>
+														<option>2014</option>
+														<option>2013</option>
+														<option>2012</option>
+														<option>2011</option>
+														<option>2010</option>
+														<option>2009</option>
+														<option>2008</option>
+													  </select>
+													</div>
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Make:
+												</div>
+												<div class="col-sm-8">
+													<div class="form-group">
+													  <select class="" id="">
+														<option></option>
+														<option>Chevrolet</option>
+														<option>Dina</option>
+														<option>Egle Transit</option>
+														<option selected>Ford</option>
+														<option>GMC</option>
+														<option>International</option>
+														<option>Motor Couch Ind Inc</option>
+														<option>New Flyer</option>
+														<option>Nova</option>
+														<option>Fahrzeugwerke </option>
+														<option>Ontario</option>
+														<option>Orion</option>
+														<option>Not Listed</option>
+													  </select>
+													</div>
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Enter Model:
+												</div>
+												<div class="col-sm-8">
+													<input type="text" class=""  value="A4"id="input">
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Body Style:
+												</div>
+												<div class="col-sm-8">
+													<div class="form-group">
+													  <select class="" id="">
+														<option></option>
+														<option>N/A</option>
+													  </select>
+													</div>
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Garaging ZIP Code:
+												</div>
+												<div class="col-sm-8">
+													<input type="text" class="" value="46526" id="input">
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Radius (One Way):
+												</div>
+												<div class="col-sm-8">
+													<div class="form-group">
+													  <select class="" id="">
+														<option></option>
+														<option selected>500 miles</option>
+														<option>Unlimited miles</option>
+													  </select>
+													</div>
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Number of Passengers:
+												</div>
+												<div class="col-sm-8">
+													<label class="radio-inline"><input type="radio" name="optradio">Seats have been removed</label>
+													<label class="radio-inline" ><input type="radio" name="optradio"checked>16 to 60</label>
+													<label class="radio-inline"><input type="radio" name="optradio">61 or more</label>
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Wheel Chair Lift?
+												</div>
+												<div class="col-sm-8">
+													<label class="radio-inline" ><input type="radio" name="optradio"checked >Yes</label>
+													<label class="radio-inline"><input type="radio" name="optradio">No</label>
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Loss Payee:
+												</div>
+												<div class="col-sm-8">
+													<div class="form-group">
+													  <select class="" id="">
+														<option>None</option>
+														<option>Loss Payee Not Listed</option>
+														<option selected>AEA Credit Union</option>
+														<option>Alabama Central CU</option>
+														<option>Alaska USA FCU</option>
+														<option>American General Finance</option>
+														<option>American Trust</option>
+														<option>Ameriserv Financial</option>
+														<option>AHFC (Loan) (American Honda)</option>
+														<option>American Suzuki Auto Credit (Lease)</option>
+														<option>American Suzuki Auto Credit (Loan) </option>
+														<option>AmeriCredit</option>
+														<option>AM South Dealer (Lease)</option>
+														<option>AM South Dealer (Loan)</option>
+													  </select>
+													</div>
+												</div>
+											</div>
+											<div class="row"style="margin-top: 4px;">
+												<div class="col-sm-4" style="background-color:lightgrey;">Add another vehicle/trailer?
+												</div>
+												<div class="col-sm-8">
+													<label class="radio-inline"><input type="radio" name="optradio" checked>Yes</label>
+													<label class="radio-inline"><input type="radio" name="optradio">No</label>
+												</div>
+											</div>
+									  </div>
+									  
+									</div>
+								<div class="modal-footer text-center" >
+								  <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+								  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						<!-- model End-->
+					 
+					</div>
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+<input type="button" name="next" class="next action-button" value="Next" />
+</fieldset>
+<fieldset>
+<h2 class="fs-title">Personal Details</h2>
+<h3 class="fs-subtitle">We will never sell it</h3>
+<input type="text" name="fname" placeholder="First Name" />
+<input type="text" name="lname" placeholder="Last Name" />
+<input type="text" name="phone" placeholder="Phone" />
+<textarea name="address" placeholder="Address"></textarea>
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+<input type="button" name="next" class="next action-button" value="Next" />
+</fieldset>
+<fieldset>
+<h2 class="fs-title">Personal Details</h2>
+<h3 class="fs-subtitle">We will never sell it</h3>
+<input type="text" name="fname" placeholder="First Name" />
+<input type="text" name="lname" placeholder="Last Name" />
+<input type="text" name="phone" placeholder="Phone" />
+<textarea name="address" placeholder="Address"></textarea>
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+<input type="button" name="next" class="next action-button" value="Next" />
+</fieldset>
+<fieldset>
+<h2 class="fs-title">Personal Details</h2>
+<h3 style="margin-bottom: 16px; margin-top:16px;">Proof of Prior Insurance</h3>
+			<div class="form-row">
+				<div class="form-holder w-100">
+				 <label>Currently Insured?<label>
+					<input type="radio" name="g">Yes
+					<input type="radio" name="g" >NO
+				
+	   <h3 style="margin-bottom: 16px; margin-top:16px;">Additional Underwriting Questions</h3>
+				<div class="form-holder w-100">
+				 <label>Does the insured have General Liability Insurance(GL) or a Business Owner's Policy(BOP)?<label>
+				<select class="form-control"><option value="G">General Liability Insurance</option>
+				<option value="B">Business Owners Policy</option>
+				<option selected="selected" value="N">Neither</option>
+				</select>
+				<div class="form-holder w-100">
+				<label>Year current business was established (YYYY - enter 9999 if unknown or not applicable):<label>
+				<input type="text" class="form-control" name="date" placeholder="2019">
+				
+				<label>Number of Additional Insureds:<label>
+		   <select class="form-control">
+		   <option selected="selected" value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+
+			</select>
+				<label>	Number of Waivers of Subrogation:<label>
+		   <select class="form-control">
+		   <option selected="selected" value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				</select>
+ <h3 style="margin-bottom: 16px; margin-top:16px;">Policy Filings</h3>
+		
+	
+		<div class="form-holder w-100">
+		<label>Are any state or federal filings required?<label>
+			<input type="radio" name="h">Yes
+					<input type="radio" name="h" >NO
+				</div>
+			<div class="form-holder w-100">
+			<label>Do we insure all commercial vehicles the insured owns?<label>
+			<input type="radio" name="i">Yes
+			<input type="radio" name="i" >NO
+			</div>
+			<div class="form-holder w-100">
+			<label>Do we insure all vehicles that the insured uses in their business?<label>
+			<input type="radio" name="k">Yes
+			<input type="radio" name="k" >NO
+			</div>
+			<h3 style="margin-bottom: 16px; margin-top:16px;">Filing Types</h3>
+			<div class="form-holder w-100">
+			<label>Federal:<label>
+			<input type="radio" name="f" checked>Yes 
+			<input type="radio" name="f" >NO
+			</div>
+			<div class="form-holder w-100">
+			<label>MCS90:<label>
+			<input type="radio" name="j" checked>Yes
+			<input type="radio" name="j" >NO
+			</div>
+			<div class="form-holder w-100">
+			<label>Federal Cargo (BMC 34):<label>
+			<input type="radio" name="k" >Yes
+			<input type="radio" name="k" checked>NO
+			</div>	
+			<div class="form-holder w-100">
+			<label>State:<label>
+		   <select class="form-control">
+		   <option selected="selected"  value="1">1</option>
+		    <option value="0">0</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				</select>
+			</div>
+<div class="form-holder w-100">
+			<label>State Cargo (Form H):<label>
+		   <select class="form-control">
+		   <option selected="selected" value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				</select>
+</div>	
+	<div class="form-holder w-100">
+			<label>Other:<label>
+		   <select class="form-control">
+		   <option selected="selected" value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				</select>
+</div>						
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+<input type="submit" name="submit" class="submit action-button" value="Submit" />
+</fieldset>
+</form>
+
+<!-- jQuery --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- jQuery easing plugin --> 
+<script src="js/jquery.easing.min.js" type="text/javascript"></script> 
+<script>
+
+$(function() {
+
+//jQuery time
+var current_fs, next_fs, previous_fs; //fieldsets
+var left, opacity, scale; //fieldset properties which we will animate
+var animating; //flag to prevent quick multi-click glitches
+
+$(".next").click(function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	next_fs = $(this).parent().next();
+	
+	//activate next step on progressbar using the index of next_fs
+	$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+	
+	//show the next fieldset
+	next_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale current_fs down to 80%
+			scale = 1 - (1 - now) * 0.2;
+			//2. bring next_fs from the right(50%)
+			left = (now * 50)+"%";
+			//3. increase opacity of next_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({'transform': 'scale('+scale+')'});
+			next_fs.css({'left': left, 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
+
+$(".previous").click(function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	previous_fs = $(this).parent().prev();
+	
+	//de-activate current step on progressbar
+	$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+	
+	//show the previous fieldset
+	previous_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale previous_fs from 80% to 100%
+			scale = 0.8 + (1 - now) * 0.2;
+			//2. take current_fs to the right(50%) - from 0%
+			left = ((1-now) * 50)+"%";
+			//3. increase opacity of previous_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({'left': left});
+			previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
+
+$(".submit").click(function(){
+	return false;
+})
+
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
