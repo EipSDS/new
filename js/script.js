@@ -1612,7 +1612,7 @@ var pda8=$(".physicaldamageammount8").val();
 				//alert(result);
 				console.log(result);
 				 $(".overlay").hide();
-				 $(".OperationDescription").removeClass("active");
+				 $(".InsuranceHistory").removeClass("active");
 					$(".CommoditiesLI").addClass("active");
 					$(".thirteen").hide();
 					$(".Fourteen_s").show();  
