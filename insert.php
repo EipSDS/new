@@ -32,7 +32,7 @@ if(!empty($company_name)){
 }
 /*-----------------------------------1st Condition Close------------------------------*/
 /*------------------------2nd condition for fields------------------------------------*/
-    else if(!empty($company_name1))
+   if(!empty($company_name1))
 {
 	$contact_id = $_POST['contactId'];
 	$start_date1 = $_POST['perid_id_second'];
@@ -56,7 +56,7 @@ $result = pg_query($query);
 }
 /*----------------------------- 2nd condition close--------------------------------------*/
 /*----------------------------- 3rd condition Start--------------------------------------*/
-else if(!empty($company_name2))
+if(!empty($company_name2))
 {
 	$contactId = $_POST['contactId'];
 	$start_date2 = $_POST['perid_id_third'];
@@ -78,8 +78,6 @@ else if(!empty($company_name2))
 		} 
 }
 /*----------------------------- 3rd condition close--------------------------------------*/
-else{
-	echo "Data is not inserted";
-}
+
 }	 
 ?>
