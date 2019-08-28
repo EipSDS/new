@@ -1560,7 +1560,7 @@ $(".OperationDescription_next").click(function(event ){
             success:function(result){
 				$(".overlay").hide();
 				 $(".OperationDescription").removeClass("active");
-					$(".CommoditiesLI").addClass("active");
+					$(".InsuranceHistory").addClass("active");
 					$(".twelve").hide();
 					$(".thirteen").show(); 
 								 
