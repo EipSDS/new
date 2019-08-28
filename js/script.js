@@ -138,7 +138,7 @@ $(".previous_InsuranceHistory").click(function(){
 $(".previous_Commodities").click(function(){
 	$(".CommoditiesLI").removeClass("active");
 	$(".OperationDescription").addClass("active");
-	$(".twelve").show(); 
+	$(".thirteen").show(); 
 	$(".Fourteen_s").hide();
 		
 });
