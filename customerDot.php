@@ -52,7 +52,7 @@ function myFunction() {
 <li class='underwritingLI'>Underwriting</li>
 <li class='CoverageLI'>Coverage Limit Information</li>
 <li class='OperationDescription'>Operation Description</li>
-<!--li class='InsuranceHistory'>Insurance History</li-->
+<li class='InsuranceHistory'>Insurance History</li>
 <li class='CommoditiesLI'>Commodities</li>
 <!--li class='CargoRelatedLI'>Cargo Related</li>
 <li class='CargoFinal'>Cargo Final</li>
@@ -2143,48 +2143,69 @@ function myFunction() {
 	
 	
 </fieldset>
-<!--fieldset class='thirteen'>
-	<h2 class="fs-title">Insurance History</h2>
-	<div class="container-fluid">
-	<div class="row">
-    <div class="col-sm-4" >Policy Period (MM/YY)
-	<div class="col-sm-2">
-	<input type="text" name="policy_perid" value="period1" id="perid_id">
-	<label>To</label>
-	<input type="text" name="policy_perid_two" value="period1_two" id="perid_id_two">
-	</div>
-	
-	<div class="col-sm-2">
-	<input type="text" name="policy_perid_second" value="period1_second" id="perid_id_second">
-	<label>To</label>
-	<input type="text" name="policy_perid_two_second" value="period1_two_second" id="perid_id_two_second">
-	</div>
-	
-	<div class="col-sm-2">
-	<input type="text" name="policy_perid_third" value="period1_third" id="perid_id_third">
-	<label>To</label>
-	<input type="text" name="policy_perid_two_third" value="period1_two_third" id="perid_id_two_third">
-	</div>
-	
-	
-	</div>
-    <div class="col-sm-4" >Company Name</div>
-	<div>
-	<input type="text" name="C_name" value="" id="C_name_input" class="input_clasompany">
-	</div>
-    <div class="col-sm-2">Liability Losses</div>
-    <div class="col-sm-2" >Physical Damage Losses</div>
-	
+<fieldset class='thirteen'>
+	<h2 class="fs-title">INSURANCE HISTORY-PAST 3 YEARS</h2>
+<table width="100%"  border="1" >
+<tbody>
+<tr>
+<th rowspan="2">Policy Period <br>
+(MM/YY)</th>
+<th rowspan="2">Company Name</th>
+<th colspan="2">Liability Losses</th>
+<th colspan="2">
+Physical Damage Losses
+</th>
+</tr>
+<tr>
+<th>Number</th>
+<th>Amount</th>
+<th>Number</th>
+<th>Amount</th>
+</tr><tr>
+<td><input type="text" class="datepickerDOB" name="policy_perid" value="<?php echo date("m/d/Y");?>" id='perid_id' placeholder='<?php echo date('m/d/Y');?>'>
+	To
+	<input type="text" class="datepickerDOB" name="policy_perid_two" value="<?php echo date("m/d/Y");?>" id='perid_id_two' placeholder='<?php echo date('m/d/Y');?>'>
+</td>
+<td><input type="text" name="input_companyname4" value="" id="inputcompanyname1" class="input_companyname1"></td>
+<td><input type="number" name="input_liabilitylosses4" value=""id="liabilitylosses1" class="input_liabilitylosses1">
+</td>
+<td><input type="text" name="input_physicaldamage4" value="" id="physicaldamage1" class="input_physicaldamage4"></td>
+<td><input type="text" name="physicaldamage7" value="" id="physicaldamage8" class="physicaldamage9"></td>
+<td><input type="text" name="physicaldamageammount" value="" id="physicaldamageammount" class="physicaldamageammount"></td>
+</tr>
+<tr>
+<td>		<input type="text" class="datepickerDOB" name="policy_perid_second" value="<?php echo date("m/d/Y");?>" id='perid_id_second' placeholder='<?php echo date('m/d/Y');?>'>
+	To
+	<input type="text" class="datepickerDOB" name="policy_perid_two_second" value="<?php echo date("m/d/Y");?>" id='perid_id_two_second' placeholder='<?php echo date('m/d/Y');?>'></td>
+<td><input type="text" name="input_companyname5" value="" id="inputcompanyname2" class="input_companyname2"></td>
+<td><input type="number" name="input_liabilitylosses5" value=""id="liabilitylosses2" class="input_liabilitylosses2"></td>
+<td><input type="text" name="input_physicaldamage5" value="" id="physicaldamage2" class="input_physicaldamag4"></td>
+<td><input type="text" name="physicaldamagenumber1" value="" id="physicaldamagenumber1" class="physicaldamagenumber1"></td>
+<td><input type="text" name="physicaldamageammount1" value="" id="physicaldamageammount1" class="physicaldamageammount1"></td>
+</tr>
+<tr>
+<td>		
+<input type="text" class="datepickerDOB" name="policy_perid_third" value="<?php echo date("m/d/Y");?>" id='perid_id_third' placeholder='<?php echo date('m/d/Y');?>'>
+	To
+	<input type="text" class="datepickerDOB" name="policy_perid_two_third" value="<?php echo date("m/d/Y");?>" id='perid_id_two_third' placeholder='<?php echo date('m/d/Y');?>'>
+<td><input type="text" name="input_companyname6" value="" id="inputcompanyname3" class="input_companyname3"></td>
+<td><input type="number" name="input_liabilitylosses6" value=""id="liabilitylosses3" class="input_liabilitylosses3"></td>
+<td><input type="text" name="input_physicaldamage6" value="" id="physicaldamage3" class="input_physicaldamage6"></td>
+<td><input type="text" name="physicaldamagenumber6" value="" id="physicaldamagenumber7" class="physicaldamagenumber8"></td>
+<td><input type="text" name="physicaldamageammount6" value="" id="physicaldamageammount7" class="physicaldamageammount8"></td>
+</tr>
+</tbody>
+</table>
 	
 <div class='previous_next_buttons'>
 		<input type="button" name="previous" class="previous_InsuranceHistory action-button" value="Previous" />
 		<input type="button" name="next" class="action-button InsuranceHistory_next" value="Next" />
 	</div>
-	</div>
-	</div>
 	
 	
-</fieldset-->
+	
+	
+</fieldset>
 <fieldset class='Fourteen_s'>
 	<h2 class="fs-title">For your commodities, can you give me a percentage of ...</h2>
 	<div class="container-fluid">
@@ -3407,3 +3428,4 @@ function myFunction() {
 
 </body>
 </html>
+

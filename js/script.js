@@ -389,7 +389,7 @@ $(".InsuranceHistory").click(function(){
 	$("#progressbar li").removeClass("active");
 	$(".InsuranceHistory").addClass("active");
 	$("fieldset").hide();
-	$(".Fourteen_s").show(); 
+	$(".thirteen").show(); 
 	}	
 });
 
@@ -1562,7 +1562,7 @@ $(".OperationDescription_next").click(function(event ){
 				 $(".OperationDescription").removeClass("active");
 					$(".CommoditiesLI").addClass("active");
 					$(".twelve").hide();
-					$(".Fourteen_s").show(); 
+					$(".thirteen").show(); 
 								 
 				
            }
@@ -1573,27 +1573,54 @@ $(".OperationDescription_next").click(function(event ){
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-$(".InsuranceHistory_next").click(function(event ){
-	var contactId=$(".contactId").val();
-		$(".overlay").show();
+ $(".InsuranceHistory_next").click(function(event ){
+var contactId=$(".contactId").val();
+	//------------------------------1st row------------------------------//
+var pp=$("#perid_id").attr('value');
+var pp1=$("#perid_id_two").attr('value');
+var ic1=$(".input_companyname1").val();
+var illose1=$(".input_liabilitylosses1").val();
+var ipd4=$(".input_physicaldamage4").val();
+var pdn9=$(".physicaldamage9").val();
+var pda=$(".physicaldamageammount").val();
+//--------------------------------------------------------------------//
+	//-----------------------------2nd row-----------------------------------//
+var pp2=$("#perid_id_second").attr('value');
+var pp3=$("#perid_id_two_second").attr('value');
+var ic2=$(".input_companyname2").val();
+var illose2=$(".input_liabilitylosses2").val();
+var ipdg4=$(".input_physicaldamag4").val();
+var pdn1=$(".physicaldamagenumber1").val();
+var pda1=$(".physicaldamageammount1").val();
+
+//---------------------------------3rd row-----------------------------------------////
+var pp4=$("#perid_id_third").attr('value');
+var pp5=$("#perid_id_two_third").attr('value');
+var ic3=$(".input_companyname3").val();
+var illose3=$(".input_liabilitylosses3").val();
+var ipdg6=$(".input_physicaldamage6").val();
+var pdn8=$(".physicaldamagenumber8").val();
+var pda8=$(".physicaldamageammount8").val();
+	//-------------------------------------------------------------------------//
+		//$(".overlay").show();
 		 $.ajax({
-            url:"ajaxRequest.php", 
+            url:"functions.php", 
             type: "POST", 
-           dataType: 'json',
-           data: ({InsuranceHistory: "success",contactId:contactId}),
+           dataType: 'text',
+           data: ({InsuranceHistory: "success",contactId:contactId,pp:pp,policyperiod1:pp1,input_companyname1:ic1,input_liabilitylosses1:illose1,input_physicaldamage4:ipd4,physicaldamage9:pdn9,physicaldamageammount:pda,perid_id_second:pp2,perid_id_two_second:pp3,input_companyname2:ic2,input_liabilitylosses2:illose2,input_physicaldamag4:ipdg4,physicaldamagenumber1:pdn1,physicaldamageammount1:pda1,perid_id_third:pp4,perid_id_two_third:pp5,input_companyname3:ic3,input_liabilitylosses3:illose3,input_physicaldamage6:ipdg6,physicaldamagenumber8:pdn8,physicaldamageammount8:pda8}),
             success:function(result){
-				$(".overlay").hide();
+				//alert(result);
+				console.log(result);
+				/* $(".overlay").hide();
 				 $(".OperationDescription").removeClass("active");
 					$(".CommoditiesLI").addClass("active");
 					$(".thirteen").hide();
-					$(".Fourteen_s").show(); 
+					$(".Fourteen_s").show();  */
 								 
 				
            }
          });
-});
-
-
+}); 
 
 
 $(".Commodities_next").click(function(event ){
