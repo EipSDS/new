@@ -30,10 +30,10 @@ if(!empty($company_name)){
 	$libility_amount2 = $_POST['input_physicaldamage6'];
 	$phsical_number2 = $_POST['physicaldamagenumber8'];
 	$phsical_amount2 = $_POST['physicaldamageammount8'];	
-     //$conn = $this->pgConnect();
-   /*   $query = "INSERT INTO public.insurance_history(
+    //$conn = $this->pgConnect();
+     echo $query = "INSERT INTO public.insurance_history(
 	 start_date_one, end_date_one, start_date_two, end_date_two, start_date_three, end_date_three, company_one, company_two, company_three, liability_number_one, liability_number_two, liability_number_three, liability_amount_one, liability_amount_two, liability_amount_three, physical_number_one, physical_number_two, physical_number_three, physical_amount_one, physical_amount_two, physical_amount_three, contact_id)
-	VALUES ('$start_date','$end_date','$start_date1','$end_date1','$start_date2','$end_date2','$company_name','$company_name1','$company_name2', '$libility_number', $libility_number1,'$libility_number2', '$libility_amount','$libility_amount1','$libility_amount2','$phsical_number','$phsical_number1','$phsical_number2','$phsical_amount','$phsical_amount1','$phsical_amount2','$contactId')";
+	VALUES ('$start_date','$end_date','$start_date1','$end_date1','$start_date2','$end_date2','$company_name','$company_name1','$company_name2', '$libility_number', $libility_number1,'$libility_number2', '$libility_amount','$libility_amount1','$libility_amount2','$phsical_number','$phsical_number1','$phsical_number2','$phsical_amount','$phsical_amount1','$phsical_amount2','$contactId')"
 		$result = pg_query($query);
 			if($result){
 			echo "Record Created Sucessfully";
@@ -41,7 +41,7 @@ if(!empty($company_name)){
 		else
 		{
 			echo "failed to create";
-		} */
+		} 
 }
 
 }	 
