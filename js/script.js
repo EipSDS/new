@@ -1611,11 +1611,11 @@ var pda8=$(".physicaldamageammount8").val();
             success:function(result){
 				//alert(result);
 				console.log(result);
-				/* $(".overlay").hide();
+				 $(".overlay").hide();
 				 $(".OperationDescription").removeClass("active");
 					$(".CommoditiesLI").addClass("active");
 					$(".thirteen").hide();
-					$(".Fourteen_s").show();  */
+					$(".Fourteen_s").show();  
 								 
 				
            }
