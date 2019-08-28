@@ -22,7 +22,8 @@ fieldset.thirteen th {
     height: 35px;
     font-size: 16px;
 }
-fieldset.thirteen>  input {
+
+fieldset.thirteen td>  input {
     padding: 7px;
     border: 1px solid #ccccccf7;
     border-radius: 3px;
@@ -34,8 +35,6 @@ fieldset.thirteen>  input {
     font-size: 13px;
     max-width: 150px;
 }
-
- 
 fieldset.thirteen .fs-title {
     font-weight: 600;
     font-size: 15px;

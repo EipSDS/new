@@ -1320,6 +1320,4 @@ if(ISSET($_POST['update_vehicle']) && $_POST['update_vehicle']=='success'){
 			}else{
 				echo 0;
 			}
-			
-			
 	}
