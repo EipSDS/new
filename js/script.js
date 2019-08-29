@@ -2708,6 +2708,15 @@ $(document).on("click", ".Business_Organization_Structure", function(event){
 
 });
 
+$(document).on("click", ".Business_Organization_Structure", function(event){
+	var id = $(this).val();
+	if(id=='Individual/Sole Proprietor'){
+		$("#is-individual-business").show();
+		$("#is-partner_cop-business").hide();
+		
+	}
+
+});
 
 
 $(document).on("click", ".have_DBA", function(event){
