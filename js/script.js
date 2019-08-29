@@ -486,6 +486,8 @@ $(".PDFData").click(function(){
 $(document).on("click", ".zero_next", function(event){
 	var contact_first_name=$(".contact_first_name").val();
 	var contact_last_name=$(".contact_last_name").val();
+    $("#Financial_Last_name").val(contact_last_name);
+    $("#Financial_First_name").val(contact_first_name);
 		if(contact_last_name && $('input[name="quick_quote_for_insurance"]').is(':checked')){
 			console.log($('input[name="quick_quote_for_insurance"]').is(':checked'));
 			var quick_quote_for_insurance = $("input[name='quick_quote_for_insurance']:checked").val();
@@ -513,8 +515,7 @@ $(document).on("click", ".zero_next", function(event){
 									$(".overlay").hide();
 									$("#Insured_first_name").val(contact_first_name);
 									$("#Insured_Last_name").val(contact_last_name);
-									$("#Financial_Last_name").val(contact_last_name);
-									$("#Financial_First_name").val(contact_first_name);
+
 							}
 						 });
 						
