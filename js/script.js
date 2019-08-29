@@ -513,7 +513,7 @@ $(document).on("click", ".zero_next", function(event){
 									$(".overlay").hide();
 									$("#Insured_first_name").val(contact_first_name);
 									$("#Insured_Last_name").val(contact_last_name);
-									$("#Financial_Last_name").val(contact_last_name);
+									$("#Financial_First_name_hidden").val(contact_last_name);
 									
 							}
 						 });
@@ -574,6 +574,8 @@ $(document).on("click", ".phone_number_next", function(event){
 				
 				$("#Contact_Insured_phone").val(phone);
 				$("#Contact_Insured_phone_hidden").val(phone);
+				$("#Financial_First_name").val(contact_first_name);
+				$("#Financial_First_name_hidden").val(contact_first_name);
 				$(".contactId").val(result.contactId);
 				if(result.Dot !==null){
 					if(result.Dot=='9999999999'){
