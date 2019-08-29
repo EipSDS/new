@@ -1141,7 +1141,7 @@ $(document).on("click", ".phone_number_next", function(event){
 					
 					if(conatctData.State_Two!== null){
 						$('#Contact_Insured_State').val(conatctData.State_Two);
-						//$('#Financial_State').val(conatctData.State_Two);
+						$('#Financial_State').val(conatctData.State_Two);
 					
 					}
 					if(conatctData.Involved_in_the_daily_operation_of_the_business!==null){
