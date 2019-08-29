@@ -513,6 +513,8 @@ $(document).on("click", ".zero_next", function(event){
 									$(".overlay").hide();
 									$("#Insured_first_name").val(contact_first_name);
 									$("#Insured_Last_name").val(contact_last_name);
+									$("#Financial_Lasst_name").val(contact_last_name);
+									$("#Financial_First_name").val(contact_fast_name);
 							}
 						 });
 						
