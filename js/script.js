@@ -513,8 +513,7 @@ $(document).on("click", ".zero_next", function(event){
 									$(".overlay").hide();
 									$("#Insured_first_name").val(contact_first_name);
 									$("#Insured_Last_name").val(contact_last_name);
-									$("#Financial_Lasst_name").val(contact_last_name);
-									$("#Financial_First_name").val(contact_fast_name);
+									
 							}
 						 });
 						
@@ -1136,6 +1135,7 @@ $(document).on("click", ".phone_number_next", function(event){
 					$("#Contact_Insured_Mailing").val(conatctData.Mailing_Address);
 					$("#Contact_Insured_City").val(conatctData.City_Two);
 					$("#Contact_Insured_ZIP_code").val(conatctData.ZIP_Code_Two);
+					$("#Financial_First_name").val(contact_first_name);
 					
 					if(conatctData.State_Two!== null){
 						$('#Contact_Insured_State').val(conatctData.State_Two);
