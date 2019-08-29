@@ -1141,7 +1141,7 @@ $(document).on("click", ".phone_number_next", function(event){
 					
 					if(conatctData.State_Two!== null){
 						$('#Contact_Insured_State').val(conatctData.State_Two);
-						$('#Financial_State').val(conatctData.State_Two);
+						//$('#Financial_State').val(conatctData.State_Two);
 					
 					}
 					if(conatctData.Involved_in_the_daily_operation_of_the_business!==null){
@@ -1233,10 +1233,14 @@ $(".dot_number_next").click(function(event ){
 					$("#Contact_Insured_City").val(result.m_city);
 					$("#Financial_City").val(result.m_city);
 					$('#Contact_Insured_State').val(result.m_state);
+					$('#Financial_State').val(result.m_state);
+					
 					console.log(result.m_state);
 					$('#Contact_Insured_State [value='+result.m_state+']').attr('selected', 'selected');
+					$('#Financial_State [value='+result.m_state+']').attr('selected', 'selected');
 					
 					$("#Contact_Insured_ZIP_code").val(result.mailing_zip);
+					$("#Financial_zipcode").val(result.mailing_zip);
 					/*$(".physical_street").val(result.p_street_address);
 					$(".mailing_street").val(result.m_street_address);
 					$(".physical_state").val(result.p_state);
