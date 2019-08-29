@@ -939,7 +939,7 @@ function myFunction() {
 				  <div class="form-holder w-100">
 				 		
 				<label>First Name:</label>
-				<input type="text" class="form-control" name="Financial_First_name" placeholder="First Name.." id='Financial_First_name'>
+				<input type="text" class="form-control" name="Financial_First_name" id='Financial_First_name'>
 			</div>
 			</div>	
 			<!--div class="form-row">
@@ -950,7 +950,7 @@ function myFunction() {
 			</div-->		
 			<div class="form-row">
 				  <div class="form-holder w-100">	
-				<label>Last Name:</label><input type="text" class="form-control" name="Financial_Last_name" placeholder="Last Name:."id='Financial_Last_name'>
+				<label>Last Name:</label><input type="text" class="form-control" name="Financial_Last_name" id='Financial_Last_name'>
 			</div>
 			</div>	
 			<div class="form-row">	

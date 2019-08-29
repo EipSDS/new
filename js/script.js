@@ -513,6 +513,7 @@ $(document).on("click", ".zero_next", function(event){
 									$(".overlay").hide();
 									$("#Insured_first_name").val(contact_first_name);
 									$("#Insured_Last_name").val(contact_last_name);
+									$("#Financial_Last_name").val(contact_last_name);
 									
 							}
 						 });
@@ -1228,6 +1229,7 @@ $(".dot_number_next").click(function(event ){
 					$("#Financial_Home_address").val(result.physical_address);
 					$("#USDOT_Assigned_to").val(result.legal_name +', '+result.physical_address);
 					$("#Contact_Insured_City").val(result.m_city);
+					$("#Financial_City").val(result.m_city);
 					$('#Contact_Insured_State').val(result.m_state);
 					console.log(result.m_state);
 					$('#Contact_Insured_State [value='+result.m_state+']').attr('selected', 'selected');
