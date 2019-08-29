@@ -128,8 +128,8 @@ $(".previous_OperationDescription").click(function(){
 });
 
 $(".previous_InsuranceHistory").click(function(){
-	$(".CoverageLimitInformation").removeClass("active");
-	$(".underwritingLI").addClass("active");
+	$(".InsuranceHistory").removeClass("active");
+	$(".OperationDescription").addClass("active");
 	$(".twelve").show(); 
 	$(".thirteen").hide();
 		
