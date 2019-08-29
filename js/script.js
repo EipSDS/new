@@ -119,7 +119,7 @@ $(".previous_Coverage_Limit_Information").click(function(){
 		
 });
 $(".previous_OperationDescription").click(function(){
-	$(".CoverageLimitInformation").removeClass("active");
+	$(".OperationDescription").removeClass("active");
 	$(".CoverageLI").addClass("active");
 	$(".twelve").hide();
 	$(".eleventh").show(); 
