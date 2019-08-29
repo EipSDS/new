@@ -1066,6 +1066,21 @@ $(document).on("click", ".phone_number_next", function(event){
 					if(conatctData.Structure!==null){
 					$("input[name='Business_Organization_Structure'][value='"+conatctData.Structure+"']").attr('checked','checked');
 					}
+					
+					if(conatctData.Structure!==null){
+					$("input[name='Business_Organization_Structure'][value='"+conatctData.Structure+"']").attr('checked','checked').trigger('click');
+					
+						if(conatctData.Structure=='Partnership'){
+						$("#is-partner_cop-business").show();
+						$(".Structure").val(conatctData.Structure);
+						}else{
+							$("#is-partner_cop-business").hide();
+							$(".Structure").val('');
+						}					
+					}
+
+
+					
 					if(conatctData.Do_you_have_a_DBA!==null){
 						$("input[name='have_DBA'][value='"+conatctData.Do_you_have_a_DBA+"']").attr('checked','checked').trigger('click');
 						if(conatctData.Do_you_have_a_DBA=='Yes'){
@@ -2680,6 +2695,20 @@ $(document).on("click", ".individual_instead_of_business", function(event){
 	}
 
 });
+
+$(document).on("click", ".Business_Organization_Structure", function(event){
+	var id = $(this).val();
+	if(id=='Partnership' || id=='Corporation or LLC'){
+		$("#is-partner_cop-business").show();
+		$("#is-individual-business").hide();
+		
+	}else{
+		$("#is-partner_cop-business").hide();
+	}
+
+});
+
+
 
 $(document).on("click", ".have_DBA", function(event){
 	var id = $(this).val();

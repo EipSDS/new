@@ -240,11 +240,16 @@ error_reporting(0);
 	
 	function insertVehicle($contact_id,$data){
 		$conn = $this->pgConnect();
-		if($data['C2VehicleDetails_subcategory']=''){
-			$category=$data['C2VehicleDetails_subcategory'];
+		if($data['C2VehicleDetails_category']!=''){
+			$category=$data['C2VehicleDetails_category'];
 			}else{
 		$category=$data['C2VehicleDetails_category'];
 		}
+		if($data['C2VehicleDetails_subcategory']!=''){
+			$subcategory=$data['C2VehicleDetails_subcategory'];
+			}else{
+		$subcategory=$data['C2VehicleDetails_subcategory'];
+		}				
 		if($data['C2VehicleDetails_make_name']!=''){
 			$make=$data['C2VehicleDetails_make_name'];
 			}else{
@@ -261,8 +266,8 @@ error_reporting(0);
 		VALUES('".$contact_id."', '".$data['vahicle_type']."','".$data['C2VehicleDetails_Vehicle_Trailer']."','".$data['vehicle_VIN']."', '".$category."','".$data['C2VehicleDetails_year']."','".trim($data['C2VehicleDetails_GaragingZIPCode'])."','".trim($data['vehicle_used_for'])."','".trim($data['vehicle_used_comprehensive'])."','".trim($data['vehicle_modifications'])."','".$data['C2VehicleDetails_Loss']."','".$data['C2VehicleDetails_Trailer']."','".$data['trailer_value']."','".$data['loss_payee_full_name']."','".trim($data['loss_payee_address'])."','".trim($data['add_any_modification'])."') RETURNING *";
 		}else{
 		 $query = "INSERT INTO public.contact_vehicles(
-		contact_id, vehicle_type,vehicle_number, vin, gross_weight, city_of_destination, category, year, make, model, body_style, garaging_zip_code, radius, is_business, is_comprehensive, value, loss_payee, name, address,need_modification)
-		VALUES('".$contact_id."', '".$data['vahicle_type']."', '".$data['C2VehicleDetails_Vehicle_v']."','".$data['vehicle_VIN']."','".$data['vehicle_Gross_weight']."','".$data['vehicle_Destination_City']."','".$category."','".$data['C2VehicleDetails_year']."','".$make."','".$model."','".$data['C2VehicleDetails_body']."','".$data['C2VehicleDetails_GaragingZIPCode']."','".$data['C2VehicleDetails_Radius']."','".$data['vehicle_used_for']."','".trim($data['vehicle_used_comprehensive'])."','".trim($data['vehicle_modifications'])."','".$data['C2VehicleDetails_Loss']."','".$data['loss_payee_full_name']."','".trim($data['loss_payee_address'])."','".trim($data['add_any_modification'])."') RETURNING *";
+		contact_id, vehicle_type,vehicle_number, vin, gross_weight, city_of_destination, category, year, make, model, body_style, garaging_zip_code, radius, is_business, is_comprehensive, value, loss_payee, name, address,need_modification, sub_category)
+		VALUES('".$contact_id."', '".$data['vahicle_type']."', '".$data['C2VehicleDetails_Vehicle_v']."','".$data['vehicle_VIN']."','".$data['vehicle_Gross_weight']."','".$data['vehicle_Destination_City']."','".$category."','".$data['C2VehicleDetails_year']."','".$make."','".$model."','".$data['C2VehicleDetails_body']."','".$data['C2VehicleDetails_GaragingZIPCode']."','".$data['C2VehicleDetails_Radius']."','".$data['vehicle_used_for']."','".trim($data['vehicle_used_comprehensive'])."','".trim($data['vehicle_modifications'])."','".$data['C2VehicleDetails_Loss']."','".$data['loss_payee_full_name']."','".trim($data['loss_payee_address'])."','".trim($data['add_any_modification'])."','".$subcategory."') RETURNING *";
 		}
 		$result = pg_query($query); 
 					

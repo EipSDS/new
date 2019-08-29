@@ -765,8 +765,9 @@ function myFunction() {
 				</div>
 			</div>
 			<div class='main_field_div'>
+			<div id="is-individual-business">
 				<h2 class="fs-title"> Who's gonna be in this insurance? Can you give me the first and last name?And do you have middle initial? </h2>
-				<div id="is-individual-business">
+				
 					<div class="form-row">
 						<div class="form-holder w-100">
 							<label>First Name:</label>
@@ -806,6 +807,7 @@ function myFunction() {
 					</div>
 				</div>
 				<div id="is-partner_cop-business"  style='display:none;'>
+				<h2 class="fs-title" id="is-partner_cop-business"> Who's gonna be in this insurance? </h2>
 					<div class="form-row">
 						<div class="form-holder w-100">
 							<label>Business Name:</label>
