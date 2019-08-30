@@ -3196,9 +3196,6 @@ if(losspayee =='None' || losspayee =='Associated Bank'){
 
 
 
-
-
-
 $(".datepicker").datepicker({
 		changeMonth: true,
 		changeYear: true,
