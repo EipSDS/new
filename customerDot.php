@@ -2041,23 +2041,30 @@ function myFunction() {
 				
 				<div class="form-row">
 					<div class="form-holder w-100">
-						<label>0-50 miles?</label>
+						<label>0-100 miles?</label>
 						<input type="number" name="percentage_one" class="per_one" id="percentage_two_one" value="" min='0'>
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="form-holder w-100">
-						<label>50-200 miles?</label>
+						<label>101-300 miles?</label>
 						<input type="number" name="percentage_two" class="per_two" id="percentage_two_id" value="" min='0'>
 					</div>
 				</div>
 				
 				<div class="form-row">
 					<div class="form-holder w-100">
-						<label>200+ miles?</label>
+						<label>301-600 miles?</label>
 							<input type="number" name="percentage_three" class="per_three" id="percentage_three_id" value="" min='0'>
 					</div>
 				</div>
+				<div class="form-row">
+					<div class="form-holder w-100">
+						<label>600+ miles?</label>
+							<input type="number" name="percentage_four" class="per_four" id="percentage_four_id" value="" min='0'>
+					</div>
+				</div>				
+				
 			</div>
 			
 		
