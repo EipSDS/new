@@ -19,8 +19,8 @@ background-color: transparent!important;
 }
 fieldset.thirteen th {
     text-align: center;
-    height: 30px;
-    font-size: 13px;
+    height: 35px;
+    font-size: 14px;
 }
 
 fieldset.thirteen td>  input {
@@ -33,7 +33,7 @@ fieldset.thirteen td>  input {
     font-family: montserrat;
     color: #2C3E50;
     font-size: 13px;
-    max-width: 125px;
+    max-width: 120px;
 }
 fieldset.thirteen .fs-title {
     font-weight: 600;

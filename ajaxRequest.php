@@ -645,14 +645,14 @@ $refresh_token = file_get_contents("refresh_token.txt");
 	if(ISSET($_POST['OperationDescription']) && $_POST['OperationDescription']=='success'){
 		$contacturl = "Contacts/".$_POST['contactId'];
 		parse_str($_POST['dataform'], $form_data);
-		/*  echo '<pre>';
-			print_r($form_data);
-		echo '<pre>'; */ 
+		 
+		/* 	print_r($form_data); */
+	 
 			   $d = array(
             "Radious_0_100_miles"=>  "".trim($form_data['percentage_one'])."" ,
             "Radious_101_300_miles"=>  "".trim($form_data['percentage_two'])."" ,
             "Radious_301-600+_miles"=>  "".trim($form_data['percentage_three'])."" ,
-            "Radious_600+_miles"=>  "".trim($form_data['percentage_four'])."" ,
+            "Radious_600+_miles"=>  "11245654" ,
             "EstimateAverage_Radius"=>  "".trim($form_data['Estimates_one'])."" ,
             "Estimate_Longest_Radius"=>  "".trim($form_data['Estimates_two'])."" ,
             "Estimate_Furthest_City"=>  "".trim($form_data['Estimates_three'])."" ,
@@ -662,10 +662,15 @@ $refresh_token = file_get_contents("refresh_token.txt");
             "Non_Trucking"=>  "".trim($form_data['Non_Trucking'])."" ,
             "household_or_commercial_mover"=>  "".trim($form_data['Operations_radio'])."" 
 			); 
-			
+/* 			echo "<pre>";
+			print_r($d);
+		echo "</pre>"; */
 			$Contactdata = '{
 			  "data": ['.json_encode($d).']
 			}';
+/* 			echo "<pre>";
+			print_r($Contactdata);
+		echo "</pre>"; */
 			
 			
 			@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
