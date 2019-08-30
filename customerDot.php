@@ -807,7 +807,7 @@ function myFunction() {
 					</div>
 				</div>
 				<div id="is-partner_cop-business"  style='display:none;'>
-				<h2 class="fs-title" id="is-partner_cop-business"> Who's gonna be in this insurance? </h2>
+				<h2 class="fs-title" id="is-partner_cop-business">Contact Information </h2>
 					<div class="form-row">
 						<div class="form-holder w-100">
 							<label>Business Name:</label>
