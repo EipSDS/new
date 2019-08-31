@@ -43,8 +43,7 @@ $dot_number="54444444";
  $url = "Contacts/search?phone=$phone_number";
  $data = "";
  $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"POST",$data,$old_access_token);
- $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"POST",$data,$old_access_token);
- 		if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){ 
+/*  		if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){  */
 			$url = "token";
 				$data = array("refresh_token"=>$refresh_token,"client_id"=>"".$zoho_client_id."","client_secret"=>"".$zoho_client_secret."","grant_type"=>"refresh_token");
 				$get_new_token = $handleFunctionsObject-> zoho_auth($url,"POST",$data);
@@ -59,8 +58,8 @@ $dot_number="54444444";
 				$data = "";
 				$check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 
-					 $contactId=$check_token_valid['data'][0]['id'];	
-					$contacturl = "Contacts/".$contactId;
+/* 					 $contactId=$check_token_valid['data'][0]['id']; */	
+					$contacturl = "Contacts";
 					 $Contactdata = '{
 								"data": [{
 								"Phone":  "'.$phone_number.'" ,
@@ -72,13 +71,13 @@ $dot_number="54444444";
 						
 					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
 
-		}
+/* 		}
 
 				else{
 						echo "failed";
 			
 
- } 
+ }  */
 
 /* else{
 					 $contactId=$check_token_valid['data'][0]['id'];
