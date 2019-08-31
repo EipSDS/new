@@ -25,8 +25,8 @@ $dot_number="54444444";
  //$phone_number = $array["twilio"]["sms"]["From"];
  $messagesid = $array["twilio"]["sms"]["MessageSid"];
  $array["twilio"]["collected_data"]["vehicles_questions"]["answer"];
- $driver_first_name ="simran tests"
- $driver_last_name ="simran tests"
+ $driver_first_name ="simran tests";
+ $driver_last_name ="simran tests";
 // $driver_first_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_first_name"]["answer"];
  $driver_last_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_last_name"]["answer"];
  $vin_number_of_vehicle = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["vin_number_of_vehicle"]["answer"];
@@ -39,11 +39,12 @@ $dot_number="54444444";
  //$date_started=$array["twilio"]["collected_data"]["vehicles_questions"]["date_started"];
  $status=$array["twilio"]["collected_data"]["vehicles_questions"]["status"];
 
-
-/*  $url = "Contacts/search?phone=$phone_number";
+*/
+ $url = "Contacts/search?phone=$phone_number";
  $data = "";
- $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
- 		if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){ */
+ $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"POST",$data,$old_access_token);
+ $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"POST",$data,$old_access_token);
+ 		if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){ 
 			$url = "token";
 				$data = array("refresh_token"=>$refresh_token,"client_id"=>"".$zoho_client_id."","client_secret"=>"".$zoho_client_secret."","grant_type"=>"refresh_token");
 				$get_new_token = $handleFunctionsObject-> zoho_auth($url,"POST",$data);
@@ -71,13 +72,13 @@ $dot_number="54444444";
 						
 					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
 
+		}
 
-
-/* 					else{
+				else{
 						echo "failed";
 			
 
- } */
+ } 
 
 /* else{
 					 $contactId=$check_token_valid['data'][0]['id'];
