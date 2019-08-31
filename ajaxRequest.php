@@ -649,9 +649,9 @@ $refresh_token = file_get_contents("refresh_token.txt");
 		/* 	print_r($form_data); */
 	 
 			   $d = array(
-            "Radious_0_miles"=>  "".trim($form_data['percentage_one'])."" ,
-            "Radious_101_miles"=>  "".trim($form_data['percentage_two'])."" ,
-            "Radious_301_miles"=>  "".trim($form_data['percentage_three'])."" ,
+            "Radious_0-100_miles"=>  "".trim($form_data['percentage_one'])."" ,
+            "Radious_101-300_miles"=>  "".trim($form_data['percentage_two'])."" ,
+            "Radious_301-600_miles"=>  "".trim($form_data['percentage_three'])."" ,
             "Radious_600_miles"=>  "".trim($form_data['percentage_four'])."" ,
             "EstimateAverage_Radius"=>  "".trim($form_data['Estimates_one'])."" ,
             "Estimate_Longest_Radius"=>  "".trim($form_data['Estimates_two'])."" ,
