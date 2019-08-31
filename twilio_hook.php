@@ -19,12 +19,15 @@ $array = json_decode($body,TRUE);
  $phone_number = $array["twilio"]["sms"]["From"];
  $driver_first_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_first_name"]["answer"];
  $driver_last_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_last_name"]["answer"];
-
- $dot_number=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["type_your_dot_number"]["answer"];
- $phone_number = $array["twilio"]["sms"]["From"];
+$dot_number="54444444";
+ //$dot_number=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["type_your_dot_number"]["answer"];
+ $phone_number= "912544444";
+ //$phone_number = $array["twilio"]["sms"]["From"];
  $messagesid = $array["twilio"]["sms"]["MessageSid"];
  $array["twilio"]["collected_data"]["vehicles_questions"]["answer"];
- $driver_first_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_first_name"]["answer"];
+ $driver_first_name ="simran tests"
+ $driver_last_name ="simran tests"
+// $driver_first_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_first_name"]["answer"];
  $driver_last_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_last_name"]["answer"];
  $vin_number_of_vehicle = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["vin_number_of_vehicle"]["answer"];
  
@@ -63,8 +66,7 @@ $array = json_decode($body,TRUE);
 								"Phone":  "'.$phone_number.'" ,
 								"Last_Name":  "'.$driver_last_name.'" ,
 								"First_Name":  "'.$driver_first_name.'", 
-								"USDOT_associated_with_the_insured_s_business": "'.$dot_number.'", 
-								"DOB_Age_MaritalStatus_Points_LicenceNo": "'.$dob.'", 
+								"USDOT_associated_with_the_insured_s_business": "'.$dot_number.'"
 								}]}'; 
 						
 						
