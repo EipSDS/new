@@ -1589,7 +1589,7 @@ $(".OperationDescription_next").click(function(event ){
 					$(".twelve").hide();
 					$(".thirteen").show(); 
 								 
-				console.log(dataform);
+				
            }
          });
 });
