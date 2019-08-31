@@ -9,11 +9,11 @@ $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
 
 
-$dataPOST = (file_get_contents('php://input'));
+/* $dataPOST = (file_get_contents('php://input'));
 $body = $_POST['Memory'];
 $currenttask = $_POST['CurrentTask'];
 
-$array = json_decode($body,TRUE);
+$array = json_decode($body,TRUE); */
 
 
  $phone_number = $array["twilio"]["sms"]["From"];
@@ -40,10 +40,10 @@ $dot_number="54444444";
  $status=$array["twilio"]["collected_data"]["vehicles_questions"]["status"];
 
 
- $url = "Contacts/search?phone=$phone_number";
+/*  $url = "Contacts/search?phone=$phone_number";
  $data = "";
  $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
- 		if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){
+ 		if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){ */
 			$url = "token";
 				$data = array("refresh_token"=>$refresh_token,"client_id"=>"".$zoho_client_id."","client_secret"=>"".$zoho_client_secret."","grant_type"=>"refresh_token");
 				$get_new_token = $handleFunctionsObject-> zoho_auth($url,"POST",$data);
@@ -73,13 +73,13 @@ $dot_number="54444444";
 
 
 
-					else{
+/* 					else{
 						echo "failed";
 			
 
- }
+ } */
 
-}else{
+/* else{
 					 $contactId=$check_token_valid['data'][0]['id'];
 					$url = "Contacts/".$contactId;
 			 $Contact = '{
@@ -89,7 +89,7 @@ $dot_number="54444444";
 			"First_Name":  "'.$driver_last_name.'" ,
 			}]}';	
 								
-					@$zohoResponse =  $handleFunctionsObject->zoho_curl($url,"POST",$Contact,$old_access_token);
+					@$zohoResponse =  $handleFunctionsObject->zoho_curl($url,"POST",$Contact,$old_access_token); */
 					
-}
+
 ?>
