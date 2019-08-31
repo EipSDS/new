@@ -652,6 +652,7 @@ $refresh_token = file_get_contents("refresh_token.txt");
             "Radious_0_50_miles"=>  "".trim($form_data['percentage_one'])."" ,
             "Radious_50_200_miles"=>  "".trim($form_data['percentage_two'])."" ,
             "Radious_200_miles"=>  "".trim($form_data['percentage_three'])."" ,
+            "Radious_600_miles"=>  "".trim($form_data['percentage_four'])."" ,
             "EstimateAverage_Radius"=>  "".trim($form_data['Estimates_one'])."" ,
             "Estimate_Longest_Radius"=>  "".trim($form_data['Estimates_two'])."" ,
             "Estimate_Furthest_City"=>  "".trim($form_data['Estimates_three'])."" ,
