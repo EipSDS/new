@@ -57,9 +57,8 @@ $dot_number="54444444";
 				 $url = "Contacts/search?phone=$phone_number";
 				$data = "";
 				$check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
-					if(!empty($check_token_valid['data'][0]['id'])){
-					 $contactId=$check_token_valid['data'][0]['id'];
-			if(isset($lincence_test["license_number_of_driver"])){		
+
+					 $contactId=$check_token_valid['data'][0]['id'];	
 					$contacturl = "Contacts/".$contactId;
 					 $Contactdata = '{
 								"data": [{
@@ -71,11 +70,9 @@ $dot_number="54444444";
 						
 						
 					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
-			}
-			else{
-				echo "failed";
-			}
-}
+
+
+
 					else{
 						echo "failed";
 			
