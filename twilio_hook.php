@@ -9,12 +9,11 @@ $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
  $driver_last_name ="simran ";
  $driver_first_name ="simrantwest";
- $phone_number= 9459;
+ $phone_number= 94594;
  $dot_number="5444444";
  $dot_number="5444444";
  $DOB="19/07/2019";
  $LicenceNo="11223355";
- $DOB_LicenceNo=$DOB.''.$LicenceNo;
  $vin_number="VIN 123456";
 
 /*$dataPOST = (file_get_contents('php://input'));
@@ -79,6 +78,25 @@ $array = json_decode($body,TRUE); */
 						
 						
 					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
+					
+ 					  if(!empty($zohoResponse['data'][0]['details']['id'])){
+				    $contactId=$zohoResponse['data'][0]['details']['id'];
+        $url = "Contacts/".$contactId;
+ 
+ 	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
+		$new_array=array(
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo,"SR22"=>$form_data['edit_driver_SR22'],"Name1"=>$drivername,"Back_up_Driver"=>"".$add_driver_Backup."","Owner_Driver"=>$Owner_Driver,"License_State"=>$form_data['edit_driver_license_state'],"Experience_Years"=>"".$new_driver_Exp."","Hire_Date"=>"".$Date_of_Hire.""
+		) ;
+		$driversData[0]=$new_array;
+			$dd=json_encode($driversData);
+			  $Contactdata = '{
+			"data": [{
+           "Drivers1":'.$dd.'
+            
+			}]}';
+			@$zohoResponse =  $handleFunctionsObject->zoho_curl($url,"PUT",$Contactdata,$old_access_token);
+ 
+					  }
  }
 /* 		}
 
