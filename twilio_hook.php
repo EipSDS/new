@@ -60,7 +60,7 @@ if(isset($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 				$check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 
 					$contactId=$check_token_valid['data'][0]['id']; 
-					$contacturl = "Contacts/".$contactId;
+					$contacturl = "Contacts";
 					 $Contactdata = '{
 								"data": [{
 								"Phone":  "'.$phone_number.'" ,
@@ -86,7 +86,7 @@ if(isset($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
            "Drivers1":'.$dd.'
             
 			}]}';
-			@$zohoResponse =  $handleFunctionsObject->zoho_curl($url,"PUT",$Contactdata1,$old_access_token);
+			@$Response =  $handleFunctionsObject->zoho_curl($url,"PUT",$Contactdata1,$old_access_token);
  
 					
  }
