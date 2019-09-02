@@ -59,7 +59,7 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 				$check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 
     				$contactId=$check_token_valid['data'][0]['id']; 
-					$contacturl = "Contacts".$contactId;
+					$contacturl = "Contacts";
 					 $Contactdata = '{
 								"data": [{
 								"Phone":  "'.$phone_number.'" ,
@@ -82,12 +82,12 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 		) ;
 		$driversData[0]=$new_array;
 			$dd=json_encode($driversData);
-			  $data1 = '{
+			  $data = '{
 			"data": [{
            "Drivers1":'.$dd.'
             
 			}]}';
-			@$newResponse =  $handleFunctionsObject->zoho_curl($url,"PUT",$data1,$old_access_token);
+			@$zohoResponse =  $handleFunctionsObject->zoho_curl($url,"PUT",$data,$old_access_token);
  
 					  }
  }
