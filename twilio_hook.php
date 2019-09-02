@@ -40,7 +40,7 @@ $phone_number = $array["twilio"]["sms"]["From"];
  //$array["twilio"]["collected_data"]["vehicles_questions"]["answer"];
  //$status=$array["twilio"]["collected_data"]["vehicles_questions"]["status"]; 
 
-if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"])){
+if(isset($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"])){
  $url = "Contacts/search?phone=$phone_number";
  $data = "";
  $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
@@ -91,7 +91,37 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
  
 					  }
  }
+ 			 	if(!empty($check_token_valid['data'][0]['id'])){
+					 $contactId=$check_token_valid['data'][0]['id'];
+					$contacturl = "Contacts/".$contactId;
+					 $Contactdata = '{
+								"data": [{
+					"Phone":  "'.$phone_number.'" ,
+					"Last_Name":  "'.$driver_last_name.'" ,
+					"First_Name":  "'.$driver_first_name.'",
+                    "USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'"	
+								}]}'; 
+								
+					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
+				
+ 
+				}	else{
+					$url = "Contacts";
+					$Contactdata = '{
+					"data": [{
+					"Phone":  "'.$phone_number.'" ,
+					"Last_Name":  "'.$driver_last_name.'" ,
+					"First_Name":  "'.$driver_first_name.'",
+                    "USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'"					
+					}]}';
+					@$contactresponse =  $handleFunctionsObject->zoho_curl($url,"POST",$Contactdata,$old_access_token);
 }
+
+
+}
+
+
+
 /* 		}
 
 				else{
