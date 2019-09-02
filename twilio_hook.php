@@ -73,7 +73,7 @@ $array = json_decode($body,TRUE); */
 								"Last_Name":  "'.$driver_last_name.'" ,
 								"First_Name":  "'.$driver_first_name.'",
 								"USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'",
-								""DOB_Age_MaritalStatus_Points_LicenceNo"":  "'.$DOB_LicenceNo.'"
+								"DOB_Age_MaritalStatus_Points_LicenceNo":  "'.$DOB_LicenceNo.'"
 								}]}'; 
 						
 						
