@@ -41,8 +41,8 @@ $array = json_decode($body,TRUE);
 
 if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"])){
  $url = "Contacts/search?phone=$phone_number";
- $data1 = "";
- $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data1,$old_access_token);
+ $data = "";
+ $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
  if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){  
 			$url = "token";
 				$data = array("refresh_token"=>$refresh_token,"client_id"=>"".$zoho_client_id."","client_secret"=>"".$zoho_client_secret."","grant_type"=>"refresh_token");
@@ -58,20 +58,19 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 				$data = "";
 				$check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 
-// 					 $contactId=$check_token_valid['data'][0]['id']; 
-					$contacturl = "Contacts";
+    				$contactId=$check_token_valid['data'][0]['id']; 
+					$contacturl = "Contacts".$contactId;
 					 $Contactdata = '{
 								"data": [{
 								"Phone":  "'.$phone_number.'" ,
 								"Last_Name":  "'.$driver_last_name.'" ,
 								"First_Name":  "'.$driver_first_name.'",
-								"USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'",
-								"Name":  "'.$driver_first_name.'",
-								"DOB_Age_MaritalStatus_Points_LicenceNo":  "'.$vin_number.'"
+								"USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'"
+		
 								}]}'; 
 						
 						
-					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
+					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
 					
 
  }
