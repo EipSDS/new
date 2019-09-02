@@ -23,7 +23,7 @@ $currenttask = $_POST['CurrentTask'];
 
 $array = json_decode($body,TRUE);  
 
-$phone_number = $array["twilio"]["sms"]["From"];
+//$phone_number = $array["twilio"]["sms"]["From"];
  $driver_first_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_first_name"]["answer"];
  $driver_last_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_last_name"]["answer"];
  $dot_number=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["type_your_dot_number"]["answer"];
