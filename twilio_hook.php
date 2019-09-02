@@ -82,12 +82,12 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 		) ;
 		$driversData[0]=$new_array;
 			$dd=json_encode($driversData);
-			  $data = '{
+			  $data1 = '{
 			"data": [{
            "Drivers1":'.$dd.'
             
 			}]}';
-			@$Response =  $handleFunctionsObject->zoho_curl($url,"PUT",$data,$old_access_token);
+			@$zohoResponse=  $handleFunctionsObject->zoho_curl($url,"PUT",$data1,$old_access_token);
  
 					  }
  }
