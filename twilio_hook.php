@@ -8,10 +8,10 @@ $handleFunctionsObject = new handleFunctions;
 $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
 
-$phone_number= 9118211;
+
 /*   $driver_last_name ="simran ";
  $driver_first_name ="simrantwest";
- 
+ $phone_number= 9118211;
  $dot_number="5444444";
  $DOB="19/07/2019";
  $LicenceNo="11223355";
@@ -23,7 +23,7 @@ $currenttask = $_POST['CurrentTask'];
 
 $array = json_decode($body,TRUE);  
 
-//$phone_number = $array["twilio"]["sms"]["From"];
+  $phone_number = $array["twilio"]["sms"]["From"];
  $driver_first_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_first_name"]["answer"];
  $driver_last_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_last_name"]["answer"];
  $dot_number=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["type_your_dot_number"]["answer"];
@@ -58,7 +58,7 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 				$data = "";
 				$check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 
-// 					 $contactId=$check_token_valid['data'][0]['id']; 
+					$contactId=$check_token_valid['data'][0]['id']; 
 					$contacturl = "Contacts";
 					 $Contactdata = '{
 								"data": [{
@@ -66,7 +66,6 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 								"Last_Name":  "'.$driver_last_name.'" ,
 								"First_Name":  "'.$driver_first_name.'",
 								"USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'",
-								"Name":  "'.$driver_first_name.'",
 								"DOB_Age_MaritalStatus_Points_LicenceNo":  "'.$vin_number.'",
 								"SR22":  "'.$form_data.'",
 								"Name1":  "'.$driver_first_name.'",
