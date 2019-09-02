@@ -74,7 +74,7 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 					
  					  if(!empty($zohoResponse['data'][0]['details']['id'])){
 				    $contactId=$zohoResponse['data'][0]['details']['id'];
-        $url = "Contacts";
+        $url = "Contacts/".$contactId;
  
  	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
 		$new_array=array(
@@ -82,12 +82,12 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 		) ;
 		$driversData[0]=$new_array;
 			$dd=json_encode($driversData);
-			  $data1 = '{
+			  $data = '{
 			"data": [{
            "Drivers1":'.$dd.'
             
 			}]}';
-			@$Response =  $handleFunctionsObject->zoho_curl($url,"PUT",$data1,$old_access_token);
+			@$Response =  $handleFunctionsObject->zoho_curl($url,"PUT",$data,$old_access_token);
  
 					  }
  }
