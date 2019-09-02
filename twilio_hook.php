@@ -9,12 +9,12 @@ $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
  $driver_last_name ="simran ";
  $driver_first_name ="simrantwest";
- $phone_number= 9459436307;
+ $phone_number= 94;
  $dot_number="5444444";
  $dot_number="5444444";
  $DOB="19/07/2019";
  $LicenceNo="11223355";
- $DOB_LicenceNo=$DOB.','.$LicenceNo;
+ $DOB_LicenceNo=$DOB.$LicenceNo;
  $vin_number="VIN 123456";
 
 /*$dataPOST = (file_get_contents('php://input'));
