@@ -9,10 +9,15 @@ $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
  $driver_last_name ="simran ";
  $driver_first_name ="simranjeet";
- $phone_number= "912544444";
+ $phone_number= "9125435094444";
  $dot_number="5444444";
- 
-/* $dataPOST = (file_get_contents('php://input'));
+ $dot_number="5444444";
+ $DOB="19/07/2019";
+ $LicenceNo="11223355";
+ $DOB_LicenceNo=$driverDOb.','.$LicenceNo;
+ $vin_number="VIN 123456";
+
+/*$dataPOST = (file_get_contents('php://input'));
 $body = $_POST['Memory'];
 $currenttask = $_POST['CurrentTask'];
 
@@ -31,7 +36,7 @@ $array = json_decode($body,TRUE); */
 
 // $driver_first_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_first_name"]["answer"];
  $driver_last_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_last_name"]["answer"];
- $vin_number_of_vehicle = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["vin_number_of_vehicle"]["answer"];
+ $vin_number = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["vin_number_of_vehicle"]["answer"];
  
  $dob=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["date_of_birth_of_driver"]["answer"];
  $licence_number=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"];
@@ -64,9 +69,11 @@ $array = json_decode($body,TRUE); */
 					$contacturl = "Contacts";
 					 $Contactdata = '{
 								"data": [{
+								"Phone":  "'.$phone_number.'" ,
 								"Last_Name":  "'.$driver_last_name.'" ,
 								"First_Name":  "'.$driver_first_name.'",
-								"USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'"
+								"USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'",
+								""DOB_Age_MaritalStatus_Points_LicenceNo"":  "'.$DOB_LicenceNo.'"
 								}]}'; 
 						
 						
