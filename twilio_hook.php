@@ -9,7 +9,7 @@ $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
  $driver_last_name ="simran ";
  $driver_first_name ="simrantwest";
- $phone_number= 94;
+ $phone_number= 945;
  $dot_number="5444444";
  $dot_number="5444444";
  $DOB="19/07/2019";
@@ -73,7 +73,7 @@ $array = json_decode($body,TRUE); */
 								"Last_Name":  "'.$driver_last_name.'" ,
 								"First_Name":  "'.$driver_first_name.'",
 								"USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'",
-								"DOB_Age_MaritalStatus_Points_LicenceNo":  "'.$DOB_LicenceNo.'"
+								"DOB_Age_MaritalStatus_Points_LicenceNo":  "'.$vin_number.'"
 								}]}'; 
 						
 						
