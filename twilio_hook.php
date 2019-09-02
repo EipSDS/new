@@ -14,7 +14,7 @@ $refresh_token = file_get_contents("refresh_token.txt");
  $dot_number="5444444";
  $DOB="19/07/2019";
  $LicenceNo="11223355";
- $DOB_LicenceNo=$DOB.$LicenceNo;
+ $DOB_LicenceNo=$DOB.','.$LicenceNo;
  $vin_number="VIN 123456";
 
 /*$dataPOST = (file_get_contents('php://input'));
