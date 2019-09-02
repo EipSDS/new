@@ -14,7 +14,7 @@ $refresh_token = file_get_contents("refresh_token.txt");
  $dot_number="5444444";
  $DOB="19/07/2019";
  $LicenceNo="11223355";
- $DOB_LicenceNo=$driverDOb.','.$LicenceNo;
+ $DOB_LicenceNo=$DOB.','.$LicenceNo;
  $vin_number="VIN 123456";
 
 /*$dataPOST = (file_get_contents('php://input'));
@@ -69,6 +69,7 @@ $array = json_decode($body,TRUE); */
 					$contacturl = "Contacts";
 					 $Contactdata = '{
 								"data": [{
+								"Phone":  "'.$phone_number.'" ,
 								"Last_Name":  "'.$driver_last_name.'" ,
 								"First_Name":  "'.$driver_first_name.'",
 								"USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'",
