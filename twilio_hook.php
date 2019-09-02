@@ -7,8 +7,11 @@ $zoho_client_secret='88c42ac4b05a8e341731956a233d89cb0399e7f3cb';
 $handleFunctionsObject = new handleFunctions;
 $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
-
-
+ $driver_last_name ="simran ";
+ $driver_first_name ="simrantestt";
+ $phone_number= "912544444";
+ //$dot_number="5444444";
+ 
 /* $dataPOST = (file_get_contents('php://input'));
 $body = $_POST['Memory'];
 $currenttask = $_POST['CurrentTask'];
@@ -16,17 +19,16 @@ $currenttask = $_POST['CurrentTask'];
 $array = json_decode($body,TRUE); */
 
 
- $phone_number = $array["twilio"]["sms"]["From"];
+/*  $phone_number = $array["twilio"]["sms"]["From"];
  $driver_first_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_first_name"]["answer"];
  $driver_last_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_last_name"]["answer"];
-$dot_number="54444444";
+
  //$dot_number=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["type_your_dot_number"]["answer"];
- $phone_number= "912544444";
+
  //$phone_number = $array["twilio"]["sms"]["From"];
  $messagesid = $array["twilio"]["sms"]["MessageSid"];
  $array["twilio"]["collected_data"]["vehicles_questions"]["answer"];
- $driver_first_name ="simran tests";
- $driver_last_name ="simran tests";
+
 // $driver_first_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_first_name"]["answer"];
  $driver_last_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_last_name"]["answer"];
  $vin_number_of_vehicle = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["vin_number_of_vehicle"]["answer"];
@@ -37,13 +39,13 @@ $dot_number="54444444";
  //$test=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"];
  //$date_completed=$array["twilio"]["collected_data"]["vehicles_questions"]["date_completed"];
  //$date_started=$array["twilio"]["collected_data"]["vehicles_questions"]["date_started"];
- $status=$array["twilio"]["collected_data"]["vehicles_questions"]["status"];
+ $status=$array["twilio"]["collected_data"]["vehicles_questions"]["status"]; */
 
-*/
+
  $url = "Contacts/search?phone=$phone_number";
  $data = "";
- $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"POST",$data,$old_access_token);
-/*  		if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){  */
+ $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
+ if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){  
 			$url = "token";
 				$data = array("refresh_token"=>$refresh_token,"client_id"=>"".$zoho_client_id."","client_secret"=>"".$zoho_client_secret."","grant_type"=>"refresh_token");
 				$get_new_token = $handleFunctionsObject-> zoho_auth($url,"POST",$data);
@@ -62,15 +64,13 @@ $dot_number="54444444";
 					$contacturl = "Contacts";
 					 $Contactdata = '{
 								"data": [{
-								"Phone":  "'.$phone_number.'" ,
 								"Last_Name":  "'.$driver_last_name.'" ,
-								"First_Name":  "'.$driver_first_name.'", 
-								"USDOT_associated_with_the_insured_s_business": "'.$dot_number.'"
+								"First_Name":  "'.$driver_first_name.'"
 								}]}'; 
 						
 						
 					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
-
+ }
 /* 		}
 
 				else{
