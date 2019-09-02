@@ -59,8 +59,8 @@ if(isset($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 				$data = "";
 				$check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 
-// 					 $contactId=$check_token_valid['data'][0]['id']; 
-					$contacturl = "Contacts".$contactId;
+					$contactId=$check_token_valid['data'][0]['id']; 
+					$contacturl = "Contacts";
 					 $Contactdata = '{
 								"data": [{
 								"Phone":  "'.$phone_number.'" ,
@@ -72,11 +72,10 @@ if(isset($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 						
 					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
 					
- 					  if(!empty($zohoResponse['data'][0]['details']['id'])){
-				    $contactId=$zohoResponse['data'][0]['details']['id'];
+        $DOB_LicenceNo=$DOB.','.$LicenceNo;
         $url = "Contacts/".$contactId;
  
- 	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
+ 	    
 		$new_array=array(
 		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo,"SR22"=>$form_data['edit_driver_SR22'],"Name1"=>$drivername,"Back_up_Driver"=>"".$add_driver_Backup."","Owner_Driver"=>$Owner_Driver,"License_State"=>$form_data['edit_driver_license_state'],"Experience_Years"=>"".$new_driver_Exp."","Hire_Date"=>"".$Date_of_Hire.""
 		) ;
@@ -89,7 +88,7 @@ if(isset($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 			}]}';
 			@$Response =  $handleFunctionsObject->zoho_curl($url,"PUT",$Contactdata1,$old_access_token);
  
-					  }
+					
  }
  			 	if(!empty($check_token_valid['data'][0]['id'])){
 					 $contactId=$check_token_valid['data'][0]['id'];
