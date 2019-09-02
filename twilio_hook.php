@@ -8,9 +8,9 @@ $handleFunctionsObject = new handleFunctions;
 $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
  $driver_last_name ="simran ";
- $driver_first_name ="simrantestt";
+ $driver_first_name ="simranjeet";
  $phone_number= "912544444";
- //$dot_number="5444444";
+ $dot_number="5444444";
  
 /* $dataPOST = (file_get_contents('php://input'));
 $body = $_POST['Memory'];
@@ -65,7 +65,8 @@ $array = json_decode($body,TRUE); */
 					 $Contactdata = '{
 								"data": [{
 								"Last_Name":  "'.$driver_last_name.'" ,
-								"First_Name":  "'.$driver_first_name.'"
+								"First_Name":  "'.$driver_first_name.'",
+								"USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'"
 								}]}'; 
 						
 						
