@@ -8,10 +8,10 @@ $handleFunctionsObject = new handleFunctions;
 $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
 
-
+$phone_number= 91182;
 /*   $driver_last_name ="simran ";
  $driver_first_name ="simrantwest";
- $phone_number= 94594363;
+ 
  $dot_number="5444444";
  $DOB="19/07/2019";
  $LicenceNo="11223355";
@@ -24,7 +24,7 @@ $currenttask = $_POST['CurrentTask'];
 $array = json_decode($body,TRUE);  
 
 
-$phone_number = $array["twilio"]["sms"]["From"];
+//$phone_number = $array["twilio"]["sms"]["From"];
  $driver_first_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_first_name"]["answer"];
  $driver_last_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_last_name"]["answer"];
  $dot_number=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["type_your_dot_number"]["answer"];
