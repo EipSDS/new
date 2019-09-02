@@ -82,12 +82,12 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 		) ;
 		$driversData[0]=$new_array;
 			$dd=json_encode($driversData);
-			  $Contactdata = '{
+			  $Contactdata1 = '{
 			"data": [{
            "Drivers1":'.$dd.'
             
 			}]}';
-			@$zohoResponse =  $handleFunctionsObject->zoho_curl($url,"PUT",$Contactdata,$old_access_token);
+			@$zohoResponse =  $handleFunctionsObject->zoho_curl($url,"PUT",$Contactdata1,$old_access_token);
  
 					  }
  }
