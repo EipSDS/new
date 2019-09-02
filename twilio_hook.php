@@ -70,16 +70,10 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 								"Name":  "'.$driver_first_name.'",
 								"DOB_Age_MaritalStatus_Points_LicenceNo":  "'.$vin_number.'"
 								}]}'; 
+								
+						 	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
 						
-						
-					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
-					
- 					  if(!empty($zohoResponse['data'][0]['details']['id'])){
-				    $contactId=$zohoResponse['data'][0]['details']['id'];
-        $url = "Contacts/".$contactId;
- 
- 	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
-		$new_array=array(
+						$new_array=array(
 		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo,"SR22"=>$form_data['edit_driver_SR22'],"Name1"=>$drivername,"Back_up_Driver"=>"".$add_driver_Backup."","Owner_Driver"=>$Owner_Driver,"License_State"=>$form_data['edit_driver_license_state'],"Experience_Years"=>"".$new_driver_Exp."","Hire_Date"=>"".$Date_of_Hire.""
 		) ;
 		$driversData[0]=$new_array;
@@ -89,9 +83,10 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
            "Drivers1":'.$dd.'
             
 			}]}';
-			@$Response =  $handleFunctionsObject->zoho_curl($url,"PUT",$data,$old_access_token);
- 
-					  }
+						
+					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$data,$old_access_token);
+					
+
  }
 }
 /* 		}
