@@ -105,17 +105,7 @@ if(isset($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
 				
  
-				}	else{
-					$url = "Contacts";
-					$Contactdata = '{
-					"data": [{
-					"Phone":  "'.$phone_number.'" ,
-					"Last_Name":  "'.$driver_last_name.'" ,
-					"First_Name":  "'.$driver_first_name.'",
-                    "USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'"					
-					}]}';
-					@$contactresponse =  $handleFunctionsObject->zoho_curl($url,"POST",$Contactdata,$old_access_token);
-}
+				}
 
 
 }
