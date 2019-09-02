@@ -8,7 +8,7 @@ $handleFunctionsObject = new handleFunctions;
 $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
 
-$phone_number= 911822222;
+$phone_number= 9118211;
 /*   $driver_last_name ="simran ";
  $driver_first_name ="simrantwest";
  
@@ -23,8 +23,7 @@ $currenttask = $_POST['CurrentTask'];
 
 $array = json_decode($body,TRUE);  
 
-
-//$phone_number = $array["twilio"]["sms"]["From"];
+$phone_number = $array["twilio"]["sms"]["From"];
  $driver_first_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_first_name"]["answer"];
  $driver_last_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_last_name"]["answer"];
  $dot_number=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["type_your_dot_number"]["answer"];
@@ -68,23 +67,19 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 								"First_Name":  "'.$driver_first_name.'",
 								"USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'",
 								"Name":  "'.$driver_first_name.'",
-								"DOB_Age_MaritalStatus_Points_LicenceNo":  "'.$vin_number.'"
-								}]}'; 
+								"DOB_Age_MaritalStatus_Points_LicenceNo":  "'.$vin_number.'",
+								"SR22":  "'.$form_data.'",
+								"Name1":  "'.$driver_first_name.'",
+								"Back_up_Driver":  "'.$add_driver_Backup.'",
+								"Owner_Driver":  "'.$add_driver_Backup.'",
+								"License_State":  "'.$add_driver_Backup.'",
+								"Experience_Years":  "'.$add_driver_Backup.'",
+								"Hire_Date":  "'.$add_driver_Backup.'",
 								
-						 	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
+								}]}'; 
 						
-						$new_array=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo,"SR22"=>$form_data['edit_driver_SR22'],"Name1"=>$drivername,"Back_up_Driver"=>"".$add_driver_Backup."","Owner_Driver"=>$Owner_Driver,"License_State"=>$form_data['edit_driver_license_state'],"Experience_Years"=>"".$new_driver_Exp."","Hire_Date"=>"".$Date_of_Hire.""
-		) ;
-		$driversData[0]=$new_array;
-			$dd=json_encode($driversData);
-			  $data = '{
-			"data": [{
-           "Drivers1":'.$dd.'
-            
-			}]}';
 						
-					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$data,$old_access_token);
+					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
 					
 
  }
