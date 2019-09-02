@@ -11,7 +11,7 @@ $refresh_token = file_get_contents("refresh_token.txt");
 
 /*   $driver_last_name ="simran ";
  $driver_first_name ="simrantwest";
- $phone_number= 9118211;
+ $phone_number= 91182;
  $dot_number="5444444";
  $DOB="19/07/2019";
  $LicenceNo="11223355";
@@ -23,7 +23,7 @@ $currenttask = $_POST['CurrentTask'];
 
 $array = json_decode($body,TRUE);  
 
-  $phone_number = $array["twilio"]["sms"]["From"];
+ $phone_number = $array["twilio"]["sms"]["From"];
  $driver_first_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_first_name"]["answer"];
  $driver_last_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_last_name"]["answer"];
  $dot_number=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["type_your_dot_number"]["answer"];
@@ -39,10 +39,10 @@ $array = json_decode($body,TRUE);
  //$array["twilio"]["collected_data"]["vehicles_questions"]["answer"];
  //$status=$array["twilio"]["collected_data"]["vehicles_questions"]["status"]; 
 
-if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"])){
+if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"])){
  $url = "Contacts/search?phone=$phone_number";
- $data = "";
- $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
+ $data1 = "";
+ $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data1,$old_access_token);
  if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){  
 			$url = "token";
 				$data = array("refresh_token"=>$refresh_token,"client_id"=>"".$zoho_client_id."","client_secret"=>"".$zoho_client_secret."","grant_type"=>"refresh_token");
@@ -58,7 +58,7 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 				$data = "";
 				$check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 
-					$contactId=$check_token_valid['data'][0]['id']; 
+// 					 $contactId=$check_token_valid['data'][0]['id']; 
 					$contacturl = "Contacts";
 					 $Contactdata = '{
 								"data": [{
@@ -66,15 +66,8 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 								"Last_Name":  "'.$driver_last_name.'" ,
 								"First_Name":  "'.$driver_first_name.'",
 								"USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'",
-								"DOB_Age_MaritalStatus_Points_LicenceNo":  "'.$vin_number.'",
-								"SR22":  "'.$form_data.'",
-								"Name1":  "'.$driver_first_name.'",
-								"Back_up_Driver":  "'.$add_driver_Backup.'",
-								"Owner_Driver":  "'.$add_driver_Backup.'",
-								"License_State":  "'.$add_driver_Backup.'",
-								"Experience_Years":  "'.$add_driver_Backup.'",
-								"Hire_Date":  "'.$add_driver_Backup.'",
-								
+								"Name":  "'.$driver_first_name.'",
+								"DOB_Age_MaritalStatus_Points_LicenceNo":  "'.$vin_number.'"
 								}]}'; 
 						
 						
