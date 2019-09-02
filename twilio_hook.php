@@ -8,27 +8,27 @@ $handleFunctionsObject = new handleFunctions;
 $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
 
-  $driver_last_name ="simran ";
+/*   $driver_last_name ="simran ";
  $driver_first_name ="simrantwest";
  $phone_number= 945943;
  $dot_number="5444444";
  $DOB="19/07/2019";
- //$LicenceNo="11223355";
+ $LicenceNo="11223355";
  $vin_number="VIN 123456"; 
-
-/* $dataPOST = (file_get_contents('php://input'));
+ */
+$dataPOST = (file_get_contents('php://input'));
 $body = $_POST['Memory'];
 $currenttask = $_POST['CurrentTask'];
 
 $array = json_decode($body,TRUE);  */
 
 
- //$phone_number = $array["twilio"]["sms"]["From"];
- //$driver_first_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_first_name"]["answer"];
- //$driver_last_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_last_name"]["answer"];
- //$dot_number=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["type_your_dot_number"]["answer"];
- //$vin_number = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["vin_number_of_vehicle"]["answer"];
- //$DOB=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["date_of_birth_of_driver"]["answer"];
+ $phone_number = $array["twilio"]["sms"]["From"];
+ $driver_first_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_first_name"]["answer"];
+ $driver_last_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_last_name"]["answer"];
+ $dot_number=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["type_your_dot_number"]["answer"];
+ $vin_number = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["vin_number_of_vehicle"]["answer"];
+ $DOB=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["date_of_birth_of_driver"]["answer"];
  $LicenceNo=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"];
  $linsance_test=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"];
  
@@ -39,7 +39,7 @@ $array = json_decode($body,TRUE);  */
  //$array["twilio"]["collected_data"]["vehicles_questions"]["answer"];
  //$status=$array["twilio"]["collected_data"]["vehicles_questions"]["status"]; 
 
-if(empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"])){
+if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"])){
  $url = "Contacts/search?phone=$phone_number";
  $data = "";
  $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
