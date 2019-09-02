@@ -66,9 +66,7 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 								"Phone":  "'.$phone_number.'" ,
 								"Last_Name":  "'.$driver_last_name.'" ,
 								"First_Name":  "'.$driver_first_name.'",
-								"USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'",
-								"Name":  "'.$driver_first_name.'",
-								"DOB_Age_MaritalStatus_Points_LicenceNo":  "'.$vin_number.'"
+								"USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'"
 								}]}'; 
 						
 						
