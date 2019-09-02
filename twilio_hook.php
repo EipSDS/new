@@ -60,7 +60,7 @@ if(isset($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 				$check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 
 					$contactId=$check_token_valid['data'][0]['id']; 
-					$contacturl = "Contacts";
+					$contacturl = "Contacts/"$contactId;
 					 $Contactdata = '{
 								"data": [{
 								"Phone":  "'.$phone_number.'" ,
@@ -72,8 +72,8 @@ if(isset($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 						
 					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
 					
- 					  if(!empty($zohoResponse['data'][0]['details']['id'])){
-				    $contactId=$zohoResponse['data'][0]['details']['id'];
+ 					  if(!empty($check_token_valid['data'][0]['id'])){
+				    $contactId=$check_token_valid['data'][0]['id'];
         $url = "Contacts/".$contactId;
  
  	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
