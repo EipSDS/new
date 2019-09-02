@@ -74,7 +74,7 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 					
  					  if(!empty($zohoResponse['data'][0]['details']['id'])){
 				    $contactId=$zohoResponse['data'][0]['details']['id'];
-        $url = "Contacts/".$contactId;
+        $url = "Contacts";
  
  	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
 		$new_array=array(
