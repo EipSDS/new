@@ -69,7 +69,6 @@ $array = json_decode($body,TRUE); */
 					$contacturl = "Contacts";
 					 $Contactdata = '{
 								"data": [{
-								"Phone":  "'.$phone_number.'" ,
 								"Last_Name":  "'.$driver_last_name.'" ,
 								"First_Name":  "'.$driver_first_name.'",
 								"USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'",
