@@ -8,7 +8,7 @@ $handleFunctionsObject = new handleFunctions;
 $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
 
-$phone_number= 911822;
+$phone_number= 91182;
 /*   $driver_last_name ="simran ";
  $driver_first_name ="simrantwest";
  
@@ -60,7 +60,7 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 				$check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 
 // 					 $contactId=$check_token_valid['data'][0]['id']; 
-					 $contacturl = "Contacts";
+					$contacturl = "Contacts";
 					 $Contactdata = '{
 								"data": [{
 								"Phone":  "'.$phone_number.'" ,
@@ -71,22 +71,27 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 								"DOB_Age_MaritalStatus_Points_LicenceNo":  "'.$vin_number.'"
 								}]}'; 
 						
-						 	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
+						
+					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
+					
+ 					  if(!empty($zohoResponse['data'][0]['details']['id'])){
+				    $contactId=$zohoResponse['data'][0]['details']['id'];
+        $url = "Contacts/".$contactId;
+ 
+ 	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
 		$new_array=array(
 		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo,"SR22"=>$form_data['edit_driver_SR22'],"Name1"=>$drivername,"Back_up_Driver"=>"".$add_driver_Backup."","Owner_Driver"=>$Owner_Driver,"License_State"=>$form_data['edit_driver_license_state'],"Experience_Years"=>"".$new_driver_Exp."","Hire_Date"=>"".$Date_of_Hire.""
-		);
+		) ;
 		$driversData[0]=$new_array;
 			$dd=json_encode($driversData);
-			  $Contactdata = '{
+			  $data = '{
 			"data": [{
            "Drivers1":'.$dd.'
             
 			}]}';
-						
-						
-						
-					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
-					
+			@$Response =  $handleFunctionsObject->zoho_curl($url,"PUT",$data,$old_access_token);
+ 
+					  }
  }
 }
 /* 		}
