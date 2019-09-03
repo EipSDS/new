@@ -42,11 +42,11 @@ $phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
 //if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"])){
  $url = "Contacts/search?phone=$phone_number";
  $data = "";
- $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"getRecord",$data,$old_access_token);
+ $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 
  echo '<script type="text/javascript">alert("'.$check_token_valid['code'].'");</script>';
  echo '<script type="text/javascript">console.log("'.$check_token_valid.'");</script>';
-  exit();
+  
  if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){  
 			$url = "token";
 				$data = array("refresh_token"=>$refresh_token,"client_id"=>"".$zoho_client_id."","client_secret"=>"".$zoho_client_secret."","grant_type"=>"refresh_token");
@@ -61,6 +61,8 @@ $phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
 				 $url = "Contacts/search?phone=$phone_number";
 				$data = "";
 				$check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
+				echo '<script type="text/javascript">alert("'.$$check_token_valid.'");</script>';
+				exit();
                     if(!empty($check_token_valid['data'][0]['id'])){
  					$contactId=$check_token_valid['data'][0]['id']; 
 					$contacturl = "Contacts/".$contactId;
