@@ -126,7 +126,7 @@ $phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
 					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
 					
 					}
-			else{
+/* 			else{
 					$contacturl = "Contacts";
 					 $Contactdata = '{
 								"data": [{
@@ -166,7 +166,7 @@ $phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
  
 					  } 
  
-				}
+				} */
 				
 }  
 
