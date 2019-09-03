@@ -9,15 +9,15 @@ $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
 
 
-/*   $driver_last_name ="simran ";
+  $driver_last_name ="simran ";
  $driver_first_name ="simrantwest";
  $phone_number= 9;
  $dot_number="5444444";
  $DOB="19/07/2019";
  $LicenceNo="11223355";
  $vin_number="VIN 123456"; 
- */
-$dataPOST = (file_get_contents('php://input'));
+
+/* $dataPOST = (file_get_contents('php://input'));
 $body = $_POST['Memory'];
 $currenttask = $_POST['CurrentTask'];
 
@@ -31,7 +31,7 @@ $phone_number = $array["twilio"]["sms"]["From"];
  $vin_number = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["vin_number_of_vehicle"]["answer"];
  $DOB=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["date_of_birth_of_driver"]["answer"];
  $LicenceNo=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"];
- $linsance_test=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"];
+ $linsance_test=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]; */
  $DOB_LicenceNo=$DOB.$LicenceNo;
  //$test=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"];
  //$date_completed=$array["twilio"]["collected_data"]["vehicles_questions"]["date_completed"];
@@ -44,6 +44,9 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
  $url = "Contacts/search?phone=$phone_number";
  $data = "";
  $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
+
+ echo '<script type="text/javascript">alert("'.$check_token_valid.'");</script>';
+ 
  if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){  
 			$url = "token";
 				$data = array("refresh_token"=>$refresh_token,"client_id"=>"".$zoho_client_id."","client_secret"=>"".$zoho_client_secret."","grant_type"=>"refresh_token");
