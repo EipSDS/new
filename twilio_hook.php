@@ -90,11 +90,11 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
  					  if(!empty($contactresponse['data'][0]['details']['id'])){
 				    $contactId=$contactresponse['data'][0]['details']['id'];
        
-	   
 	   $url = "Contacts/".$contactId;
+ 
  	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
 		$new_array=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo,"SR22"=>$form_data['edit_driver_SR22'],"Name1"=>$drivername,"Back_up_Driver"=>"".$add_driver_Backup.""
 		) ;
 		$driversData[0]=$new_array;
 			$dd=json_encode($driversData);
