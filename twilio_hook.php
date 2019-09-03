@@ -8,8 +8,6 @@ $handleFunctionsObject = new handleFunctions;
 $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
 
-echo '<script type="text/javascript">alert("'.$old_access_token.'");</script>';
-exit();
   $driver_last_name ="simran ";
  $driver_first_name ="simrantwest";
  $phone_number= 11155375672;
@@ -25,7 +23,7 @@ $currenttask = $_POST['CurrentTask'];
 $array = json_decode($body,TRUE);  
 
 
-$phone_number = $array["twilio"]["sms"]["From"];
+$phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
  $driver_first_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_first_name"]["answer"];
  $driver_last_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_last_name"]["answer"];
  $dot_number=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["type_your_dot_number"]["answer"];
@@ -44,9 +42,9 @@ $phone_number = $array["twilio"]["sms"]["From"];
 //if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"])){
  $url = "Contacts/search?phone=$phone_number";
  $data = "";
- $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
+ $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"getRecord",$data,$old_access_token);
 
- echo '<script type="text/javascript">alert("'.$check_token_valid.'");</script>';
+ echo '<script type="text/javascript">alert("'.$check_token_valid['code'].'");</script>';
  echo '<script type="text/javascript">console.log("'.$check_token_valid.'");</script>';
   exit();
  if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){  
