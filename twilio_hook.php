@@ -92,8 +92,7 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 					  }
  }
  			else{ 	
-					
-					$contacturl = "Contacts";
+					$contacturl = "Contacts/".$contactId;
 					 $Contactdata = '{
 								"data": [{
 					"Phone":  "'.$phone_number.'" ,
