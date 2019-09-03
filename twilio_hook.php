@@ -94,7 +94,7 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
  
  	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
 		$new_array=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo,"SR22"=>$form_data['edit_driver_SR22'],"Name1"=>$drivername,"Back_up_Driver"=>"".$add_driver_Backup.""
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo,"SR22"=>$form_data['edit_driver_SR22']
 		) ;
 		$driversData[0]=$new_array;
 			$dd=json_encode($driversData);
