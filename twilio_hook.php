@@ -71,6 +71,7 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 						
 						
 					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
+					
 					}
 					
  
@@ -86,6 +87,25 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 								
 					@$contactresponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
 				
+				 		if(!empty($check_token_valid['data'][0]['id'])){
+				   $contactId=$check_token_valid['data'][0]['id']; 
+       
+	   $url = "Contacts/".$contactId;
+ 
+ 	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
+		$new_array=array(
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo,"SR22"=>$form_data['edit_driver_SR22'],"Name1"=>$drivername,"Back_up_Driver"=>"".$add_driver_Backup."","Owner_Driver"=>$Owner_Driver,"License_State"=>$form_data['edit_driver_license_state'],"Experience_Years"=>"".$new_driver_Exp."","Hire_Date"=>"".$Date_of_Hire.""
+		) ;
+		$driversData[0]=$new_array;
+			$dd=json_encode($driversData);
+			  $data1 = '{
+			"data": [{
+           "Drivers1":'.$dd.'
+            
+			}]}';
+			@$Response =  $handleFunctionsObject->zoho_curl($url,"PUT",$data1,$old_access_token);
+ 
+					  }
  
 				}
 
@@ -107,7 +127,17 @@ else{
 					
 				   
 					
-				}
+				}else{
+					$url = "Contacts";
+					$Contactdata = '{
+								"data": [{
+					"Phone":  "'.$phone_number.'" ,
+					"Last_Name":  "'.$driver_last_name.'" ,
+					"First_Name":  "'.$driver_first_name.'",
+                    "USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'"	
+								}]}'; 
+					@$contactresponse =  $handleFunctionsObject->zoho_curl($url,"POST",$Contactdata,$old_access_token);  
+				} 
 				
 			}
 
