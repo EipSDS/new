@@ -87,8 +87,8 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 								
 					@$contactresponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
 				
-				 		if(!empty($check_token_valid['data'][0]['id'])){
-				   $contactId=$check_token_valid['data'][0]['id']; 
+ 					  if(!empty($zohoResponse['data'][0]['details']['id'])){
+				    $contactId=$zohoResponse['data'][0]['details']['id'];
        
 	   $url = "Contacts/".$contactId;
  
@@ -111,10 +111,7 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 
 }
 else{
-				
-			 	if(!empty($check_token_valid['data'][0]['id'])){
-					 $contactId=$check_token_valid['data'][0]['id'];
-					$contacturl = "Contacts/".$contactId;
+					 $contacturl = "Contacts";
 					 $Contactdata = '{
 								"data": [{
 					"Phone":  "'.$phone_number.'" ,
@@ -123,10 +120,9 @@ else{
                     "USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'"	
 								}]}'; 
 								
-					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
-					
-				 				 		if(!empty($check_token_valid['data'][0]['id'])){
-				   $contactId=$check_token_valid['data'][0]['id']; 
+					@$contactresponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);		
+ 					  if(!empty($zohoResponse['data'][0]['details']['id'])){
+				    $contactId=$zohoResponse['data'][0]['details']['id'];
        
 	   $url = "Contacts/".$contactId;
  
@@ -143,9 +139,7 @@ else{
 			}]}';
 			@$contactresponse =  $handleFunctionsObject->zoho_curl($url,"POST",$data1,$old_access_token);
  
-					  }  
-					
-				}
+					  }
 				
 			}
 
