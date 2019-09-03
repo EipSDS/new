@@ -89,16 +89,15 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 					"DOB_Age_MaritalStatus_Points_LicenceNo":  "'.$DOB_LicenceNo.'"
 					}]}'; 
 								
-					@$contactresponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
+					@$contactresponse =  $handleFunctionsObject->zoho_curl($contacturl,"GET",$Contactdata,$old_access_token);
 				
-/*  					  if(!empty($contactresponse['data'][0]['details']['id'])){
-				    $contactId=$contactresponse['data'][0]['details']['id'];
+				    $Id=$contactresponse['data'][0]['details']['id'];
        
-	   $url = "Contacts/".$contactId;
+	    $url = "Contacts/".$Id;
  
  	    $DOB_LicenceNo=$DOB.$LicenceNo;
 		$new_array=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo
+		"DOB_Age_MaritalStatus_Points_LicenceNo" => $DOB_LicenceNo
 		) ;
 		$driversData[0]=$new_array;
 			$dd=json_encode($driversData);
@@ -108,8 +107,8 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
             
 			}]}';
 			@$response =  $handleFunctionsObject->zoho_curl($url,"PUT",$data1,$old_access_token);
- 
-					  } */
+            @$cresponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
+					  } 
  
 				}
 
