@@ -8,10 +8,11 @@ $handleFunctionsObject = new handleFunctions;
 $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
 
-
+echo '<script type="text/javascript">alert("'.$old_access_token.'");</script>';
+exit();
   $driver_last_name ="simran ";
  $driver_first_name ="simrantwest";
- $phone_number= 1115537972;
+ $phone_number= 11155375672;
  $dot_number="5444444";
  $DOB="19/07/2019";
  $LicenceNo="11223355";
