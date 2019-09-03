@@ -114,7 +114,7 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 				}
 
 }
- /* else{
+/*  else{
                     if(!empty($check_token_valid['data'][0]['id'])){
  					$contactId=$check_token_valid['data'][0]['id']; 
 					$contacturl = "Contacts/".$contactId;
@@ -168,18 +168,36 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 			
 			@$zresponse =  $handleFunctionsObject->zoho_curl($url,"PUT",$data1,$old_access_token);
  
-					  } */
+					  } 
  
 				}
 				
-} 
+}  */
 
 			
 }
 
 
 
+/* 		}
 
+				else{
+						echo "failed";
+			
+
+ }  */
+
+/* else{
+					 $contactId=$check_token_valid['data'][0]['id'];
+					$url = "Contacts/".$contactId;
+			 $Contact = '{
+			"data": [{
+			"Phone":  "'.$from.'" ,
+			"Last_Name":  "'.$driver_first_name.'" ,
+			"First_Name":  "'.$driver_last_name.'" ,
+			}]}';	
+								
+					@$zohoResponse =  $handleFunctionsObject->zoho_curl($url,"POST",$Contact,$old_access_token); */
 					
 
 ?>
