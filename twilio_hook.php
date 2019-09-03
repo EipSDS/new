@@ -8,15 +8,15 @@ $handleFunctionsObject = new handleFunctions;
 $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
 
-  $driver_last_name ="simran ";
+/*   $driver_last_name ="simran ";
  $driver_first_name ="simrantwest";
  $phone_number= 11155672;
  $dot_number="5444444";
  $DOB="19/07/2019";
  $LicenceNo="11223355";
- $vin_number="VIN 123456"; 
+ $vin_number="VIN 123456";  */
 
-/* $dataPOST = (file_get_contents('php://input'));
+ $dataPOST = (file_get_contents('php://input'));
 $body = $_POST['Memory'];
 $currenttask = $_POST['CurrentTask'];
 
@@ -39,7 +39,7 @@ $phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
  //$array["twilio"]["collected_data"]["vehicles_questions"]["answer"];
  //$status=$array["twilio"]["collected_data"]["vehicles_questions"]["status"]; 
 
-//if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"])){
+ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"])){
  $url = "Contacts/search?phone=$phone_number";
  $data = "";
  $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
@@ -58,8 +58,6 @@ $phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
 				 $url = "Contacts/search?phone=$phone_number";
 				$data = "";
 				$check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
-				echo '<script type="text/javascript">console.log("'.$check_token_valid['data'].'");</script>';
-				exit();
                     if(!empty($check_token_valid['data'][0]['id'])){
  					$contactId=$check_token_valid['data'][0]['id']; 
 					$contacturl = "Contacts/".$contactId;
@@ -111,8 +109,8 @@ $phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
  
 				}
 
-//}
-/*  else{
+}
+ else{
                     if(!empty($check_token_valid['data'][0]['id'])){
  					$contactId=$check_token_valid['data'][0]['id']; 
 					$contacturl = "Contacts/".$contactId;
@@ -144,13 +142,13 @@ $phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
 					@$contactresponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
 				
  					  if(!empty($contactresponse['data'][0]['details']['id'])){
-				    $contactId=$contactresponse['data'][0]['details']['id'];
+				    $Id=$contactresponse['data'][0]['details']['id'];
        
-	   $url = "Contacts/".$contactId;
+	   $url = "Contacts/".$Id;
  
  	    $DOB_LicenceNo=$DOB.$LicenceNo;
 		$new_array=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo
+		"Name1"=>$driver_last_name,"DOB_Age_MaritalStatus_Points_LicenceNo" => $DOB_LicenceNo
 		) ;
 		$driversData[0]=$new_array;
 			$dd=json_encode($driversData);
@@ -170,7 +168,7 @@ $phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
  
 				}
 				
-}  */
+}  
 
 			
 }
