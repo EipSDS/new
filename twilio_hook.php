@@ -83,7 +83,8 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 					"Last_Name":  "'.$driver_last_name.'" ,
 					"First_Name":  "'.$driver_first_name.'",
                     "USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'"
-                    },					
+					 }],
+                    "data": [{					 
 					"Drivers1": {	
 					"DOB_Age_MaritalStatus_Points_LicenceNo":"'.$DOB_LicenceNo.'"
 					}]}';
@@ -137,7 +138,8 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 					"Last_Name":  "'.$driver_last_name.'" ,
 					"First_Name":  "'.$driver_first_name.'",
                     "USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'"
-                    },					
+					 }],
+                    "data": [{					 
 					"Drivers1": {	
 					"DOB_Age_MaritalStatus_Points_LicenceNo":"'.$DOB_LicenceNo.'"
 					}]}';
