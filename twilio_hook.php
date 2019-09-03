@@ -90,8 +90,8 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
  					  if(!empty($contactresponse['data'][0]['details']['id'])){
 				    $contactId=$contactresponse['data'][0]['details']['id'];
        
+	   
 	   $url = "Contacts/".$contactId;
- 
  	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
 		$new_array=array(
 		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo
