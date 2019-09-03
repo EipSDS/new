@@ -92,7 +92,7 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
        
 	   $url = "Contacts/".$contactId;
  
- 	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
+ 	    $DOB_LicenceNo=$DOB.$LicenceNo;
 		$new_array=array(
 		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo
 		) ;
@@ -103,7 +103,7 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
            "Drivers1":'.$dd.'
             
 			}]}';
-			@$contactresponse =  $handleFunctionsObject->zoho_curl($url,"PUT",$data1,$old_access_token);
+			@$response =  $handleFunctionsObject->zoho_curl($url,"PUT",$data1,$old_access_token);
  
 					  }
  
@@ -143,7 +143,7 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
        
 	   $url = "Contacts/".$contactId;
  
- 	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
+ 	    $DOB_LicenceNo=$DOB.$LicenceNo;
 		$new_array=array(
 		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo
 		) ;
