@@ -103,7 +103,7 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
            "Drivers1":'.$dd.'
             
 			}]}';
-			@$contactresponse =  $handleFunctionsObject->zoho_curl($url,"POST",$data1,$old_access_token);
+			@$response =  $handleFunctionsObject->zoho_curl($url,"PUT",$data1,$old_access_token);
  
 					  }
  
