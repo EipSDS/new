@@ -85,7 +85,7 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
                     "USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'"	
 								}]}'; 
 								
-					@$contactresponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
+					@$contactresponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
 				
  					  if(!empty($contactresponse['data'][0]['details']['id'])){
 				    $contactId=$contactresponse['data'][0]['details']['id'];
@@ -103,7 +103,7 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
            "Drivers1":'.$dd.'
             
 			}]}';
-			@$contactresponse =  $handleFunctionsObject->zoho_curl($url,"PUT",$data1,$old_access_token);
+			@$contactresponse =  $handleFunctionsObject->zoho_curl($url,"POST",$data1,$old_access_token);
  
 					  }
  
@@ -120,7 +120,7 @@ else{
                     "USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'"	
 								}]}'; 
 								
-					@$contactresponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);		
+					@$contactresponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);		
  					  if(!empty($contactresponse['data'][0]['details']['id'])){
 				    $contactId=$contactresponse['data'][0]['details']['id'];
        
@@ -137,7 +137,7 @@ else{
            "Drivers1":'.$dd.'
             
 			}]}';
-			@$contactresponse =  $handleFunctionsObject->zoho_curl($url,"PUT",$data1,$old_access_token);
+			@$contactresponse =  $handleFunctionsObject->zoho_curl($url,"POST",$data1,$old_access_token);
  
 					  }
 				
