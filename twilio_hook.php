@@ -83,13 +83,9 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 					"Last_Name":  "'.$driver_last_name.'" ,
 					"First_Name":  "'.$driver_first_name.'",
                     "USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'"
-								},
-					"Drivers1": {
-					"Name1":  "'.$driver_first_name.'",	
-					"DOB_Age_MaritalStatus_Points_LicenceNo":  "'.$DOB_LicenceNo.'"
-					}]}'; 
+								}]}'; 
 								
-					@$contactresponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
+					@$contactresponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
 				
  					  if(!empty($contactresponse['data'][0]['details']['id'])){
 				    $Id=$contactresponse['data'][0]['details']['id'];
@@ -98,7 +94,7 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
  
  	    $DOB_LicenceNo=$DOB.$LicenceNo;
 		$new_array=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo" => $DOB_LicenceNo
+		"Name1"=>$driver_last_name,"DOB_Age_MaritalStatus_Points_LicenceNo" => $DOB_LicenceNo
 		) ;
 		$driversData[0]=$new_array;
 			$dd=json_encode($driversData);
@@ -107,7 +103,7 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
            "Drivers1":'.$dd.'
             
 			}]}';
-			@$response =  $handleFunctionsObject->zoho_curl($url,"POST",$data1,$old_access_token);
+			@$response =  $handleFunctionsObject->zoho_curl($url,"PUT",$data1,$old_access_token);
  
 					  } 
  
