@@ -70,7 +70,7 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 								}]}'; 
 						
 						
-					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
+					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
 					
 					}
 					
@@ -82,7 +82,8 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 					"Phone":  "'.$phone_number.'" ,
 					"Last_Name":  "'.$driver_last_name.'" ,
 					"First_Name":  "'.$driver_first_name.'",
-                    "USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'"
+                    "USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'",	
+                    "DOB_Age_MaritalStatus_Points_LicenceNo":"'.$DOB_LicenceNo.'"
 								}]}'; 
 								
 					@$contactresponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
