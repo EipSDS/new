@@ -46,6 +46,7 @@ $phone_number = $array["twilio"]["sms"]["From"];
  $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 
  echo '<script type="text/javascript">alert("'.$check_token_valid.'");</script>';
+ echo '<script type="text/javascript">console.log("'.$check_token_valid.'");</script>';
   exit();
  if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){  
 			$url = "token";
