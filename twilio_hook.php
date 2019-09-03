@@ -10,7 +10,7 @@ $refresh_token = file_get_contents("refresh_token.txt");
 
   $driver_last_name ="simran ";
  $driver_first_name ="simrantwest";
- $phone_number= 11155375672;
+ $phone_number= 11155672;
  $dot_number="5444444";
  $DOB="19/07/2019";
  $LicenceNo="11223355";
@@ -44,8 +44,7 @@ $phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
  $data = "";
  $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 
- echo '<script type="text/javascript">alert("'.$check_token_valid['code'].'");</script>';
- echo '<script type="text/javascript">console.log("'.$check_token_valid.'");</script>';
+ echo '<script type="text/javascript">console.log("'.$check_token_valid['code'].'");</script>';
   
  if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){  
 			$url = "token";
@@ -62,6 +61,7 @@ $phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
 				$data = "";
 				$check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 				echo '<script type="text/javascript">alert("'.$$check_token_valid.'");</script>';
+				echo '<script type="text/javascript">console.log("'.$check_token_valid.'");</script>';
 				exit();
                     if(!empty($check_token_valid['data'][0]['id'])){
  					$contactId=$check_token_valid['data'][0]['id']; 
