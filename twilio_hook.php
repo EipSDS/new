@@ -114,7 +114,7 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 				}
 
 }
- else{
+ /* else{
                     if(!empty($check_token_valid['data'][0]['id'])){
  					$contactId=$check_token_valid['data'][0]['id']; 
 					$contacturl = "Contacts/".$contactId;
@@ -145,7 +145,7 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 								
 					@$contactresponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
 				
-/*  					  if(!empty($contactresponse['data'][0]['details']['id'])){
+ 					  if(!empty($contactresponse['data'][0]['details']['id'])){
 				    $contactId=$contactresponse['data'][0]['details']['id'];
        
 	   $url = "Contacts/".$contactId;
@@ -179,25 +179,7 @@ if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["li
 
 
 
-/* 		}
 
-				else{
-						echo "failed";
-			
-
- }  */
-
-/* else{
-					 $contactId=$check_token_valid['data'][0]['id'];
-					$url = "Contacts/".$contactId;
-			 $Contact = '{
-			"data": [{
-			"Phone":  "'.$from.'" ,
-			"Last_Name":  "'.$driver_first_name.'" ,
-			"First_Name":  "'.$driver_last_name.'" ,
-			}]}';	
-								
-					@$zohoResponse =  $handleFunctionsObject->zoho_curl($url,"POST",$Contact,$old_access_token); */
 					
 
 ?>
