@@ -70,7 +70,7 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 								}]}'; 
 						
 						
-					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
+					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
 					
 					}
 					
@@ -94,7 +94,7 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
  
  	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
 		$new_array=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo,"SR22"=>$form_data['edit_driver_SR22']
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo,"SR22"=>$form_data['edit_driver_SR22'],"Name1"=>$drivername,"Back_up_Driver"=>"".$add_driver_Backup.""
 		) ;
 		$driversData[0]=$new_array;
 			$dd=json_encode($driversData);
@@ -110,9 +110,58 @@ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["l
 				}
 
 }
-
-
+else{
+                    if(!empty($check_token_valid['data'][0]['id'])){
+ 					$contactId=$check_token_valid['data'][0]['id']; 
+					$contacturl = "Contacts/".$contactId;
+					$Contactdata = '{
+								"data": [{
+								"Phone":  "'.$phone_number.'" ,
+								"Last_Name":  "'.$driver_last_name.'" ,
+								"First_Name":  "'.$driver_first_name.'",
+								"USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'"
+								}]}'; 
+						
+						
+					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
+					
+					}
+			else{
+					$contacturl = "Contacts";
+					 $Contactdata = '{
+								"data": [{
+					"Phone":  "'.$phone_number.'" ,
+					"Last_Name":  "'.$driver_last_name.'" ,
+					"First_Name":  "'.$driver_first_name.'",
+                    "USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'",
+								}]}'; 
+								
+					@$contactresponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
 				
+ 					  if(!empty($contactresponse['data'][0]['details']['id'])){
+				    $contactId=$contactresponse['data'][0]['details']['id'];
+       
+	   $url = "Contacts/".$contactId;
+ 
+ 	    $DOB_LicenceNo=$DOB.','.$LicenceNo;
+		$new_array=array(
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_LicenceNo,"SR22"=>$form_data['edit_driver_SR22'],"Name1"=>$drivername,"Back_up_Driver"=>"".$add_driver_Backup.""
+		) ;
+		$driversData[0]=$new_array;
+			$dd=json_encode($driversData);
+			  $data1 = '{
+			"data": [{
+           "Drivers1":'.$dd.'
+            
+			}]}';
+			@$contactresponse =  $handleFunctionsObject->zoho_curl($url,"PUT",$data1,$old_access_token);
+ 
+					  }
+ 
+				}
+				
+}
+
 			
 }
 
