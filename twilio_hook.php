@@ -11,7 +11,7 @@ $refresh_token = file_get_contents("refresh_token.txt");
 
   $driver_last_name ="simran ";
  $driver_first_name ="simrantwest";
- $phone_number= 1115537882465;
+ $phone_number= 1115537882461;
  $dot_number="5444444";
  $DOB="19/07/2019";
  $LicenceNo="11223355";
@@ -45,7 +45,7 @@ $phone_number = $array["twilio"]["sms"]["From"];
  $data = "";
  $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 
- echo '<script type="text/javascript">alert("'.echo '<pre>'; echo $check_token_valid; echo '</pre>';.'");</script>';
+ echo '<script type="text/javascript">alert("'.$check_token_valid.'");</script>';
   exit();
  if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){  
 			$url = "token";
