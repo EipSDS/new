@@ -23,7 +23,7 @@ $currenttask = $_POST['CurrentTask'];
 $array = json_decode($body,TRUE);  
 
 
-$phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
+ $phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
  $driver_first_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_first_name"]["answer"];
  $driver_last_name = $array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["driver_last_name"]["answer"];
  $dot_number=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["type_your_dot_number"]["answer"];
@@ -39,7 +39,7 @@ $phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
  //$array["twilio"]["collected_data"]["vehicles_questions"]["answer"];
  //$status=$array["twilio"]["collected_data"]["vehicles_questions"]["status"]; 
 
- if(ISSET($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"])){
+ if(!empty($array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"]) && (!empty($phone_number))){
  $url = "Contacts/search?phone=$phone_number";
  $data = "";
  $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
