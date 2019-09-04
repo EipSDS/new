@@ -45,7 +45,7 @@ $phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
  $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
   
  if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){  
-			$url = "token";
+			     $url = "token";
 				$data = array("refresh_token"=>$refresh_token,"client_id"=>"".$zoho_client_id."","client_secret"=>"".$zoho_client_secret."","grant_type"=>"refresh_token");
 				$get_new_token = $handleFunctionsObject-> zoho_auth($url,"POST",$data);
 				if(isset($get_new_token['access_token'])){
@@ -126,7 +126,7 @@ $phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
 					@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
 					
 					}
-/* 			else{
+ 			else{
 					$contacturl = "Contacts";
 					 $Contactdata = '{
 								"data": [{
@@ -134,10 +134,7 @@ $phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
 					"Last_Name":  "'.$driver_last_name.'" ,
 					"First_Name":  "'.$driver_first_name.'",
                     "USDOT_associated_with_the_insured_s_business":  "'.$dot_number.'"
-                    },					
-					"Drivers1": {	
-					"DOB_Age_MaritalStatus_Points_LicenceNo":"'.$DOB_LicenceNo.'"
-					}]}';
+                    }]}';
 								
 					@$contactresponse =  $handleFunctionsObject->zoho_curl($contacturl,"POST",$Contactdata,$old_access_token);
 				
@@ -166,7 +163,7 @@ $phone_number = preg_replace("/[^0-9]/", "",$array["twilio"]["sms"]["From"]);
  
 					  } 
  
-				} */
+				} 
 				
 }  
 
