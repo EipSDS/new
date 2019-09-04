@@ -33,7 +33,7 @@ $array = json_decode($body,TRUE);
  $DOB=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["date_of_birth_of_driver"]["answer"];
  $LicenceNo=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"];
  $linsance_test=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]; 
- $DOB_LicenceNo=$DOB.$LicenceNo;
+ $DOB_LicenceNo=$DOB.','.$LicenceNo;
  
  //$test=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"];
  //$date_completed=$array["twilio"]["collected_data"]["vehicles_questions"]["date_completed"];
