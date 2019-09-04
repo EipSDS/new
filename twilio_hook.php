@@ -92,7 +92,10 @@ $array = json_decode($body,TRUE);
 				
  					  if(!empty($contactresponse['data'][0]['details']['id'])){
 				    $Id=$contactresponse['data'][0]['details']['id'];
-       
+					
+ 				$query = "INSERT INTO public.contact_vehicles(contact_id,vin) VALUES ('$Id','$vin_number')";
+					$result = pg_query($query); 
+ 
 	    $url = "Contacts/".$Id;
  
  	    $DOB_LicenceNo=$DOB.$LicenceNo;
@@ -108,8 +111,7 @@ $array = json_decode($body,TRUE);
 			}]}';
 			@$response =  $handleFunctionsObject->zoho_curl($url,"PUT",$data1,$old_access_token);
  
- 				$query = "INSERT INTO public.contact_vehicles(contact_id,vin) VALUES ('$Id','$vin_number')";
-					$result = pg_query($query);	
+	
  
 					  } 
 
@@ -166,11 +168,9 @@ $array = json_decode($body,TRUE);
 			}';
 			
 			@$zresponse =  $handleFunctionsObject->zoho_curl($url,"PUT",$data1,$old_access_token);
- 
-					  } 
- 
  				$query = "INSERT INTO public.contact_vehicles(contact_id,vin) VALUES ('$Id','$vin_number')";
 					$result = pg_query($query);	
+					} 
  
  
 				} 
