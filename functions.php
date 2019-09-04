@@ -422,7 +422,7 @@ error_reporting(0);
 			$query = "UPDATE  public.contact_commodities SET value='".$values."' WHERE contact_id=".$contact_id." AND name='".$field."'";
 			$result = pg_query($conn, $query);
 			
-			$qry = "UPDATE  public.max_average_value SET percentage='".$values."' WHERE contact_id=".$contact_id." AND name='".$field."'";
+			$qry = "UPDATE  public.max_average_value SET percentage='".$values."' WHERE contact_id=".$contact_id." AND hauled='".$field."'";
 			$result = pg_query($conn, $qry);
 			
 		}else{
