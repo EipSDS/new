@@ -2,6 +2,8 @@
 
 include('functions.php');
 
+$con = pg_connect("host=ec2-54-243-47-196.compute-1.amazonaws.com dbname=da75gbsng1e37m user=ikheqtaxeqwazi password=800c91378dbd23c1752ef5722ad7c40a4f727966939b44d58361184792659ebd");
+
 $zoho_client_id='1000.G5ADCREZLWKQ37764DHC3ZZXAW4VEH';
 $zoho_client_secret='88c42ac4b05a8e341731956a233d89cb0399e7f3cb';
 $handleFunctionsObject = new handleFunctions;
@@ -32,6 +34,7 @@ $array = json_decode($body,TRUE);
  $LicenceNo=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]["answer"];
  $linsance_test=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"]["license_number_of_driver"]; 
  $DOB_LicenceNo=$DOB.$LicenceNo;
+ 
  //$test=$array["twilio"]["collected_data"]["vehicles_questions"]["answers"];
  //$date_completed=$array["twilio"]["collected_data"]["vehicles_questions"]["date_completed"];
  //$date_started=$array["twilio"]["collected_data"]["vehicles_questions"]["date_started"];
@@ -105,9 +108,12 @@ $array = json_decode($body,TRUE);
 			}]}';
 			@$response =  $handleFunctionsObject->zoho_curl($url,"PUT",$data1,$old_access_token);
  
-					  } 
+ 				$query = "INSERT INTO public.contact_vehicles(contact_id,vin) VALUES ('$Id','$vin_number')";
+					$result = pg_query($query);	
  
-				}
+					  } 
+
+	}
 
 }
  else{
@@ -162,6 +168,10 @@ $array = json_decode($body,TRUE);
 			@$zresponse =  $handleFunctionsObject->zoho_curl($url,"PUT",$data1,$old_access_token);
  
 					  } 
+ 
+ 				$query = "INSERT INTO public.contact_vehicles(contact_id,vin) VALUES ('$Id','$vin_number')";
+					$result = pg_query($query);	
+ 
  
 				} 
 				
