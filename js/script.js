@@ -602,11 +602,10 @@ $(document).on("click", ".phone_number_next", function(event){
 				var contactDataa=result.contactData;
 				var commodities_data=result.commodities_data;
 				var Vehiclesdata=result.vehicles_data;
-								console.log(commodities_data);
-								console.log(jQuery.type(commodities_data));
+				console.log(commodities_data);
 				/* console.log(conatctData);
 				console.log(contactDataa);
-
+				
 				console.log(jQuery.type(conatctData));
 				console.log(jQuery.type(contactDataa));
 				console.log(jQuery.type(commodities_data));
@@ -1433,8 +1432,6 @@ $(".general_data_next").click(function(event ){
            dataType: 'json',
            data: ({general_data_next: "success",contactId:contactId,dataform:dataform}),
             success:function(result){
-             alert(dataform);
-			 console.log(dataform);
 				$(".overlay").hide();
 					$(".generalLI").removeClass("active");
 					$(".vehiclesLI").addClass("active");
