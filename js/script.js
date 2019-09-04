@@ -1432,6 +1432,7 @@ $(".general_data_next").click(function(event ){
            dataType: 'json',
            data: ({general_data_next: "success",contactId:contactId,dataform:dataform}),
             success:function(result){
+             console.log(dataform);
 				$(".overlay").hide();
 					$(".generalLI").removeClass("active");
 					$(".vehiclesLI").addClass("active");
