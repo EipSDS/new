@@ -448,6 +448,13 @@ error_reporting(0);
 		}
 		
 		 pg_close($conn);
+				if($result){
+		 $response=1;
+		}else{
+		$response=0	;
+			
+		}
+		
 		}
 		
 		
