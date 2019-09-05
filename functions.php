@@ -437,6 +437,32 @@ error_reporting(0);
 		}
 		return $response;
 	}
+	
+		function insertcommodities($contact_id,$field,$values){
+		$conn = $this->pgConnect();
+		if($field!=''){
+		$query = "SELECT * FROM public.max_average_value where contact_id=".$contact_id." AND hauled='".$field."'";	
+		$rs = pg_query($conn, $query);
+		$rows = pg_num_rows($rs);
+		if($rows==1){
+		$qry = "UPDATE  public.max_average_value SET percentage='".$values."' WHERE contact_id=".$contact_id." AND hauled='".$field."'";
+		$result = pg_query($conn, $qry);
+
+		}else{
+		$qry = "INSERT INTO public.max_average_value(contact_id, hauled,percentage)VALUES('".$contact_id."', '".$field."','".$values."')";
+		$result = pg_query($qry);
+		}
+
+		pg_close($conn);
+		if($result){
+		$response=1;
+		}else{
+		$response=0	;
+
+		}
+		}
+		return $response;
+	}
 
 	function GetContactData($contact_id){
 		$conn = $this->pgConnect();
