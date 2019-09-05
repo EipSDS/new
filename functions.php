@@ -415,15 +415,15 @@ error_reporting(0);
 	function insertcommoditiesconatctdata($contact_id,$field,$values){
 		$conn = $this->pgConnect();
 		if($field!=''){
-		$query = "SELECT * FROM public.contact_commodities where contact_id=".$contact_id." AND name='".$field."'";	
+		$query = "SELECT * FROM public.contact_commodities where contact_id=".$contact_id." AND hauled='".$field."'";	
 		$rs = pg_query($conn, $query);
 		$rows = pg_num_rows($rs);
 		if($rows==1){
-			$query = "UPDATE  public.contact_commodities SET value='".$values."' WHERE contact_id=".$contact_id." AND name='".$field."'";
+			$query = "UPDATE  public.contact_commodities SET percentage='".$values."' WHERE contact_id=".$contact_id." AND hauled='".$field."'";
 			$result = pg_query($conn, $query);
 			
 		}else{
-			  $query = "INSERT INTO public.contact_commodities(contact_id, name,value)VALUES('".$contact_id."', '".$field."','".$values."')";
+			  $query = "INSERT INTO public.contact_commodities(contact_id, hauled,percentage)VALUES('".$contact_id."', '".$field."','".$values."')";
 			$result = pg_query($query);
 		}
 		
