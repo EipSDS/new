@@ -427,6 +427,7 @@ error_reporting(0);
 			$result = pg_query($query);
 		}
 		
+		 pg_close($conn);
 		if($result){
 		 $response=1;
 		}else{
@@ -434,28 +435,6 @@ error_reporting(0);
 			
 		}
 		}
-				if($field!=''){
-		$query = "SELECT * FROM public.contact_commodities where contact_id=".$contact_id." AND name='".$field."'";	
-		$rs = pg_query($conn, $query);
-		$rows = pg_num_rows($rs);
-		if($rows==1){
-			$query = "UPDATE  public.contact_commodities SET value='".$values."' WHERE contact_id=".$contact_id." AND name='".$field."'";
-			$result = pg_query($conn, $query);
-			
-		}else{
-			  $query = "INSERT INTO public.contact_commodities(contact_id, name,value)VALUES('".$contact_id."', '".$field."','".$values."')";
-			$result = pg_query($query);
-		}
-		
-		if($result){
-		 $response=1;
-		}else{
-		$response=0	;
-			
-		}
-		}
-		
-		
 		return $response;
 	}
 
