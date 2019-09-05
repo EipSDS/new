@@ -426,7 +426,7 @@ error_reporting(0);
 			  $query = "INSERT INTO public.contact_commodities(contact_id, name,value)VALUES('".$contact_id."', '".$field."','".$values."')";
 			$result = pg_query($query);
 		}
-		
+			 pg_close($conn);	
 		if($result){
 		 $response=1;
 		}else{
@@ -439,23 +439,21 @@ error_reporting(0);
 		$rs = pg_query($conn, $query);
 		$rows = pg_num_rows($rs);
 		if($rows==1){
-			$qry = "INSERT INTO public.max_average_value(contact_id, hauled,percentage)VALUES('".$contact_id."', '".$field."','".$values."')";
-			//$qry = "UPDATE  public.max_average_value SET percentage='".$values."' WHERE contact_id=".$contact_id." AND hauled='".$field."'";
+			$qry = "UPDATE  public.max_average_value SET percentage='".$values."' WHERE contact_id=".$contact_id." AND hauled='".$field."'";
 			$result = pg_query($conn, $qry);
 			
 		}else{
-		//	$qry = "INSERT INTO public.max_average_value(contact_id, hauled,percentage)VALUES('".$contact_id."', '".$field."','".$values."')";
-		//	$result = pg_query($qry);
+			$qry = "INSERT INTO public.max_average_value(contact_id, hauled,percentage)VALUES('".$contact_id."', '".$field."','".$values."')";
+			$result = pg_query($qry);
 		}
 		
 		 pg_close($conn);
-				if($result){
+		if($result){
 		 $response=1;
 		}else{
 		$response=0	;
 			
 		}
-		
 		}
 		
 		
