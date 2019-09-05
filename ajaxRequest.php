@@ -790,6 +790,7 @@ $refresh_token = file_get_contents("refresh_token.txt");
 			if($key!='' && $comm!='' ){
 			  $new_string = str_replace('_', ' ', $key);
 				  $databaseRes =  $handleFunctionsObject->insertcommoditiesconatctdata($_POST['contactId'],$new_string,$comm);
+				  $databaseRes =  $handleFunctionsObject->insertcommodities($_POST['contactId'],$new_string,$comm);
 			}
 		}
 		echo json_encode($databaseRes);	 
