@@ -426,7 +426,7 @@ error_reporting(0);
 			  $query = "INSERT INTO public.contact_commodities(contact_id, name,value)VALUES('".$contact_id."', '".$field."','".$values."')";
 			$result = pg_query($query);
 		}
-			 pg_close($conn);	
+
 		if($result){
 		 $response=1;
 		}else{
