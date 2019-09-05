@@ -427,7 +427,6 @@ error_reporting(0);
 			$result = pg_query($query);
 		}
 		
-
 		if($result){
 		 $response=1;
 		}else{
@@ -448,7 +447,6 @@ error_reporting(0);
 			$result = pg_query($query);
 		}
 		
-		 pg_close($conn);
 		if($result){
 		 $response=1;
 		}else{

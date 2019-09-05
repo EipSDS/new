@@ -115,8 +115,7 @@ $array = json_decode($body,TRUE);
 			echo "data already exists";
 			}
  				else{
-					$query = "INSERT INTO public.contact_vehicles(contact_id,vin) VALUES ('$Id','$vin_number')";
-					$result = pg_query($query);	
+	
 				}	
  
 					  } 

@@ -602,10 +602,10 @@ $(document).on("click", ".phone_number_next", function(event){
 				var contactDataa=result.contactData;
 				var commodities_data=result.commodities_data;
 				var Vehiclesdata=result.vehicles_data;
-				console.log(commodities_data);
+				
 				/* console.log(conatctData);
 				console.log(contactDataa);
-				
+				console.log(commodities_data);
 				console.log(jQuery.type(conatctData));
 				console.log(jQuery.type(contactDataa));
 				console.log(jQuery.type(commodities_data));
