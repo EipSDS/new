@@ -439,8 +439,7 @@ error_reporting(0);
 		$rs = pg_query($conn, $query);
 		$rows = pg_num_rows($rs);
 		if($rows==1){
-			$qry = "UPDATE  public.max_average_value SET percentage='".$values."' WHERE contact_id=".$contact_id." AND hauled='".$field."'";
-			$result = pg_query($conn, $qry);
+echo "success";
 			
 		}else{
 			$qry = "INSERT INTO public.max_average_value(contact_id, hauled,percentage)VALUES('".$contact_id."', '".$field."','".$values."')";
