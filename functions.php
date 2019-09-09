@@ -279,7 +279,7 @@ error_reporting(0);
 			
 		}
 
-		pg_close($conn);
+		
 		return $response;
 		
 	} 
@@ -291,7 +291,7 @@ error_reporting(0);
 		$conn = $this->pgConnect();
 		if($data['C2VehicleDetails_GaragingZIPCode'] !== ''){
 			$query = "INSERT INTO public.zip_code(
-		contact_id, zip_code)
+		contact_id, GaragingZIPCode)
 		VALUES('".$contact_id."', '".trim($data['C2VehicleDetails_GaragingZIPCode'])."') RETURNING *";
 		}
 		$result = pg_query($query); 
