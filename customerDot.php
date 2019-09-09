@@ -2032,6 +2032,7 @@ function myFunction() {
 	</div>
 	
 </fieldset>
+
 <fieldset class='twelve'>
 	<h2 class="fs-title">Let me collect some information with your operation.</h2>
 		<h3 class="fs-subtitle"></h3>
