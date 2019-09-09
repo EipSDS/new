@@ -1600,6 +1600,7 @@ $(".OperationDescription_next").click(function(event ){
 
  $(".InsuranceHistory_next").click(function(event ){
 var contactId=$(".contactId").val();
+var dataform=	$('.thirteen').find('select, textarea, input').serialize();
 	//------------------------------1st row------------------------------//
 var pp=$("#perid_id").attr('value');
 var pp1=$("#perid_id_two").attr('value');
@@ -1632,10 +1633,10 @@ var pda8=$(".physicaldamageammount8").val();
             url:"insert.php", 
             type: "POST", 
            dataType: 'text',
-           data: ({InsuranceHistory: "success",contactId:contactId,pp:pp,policyperiod1:pp1,input_companyname1:ic1,input_liabilitylosses1:illose1,input_physicaldamage4:ipd4,physicaldamage9:pdn9,physicaldamageammount:pda,perid_id_second:pp2,perid_id_two_second:pp3,input_companyname2:ic2,input_liabilitylosses2:illose2,input_physicaldamag4:ipdg4,physicaldamagenumber1:pdn1,physicaldamageammount1:pda1,perid_id_third:pp4,perid_id_two_third:pp5,input_companyname3:ic3,input_liabilitylosses3:illose3,input_physicaldamage6:ipdg6,physicaldamagenumber8:pdn8,physicaldamageammount8:pda8}),
+           data: ({InsuranceHistory: "success",contactId:contactId,pp:pp,policyperiod1:pp1,input_companyname1:ic1,input_liabilitylosses1:illose1,input_physicaldamage4:ipd4,physicaldamage9:pdn9,physicaldamageammount:pda,perid_id_second:pp2,perid_id_two_second:pp3,input_companyname2:ic2,input_liabilitylosses2:illose2,input_physicaldamag4:ipdg4,physicaldamagenumber1:pdn1,physicaldamageammount1:pda1,perid_id_third:pp4,perid_id_two_third:pp5,input_companyname3:ic3,input_liabilitylosses3:illose3,input_physicaldamage6:ipdg6,physicaldamagenumber8:pdn8,physicaldamageammount8:pda8,dataform:dataform}),
             success:function(result){
 				//alert(result);
-				console.log(result);
+				console.log(dataform);
 				 $(".overlay").hide();
 				 $(".InsuranceHistory").removeClass("active");
 					$(".CommoditiesLI").addClass("active");
