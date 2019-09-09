@@ -2,6 +2,7 @@
 /*--------------------------------Database connection-----------------------------*/
 $con = pg_connect("host=ec2-54-243-47-196.compute-1.amazonaws.com dbname=da75gbsng1e37m user=ikheqtaxeqwazi password=800c91378dbd23c1752ef5722ad7c40a4f727966939b44d58361184792659ebd");
 /*-------------------------------------------------------------*/
+parse_str($_POST['dataform'], $form_data);
 if($_POST['InsuranceHistory'] == "success")
 { 
 /*---------------Conditions according to company Names----------------------------*/
@@ -12,8 +13,8 @@ $company_name = $_POST['input_companyname1'];
 /*----------------------1st condition for fields-----------------------------------*/
 if(!empty($company_name)){
    $contact_Id = $_POST['contactId'];
-	$start_date = $_POST['pp'];
-	$end_date = $_POST['policyperiod1'];
+	$start_date = $form_data['policy_perid'];
+	$end_date = $form_data['policy_perid_two'];
 	$company_name = $_POST['input_companyname1'];
 	$liability_number = $_POST['input_liabilitylosses1'];
 	$liability_amount = $_POST['input_physicaldamage4'];
