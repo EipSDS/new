@@ -279,7 +279,7 @@ error_reporting(0);
 			
 		}
 
-
+pg_close($conn);
 		return $response;
 		
 	} 
