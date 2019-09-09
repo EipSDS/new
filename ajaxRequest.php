@@ -1019,6 +1019,14 @@ $refresh_token = file_get_contents("refresh_token.txt");
 	}
 
 
+	if(ISSET($_POST['new_vehicle_add']) && $_POST['new_vehicle_add']=='success'){
+		parse_str($_POST['dataform'], $form_data);
+		$contactid = $_POST['contactId'];
+		 	$database =  $handleFunctionsObject->newinsertVehicle($contactid,$form_data);
+
+		echo json_encode($database);	 		
+			
+	}
 
 
 
