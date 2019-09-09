@@ -287,7 +287,7 @@ error_reporting(0);
 	function newinsertVehicle($contact_id,$data){
 		$conn = $this->pgConnect();
 	if($data['C2VehicleDetails_GaragingZIPCode'] != ""){
-			$query = "INSERT INTO public.zip_code(contact_id,GaragingZIPCode) VALUES('".$contact_id."','".trim($data['C2VehicleDetails_GaragingZIPCode'])."')";
+			$query = "INSERT INTO public.zip_code(contact_id,zip_code) VALUES('".$contact_id."','".trim($data['C2VehicleDetails_GaragingZIPCode'])."')";
 			$res = pg_query($query); 
 	}				
 	}
