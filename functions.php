@@ -279,7 +279,7 @@ error_reporting(0);
 			
 		}
 
-		pg_close($conn);
+
 		return $response;
 		
 	} 
@@ -288,10 +288,8 @@ error_reporting(0);
 	function newinsertVehicle($contact_id,$data){
 		$conn = $this->pgConnect();
 		
-		if(!empty($data['C2VehicleDetails_GaragingZIPCode'])){
 			$query = "INSERT INTO public.garagingzipcode(contact_id, GaragingZIPCode) VALUES('".$contact_id."', '".trim($data['C2VehicleDetails_GaragingZIPCode'])."')";
 				$result = pg_query($query); 
-		}
 		pg_close($conn);			
 		if($result){
 echo "added";
@@ -299,7 +297,7 @@ echo "added";
 echo "not added";
 			
 		}
-
+		pg_close($conn);
 		return $response;
 		
 	}
