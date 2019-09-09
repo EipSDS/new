@@ -36,8 +36,8 @@ if(!empty($company_name)){
    if(!empty($company_name1))
 {
 	$contact_id = $_POST['contactId'];
-	$start_date1 = $_POST['perid_id_second'];
-	$end_date1 = $_POST['perid_id_two_second'];
+	$start_date1 = $form_data['policy_perid_second'];
+	$end_date1 = $form_data['policy_perid_two_second'];
 	$company_name1 = $_POST['input_companyname2'];
 	$libility_number1 = $_POST['input_liabilitylosses2'];
 	$libility_amount1 = $_POST['input_physicaldamag4'];
@@ -60,8 +60,8 @@ $result = pg_query($query);
 if(!empty($company_name2))
 {
 	$contactId = $_POST['contactId'];
-	$start_date2 = $_POST['perid_id_third'];
-	$end_date2 = $_POST['perid_id_two_third'];
+	$start_date2 = $form_data['policy_perid_third'];
+	$end_date2 = $form_data['policy_perid_two_third'];
 	$company_name2 = $_POST['input_companyname3'];
 	$libility_number2= $_POST['input_liabilitylosses3'];
 	$libility_amount2 = $_POST['input_physicaldamage6'];

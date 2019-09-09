@@ -2182,9 +2182,9 @@ Physical Damage Losses
 <td><input type="text" name="physicaldamageammount" value="" id="physicaldamageammount" class="physicaldamageammount"></td>
 </tr>
 <tr>
-<td>		<input type="text" class="datepickerDOB" name="policy_perid_second" value="<?php echo date("m/d/Y");?>" id='perid_id_second' placeholder='<?php echo date('m/d/Y');?>'>
+<td>		<input type="text" class="datepickerDOB" name="policy_perid_second" id='perid_id_second' placeholder='<?php echo date('m/d/Y');?>'>
 	To
-	<input type="text" class="datepickerDOB" name="policy_perid_two_second" value="<?php echo date("m/d/Y");?>" id='perid_id_two_second' placeholder='<?php echo date('m/d/Y');?>'></td>
+	<input type="text" class="datepickerDOB" name="policy_perid_two_second" id='perid_id_two_second' placeholder='<?php echo date('m/d/Y');?>'></td>
 <td><input type="text" name="input_companyname5" value="" id="inputcompanyname2" class="input_companyname2"></td>
 <td><input type="number" name="input_liabilitylosses5" value=""id="liabilitylosses2" class="input_liabilitylosses2"></td>
 <td><input type="text" name="input_physicaldamage5" value="" id="physicaldamage2" class="input_physicaldamag4"></td>
