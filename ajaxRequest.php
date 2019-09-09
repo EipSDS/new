@@ -1006,7 +1006,7 @@ $refresh_token = file_get_contents("refresh_token.txt");
 		parse_str($_POST['dataform'], $form_data);
 		$contactid = $_POST['contactId'];
 		 	$contactdata =  $handleFunctionsObject->insertVehicle($contactid,$form_data);
-			$contact =  $handleFunctionsObject->newinsertVehicle($contactid,$form_data);
+		$contact =  $handleFunctionsObject->newinsertVehicle($contactid,$form_data);
 			if($contactdata!=0){
 				echo json_encode($contactdata);
 			}else{
