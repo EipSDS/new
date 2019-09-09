@@ -264,6 +264,8 @@ error_reporting(0);
 			$query = "INSERT INTO public.contact_vehicles(
 		contact_id, vehicle_type,trailer_number, vin, category, year, garaging_zip_code, is_business, is_comprehensive, value, loss_payee, trailer_type, non_owned_value, name, address,need_modification)
 		VALUES('".$contact_id."', '".$data['vahicle_type']."','".$data['C2VehicleDetails_Vehicle_Trailer']."','".$data['vehicle_VIN']."', '".$category."','".$data['C2VehicleDetails_year']."','".trim($data['C2VehicleDetails_GaragingZIPCode'])."','".trim($data['vehicle_used_for'])."','".trim($data['vehicle_used_comprehensive'])."','".trim($data['vehicle_modifications'])."','".$data['C2VehicleDetails_Loss']."','".$data['C2VehicleDetails_Trailer']."','".$data['trailer_value']."','".$data['loss_payee_full_name']."','".trim($data['loss_payee_address'])."','".trim($data['add_any_modification'])."') RETURNING *";
+			$query = "INSERT INTO public.zip_code(contact_id, GaragingZIPCode) VALUES ('".$contact_id."','".trim($data['C2VehicleDetails_GaragingZIPCode'])."') RETURNING *";		
+		
 		}else{
 		 $query = "INSERT INTO public.contact_vehicles(
 		contact_id, vehicle_type,vehicle_number, vin, gross_weight, city_of_destination, category, year, make, model, body_style, garaging_zip_code, radius, is_business, is_comprehensive, value, loss_payee, name, address,need_modification, sub_category)
@@ -279,35 +281,10 @@ error_reporting(0);
 			
 		}
 
-		
-		return $response;
-		
-	} 
-	 
-	
-		//new insert in  zip_code table
-		
-		function newinsertVehicle($contact_id,$data){
-		$conn = $this->pgConnect();
-		if($data['C2VehicleDetails_GaragingZIPCode'] != ''){
-			$query = "INSERT INTO public.zip_code(
-		contact_id, GaragingZIPCode)VALUES('".$contact_id."','".trim($data['C2VehicleDetails_GaragingZIPCode'])."') RETURNING *";
-		}
-		$result = pg_query($query); 
-					
-		if($result){
-			$fch = pg_fetch_assoc($result);
-			$response= $fch;
-		}else{
-		$response=0	;
-			
-		}
-
 		pg_close($conn);
 		return $response;
 		
-	}
-	
+	} 
 	function updateVehicle($contact_id,$data){
 		$conn = $this->pgConnect();
 		if($data['C2VehicleDetails_subcategory']=''){
