@@ -279,7 +279,6 @@ error_reporting(0);
 			
 		}
 
-pg_close($conn);
 		return $response;
 		
 	} 
@@ -292,12 +291,6 @@ pg_close($conn);
 			$result = pg_query($query); 
 	}
 		pg_close($conn);			
-		if($result){
-echo "added";
-		}else{
-echo "not added";
-			
-		}
 		
 	}
 	
