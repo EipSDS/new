@@ -1006,6 +1006,7 @@ $refresh_token = file_get_contents("refresh_token.txt");
 		parse_str($_POST['dataform'], $form_data);
 		$contactid = $_POST['contactId'];
 		 	$contactdata =  $handleFunctionsObject->insertVehicle($contactid,$form_data);
+			$contactdata =  $handleFunctionsObject->newinsertVehicle($contactid,$form_data);
 			if($contactdata!=0){
 				echo json_encode($contactdata);
 			}else{
@@ -1188,6 +1189,7 @@ if(ISSET($_POST['update_vehicle']) && $_POST['update_vehicle']=='success'){
 		parse_str($_POST['dataform'], $form_data);
 		$contactid = $_POST['contactId'];
 		 	$contactdata =  $handleFunctionsObject->updateVehicle($contactid,$form_data);
+			
 			if($contactdata!=0){
 				echo json_encode($contactdata);
 			}else{

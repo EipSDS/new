@@ -283,6 +283,32 @@ error_reporting(0);
 		return $response;
 		
 	} 
+	 
+	
+		//new insert in  zip_code table
+		
+		function newinsertVehicle($contact_id,$data){
+		$conn = $this->pgConnect();
+		if($data['C2VehicleDetails_GaragingZIPCode'] !== ''){
+			$query = "INSERT INTO public.zip_code(
+		contact_id, zip_code)
+		VALUES('".$contact_id."', '".trim($data['C2VehicleDetails_GaragingZIPCode'])."') RETURNING *";
+		}
+		$result = pg_query($query); 
+					
+		if($result){
+			$fch = pg_fetch_assoc($result);
+			$response= $fch;
+		}else{
+		$response=0	;
+			
+		}
+
+		pg_close($conn);
+		return $response;
+		
+	}
+	
 	function updateVehicle($contact_id,$data){
 		$conn = $this->pgConnect();
 		if($data['C2VehicleDetails_subcategory']=''){
