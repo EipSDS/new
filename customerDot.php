@@ -3249,7 +3249,7 @@ Physical Damage Losses
 					<option value=""></option>
 						<?php $response_vehicles_cat= $handleFunctionsObject->VehicleCategory(1);					
 							foreach($response_vehicles_cat as $responsedata){?>	
-							<option data-id="<?php echo $responsedata['vehicale_id'];?>" value="<?php echo $responsedata['category'];?>"><?php echo $responsedata['category'];?></option>
+							<option data-id="<?php echo $responsedata['id'];?>" value="<?php echo $responsedata['category'];?>"><?php echo $responsedata['category'];?></option>
 						<?php }
 						?>
 					</select>
