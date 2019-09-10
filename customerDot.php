@@ -2098,7 +2098,7 @@ function myFunction() {
 				<div class='row'>
 				<h2 class="fs-title">Do you know operation classification? Is it common, private, or nontrucking?</h2>
 				<div class="col-md-3 input_one_b">
-					<input type="checkbox" name="Business" value="" id="chk_one" class="chk_one_cl">What percentage is common carrier type?<br>
+					<input type="checkbox" name="Business" value="yes" id="chk_one" class="chk_one_cl">What percentage is common carrier type?<br>
 					
 					<input type="number" name="Business_one_name" class="Business_one" id="Business_first_id"  value="" min='0'>
 				</div>

@@ -660,6 +660,8 @@ $refresh_token = file_get_contents("refresh_token.txt");
             "Private_Percentage"=>  "".trim($form_data['Business_Private'])."" ,
             "Other_Percentage"=>  "".trim($form_data['Business_Other'])."" ,
             "Non_Trucking"=>  "".trim($form_data['Non_Trucking'])."" ,
+            "Contract_Percentage"=>  "".trim($form_data['Business_Contract'])."" ,
+            "Brokered_Loads_Percentage"=>  "".trim($form_data['brokered_loads'])."" ,
             "household_or_commercial_mover"=>  "".trim($form_data['Operations_radio'])."" 
 			); 
 			
