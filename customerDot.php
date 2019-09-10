@@ -2099,7 +2099,6 @@ function myFunction() {
 				<h2 class="fs-title">Do you know operation classification? Is it common, private, or nontrucking?</h2>
 				<div class="col-md-3 input_one_b">
 					<input type="checkbox" name="Business" value="yes" id="chk_one" class="chk_one_cl">What percentage is common carrier type?<br>
-					
 					<input type="number" name="Business_one_name" class="Business_one" id="Business_first_id"  value="" min='0'>
 				</div>
 					<div class="col-md-3 input_two_b">
@@ -3250,7 +3249,7 @@ Physical Damage Losses
 					<option value=""></option>
 						<?php $response_vehicles_cat= $handleFunctionsObject->VehicleCategory(1);					
 							foreach($response_vehicles_cat as $responsedata){?>	
-							<option data-id="<?php echo $responsedata['id'];?>" value="<?php echo $responsedata['category'];?>"><?php echo $responsedata['category'];?></option>
+							<option data-id="<?php echo $responsedata['vehicale_id'];?>" value="<?php echo $responsedata['category'];?>"><?php echo $responsedata['category'];?></option>
 						<?php }
 						?>
 					</select>
