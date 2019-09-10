@@ -2114,7 +2114,7 @@ function myFunction() {
 					<input type="number" name="Non_Trucking" class="Business_three" id="Non_Trucking_id"  value="" min='0'>
 					</div>
 					<div class="col-md-3 input_five_b">
-					<input type="checkbox" name="brokered_loads_Business" value="" id="chk_five" class="chk_five_id">What percentage is private carrier type?<br>
+					<input type="checkbox" name="brokered_loads_Business" value="" id="chk_five" class="chk_five_id">What percentage is brokered loads carrier type?<br>
 					<input type="number" name="brokered_loads" class="Business_five" id="brokered_loads_id"  value="" min='0'>
 					</div>
 					
