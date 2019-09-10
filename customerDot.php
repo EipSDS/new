@@ -2102,14 +2102,21 @@ function myFunction() {
 					
 					<input type="number" name="Business_one_name" class="Business_one" id="Business_first_id"  value="" min='0'>
 				</div>
-					
+					<div class="col-md-3 input_two_b">
+					<input type="checkbox" name="Business" value="" id="chk_two" class="chk_two_id">What percentage is contract carrier type?<br>
+					<input type="number" name="Business_Contract" class="Business_two" id="Business_contract_id"  value="" min='0'>
+					</div>				
 					<div class="col-md-3 input_three_b">
 					<input type="checkbox" name="Business" value="" id="chk_thr" class="chk_three_id">What percentage is private carrier type?<br>
 					<input type="number" name="Business_Private" class="Business_three" id="Business_Private_id"  value="" min='0'>
 					</div>
 					<div class="col-md-3 input_four_b">
-					<input type="checkbox" name="Non_Trucking_Business" value="" id="Non_Trucking_Business_check" class="Non_Trucking_Business_check">If it's not 100% ask for the percentage of non-trucking<br>
+					<input type="checkbox" name="Non_Trucking_Business" value="" id="Non_Trucking_Business_check" class="Non_Trucking_check">If it's not 100% ask for the percentage of non-trucking<br>
 					<input type="number" name="Non_Trucking" class="Business_three" id="Non_Trucking_id"  value="" min='0'>
+					</div>
+					<div class="col-md-3 input_five_b">
+					<input type="checkbox" name="brokered_loads_Business" value="" id="chk_five" class="chk_five_id">What percentage is private carrier type?<br>
+					<input type="number" name="brokered_loads" class="Business_five" id="brokered_loads_id"  value="" min='0'>
 					</div>
 					
 					<div class="col-md-3 input_six_b">

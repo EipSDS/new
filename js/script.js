@@ -1583,6 +1583,7 @@ $(".OperationDescription_next").click(function(event ){
            dataType: 'json',
            data: ({OperationDescription: "success",contactId:contactId,dataform:dataform}),
             success:function(result){
+				console.log(dataform);
 				$(".overlay").hide();
 				 $(".OperationDescription").removeClass("active");
 					$(".InsuranceHistory").addClass("active");
