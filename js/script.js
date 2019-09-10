@@ -2636,6 +2636,7 @@ $(document).on("click", "#vehicles_add_button", function(event){
 	if(d==1){
 		var dataform=	$('#Add_new_vehicle').serialize();
 		var contactId=$(".contactId").val();
+		console.log(dataform);
 		$(".overlay").show();
 		$.ajax({
             url:"ajaxRequest.php", 
