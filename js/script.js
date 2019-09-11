@@ -3501,6 +3501,9 @@ $(document).on('click', '.is_violation', function(){
 	if(d=='Yes'){
 	$("#Violation_Table").show();
 	}
+	if(d=='No'){
+	$("#Violation_Table").hide();
+	}
 });
 
 });	
