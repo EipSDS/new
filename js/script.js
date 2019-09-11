@@ -1132,9 +1132,8 @@ $(document).on("click", ".phone_number_next", function(event){
 					if(conatctData.Date_Two!== null){
 					$("#Financial_dob").val(moment(conatctData.Date_Two).format('MM/DD/YYYY'));
 					}
-					var array = conatctData.Home_Address.split(" ",4);
-					$("#Financial_Home_address").val(array);
-					
+					$("#Financial_Home_address").val(conatctData.Home_Address);
+					console.log(conatctData.Home_Address);
 					$("#Financial_City").val(conatctData.City);
 					$("#Financial_zipcode").val(conatctData.ZIP_Code);
 					//$("#Financial_social_security_number").val(conatctData.Social_Security_Number);
