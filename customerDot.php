@@ -37,8 +37,8 @@ function myFunction() {
 <form id="msform">
 <!-- progressbar -->
 <ul id="progressbar">
-<li class="zeroli active">Greetings</li>
-<li class="phoneli">Phone Number </li>
+<!--<li class="zeroli active">Phone Number</li>-->
+<li class="phoneli">Greetings</li>
 <li class="IntroLi">Intro</li>
 <li class='dotLi'>DOT</li>
 <li class='MCLi'>MC</li>
@@ -62,7 +62,7 @@ function myFunction() {
 <div class="overlay">
     <div id="loading-img"></div>
 </div>
-	<fieldset class='zero'>
+<!--	<fieldset class='zero'>
 	<h2 class="fs-title">Welcome to Givesurance</h2>
 	<h3 class="fs-subtitle"></h3>
 	<div class='row'>
@@ -123,8 +123,62 @@ function myFunction() {
 	<input type="button" name="next" class="action-button no_insurance" value="Done" style='display:none;'/>
 		</div>
 	</fieldset>
-
+-->
 	<fieldset class='first'>
+		<h2 class="fs-title">Welcome to Givesurance</h2>
+	<h3 class="fs-subtitle"></h3>
+	<div class='row'>
+	
+	<div class='col-md-6'>
+		<div class="form-row">
+			<div class="form-holder w-100">
+			<label>Who am i speaking with today?</label>
+			<input type="text" name="contact_first_name" placeholder="Enter First Name" required class='contact_first_name'/>
+			</div>	
+		</div>
+		<div class="form-row">
+			<div class="form-holder w-100">
+			<input type="text" name="contact_last_name" placeholder="Enter Last Name" required class='contact_last_name'/>
+			</div>	
+		</div>
+		
+	</div>	
+	<div class='col-md-6'>	
+		<div class="form-row">
+			<div class="form-holder w-100">
+			<label>Would you like quick quote for insurance today?</label>
+			 <div class='radio'>
+				<input type="radio" name="quick_quote_for_insurance" class='quick_quote_for_insurance'  value='Yes'>
+				<label>Yes</label>
+				</div>
+				 <div class='radio'>
+				<input type="radio" name="quick_quote_for_insurance"  class='quick_quote_for_insurance'  value='No'>
+				<label>No</label>
+				</div>
+			</div>	
+		</div>
+		
+		<div class="form-row quick_quote_for_insurance_no" style='display:none'>
+			<div class="form-holder w-100">
+			<label>what can I help you with today? </label>
+			 <textarea  name="help_text"  required class='help_text'></textarea>
+			</div>	
+		</div>
+	</div>
+	<div class="form-row quick_quote_for_insurance_yes" style='display:none'>
+			<div class="form-holder w-100">
+			<label>I can help you with that. Let me get some information from you real quick.</label>
+			
+			</div>	
+		</div>
+	
+	</div>
+	
+	<div role="alert" class='dot_alert' style='display:none;color:red';>
+		Please Fill all fields.
+	</div>
+	
+	</div>	
 	<h2 class="fs-title">Hi my name is (YOUR NAME) and I will be assisting you today.
 	In case we get disconnected, what is the best phone number to reach you?</h2>
 	<h3 class="fs-subtitle"></h3>
