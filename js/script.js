@@ -3443,7 +3443,21 @@ $(document).on("click", ".have_DOT_number", function(event){
 		$('.searchedNumber').val('');
 	}
 
-});		
+});	
+
+
+$(document).on("click", ".Is_the_owner_driver", function(event){
+	var d=$("input[name='Is_the_owner_driver']:checked").val();
+	if(d=='Yes'){
+	var contact_first_name=$(".contact_first_name").val();
+	var contact_last_name=$(".contact_last_name").val();
+	$("#new_driver_first").val(contact_first_name);
+	$("#new_driver_last").val(contact_last_name);	
+	}
+});
+
+
+	
 $(document).on("click", ".need_new_DOT_number", function(event){
 	var d=$("input[name='need_new_DOT_number']:checked").val();
 	if(d=='Yes'){
