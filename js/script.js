@@ -573,7 +573,6 @@ $(document).on("click", ".phone_number_next", function(event){
 				$("#Contact_Insured_phone").val(phone);
 				$("#Contact_Insured_phone_hidden").val(phone);
 				$("#Financial_First_name").val(contact_first_name);
-				$("#Financial_Last_name").val(contact_last_name);
 				$("#new_driver_first").val(contact_last_name);
 				$(".contactId").val(result.contactId);
 				if(result.Dot !==null){
