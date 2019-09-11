@@ -483,45 +483,45 @@ $(".PDFData").click(function(){
 	}	
 });
 
-$(document).on("click", ".zero_next", function(event){
-	// var contact_first_name=$(".contact_first_name").val();
-	// var contact_last_name=$(".contact_last_name").val();
-		// if(contact_last_name && $('input[name="quick_quote_for_insurance"]').is(':checked')){
-			// console.log($('input[name="quick_quote_for_insurance"]').is(':checked'));
-			// var quick_quote_for_insurance = $("input[name='quick_quote_for_insurance']:checked").val();
-				// if(quick_quote_for_insurance=='No'){
-					// $(this).hide();
-					// $(".no_insurance").show();
-					// $(".dot_alert").html('I am sorry I will not be able to help you with that. Let me transfer to our professional who can better assist you.');
-					// $(".dot_alert").show();
-				// }else{
-					// $(this).show();
-					// $(".no_insurance").hide();
-					// $(".dot_alert").hide();
-					// $(".overlay").show();
-					$.ajax({
-							url:"ajaxRequest.php", 
-							type: "POST", 
-						   dataType: 'json',
-						   data: ({form_zero_step: "success"}),
-							success:function(result){
-								// $(".zeroli").removeClass("active");
-									// $(".phoneli").addClass("active");
-									// $(".zero").hide();
-									// $(".first").show(); 
-									// $(".overlay").hide();
-									// $("#Insured_first_name").val(contact_first_name);
-									// $("#Insured_Last_name").val(contact_last_name);									
-							}
-						 });
+// $(document).on("click", ".zero_next", function(event){
+	// // var contact_first_name=$(".contact_first_name").val();
+	// // var contact_last_name=$(".contact_last_name").val();
+		// // if(contact_last_name && $('input[name="quick_quote_for_insurance"]').is(':checked')){
+			// // console.log($('input[name="quick_quote_for_insurance"]').is(':checked'));
+			// // var quick_quote_for_insurance = $("input[name='quick_quote_for_insurance']:checked").val();
+				// // if(quick_quote_for_insurance=='No'){
+					// // $(this).hide();
+					// // $(".no_insurance").show();
+					// // $(".dot_alert").html('I am sorry I will not be able to help you with that. Let me transfer to our professional who can better assist you.');
+					// // $(".dot_alert").show();
+				// // }else{
+					// // $(this).show();
+					// // $(".no_insurance").hide();
+					// // $(".dot_alert").hide();
+					// // $(".overlay").show();
+					// $.ajax({
+							// url:"ajaxRequest.php", 
+							// type: "POST", 
+						   // dataType: 'json',
+						   // data: ({form_zero_step: "success"}),
+							// success:function(result){
+								// // $(".zeroli").removeClass("active");
+									// // $(".phoneli").addClass("active");
+									// // $(".zero").hide();
+									// // $(".first").show(); 
+									// // $(".overlay").hide();
+									// // $("#Insured_first_name").val(contact_first_name);
+									// // $("#Insured_Last_name").val(contact_last_name);									
+							// }
+						 // });
 						
-					}
-		}else{
-			// event.preventDefault();
-			// $(".dot_alert").show();
-			//$(".contact_last_name").addClass('is-invalid');
-		}
-});
+					// }
+		// }else{
+			// // event.preventDefault();
+			// // $(".dot_alert").show();
+			// //$(".contact_last_name").addClass('is-invalid');
+		// }
+// });
 
 
 $(document).on("click", ".phone_number_next", function(event){
