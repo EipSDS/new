@@ -482,8 +482,7 @@ $(".PDFData").click(function(){
 	$(".Seventeen").show(); 
 	}	
 });
-	var contact_first_name=$(".contact_first_name").val();
-	var contact_last_name=$(".contact_last_name").val();
+
 $(document).on("click", ".zero_next", function(event){
 	var contact_first_name=$(".contact_first_name").val();
 	var contact_last_name=$(".contact_last_name").val();
@@ -3326,8 +3325,8 @@ $(document).on('click', '#add_drivers', function(){
 	Is_the_owner_driver =$("input[name='Is_the_owner_driver']:checked").val();
 	console.log(Is_the_owner_driver);
 		if(Is_the_owner_driver=='Yes') {
-		$('#new_driver_first').val($('#contact_first_name').val());
-		$('#new_driver_middle').val($('#contact_last_name').val());
+		$('#new_driver_first').val($('#Insured_first_name').val());
+		$('#new_driver_middle').val($('#Insured_Middle_name').val());
 		$('#new_driver_last').val($('#Insured_Last_name').val());
 		$('#new_driver_dob').val($('#Insured_DOB').val());
 		}else{
