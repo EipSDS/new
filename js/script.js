@@ -482,7 +482,8 @@ $(".PDFData").click(function(){
 	$(".Seventeen").show(); 
 	}	
 });
-
+	var contact_first_name=$(".contact_first_name").val();
+	var contact_last_name=$(".contact_last_name").val();
 $(document).on("click", ".zero_next", function(event){
 	var contact_first_name=$(".contact_first_name").val();
 	var contact_last_name=$(".contact_last_name").val();
@@ -3322,10 +3323,8 @@ if(business_cat!=''){
 	
 $(document).on('click', '#add_drivers', function(){
 	var contactId=$(".contactId").val();
-	var Is_the_owner_driver =$("input[name='Is_the_owner_driver']:checked").val();
-	$(".contact_first_name").val(contact_first_name);
-	$(".contact_last_name").val(contact_last_name);
-		 console.log(contact_first_name);
+	Is_the_owner_driver =$("input[name='Is_the_owner_driver']:checked").val();
+	console.log(Is_the_owner_driver);
 		if(Is_the_owner_driver=='Yes') {
 		$('#new_driver_first').val(contact_first_name);
 		$('#new_driver_middle').val(contact_last_name);
