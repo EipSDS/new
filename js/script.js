@@ -1132,7 +1132,9 @@ $(document).on("click", ".phone_number_next", function(event){
 					if(conatctData.Date_Two!== null){
 					$("#Financial_dob").val(moment(conatctData.Date_Two).format('MM/DD/YYYY'));
 					}
-					$("#Financial_Home_address").val(conatctData.Home_Address);
+					var array = conatctData.Home_Address.split(" ",4);
+					$("#Financial_Home_address").val(array);
+					
 					$("#Financial_City").val(conatctData.City);
 					$("#Financial_zipcode").val(conatctData.ZIP_Code);
 					//$("#Financial_social_security_number").val(conatctData.Social_Security_Number);
@@ -1583,7 +1585,6 @@ $(".OperationDescription_next").click(function(event ){
            dataType: 'json',
            data: ({OperationDescription: "success",contactId:contactId,dataform:dataform}),
             success:function(result){
-				console.log(dataform);
 				$(".overlay").hide();
 				 $(".OperationDescription").removeClass("active");
 					$(".InsuranceHistory").addClass("active");
@@ -1637,7 +1638,6 @@ var pda8=$(".physicaldamageammount8").val();
            data: ({InsuranceHistory: "success",contactId:contactId,pp:pp,policyperiod1:pp1,input_companyname1:ic1,input_liabilitylosses1:illose1,input_physicaldamage4:ipd4,physicaldamage9:pdn9,physicaldamageammount:pda,perid_id_second:pp2,perid_id_two_second:pp3,input_companyname2:ic2,input_liabilitylosses2:illose2,input_physicaldamag4:ipdg4,physicaldamagenumber1:pdn1,physicaldamageammount1:pda1,perid_id_third:pp4,perid_id_two_third:pp5,input_companyname3:ic3,input_liabilitylosses3:illose3,input_physicaldamage6:ipdg6,physicaldamagenumber8:pdn8,physicaldamageammount8:pda8,dataform:dataform}),
             success:function(result){
 				//alert(result);
-				console.log(dataform);
 				 $(".overlay").hide();
 				 $(".InsuranceHistory").removeClass("active");
 					$(".CommoditiesLI").addClass("active");
