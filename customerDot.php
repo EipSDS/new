@@ -2509,7 +2509,7 @@ Physical Damage Losses
 		   <div class="swal2-success-circular-line-right" style="background-color: rgb(255, 255, 255);"></div>
 		  </div>
         
-        <p style="font-size:17px;color:#5C5C5C;">I got the information I need right now, we'll submit it to our carriers. Me and my colleague will give you callback within an hour. You'll also get a text message when your quote is ready.</p>
+        <p style="font-size:17px;color:#5C5C5C;">I got the information I need right now, we'll submit it to our carriers. Me or my colleague will give you callback within an hour. You'll also get a text message when your quote is ready.</p>
 		<div class="form-row">
 					<div class="form-holder w-100">
 				   <label>What is the best number to receive the text message/confirmation?</label>
