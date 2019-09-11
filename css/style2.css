@@ -78,6 +78,7 @@ box-sizing: border-box;
 font-family: montserrat;
 color: #2C3E50;
 font-size: 13px;
+margin:auto;
 }
 /*buttons*/
 #msform .action-button {
@@ -1764,9 +1765,4 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swa
     pointer-events: none;
 	color: #ccc;
     opacity: 0.5;
-}
-@media screen and (min-width: 2000px) {
-#msform input, #msform textarea, #msform select {
-    margin: auto;
-}
 }
