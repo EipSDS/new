@@ -3323,9 +3323,9 @@ if(business_cat!=''){
 $(document).on('click', '#add_drivers', function(){
 	var contactId=$(".contactId").val();
 	var Is_the_owner_driver =$("input[name='Is_the_owner_driver']:checked").val();
-	 console.log(contact_first_name);
 	$(".contact_first_name").val(contact_first_name);
 	$(".contact_last_name").val(contact_last_name);
+		 console.log(contact_first_name);
 		if(Is_the_owner_driver=='Yes') {
 		$('#new_driver_first').val(contact_first_name);
 		$('#new_driver_middle').val(contact_last_name);
