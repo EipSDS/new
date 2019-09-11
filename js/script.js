@@ -541,9 +541,9 @@ $(document).on("click", ".phone_number_next", function(event){
 					$(".dot_alert").hide();
 					//$(".contact_last_name").removeClass('is-invalid');
 					$(".overlay").show();
+				}
 	
-	
-	
+		}
 	var phone=$(".phoneNumber").val();
 	// var contact_first_name=$(".contact_first_name").val();
 	// var contact_last_name=$(".contact_last_name").val();
