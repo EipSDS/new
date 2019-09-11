@@ -3326,8 +3326,7 @@ $(document).on('click', '#add_drivers', function(){
 	console.log(Is_the_owner_driver);
 		if(Is_the_owner_driver=='Yes') {
 		$('#new_driver_first').val($(".contact_first_name").val());
-		$('#new_driver_middle').val($(".contact_last_name").val());
-		$('#new_driver_last').val($('#Insured_Last_name').val());
+		$('#new_driver_last').val($(".contact_last_name").val());
 		$('#new_driver_dob').val($('#Insured_DOB').val());
 		}else{
 			$('#new_driver_first').val(' ');
