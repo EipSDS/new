@@ -3498,7 +3498,9 @@ $(document).on('click', '.is_violation', function(){
 	var contactId=$(".contactId").val();
 	var d=$("input[name='is_voilation']:checked").val();
 	console.log(d);
+	if(d=='Yes'){
 	$("#Violation_Table").show();
+	}
 });
 
 });	
