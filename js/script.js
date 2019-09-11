@@ -1244,7 +1244,7 @@ $(".dot_number_next").click(function(event ){
 					$("#mc_number").val(result.mc_mx_ff_nmumber);
 					$(".dot").val(result.usdot_number);
 					$("#Contact_Insured_Mailing").val(result.m_postal);
-					$("#Financial_Home_address").val(result.physical_address);
+					$("#Financial_Home_address").val(result.p_street_address);
 					$("#USDOT_Assigned_to").val(result.legal_name +', '+result.physical_address);
 					$("#Contact_Insured_City").val(result.m_city);
 					$("#Financial_City").val(result.m_city);
