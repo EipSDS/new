@@ -37,8 +37,8 @@ function myFunction() {
 <form id="msform">
 <!-- progressbar -->
 <ul id="progressbar">
-<!--<li class="zeroli active">Phone Number </li-->
-<li class="phoneli">Greetings</li>
+<li class="zeroli active">Greetings</li>
+<li class="phoneli">Phone Number </li>
 <li class="IntroLi">Intro</li>
 <li class='dotLi'>DOT</li>
 <li class='MCLi'>MC</li>
@@ -62,8 +62,7 @@ function myFunction() {
 <div class="overlay">
     <div id="loading-img"></div>
 </div>
-
-	<fieldset class='first'>
+	<fieldset class='zero'>
 	<h2 class="fs-title">Welcome to Givesurance</h2>
 	<h3 class="fs-subtitle"></h3>
 	<div class='row'>
@@ -118,15 +117,22 @@ function myFunction() {
 	</div>
 	
 	</div>
+	<div class='previous_next_buttons'>
 
+	<input type="button" name="next" class="action-button zero_next" value="Next" />
+	<input type="button" name="next" class="action-button no_insurance" value="Done" style='display:none;'/>
+		</div>
+	</fieldset>
+
+	<fieldset class='first'>
 	<h2 class="fs-title">Hi my name is (YOUR NAME) and I will be assisting you today.
 	In case we get disconnected, what is the best phone number to reach you?</h2>
 	<h3 class="fs-subtitle"></h3>
 		<input type="text" name="phone" placeholder="Phone Number" required class='phoneNumber' oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
 		<input type="hidden" name="contactId" placeholder="Phone Number" required class='contactId' />
 		<div class='previous_next_buttons'>
+			<input type="button" name="previous" class="previous_phone action-button" value="Previous" />
 		<input type="button" name="next" class="action-button phone_number_next" value="Next" />
-			<input type="button" name="next" class="action-button no_insurance" value="Done" style='display:none;'/>
 		</div>
 	</fieldset>
 	<fieldset class='first_1'>
@@ -765,11 +771,11 @@ function myFunction() {
 					<div class="form-row">
 						<div class="form-holder w-100">
 							<label>First Name:</label>
-								<input type="text" class="form-control" name="Insured_first_name"  id='Insured_first_name'>
+								<input type="text" class="form-control" name="Insured_first_name" placeholder="First Name.." id='Insured_first_name'>
 							<label>Middle Initial:</label>
-								<input type="text" class="form-control" name="Insured_Middle_name"  id='Insured_Middle_name'>
+								<input type="text" class="form-control" name="Insured_Middle_name" placeholder="Middle Initial:.." id='Insured_Middle_name'>
 							<label>Last Name:</label>
-								<input type="text" class="form-control" name="Insured_Last_name" id='Insured_Last_name'>
+								<input type="text" class="form-control" name="Insured_Last_name" placeholder="Last Name:." id='Insured_Last_name'>
 							</div>	
 					</div>	
 					<div class="form-row">
