@@ -64,7 +64,8 @@ function myFunction() {
 </div>
 
 	<fieldset class='first'>
-	<h2 class="fs-title">Welcome to Givesurance</h2>
+	<h2 class="fs-title">Hi my name is (YOUR NAME) and I will be assisting you today.
+	In case we get disconnected, what is the best phone number to reach you?</h2>
 	<h3 class="fs-subtitle"></h3>
 	<div class='row'>
 	
@@ -118,9 +119,6 @@ function myFunction() {
 	</div>
 	
 	</div>
-
-	<h2 class="fs-title">Hi my name is (YOUR NAME) and I will be assisting you today.
-	In case we get disconnected, what is the best phone number to reach you?</h2>
 	<h3 class="fs-subtitle"></h3>
 		<input type="text" name="phone" placeholder="Phone Number" required class='phoneNumber' oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
 		<input type="hidden" name="contactId" placeholder="Phone Number" required class='contactId' />
