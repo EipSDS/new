@@ -2513,9 +2513,7 @@ Physical Damage Losses
 		<div class="alert alert-success" id='final_thanku_message' style='display:none'>
 		  Thank you for calling givesurance. Have a great day!!
 		</div>
-	    <div class='previous_next_buttons' id='submit_quote' style='display:none'>
-		<input type="button" name="submit_quote" class="action-button" value="Submit" />
-		</div>
+<input type="button" name="next" class="action-button submit_quote" value="Get Progressive Quote" style='display:none;'/>
 	</fieldset>
 </form>
 

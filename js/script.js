@@ -3510,7 +3510,7 @@ $(document).on('click', '.Thankyou_next', function(){
 	   data: ({thankyou_next: "success",contactId:contactId,alternate_phone_number:alternate_phone_number}),
 		success:function(result){
 			$("#final_thanku_message").show();
-			$("#submit_quote").show();
+			$(".submit_quote").show();
 		}
 	})
 	}
