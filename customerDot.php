@@ -547,8 +547,8 @@ function myFunction() {
 				<div class="form-row" id='Specify_Commodities_Hauled_select_div'>	
 					<div class="form-holder w-100">
 					<label>Specify Commodities Hauled</label>
-					<select  multiple="multiple" id='Specify_Commodities_Hauled_select' name='Specify_Commodities_Hauled[]'>
-
+					<select  id='Specify_Commodities_Hauled_select' name='Specify_Commodities_Hauled[]'>
+						<option value="">Choose Commodities Hauled</option>
 						 <option value="Agricultural/Farm Supplies">Agricultural/Farm Supplies</option>
 						<option value="Auto Parts / Tires">Auto Parts / Tires</option>
 						<option value="Beverages">Beverages</option>
