@@ -119,7 +119,6 @@ function myFunction() {
 	</div>
 	
 	</div>
-	<h3 class="fs-subtitle"></h3>
 		<input type="text" name="phone" placeholder="Phone Number" required class='phoneNumber' oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
 		<input type="hidden" name="contactId" placeholder="Phone Number" required class='contactId' />
 		<div class='previous_next_buttons'>
