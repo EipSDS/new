@@ -9,8 +9,8 @@ $(".previous_phone").click(function(){
 });
 $(".previous_doT").click(function(){
 	$(".dotLi").removeClass("active");
-	$(".phoneli").addClass("active");
-	$(".first").show(); 
+	$(".IntroLi").addClass("active");
+	$(".first_1").show(); 
 	$(".second").hide();
 		
 });
@@ -177,18 +177,12 @@ $(".zeroli").click(function(){
 
 $(".phoneli").click(function(){
 	var contact_last_name=$(".contact_last_name").val();
-	if(contact_last_name && $('input[name="quick_quote_for_insurance"]').is(':checked') &&  $("input[name='quick_quote_for_insurance']:checked").val()=='Yes'){
 		$(".dot_alert").hide();
 		$("#progressbar li").removeClass("active");
 		$(".phoneli").addClass("active");
 		$("fieldset").hide();
 		$(".first").show();
-	}else{
-		event.preventDefault();
-		$(".contact_last_name").addClass('is-invalid');
-		$(".dot_alert").show();
-	 
-	}	
+	
 });
 $(".IntroLi").click(function(){
 	var contactId=$(".contactId").val();
@@ -483,12 +477,56 @@ $(".PDFData").click(function(){
 	}	
 });
 
-$(document).on("click", ".zero_next", function(event){
-	var contact_first_name=$(".contact_first_name").val();
-	var contact_last_name=$(".contact_last_name").val();
+// $(document).on("click", ".zero_next", function(event){
+	// var contact_first_name=$(".contact_first_name").val();
+	// var contact_last_name=$(".contact_last_name").val();
+		// if(contact_last_name && $('input[name="quick_quote_for_insurance"]').is(':checked')){
+			// console.log($('input[name="quick_quote_for_insurance"]').is(':checked'));
+			// var quick_quote_for_insurance = $("input[name='quick_quote_for_insurance']:checked").val();
+				// if(quick_quote_for_insurance=='No'){
+					// $(this).hide();
+					// $(".no_insurance").show();
+					// $(".dot_alert").html('I am sorry I will not be able to help you with that. Let me transfer to our professional who can better assist you.');
+					// $(".dot_alert").show();
+				// }else{
+					// $(this).show();
+					// $(".no_insurance").hide();
+					// $(".dot_alert").hide();
+					// //$(".contact_last_name").removeClass('is-invalid');
+					// $(".overlay").show();
+					// $.ajax({
+							// url:"ajaxRequest.php", 
+							// type: "POST", 
+						   // dataType: 'json',
+						   // data: ({form_zero_step: "success"}),
+							// success:function(result){
+								// $(".zeroli").removeClass("active");
+									// $(".phoneli").addClass("active");
+									// $(".zero").hide();
+									// $(".first").show(); 
+									// $(".overlay").hide();
+									// $("#Insured_first_name").val(contact_first_name);
+									// $("#Insured_Last_name").val(contact_last_name);									
+							// }
+						 // });
+						
+					// }
+		// }else{
+			// event.preventDefault();
+			// $(".dot_alert").show();
+			// //$(".contact_last_name").addClass('is-invalid');
+		// }
+// });
+
+
+$(document).on("click", ".phone_number_next", function(event){
+		var contact_first_name=$(".contact_first_name").val();
+		var contact_last_name=$(".contact_last_name").val();
 		if(contact_last_name && $('input[name="quick_quote_for_insurance"]').is(':checked')){
-			console.log($('input[name="quick_quote_for_insurance"]').is(':checked'));
+		console.log($('input[name="quick_quote_for_insurance"]').is(':checked'));
 			var quick_quote_for_insurance = $("input[name='quick_quote_for_insurance']:checked").val();
+				$("#Insured_first_name").val(contact_first_name);
+				$("#Insured_Last_name").val(contact_last_name);
 				if(quick_quote_for_insurance=='No'){
 					$(this).hide();
 					$(".no_insurance").show();
@@ -500,21 +538,6 @@ $(document).on("click", ".zero_next", function(event){
 					$(".dot_alert").hide();
 					//$(".contact_last_name").removeClass('is-invalid');
 					$(".overlay").show();
-					$.ajax({
-							url:"ajaxRequest.php", 
-							type: "POST", 
-						   dataType: 'json',
-						   data: ({form_zero_step: "success"}),
-							success:function(result){
-								$(".zeroli").removeClass("active");
-									$(".phoneli").addClass("active");
-									$(".zero").hide();
-									$(".first").show(); 
-									$(".overlay").hide();
-									$("#Insured_first_name").val(contact_first_name);
-									$("#Insured_Last_name").val(contact_last_name);									
-							}
-						 });
 						
 					}
 		}else{
@@ -522,20 +545,20 @@ $(document).on("click", ".zero_next", function(event){
 			$(".dot_alert").show();
 			//$(".contact_last_name").addClass('is-invalid');
 		}
-});
-
-
-$(document).on("click", ".phone_number_next", function(event){
+	
 	var phone=$(".phoneNumber").val();
-	var contact_first_name=$(".contact_first_name").val();
-	var contact_last_name=$(".contact_last_name").val();
-	var quick_quote_for_insurance = 'Yes';
+var quick_quote_for_insurance = $("input[name='quick_quote_for_insurance']:checked").val();
 	
 	
-	if(phone==''){
+	if(phone=='' || contact_last_name=='' || $('input[name="quick_quote_for_insurance"]').is(':checked')==false || quick_quote_for_insurance=='No' ){
 		event.preventDefault();
 		$(".phoneNumber").addClass('is-invalid');
+		$(".dot_alert").show();		
+		
 	}else{
+			var contact_first_name=$(".contact_first_name").val();
+	var contact_last_name=$(".contact_last_name").val();
+	var quick_quote_for_insurance = 'Yes';
 	$(".phoneNumber").removeClass('is-invalid');
 	$("body").css("cursor", "progress");
 	$(".overlay").show();
@@ -3421,7 +3444,7 @@ $(document).on("click", ".quick_quote_for_insurance", function(event){
 		$('.quick_quote_for_insurance_no').hide();
 		$('.help_text').val('');
 		$(".no_insurance").hide();
-		$(".zero_next").show();
+		$(".phone_number_next").show();
 		$(".dot_alert").hide();
 	}
 
