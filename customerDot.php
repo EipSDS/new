@@ -548,7 +548,7 @@ function myFunction() {
 					<div class="form-holder w-100">
 					<label>Specify Commodities Hauled</label>
 					<select  multiple="multiple" id='Specify_Commodities_Hauled_select' name='Specify_Commodities_Hauled[]'>
-						<option value="">Choose Commodities Hauled</option>
+						<option value=""><span>Choose Commodities Hauled</span></option>
 						 <option value="Agricultural/Farm Supplies">Agricultural/Farm Supplies</option>
 						<option value="Auto Parts / Tires">Auto Parts / Tires</option>
 						<option value="Beverages">Beverages</option>
@@ -2513,7 +2513,6 @@ Physical Damage Losses
 		<div class="alert alert-success" id='final_thanku_message' style='display:none'>
 		  Thank you for calling givesurance. Have a great day!!
 		</div>
-<input type="button" name="next" class="action-button submit_quote" value="Get Progressive Quote" style='display:none;'/>
 	</fieldset>
 </form>
 
