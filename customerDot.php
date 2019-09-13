@@ -64,8 +64,7 @@ function myFunction() {
 </div>
 
 	<fieldset class='first'>
-	<h2 class="fs-title">Hi my name is (YOUR NAME) and I will be assisting you today.
-	In case we get disconnected, what is the best phone number to reach you?</h2>
+	<h2 class="fs-title">"Welcome to Givesurance. My name is (YOUR NAME) and I will be assisting you today. To proceed, may i have some basic details from you? </h2>
 	<h3 class="fs-subtitle"></h3>
 	<div class='row'>
 	
