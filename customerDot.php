@@ -548,7 +548,7 @@ function myFunction() {
 					<div class="form-holder w-100">
 					<label>Specify Commodities Hauled</label>
 					<select  multiple="multiple" id='Specify_Commodities_Hauled_select' name='Specify_Commodities_Hauled[]'>
-						<option value=""><span>Choose Commodities Hauled</span></option>
+
 						 <option value="Agricultural/Farm Supplies">Agricultural/Farm Supplies</option>
 						<option value="Auto Parts / Tires">Auto Parts / Tires</option>
 						<option value="Beverages">Beverages</option>
