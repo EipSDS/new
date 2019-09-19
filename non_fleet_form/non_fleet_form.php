@@ -43,7 +43,7 @@ $driversData=$check_token_valid['data'][0];
 $dd=json_decode($driversData);
 	echo "<pre>";
 	echo "valid taken";
-	echo $driversData;
+	print_r($driversData);
 	echo "</pre>";
 	
 }
