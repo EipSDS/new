@@ -36,7 +36,7 @@ if(!empty($phone_number)){
 				echo $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 	echo "<pre>";
 	echo "not valid";
-	print_r($check_token_valid['data'][0]['id']);
+	echo $check_token_valid['data'][0]['id'];
 	echo "</pre>";
 }
 else{
