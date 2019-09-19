@@ -42,7 +42,7 @@ if(!empty($phone_number)){
 else{
 	echo "<pre>";
 	echo "valid taken";
-	echo $check_token_valid['code'][0]['id'];
+	echo $check_token_valid['code'];
 	echo "</pre>";
 }	
 }
