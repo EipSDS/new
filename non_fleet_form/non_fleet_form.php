@@ -37,6 +37,7 @@ if(!empty($phone_number)){
 	echo "<pre>";
 	echo "not valid";
 	echo $check_token_valid['data'];
+	echo $get_new_token['refresh_token'];
 	echo "</pre>";
 }
 else{
