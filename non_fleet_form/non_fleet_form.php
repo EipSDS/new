@@ -39,11 +39,9 @@ if(!empty($contact_id)){
 	echo ($check_token_valid['data'][0]['Specify_Commodities_Hauled']);
 	echo "</pre>";
 }
-$driversData=$check_token_valid['data'][0];
-$dd=json_decode($driversData);
 	echo "<pre>";
 	echo "valid taken";
-	print_r($driversData);
+	print_r($check_token_valid['code']);
 	echo "</pre>";
 	
 }
