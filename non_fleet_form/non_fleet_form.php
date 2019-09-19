@@ -20,7 +20,7 @@ if($contact_id!== ''){
 				$url = "Contacts/search?$phone_number";
 			$data = "";
 			echo $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
-			if(ISSET($check_token_valid['code']) && $check_token_valid['code'] !== "INVALID_TOKEN"){
+			if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){
 				$url = "token";
 				$data = array("refresh_token"=>$refresh_token,"client_id"=>"".$zoho_client_id."","client_secret"=>"".$zoho_client_secret."","grant_type"=>"refresh_token");
 				$get_new_token = $handleFunctionsObject-> zoho_auth($url,"POST",$data);
