@@ -39,9 +39,11 @@ if(!empty($contact_id)){
 	echo ($check_token_valid['data'][0]['Specify_Commodities_Hauled']);
 	echo "</pre>";
 }
+$driversData=$check_token_valid['data'][0];
+$dd=json_decode($driversData);
 	echo "<pre>";
 	echo "valid taken";
-	echo ($check_token_valid['data'][0]['Specify_Commodities_Hauled']);
+	echo $driversData;
 	echo "</pre>";
 	
 }
