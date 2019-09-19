@@ -13,7 +13,7 @@ echo $contact_id;
 echo $phone_number;
 
 
-if(!empty($contact_id)){
+if(!empty($phone_number)){
 		
 		echo "Contact ID found";
 		
