@@ -20,7 +20,7 @@ if(!empty($contact_id)){
 				$url = "Contacts/$contact_id";
 			$data = "";
 			echo $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
-			if($check_token_valid['code'] == "AUTHENTICATION_FAILURE"){
+			if($check_token_valid['code']== "AUTHENTICATION_FAILURE"){
 				$url = "token";
 				$data = array("refresh_token"=>$refresh_token,"client_id"=>"".$zoho_client_id."","client_secret"=>"".$zoho_client_secret."","grant_type"=>"refresh_token");
 				$get_new_token = $handleFunctionsObject-> zoho_auth($url,"POST",$data);
@@ -38,12 +38,12 @@ if(!empty($contact_id)){
 	echo "not valid";
 	echo ($check_token_valid['data'][0]['Specify_Commodities_Hauled']);
 	echo "</pre>";
-}
+}else{
 	echo "<pre>";
 	echo "valid taken";
 	print_r($check_token_valid['code']);
 	echo "</pre>";
-	
+}	
 }
 
 
