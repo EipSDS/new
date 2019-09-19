@@ -76,6 +76,8 @@ echo $Radious_0_50_miles=$check_token_valid['data'][0]['Radious_0_50_miles'];
 echo $Radious_50_200_miles=$check_token_valid['data'][0]['Radious_50_200_miles'];
 echo $Radious_400_miles=$check_token_valid['data'][0]['Radious_200_miles'];
 echo $Radious_600_miles=$check_token_valid['data'][0]['Radious_600_miles'];	
+echo $DOB_Age_MaritalStatus_Points_LicenceNo=$check_token_valid['data'][0]['DOB_Age_MaritalStatus_Points_LicenceNo'];	
+echo $Name1=$check_token_valid['data'][0]['Name1'];	
 	
 	echo "<pre>";
 	echo "valid taken";
