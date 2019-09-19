@@ -45,9 +45,11 @@ echo $ZIP_Code_Two=$check_token_valid['data'][0]['ZIP_Code_Two'];
 echo $E_mail_Address=$check_token_valid['data'][0]['E_mail_Address'];
 echo $Radious_0_50_miles=$check_token_valid['data'][0]['Radious_0_50_miles'];
 echo $Radious_50_200_miles=$check_token_valid['data'][0]['Radious_50_200_miles'];
+echo $Radious_400_miles=$check_token_valid['data'][0]['Radious_200_miles'];
+echo $Radious_600_miles=$check_token_valid['data'][0]['Radious_600_miles'];
 	
 	echo "<pre>";			 
-	print_r($check_token_valid['data'][0]);
+	print_r($check_token_valid);
     echo "</pre>";
 	
 	
