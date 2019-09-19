@@ -46,7 +46,7 @@ echo	$E_mail_Address=$check_token_valid['data'][0]['E_mail_Address']);
 echo	$Radious_0_50_miles=$check_token_valid['data'][0]['Radious_0_50_miles']);
 echo	$Radious_50_200_miles=$check_token_valid['data'][0]['Radious_50_200_miles']);
 	
-	echo "<pre>";			 0
+	echo "<pre>";			 
 	print_r($check_token_valid['data'][0]);
     echo "</pre>";
 	
