@@ -35,10 +35,12 @@ if($contact_id!== ''){
 				$data = "";
 				echo $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 	echo "<pre>";
+	echo "not valid";
 	print($check_token_valid);
 	echo "</pre>";
 }
 	echo "<pre>";
+	echo "valid taken";
 	print($check_token_valid);
 	echo "</pre>";
 }
