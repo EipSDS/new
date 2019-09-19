@@ -29,16 +29,15 @@ if(!empty($phone_number)){
 				 $url = "Contacts/search?phone=$phone_number";
 				$data = "";
 				 $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
-echo $contact_id=$check_token_valid['data'];
+echo $contact_id=$check_token_valid['data'][0];
 echo $first_name=$check_token_valid['data'][0]['First_Name'];
+echo $effective_date=$check_token_valid['data'][0]['Policy_Effective_Date'];
 
 	
 	echo "<pre>";			 
 	print_r($check_token_valid['data'][0]);
     echo "</pre>";
-		echo "<pre>";			 
-	print_r($check_token_valid['data']);
-    echo "</pre>";
+	
 	
 }
 else{
