@@ -33,7 +33,7 @@ if($contact_id!== ''){
 				$old_access_token = file_get_contents("access_token.txt");
 				 $url = "Contacts/search?phone=$phone_number";
 				$data = "";
-				$check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
+				echo $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 	echo "<pre>";
 	print($check_token_valid);
 	echo "</pre>";
