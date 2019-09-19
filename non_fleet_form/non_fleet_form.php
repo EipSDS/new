@@ -29,22 +29,8 @@ if(!empty($phone_number)){
 				 $url = "Contacts/search?phone=$phone_number";
 				$data = "";
 				 $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
-echo	$contact_id=$check_token_valid['data'][0]);
-echo	$first_name=$check_token_valid['data'][0]['First_Name']);
-echo	$effective_date=$check_token_valid['data'][0]['Policy_Effective_Date']);
-echo	$garaging_address=$check_token_valid['data'][0]['Home_Address']);
-echo	$USDOT_Assigned_to=$check_token_valid['data'][0]['USDOT_Assigned_to']);
-echo	$garaging_City=$check_token_valid['data'][0]['City']);
-echo	$garaging_State=$check_token_valid['data'][0]['State']);
-echo	$garaging_ZIP_Code=$check_token_valid['data'][0]['ZIP_Code']);
-echo	$Yrs_in_business=$check_token_valid['data'][0]['Yrs_in_business']);
-echo	$Mailing_Address=$check_token_valid['data'][0]['Mailing_Address']);
-echo	$City_Two=$check_token_valid['data'][0]['City_Two']);
-echo	$State_Two=$check_token_valid['data'][0]['State_Two']);
-echo	$ZIP_Code_Two=$check_token_valid['data'][0]['ZIP_Code_Two']);
-echo	$E_mail_Address=$check_token_valid['data'][0]['E_mail_Address']);
-echo	$Radious_0_50_miles=$check_token_valid['data'][0]['Radious_0_50_miles']);
-echo	$Radious_50_200_miles=$check_token_valid['data'][0]['Radious_50_200_miles']);
+echo $contact_id=$check_token_valid['data'][0];
+
 	
 	echo "<pre>";			 
 	print_r($check_token_valid['data'][0]);
