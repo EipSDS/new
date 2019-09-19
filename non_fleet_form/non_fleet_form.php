@@ -34,7 +34,9 @@ if(!empty($phone_number)){
 				 $url = "Contacts/search?phone=$phone_number";
 				$data = "";
 				 $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
+	echo "<pre>";			 
 	print_r($check_token_valid['data'][0]);
+    echo "</pre>";
 }
 else{
 	echo "<pre>";
