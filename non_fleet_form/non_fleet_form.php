@@ -13,11 +13,11 @@ echo $contact_id;
 echo $phone_number;
 
 
-if($contact_id!== ''){
+if(!empty($contact_id)){
 		
 		echo "Contact ID found";
 		
-				$url = "Contacts/search?$phone_number";
+				$url = "Contacts/$contact_id";
 			$data = "";
 			echo $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 			if(ISSET($check_token_valid['code']) && $check_token_valid['code'] == "INVALID_TOKEN"){
@@ -36,13 +36,14 @@ if($contact_id!== ''){
 				echo $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 	echo "<pre>";
 	echo "not valid";
-	print($check_token_valid['data']);
+	print_r($check_token_valid['data'][0]);
 	echo "</pre>";
 }
 	echo "<pre>";
 	echo "valid taken";
-	print($check_token_valid['data']);
+	print_r($check_token_valid['data'][0]);
 	echo "</pre>";
+	
 }
 
 
@@ -51,6 +52,9 @@ if($contact_id!== ''){
 
 
 
+else{
+	echo "contact not found";
+}
 
 
 
