@@ -31,7 +31,7 @@ if(!empty($contact_id)){
 					file_put_contents("refresh_token.txt",$get_new_token['refresh_token']);
 				}
 				$old_access_token = file_get_contents("access_token.txt");
-				 $url = "Contacts/search?phone=$phone_number";
+				 $url = "Contacts/$contact_id";
 				$data = "";
 				echo $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 	echo "<pre>";
