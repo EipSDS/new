@@ -17,7 +17,7 @@ if(!empty($contact_id)){
 		
 		echo "Contact ID found";
 		
-				$url = "Contacts/$contact_id";
+				$url = "Contacts/search?phone=$phone_number";
 			$data = "";
 			echo $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 			if($check_token_valid['code']== "AUTHENTICATION_FAILURE"){
@@ -36,9 +36,10 @@ if(!empty($contact_id)){
 				echo $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 	echo "<pre>";
 	echo "not valid";
-	echo ($check_token_valid['data'][0]['Specify_Commodities_Hauled']);
+	print_r ($check_token_valid['data'][0]['Specify_Commodities_Hauled']);
 	echo "</pre>";
-}else{
+}
+else{
 	echo "<pre>";
 	echo "valid taken";
 	print_r($check_token_valid['code']);
