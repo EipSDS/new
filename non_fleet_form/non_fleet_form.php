@@ -1325,6 +1325,7 @@ while ($row21 = pg_fetch_assoc($result21)) {
 <?php
 }
 }
+pg_close($con);
 ?>
 	</td>
 	</tr>
@@ -1356,6 +1357,7 @@ if($rows2>=1){
 	<?php
 }
 }
+pg_close($con);
 ?>	
 	</td>
 	</tr>
@@ -1387,6 +1389,7 @@ while ($row22 = pg_fetch_assoc($result22)) {
 <?php
 }
 }
+pg_close($con);
 ?>	
 	</td>
 	</tr>
