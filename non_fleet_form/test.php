@@ -161,7 +161,7 @@ if($rows2>=1){
 echo 'array print';	
 	$response=array();	
 	 $response=$row2;
-	 print_r($response);
+	 // print_r($response);
 	 echo 'array print';
 	 foreach($response as $key => $value){
 		  echo 'jhklh<pre>';
@@ -173,12 +173,12 @@ echo 'array print';
 	 echo 'jhklh</pre>';
 	 }
 
-	 echo '<br>';	
+/* 	 echo '<br>';	
 	 echo $row2['year'];
 	 echo $row2['make'];
 	 echo '<br>';	
 	 echo $row2['vin'];
-	 echo '<br>';	 
+	 echo '<br>';	 */ 
 	}
 }	
 $query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
