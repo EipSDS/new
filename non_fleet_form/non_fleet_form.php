@@ -59,7 +59,7 @@ print_r($check_token_valid);
 echo "</pre>";	
 
 $query = "SELECT * FROM public.contact_commodities";
-$result = pg_query($con,$query);
+$result = pg_query($query);
 if($result){
 	echo "connected susccessfully";
 
