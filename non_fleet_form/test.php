@@ -164,7 +164,7 @@ if($rows2>=1){
 	$response=array();	
 	 echo $row2['year'];
 	 $response=$row2;
-	 print_r($response);
+	// print_r($response);
 	 echo '<br>';	
 	 echo $row2['make'];
 	 echo '<br>';	
