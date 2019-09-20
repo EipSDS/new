@@ -170,8 +170,9 @@ echo 'array print';
 	echo '<pre>';
 	 print_r($value);
 	 echo '</pre>';
-	 }
 	 echo $key[3][0];
+	 }
+
  echo 'newwwwww';
 /* 	 echo '<br>';	
 	 echo $row2['year'];
