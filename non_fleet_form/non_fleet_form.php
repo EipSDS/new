@@ -1340,23 +1340,25 @@ else{
 	</td>
 	</tr>
 	</table>
-	<?php
+
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+		<?php
 if($rows2>=1){
 	while ($row2 = pg_fetch_assoc($result2)) {
 	 	 
 ?>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
 	<input type="text" name="VIN1" class='vin' id="vin1" width="100%"  value="<?php echo $row2['contact_id']; ?>" style="width:100%;border: 0;font-size:14px;"/>
+		<?php
+		}
+}
+	?>
 	</td>
 	</tr>
 	</table>
 	
-	<?php
-		}
-}
-	?>
+
 	</td>
 	</tr>
 	</table>
