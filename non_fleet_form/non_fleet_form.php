@@ -68,7 +68,20 @@ if($rows2>=1){
 	 echo $row2['vin'];
 	 echo '<br>';	 
 	}
-}			 
+}	
+$query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
+$result3 = pg_query($query3);
+$rows3 = pg_num_rows($result3);
+if($rows3>=1){
+	while ($row3 = pg_fetch_assoc($result3)) {
+	 echo $row3['year'];
+	 echo '<br>';	
+	 echo $row3['make'];
+	 echo '<br>';	
+	 echo $row3['vin'];
+	 echo '<br>';	 
+	}
+}		 
 echo $id=$check_token_valid['data'][0];
 echo $first_name=$check_token_valid['data'][0]['First_Name'];
 echo $effective_date=$check_token_valid['data'][0]['Policy_Effective_Date'];
@@ -153,16 +166,16 @@ if($rows2>=1){
 	 echo '<br>';	 
 	}
 }	
-$query2 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
-$result2 = pg_query($query2);
-$rows2 = pg_num_rows($result2);
-if($rows2>=1){
-	while ($row2 = pg_fetch_assoc($result2)) {
-	 echo $row2['year'];
+$query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
+$result3 = pg_query($query3);
+$rows3 = pg_num_rows($result3);
+if($rows3>=1){
+	while ($row3 = pg_fetch_assoc($result3)) {
+	 echo $row3['year'];
 	 echo '<br>';	
-	 echo $row2['make'];
+	 echo $row3['make'];
 	 echo '<br>';	
-	 echo $row2['vin'];
+	 echo $row3['vin'];
 	 echo '<br>';	 
 	}
 }	
