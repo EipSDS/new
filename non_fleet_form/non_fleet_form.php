@@ -163,14 +163,15 @@ $query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' 
 $result3 = pg_query($query3);
 $rows3 = pg_num_rows($result3);
 if($rows3>=1){
-	while ($row3 = pg_fetch_assoc($result3)) {
+	$row3 = pg_fetch_assoc($result3);
+	/* while ($row3 = pg_fetch_assoc($result3)) {
 	 echo $row3['year'];
 	 echo '<br>';	
 	 echo $row3['make'];
 	 echo '<br>';	
 	 echo $row3['vin'];
 	 echo '<br>';	 
-	}
+	} */
 }	
 
 	 $url = "Contacts/$contact_id";
@@ -1344,7 +1345,7 @@ else{
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="VIN1" class='vin' id="vin1" width="100%"  value="<?php echo $first_name; ?>" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="VIN1" class='vin' id="vin1" width="100%"  value="<?php echo $row3['vin']; ?>" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
