@@ -1308,13 +1308,24 @@ else{
 	</td>
 	</tr>
 	</table>
+<?php
+$query2 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='1981 or newer vehicle'";
+$result2 = pg_query($query2);
+$rows2 = pg_num_rows($result2);
+if($rows2>=1){
+while ($row2 = pg_fetch_assoc($result2)) { 
+?>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Tractors1" class='tractors' id="tractors1" value="test" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Tractors1" class='tractors' id="tractors1" value="<?php echo $row2['make']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
+<?php
+}
+}
+?>
 	</td>
 	</tr>
 	</table>
