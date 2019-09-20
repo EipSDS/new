@@ -59,12 +59,10 @@ print_r($check_token_valid);
 echo "</pre>";	
 
 $query = "SELECT * FROM public.contact_commodities where contact_id=".$contact_id."";
-$result = pg_query($con,$query);
+$rs = pg_query($query);
 if($result){
-	while($row = $result->fetch_assoc()) {
 	echo "connected susccessfully";
-	echo $row['value'];
-}
+
 }
 else{
 	echo "not connected successfully";
