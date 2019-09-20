@@ -261,7 +261,7 @@ else{
 	<table width="50%" align="left" cellpadding="0" cellspacing="0">
 	<tr>
 	<td align="left">		
-	<img src="img/logo.png" alt="logo"/>
+	<img src="http://givesurance.herokuapp.com/non_fleet_form/img/logo.png" alt="logo"/>
 	</td>
 	</tr>
 	</table>
@@ -1606,7 +1606,7 @@ else{
 	<table width="50%" align="left" cellpadding="0" cellspacing="0">
 	<tr>
 	<td align="left">		
-	<img src="img/logo.png" alt="logo"/>
+	<img src="http://givesurance.herokuapp.com/non_fleet_form/img/logo.png" alt="logo"/>
 	</td>
 	</tr>
 	</table>
@@ -2730,7 +2730,7 @@ else{
 	<table width="50%" align="left" cellpadding="0" cellspacing="0">
 	<tr>
 	<td align="left">		
-	<img src="img/logo.png" alt="logo"/>
+	<img src="http://givesurance.herokuapp.com/non_fleet_form/img/logo.png" alt="logo"/>
 	</td>
 	</tr>
 	</table>
