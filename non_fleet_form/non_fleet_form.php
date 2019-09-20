@@ -61,7 +61,10 @@ echo "</pre>";
 $query = "SELECT * FROM public.contact_commodities where contact_id='".$contact_id."'";
 $result = pg_query($query);
 	if($result){
+	while($row = mysqli_fetch_assoc($result)) {
 	echo "Record Created Sucessfully";
+	echo $row['value'];
+	}
 	}
 	else
 	{
