@@ -1321,11 +1321,11 @@ else{
 	</tr>
 	</table>
 <?php	
-$query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
-$result3 = pg_query($query3);
-$rows3 = pg_num_rows($result3);
-if($rows3>=1){
-	while ($row3 = pg_fetch_assoc($result3)) {	 
+// $query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
+// $result3 = pg_query($query3);
+// $rows3 = pg_num_rows($result3);
+// if($rows3>=1){
+	// while ($row3 = pg_fetch_assoc($result3)) {	 
 
 ?>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
@@ -1337,8 +1337,8 @@ if($rows3>=1){
 	</tr>
 	</table>
 	<?php
-	}
-	}
+	// }
+	// }
 	?>
 	</td>
 	</tr>
@@ -1358,18 +1358,18 @@ if($rows3>=1){
 	<tr>
 		<?php
 
-$query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
-$result3 = pg_query($query3);
-$rows3 = pg_num_rows($result3);
-if($rows3>=1){
-	while ($row3 = pg_fetch_assoc($result3)) {	 
+// $query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
+// $result3 = pg_query($query3);
+// $rows3 = pg_num_rows($result3);
+// if($rows3>=1){
+	// while ($row3 = pg_fetch_assoc($result3)) {	 
 ?>
 	<td>
 	<input type="text" name="VIN1" class='vin' id="vin1" value="<?php echo $row3['vin']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 		<?php
-	}
-}
+	// }
+// }
 	?>
 	</tr>
 	</table>
@@ -1389,11 +1389,11 @@ if($rows3>=1){
 	</table>
 <?php
 
-$query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
-$result3 = pg_query($query3);
-$rows3 = pg_num_rows($result3);
-if($rows3>=1){
-	while ($row3 = pg_fetch_assoc($result3)) {	 
+// $query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
+// $result3 = pg_query($query3);
+// $rows3 = pg_num_rows($result3);
+// if($rows3>=1){
+	// while ($row3 = pg_fetch_assoc($result3)) {	 
 ?>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
@@ -1403,8 +1403,8 @@ if($rows3>=1){
 	</tr>
 	</table>
 <?php
-	}
-}
+	// }
+// }
 ?>	
 	</td>
 	</tr>
