@@ -63,7 +63,14 @@ $result = pg_query($query);
 	$rows = pg_num_rows($result);
 		if($rows>=1){
 			while ($row = pg_fetch_assoc($result)) {
+			 echo $row['name'];
+			 echo '<br>';
 			 echo $row['value'];
+			 echo '<br>';
+			 echo $row['max_value'];
+			 echo '<br>';
+			 echo $row['average_value'];
+			 echo '<br>';			 
 			}
 		}else{
 		echo "not connected";
