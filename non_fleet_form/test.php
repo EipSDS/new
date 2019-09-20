@@ -162,7 +162,15 @@ echo "adddddddddddeeeeeeeeeedddddd";
 if($rows2>=1){
 	while ($row2 = pg_fetch_assoc($result2)) {
 	print_r($row2);
-	
+	echo '----------------------------';
+		foreach($row2 as $value){
+		echo'<pre>';
+		
+		print_r($value);
+		echo'</pre>';
+		
+		
+	}
 	
 	/* $response=array();	
 	 echo $row2['year'];
@@ -174,14 +182,7 @@ if($rows2>=1){
 	 echo $row2['vin'];
 	 echo '<br>'; */	 
 	}
-	foreach($row2 as $value){
-		echo'<pre>';
-		
-		print_r($value);
-		echo'</pre>';
-		
-		
-	}
+
 }	
 $query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
 $result3 = pg_query($query3);
