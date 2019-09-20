@@ -156,8 +156,8 @@ if($rows1>=1){
 $query2 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='1981 or newer vehicle'";
 $result2 = pg_query($query2);
 $rows2 = pg_num_rows($result2);
+$row2 = pg_fetch_assoc($result2);
 if($rows2>=1){
-	while ($row2 = pg_fetch_assoc($result2)) {
 echo 'array print';	
 	$response=array();	
 	 $response=$row2;
@@ -167,11 +167,12 @@ echo 'array print';
 	 print_r($key);
 	 echo '</pre>';		
 
-		echo '<pre>';
+	echo '<pre>';
 	 print_r($value);
 	 echo '</pre>';
 	 }
-
+	 echo $key[3][0];
+ echo 'newwwwww';
 /* 	 echo '<br>';	
 	 echo $row2['year'];
 	 echo $row2['make'];
