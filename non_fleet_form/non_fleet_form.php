@@ -389,7 +389,7 @@ else{
 			<table align="left" cellpadding="6" cellspacing="0">
 				<tr>
 					<td align="center">
-						<input type="text" name="Applicant Name" class='applicant_name' id="applicant_name" width="100%" style="width:360px;border: 0;font-size:14px;"/>
+						<input type="text" name="Applicant Name" class='applicant_name' id="applicant_name" value="<?php echo $first_name;?>" width="100%" style="width:360px;border: 0;font-size:14px;"/>
 					</td>
 				</tr>
 			</table>
@@ -409,7 +409,7 @@ else{
 			<table align="left" cellpadding="6" cellspacing="0">
 				<tr>
 					<td align="center">
-						<input type="text" name="Effective Date" class='effective_date' id="effective_date" width="100%" style="width:125px;border: 0;font-size:14px;"/>
+						<input type="text" name="Effective Date" class='effective_date' id="effective_date" value="<?php echo $effective_date; ?>" width="100%" style="width:125px;border: 0;font-size:14px;"/>
 					</td>
 				</tr>
 			</table>
@@ -435,7 +435,7 @@ else{
 			<table align="left" cellpadding="6" cellspacing="0">
 				<tr>
 					<td align="center">
-						<input type="text" name="Garaging Address" class='garaging_address' id="garaging_address" width="100%" style="width:360px;border: 0;font-size:14px;"/>
+						<input type="text" name="Garaging Address" class='garaging_address' id="garaging_address" value="<?php echo $garaging_address; ?>" width="100%" style="width:360px;border: 0;font-size:14px;"/>
 					</td>
 				</tr>
 			</table>
@@ -455,7 +455,7 @@ else{
 			<table align="left" cellpadding="6" cellspacing="0">
 				<tr>
 					<td align="center">
-						<input type="text" name="DOT" class='dot' id="dot" width="100%" style="width:125px;border: 0;font-size:14px;"/>
+						<input type="text" name="DOT" class='dot' id="dot" width="100%" value="<?php echo $USDOT_Assigned_to; ?>" style="width:125px;border: 0;font-size:14px;"/>
 					</td>
 				</tr>
 			</table>
@@ -481,7 +481,7 @@ else{
 			<table align="left" cellpadding="6" cellspacing="0">
 				<tr>
 					<td align="center">
-						<input type="text" name="City State Zip:" class='city_state_zip' id="city_state_zip" width="100%" style="width:360px;border: 0;font-size:14px;"/>
+						<input type="text" name="City State Zip:" class='city_state_zip' id="city_state_zip" value="<?php echo $Yrs_in_business; ?>" width="100%" style="width:360px;border: 0;font-size:14px;"/>
 					</td>
 				</tr>
 			</table>
@@ -501,7 +501,7 @@ else{
 			<table align="left" cellpadding="6" cellspacing="0">
 				<tr>
 					<td align="center">
-						<input type="text" name="Years in Bus:" class='years_in_bus:' id="years_in_bus" width="100%" style="width:125px;border: 0;font-size:14px;"/>
+						<input type="text" name="Years in Bus:" class='years_in_bus:' id="years_in_bus" value="<?php echo $Yrs_in_business; ?>" width="100%" style="width:125px;border: 0;font-size:14px;"/>
 					</td>
 				</tr>
 			</table>
@@ -527,7 +527,7 @@ else{
 			<table align="left" cellpadding="6" cellspacing="0">
 				<tr>
 					<td align="center">
-						<input type="text" name="Mailing Address" class='mailing_address' id="mailing_address" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+						<input type="text" name="Mailing Address" class='mailing_address' id="mailing_address" value="<?php echo $Mailing_Address; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 					</td>
 				</tr>
 			</table>
@@ -547,7 +547,7 @@ else{
 			<table align="left" cellpadding="6" cellspacing="0">
 				<tr>
 					<td align="center">
-						<input type="text" name="City State Zip:" class='city_state_zip' id="city_state_zip" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+						<input type="text" name="City State Zip:" class='city_state_zip' id="city_state_zip" value="<?php echo $City_Two; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 					</td>
 				</tr>
 			</table>
@@ -573,7 +573,7 @@ else{
 			<table align="left" width="123" cellpadding="6" cellspacing="0">
 				<tr>
 					<td align="center">
-						<input type="text" name="Contact Name" class='contact_name' id="contact_name" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+						<input type="text" name="Contact Name" class='contact_name' id="contact_name" value="<?php echo $first_name; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 					</td>
 				</tr>
 			</table>
@@ -593,7 +593,7 @@ else{
 			<table align="left" width="123" cellpadding="6" cellspacing="0">
 				<tr>
 					<td align="center">
-						<input type="text" name="Phone" class='phone' id="Phone" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+						<input type="text" name="Phone" class='phone' id="Phone" value="<?php echo $phone_number; ?>"  width="100%" style="width:100%;border: 0;font-size:14px;"/>
 					</td>
 				</tr>
 			</table>
@@ -613,7 +613,7 @@ else{
 			<table align="left" width="123" cellpadding="6" cellspacing="0">
 				<tr>
 					<td align="center">
-						<input type="text" name="e-mail" class='e-mail' id="e-mail" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+						<input type="text" name="e-mail" class='e-mail' id="e-mail" value="<?php echo $E_mail_Address; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 					</td>
 				</tr>
 			</table>
@@ -661,7 +661,7 @@ else{
 	<table align="left" width="86" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="miles" class='miles' id="miles" width="100%" style="width:86;border: 0;font-size:14px;"/>
+			<input type="text" name="miles" class='miles' id="miles"  width="100%" style="width:86;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
