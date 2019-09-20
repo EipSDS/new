@@ -130,7 +130,6 @@ if($rows>=1){
 $query2 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='1981 or newer vehicle'";
 $result2 = pg_query($query2);
 $rows2 = pg_num_rows($result2);
-
 $query1 = "SELECT * FROM public.violation where contact_id='".$contact_id."'";
 $result1 = pg_query($query1);
 $rows1 = pg_num_rows($result1);
