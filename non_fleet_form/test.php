@@ -165,7 +165,7 @@ if($rows2>=1){
 		foreach($row2 as $key => $value){
 		echo'<pre>';
 		
-		print_r($value);
+		print_r($value['vehicle_type']);
 		echo'</pre>';
 		
 		
