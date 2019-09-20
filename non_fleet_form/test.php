@@ -163,6 +163,16 @@ echo 'array print';
 	 $response=$row2;
 	 print_r($response);
 	 echo 'array print';
+	 foreach($response as $key => $value){
+		  echo 'jhklh<pre>';
+	 print_r($key);
+	 echo 'jhklh</pre>';		
+
+		echo 'jhklh<pre>';
+	 print_r($value);
+	 echo 'jhklh</pre>';
+	 }
+
 	 echo '<br>';	
 	 echo $row2['year'];
 	 echo $row2['make'];
