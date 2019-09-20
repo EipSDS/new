@@ -57,6 +57,9 @@ echo "valid taken";
 echo "<pre>";
 print_r($check_token_valid);
 echo "</pre>";	
+
+$query = "SELECT * FROM public.contact_commodities where contact_id='".$contact_id."'";
+	
 	
 }
 else{
