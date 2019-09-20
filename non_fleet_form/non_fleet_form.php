@@ -1,4 +1,5 @@
 <?php
+$con = pg_connect("host=ec2-54-243-47-196.compute-1.amazonaws.com dbname=da75gbsng1e37m user=ikheqtaxeqwazi password=800c91378dbd23c1752ef5722ad7c40a4f727966939b44d58361184792659ebd");
 include('functions.php');
 $zoho_client_id='1000.G5ADCREZLWKQ37764DHC3ZZXAW4VEH';
 $zoho_client_secret='88c42ac4b05a8e341731956a233d89cb0399e7f3cb';
@@ -51,11 +52,20 @@ echo $driver_Name1=$check_token_valid['data'][0]['Drivers1'][0]['Name1'];
 echo $DOB_Age_MaritalStatus_Points_LicenceNo=$check_token_valid['data'][0]['Drivers1'][0]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 echo $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
 echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];	
-	echo "valid taken";
-	echo "<pre>";
-	print_r($check_token_valid);
-	echo "</pre>";	
 	
+echo "valid taken";
+echo "<pre>";
+print_r($check_token_valid);
+echo "</pre>";	
+
+$query = "SELECT * FROM public.contact_commodities where contact_id=".$contact_id."";
+$rs = pg_query($query);
+if($result){
+	echo "connected susccessfully";
+	echo $result['value'];
+}
+else{
+	echo "not connected successfully";
 }
 else{
 	 $url = "Contacts/$contact_id";
@@ -84,23 +94,13 @@ echo $DOB_Age_MaritalStatus_Points_LicenceNo=$check_token_valid['data'][0]['Driv
 echo $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
 echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];	
 
-	
-	echo "<pre>";
-	echo "valid taken";
-	print_r($check_token_valid['code']);
-	echo "</pre>";
-	echo "<pre>";
-	echo "valid 2 taken";
-	print_r($check_token_valid);
-	echo "</pre>";
+echo "<pre>";
+echo "valid 2 taken";
+print_r($check_token_valid);
+echo "</pre>";
 	
 }	
 }
-
-
-
-
-
 
 
 else{
