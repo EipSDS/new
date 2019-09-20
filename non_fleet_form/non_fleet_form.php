@@ -1374,7 +1374,7 @@ if($rows3>=1){
 	<tr>
 	<td>
 	
-	<input type="text" name="Make1" class='tractors' value="<?php echo $row3['year']; ?>" id="Make1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Make1" class='tractors' value="<?php echo $row3['contact_id']; ?>" id="Make1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	
 	</td>
 	</tr>
