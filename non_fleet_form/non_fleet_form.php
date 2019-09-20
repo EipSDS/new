@@ -1345,13 +1345,12 @@ else{
 	<tr>
 	<td>
 		<?php
-	while ($row2 = pg_fetch_assoc($result2)) {
-	 	 
+	while ($row2 = pg_fetch_assoc($result2)){ 	 
 ?>
 	<input type="text" name="VIN1" class='vin' id="vin1" width="100%"  value="<?php echo $row2['contact_id']; ?>" style="width:100%;border: 0;font-size:14px;"/>
-		<?php
+<?php
 }
-	?>
+?>
 	</td>
 	</tr>
 	</table>
