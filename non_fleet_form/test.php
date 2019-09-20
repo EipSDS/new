@@ -158,17 +158,17 @@ $result2 = pg_query($query2);
 $rows2 = pg_num_rows($result2);
 if($rows2>=1){
 	while ($row2 = pg_fetch_assoc($result2)) {
-echo 'array print';	
+// echo 'array print';	
 	$response=array();	
 	 $response=$row2;
 	 // print_r($response);
 	 foreach($response as $key => $value){
 		  echo '<pre>';
-	 print_r($key);
+	echo $key[3][0];
 	 echo '</pre>';		
 
 		echo '<pre>';
-	 print_r($value);
+	 print_r($value[3][0]);
 	 echo '</pre>';
 	 }
 
