@@ -1327,34 +1327,6 @@ else{
 	</td>
 	</tr>
 	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Tractors2" class='tractors' id="tractors2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Tractors3" class='tractors' id="tractors3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Tractors4" class='tractors' id="tractors4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Tractors5" class='tractors' id="tractors5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
 	</td>
 	</tr>
 	</table>
@@ -1372,34 +1344,6 @@ else{
 	<tr>
 	<td>
 	<input type="text" name="VIN1" class='vin' id="vin1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="vin2" class='tractors' id="vin2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="vin3" class='tractors' id="vin3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="vin4" class='tractors' id="vin4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="vin5" class='tractors' id="vin5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -1423,37 +1367,7 @@ else{
 	</td>
 	</tr>
 	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Stated2" class='tractors' id="Stated2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Stated3" class='tractors' id="Stated3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Stated4" class='tractors' id="Stated4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Stated5" class='tractors' id="Stated5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	</td>
-	</tr>
-	</table>
+	
 	</td>
 	</tr>
 	</table>
