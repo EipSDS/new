@@ -61,7 +61,11 @@ $result2 = pg_query($query2);
 $rows2 = pg_num_rows($result2);
 if($rows2>=1){
 	while ($row2 = pg_fetch_assoc($result2)) {
+	 $response=array();	
 	 echo $row2['year'];
+	 $response=$row2['year'];
+	 print_r($response);
+	 echo 'array print';	
 	 echo '<br>';	
 	 echo $row2['make'];
 	 echo '<br>';	
@@ -661,7 +665,7 @@ else{
 	<table align="left" width="86" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="miles" class='miles' id="miles"  width="100%" style="width:86;border: 0;font-size:14px;"/>
+			<input type="text" name="miles" class='miles' id="miles" value="<?php echo $Radious_0_50_miles; ?>" width="100%" style="width:86;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -681,7 +685,7 @@ else{
 	<table align="left" width="86" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="miles_2" class='miles_2' id="miles_2" width="100%" style="width:86px;border: 0;font-size:14px;"/>
+			<input type="text" name="miles_2" class='miles_2' id="miles_2" value="<?php echo $Radious_50_200_miles; ?>" width="100%" style="width:86px;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -701,7 +705,7 @@ else{
 	<table align="left" width="86" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="miles_3" class='miles_3' id="miles_3" width="100%" style="width:86;border: 0;font-size:14px;"/>
+			<input type="text" name="miles_3" class='miles_3' id="miles_3" value="<?php echo $Radious_400_miles; ?>" width="100%" style="width:86;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -721,7 +725,7 @@ else{
 	<table align="left" width="86" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="miles_4" class='miles_4' id="miles_4" width="100%" style="width:86;border: 0;font-size:14px;"/>
+			<input type="text" name="miles_4" class='miles_4' id="miles_4" value="<?php echo $Radious_600_miles; ?>" width="100%" style="width:86;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
