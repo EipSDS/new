@@ -30,6 +30,35 @@ if(!empty($phone_number)){
 				 $url = "Contacts/$contact_id";
 				$data = "";
 				 $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
+$query = "SELECT * FROM public.contact_commodities where contact_id='".$contact_id."'";
+$result = pg_query($query);
+$rows = pg_num_rows($result);
+if($rows>=1){
+	while ($row = pg_fetch_assoc($result)) {
+	 echo $row['name'];
+	 echo '<br>';
+	 echo $row['value'];
+	 echo '<br>';
+	 echo $row['max_value'];
+	 echo '<br>';
+	 echo $row['average_value'];
+	 echo '<br>';			 
+	}
+}
+
+$query1 = "SELECT * FROM public.violation where contact_id='".$contact_id."'";
+$result1 = pg_query($query1);
+$rows1 = pg_num_rows($result1);
+if($rows1>=1){
+	while ($row1 = pg_fetch_assoc($result1)) {
+	 echo $row1['accident_violation'];
+	 echo '<br>';	
+	 echo $row1['date'];
+	 echo '<br>';		 
+	}
+}
+
+				 
 echo $id=$check_token_valid['data'][0];
 echo $first_name=$check_token_valid['data'][0]['First_Name'];
 echo $effective_date=$check_token_valid['data'][0]['Policy_Effective_Date'];
@@ -58,24 +87,7 @@ echo "<pre>";
 print_r($check_token_valid);
 echo "</pre>";	
 
-$query = "SELECT * FROM public.contact_commodities where contact_id='".$contact_id."'";
-$result = pg_query($query);
-	$rows = pg_num_rows($result);
-		if($rows>=1){
-			while ($row = pg_fetch_assoc($result)) {
-			 echo $row['name'];
-			 echo '<br>';
-			 echo $row['value'];
-			 echo '<br>';
-			 echo $row['max_value'];
-			 echo '<br>';
-			 echo $row['average_value'];
-			 echo '<br>';			 
-			}
-		}else{
-		echo "not connected";
-			
-		}
+
 	
 }
 else{
