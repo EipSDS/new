@@ -162,7 +162,7 @@ if($rows2>=1){
 	while ($row2 = pg_fetch_assoc($result2)) {
 	print_r($row2);
 	echo '----------------------------';
-		foreach($row2 as $value){
+		foreach($row2 as $key => $value){
 		echo'<pre>';
 		
 		print_r($value);
