@@ -45,7 +45,6 @@ if($rows>=1){
 	 echo '<br>';			 
 	}
 }
-
 $query1 = "SELECT * FROM public.violation where contact_id='".$contact_id."'";
 $result1 = pg_query($query1);
 $rows1 = pg_num_rows($result1);
@@ -69,8 +68,7 @@ if($rows2>=1){
 	 echo $row2['vin'];
 	 echo '<br>';	 
 	}
-}
-				 
+}			 
 echo $id=$check_token_valid['data'][0];
 echo $first_name=$check_token_valid['data'][0]['First_Name'];
 echo $effective_date=$check_token_valid['data'][0]['Policy_Effective_Date'];
@@ -92,6 +90,17 @@ echo $Radious_600_miles=$check_token_valid['data'][0]['Radious_600_miles'];
 echo $driver_Name1=$check_token_valid['data'][0]['Drivers1'][0]['Name1'];
 echo "<br>";
 echo $DOB_Age_MaritalStatus_Points_LicenceNo=$check_token_valid['data'][0]['Drivers1'][0]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+$str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);  
+echo $DOB=$str_arr[0]; 
+echo"<br>";
+echo $Age=$str_arr[1]; 
+echo"<br>";
+echo $MaritalStatus=$str_arr[2]; 
+echo"<br>";
+echo $Points=$str_arr[3]; 
+echo"<br>";
+echo $LicenceNo=$str_arr[4]; 
+
 echo $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
 echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];	
 	
@@ -131,8 +140,19 @@ if($rows1>=1){
 	 echo '<br>';		 
 	}
 }
-	
-	
+$query2 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='1981 or newer vehicle'";
+$result2 = pg_query($query2);
+$rows2 = pg_num_rows($result2);
+if($rows2>=1){
+	while ($row2 = pg_fetch_assoc($result2)) {
+	 echo $row2['year'];
+	 echo '<br>';	
+	 echo $row2['make'];
+	 echo '<br>';	
+	 echo $row2['vin'];
+	 echo '<br>';	 
+	}
+}	
 	 $url = "Contacts/$contact_id";
 	 $data = "";
 	 $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
@@ -156,6 +176,18 @@ echo $Radious_400_miles=$check_token_valid['data'][0]['Radious_200_miles'];
 echo $Radious_600_miles=$check_token_valid['data'][0]['Radious_600_miles'];	
 echo $driver_Name1=$check_token_valid['data'][0]['Drivers1'][0]['Name1'];
 echo $DOB_Age_MaritalStatus_Points_LicenceNo=$check_token_valid['data'][0]['Drivers1'][0]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+
+$str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);  
+echo $DOB=$str_arr[0]; 
+echo"<br>";
+echo $Age=$str_arr[1]; 
+echo"<br>";
+echo $MaritalStatus=$str_arr[2]; 
+echo"<br>";
+echo $Points=$str_arr[3]; 
+echo"<br>";
+echo $LicenceNo=$str_arr[4]; 
+
 echo $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
 echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];	
 
