@@ -56,19 +56,7 @@ if($rows1>=1){
 	 echo '<br>';		 
 	}
 }
-$query2 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='1981 or newer vehicle'";
-$result2 = pg_query($query2);
-$rows2 = pg_num_rows($result2);
-if($rows2>=1){
-	while ($row2 = pg_fetch_assoc($result2)) {
-	 echo $row2['year'];
-	 echo '<br>';	
-	 echo $row2['make'];
-	 echo '<br>';	
-	 echo $row2['vin'];
-	 echo '<br>';	 
-	}
-}	
+
 $query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
 $result3 = pg_query($query3);
 $rows3 = pg_num_rows($result3);
