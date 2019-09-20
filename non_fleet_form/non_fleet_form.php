@@ -63,7 +63,7 @@ if($rows2>=1){
 	while ($row2 = pg_fetch_assoc($result2)) {
 	 $response=array();	
 	 echo $row2['year'];
-	 $response=$row2['year'];
+	 $response=$row2;
 	 print_r($response);
 	 echo 'array print';	
 	 echo '<br>';	
