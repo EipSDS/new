@@ -1375,7 +1375,6 @@ while ($row22 = pg_fetch_assoc($result22)) {
 <?php
 }
 }
-pg_close($con);
 ?>	
 	</td>
 	</tr>
