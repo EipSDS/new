@@ -189,13 +189,6 @@ echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];
 
 	
 }	
-}
-
-
-else{
-	echo "contact not found";
-}
-
 ?>
 
 <html>
@@ -2855,3 +2848,14 @@ while ($row22 = pg_fetch_assoc($result22)) {
 	</table>
 </body>
 </html>
+
+<?php
+}
+
+
+else{
+	echo "contact not found";
+}
+
+?>
+?>
