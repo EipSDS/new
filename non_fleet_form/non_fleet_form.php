@@ -1,4 +1,5 @@
 <?php
+$con = pg_connect("host=ec2-54-243-47-196.compute-1.amazonaws.com dbname=da75gbsng1e37m user=ikheqtaxeqwazi password=800c91378dbd23c1752ef5722ad7c40a4f727966939b44d58361184792659ebd");
 include('functions.php');
 $zoho_client_id='1000.G5ADCREZLWKQ37764DHC3ZZXAW4VEH';
 $zoho_client_secret='88c42ac4b05a8e341731956a233d89cb0399e7f3cb';
