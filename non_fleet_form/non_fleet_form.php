@@ -1,5 +1,4 @@
 <?php
-
 include('functions.php');
 $zoho_client_id='1000.G5ADCREZLWKQ37764DHC3ZZXAW4VEH';
 $zoho_client_secret='88c42ac4b05a8e341731956a233d89cb0399e7f3cb';
@@ -57,10 +56,7 @@ echo "valid taken";
 echo "<pre>";
 print_r($check_token_valid);
 echo "</pre>";	
-
-
-else{
-	echo "not connected successfully";
+	
 }
 else{
 	 $url = "Contacts/$contact_id";
