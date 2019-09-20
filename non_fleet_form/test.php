@@ -163,7 +163,6 @@ echo 'array print';
 	 $response=$row2;
 	 print_r($response);
 	 echo 'array print';
-print_r($row2);	 
 	 echo '<br>';	
 	 echo $row2['year'];
 	 echo $row2['make'];
