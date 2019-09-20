@@ -26,7 +26,7 @@ if(!empty($phone_number)){
 					file_put_contents("refresh_token.txt",$get_new_token['refresh_token']);
 				}
 				$old_access_token = file_get_contents("access_token.txt");
-				 $url = "Contacts/search?phone=$phone_number";
+				 $url = "Contacts/$contact_id";
 				$data = "";
 				 $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 echo $id=$check_token_valid['data'][0];
@@ -48,22 +48,14 @@ echo $Radious_50_200_miles=$check_token_valid['data'][0]['Radious_50_200_miles']
 echo $Radious_400_miles=$check_token_valid['data'][0]['Radious_200_miles'];
 echo $Radious_600_miles=$check_token_valid['data'][0]['Radious_600_miles'];
 	
-	 $url = "Contacts/$contact_id";
-				$data = "";
-				 $contacts_data =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
-	
-	echo "<pre>";			 
-	print_r($contacts_data);
-    echo "</pre>";
-	
 	echo "<pre>";
 	echo "valid taken";
-	echo $check_token_valid['code']['Drivers1'];
-	echo "</pre>";
+	echo $check_token_valid;
+	echo "</pre>";	
 	
 }
 else{
-	 $url = "Contacts/search?phone=$phone_number";
+	 $url = "Contacts/$contact_id";
 	 $data = "";
 	 $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 echo $contact_id=$check_token_valid['data'][0];
@@ -91,19 +83,11 @@ echo $Name1=$check_token_valid['data'][0]['Name1'];
 	echo "valid taken";
 	echo $check_token_valid['code'];
 	echo "</pre>";
-	echo "<pre>";
-	echo "valid taken";
-	echo $check_token_valid['Drivers1'];
+		echo "<pre>";
+	echo "valid 2 taken";
+	echo $check_token_valid;
 	echo "</pre>";
 	
-	
-		 $url = "Contacts/$contact_id";
-				$data = "";
-				 $contacts_data =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
-	
-	echo "<pre>";			 
-	print_r($contacts_data);
-    echo "</pre>";
 }	
 }
 
