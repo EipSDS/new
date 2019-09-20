@@ -57,7 +57,7 @@ if($rows1>=1){
 	 echo '<br>';		 
 	}
 }
-$query2 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='1981 or newer vehicle'";
+$query2 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='1981 or newer vehicle' AND vehicle_type='1980 or older vehicle'";
 $result2 = pg_query($query2);
 $rows2 = pg_num_rows($result2);
 if($rows2>=1){
