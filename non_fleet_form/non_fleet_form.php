@@ -1340,6 +1340,20 @@ else{
 	</td>
 	</tr>
 	</table>
+<?php	
+	$query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
+$result3 = pg_query($query3);
+$rows3 = pg_num_rows($result3);
+if($rows3>=1){
+	while ($row3 = pg_fetch_assoc($result3)) {
+	 echo $row3['year'];
+	 echo '<br>';	
+	 echo $row3['make'];
+	 echo '<br>';	
+	 echo $row3['vin'];
+	 echo '<br>';	 
+
+?>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
@@ -1347,6 +1361,10 @@ else{
 	</td>
 	</tr>
 	</table>
+	<?php
+	}
+}
+	?>
 	</td>
 	</tr>
 	</table>
