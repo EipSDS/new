@@ -57,7 +57,19 @@ if($rows1>=1){
 	 echo '<br>';		 
 	}
 }
-
+$query1 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='1981 or newer vehicle','1980 or older vehicle'";
+$result1 = pg_query($query1);
+$rows1 = pg_num_rows($result1);
+if($rows1>=1){
+	while ($row1 = pg_fetch_assoc($result1)) {
+	 echo $row1['year'];
+	 echo '<br>';	
+	 echo $row1['make'];
+	 echo '<br>';	
+	 echo $row1['vin'];
+	 echo '<br>';	 
+	}
+}
 				 
 echo $id=$check_token_valid['data'][0];
 echo $first_name=$check_token_valid['data'][0]['First_Name'];
@@ -78,6 +90,7 @@ echo $Radious_50_200_miles=$check_token_valid['data'][0]['Radious_50_200_miles']
 echo $Radious_400_miles=$check_token_valid['data'][0]['Radious_200_miles'];
 echo $Radious_600_miles=$check_token_valid['data'][0]['Radious_600_miles'];
 echo $driver_Name1=$check_token_valid['data'][0]['Drivers1'][0]['Name1'];
+echo "<br>";
 echo $DOB_Age_MaritalStatus_Points_LicenceNo=$check_token_valid['data'][0]['Drivers1'][0]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 echo $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
 echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];	
@@ -91,6 +104,35 @@ echo "</pre>";
 	
 }
 else{
+	$query = "SELECT * FROM public.contact_commodities where contact_id='".$contact_id."'";
+$result = pg_query($query);
+$rows = pg_num_rows($result);
+if($rows>=1){
+	while ($row = pg_fetch_assoc($result)) {
+	 echo $row['name'];
+	 echo '<br>';
+	 echo $row['value'];
+	 echo '<br>';
+	 echo $row['max_value'];
+	 echo '<br>';
+	 echo $row['average_value'];
+	 echo '<br>';			 
+	}
+}
+
+$query1 = "SELECT * FROM public.violation where contact_id='".$contact_id."'";
+$result1 = pg_query($query1);
+$rows1 = pg_num_rows($result1);
+if($rows1>=1){
+	while ($row1 = pg_fetch_assoc($result1)) {
+	 echo $row1['accident_violation'];
+	 echo '<br>';	
+	 echo $row1['date'];
+	 echo '<br>';		 
+	}
+}
+	
+	
 	 $url = "Contacts/$contact_id";
 	 $data = "";
 	 $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
