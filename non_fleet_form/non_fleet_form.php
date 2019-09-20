@@ -48,9 +48,9 @@ echo $Radious_50_200_miles=$check_token_valid['data'][0]['Radious_50_200_miles']
 echo $Radious_400_miles=$check_token_valid['data'][0]['Radious_200_miles'];
 echo $Radious_600_miles=$check_token_valid['data'][0]['Radious_600_miles'];
 	
-	echo "<pre>";
 	echo "valid taken";
-	echo $check_token_valid;
+	echo "<pre>";
+	print_r($check_token_valid);
 	echo "</pre>";	
 	
 }
@@ -81,11 +81,11 @@ echo $Name1=$check_token_valid['data'][0]['Name1'];
 	
 	echo "<pre>";
 	echo "valid taken";
-	echo $check_token_valid['code'];
+	print_r($check_token_valid['code']);
 	echo "</pre>";
-		echo "<pre>";
+	echo "<pre>";
 	echo "valid 2 taken";
-	echo $check_token_valid;
+	print_r($check_token_valid);
 	echo "</pre>";
 	
 }	
