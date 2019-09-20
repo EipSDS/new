@@ -1332,7 +1332,7 @@ $query22 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id'
 $result22 = pg_query($query22);
 $rows22 = pg_num_rows($result22);
 if($rows22>=1){
-while ($row22 = pg_fetch_assoc($result22)){ 
+while ($row22 = pg_fetch_assoc($result22)) { 
 ?>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
@@ -1362,17 +1362,19 @@ while ($row22 = pg_fetch_assoc($result22)){
 	</tr>
 	</table>
 	<?php
-$query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
+$query3 = "SELECT * FROM public.contact_vehicles where contact_id='4098623000000648059' AND vehicle_type='Trailer'";
 $result3 = pg_query($query3);
 $rows3 = pg_num_rows($result3);
 if($rows3>=1){
-	while ($row3 = pg_fetch_assoc($result3)){
- ?>
-<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	while ($row3 = pg_fetch_assoc($result3)) {
+ 
+?>
+	
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
 	
-	<input type="text" name="Make1" class='tractors' value="<?php echo $row3['vin']; ?>" id="Make1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Make1" class='tractors' value="<?php echo $row3['year']; ?>" id="Make1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	
 	</td>
 	</tr>
@@ -1380,7 +1382,9 @@ if($rows3>=1){
 	<?php
 }
 }
-?>  </td>
+?>
+	
+	</td>
 	</tr>
 	</table>
 	<table align="left" width="30%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
