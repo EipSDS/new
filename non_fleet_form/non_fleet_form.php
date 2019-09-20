@@ -61,11 +61,7 @@ $result2 = pg_query($query2);
 $rows2 = pg_num_rows($result2);
 if($rows2>=1){
 	while ($row2 = pg_fetch_assoc($result2)) {
-	 $response=array();	
 	 echo $row2['year'];
-	 $response=$row2;
-	 print_r($response);
-	 echo 'array print';	
 	 echo '<br>';	
 	 echo $row2['make'];
 	 echo '<br>';	
@@ -482,13 +478,19 @@ else{
 					</td>
 				</tr>
 			</table>
-			<table align="left" cellpadding="6" cellspacing="0">
-				<tr>
-					<td align="center">
-						<input type="text" name="City State Zip:" class='city_state_zip' id="city_state_zip" value="<?php echo $Yrs_in_business; ?>" width="100%" style="width:360px;border: 0;font-size:14px;"/>
-					</td>
-				</tr>
-			</table>
+<table align="left" cellpadding="6" cellspacing="0">
+			<tr>
+				<td align="center">
+					<input type="text" name="City" class='City' id="City" value="<?php  ?>"  style="width:110px;border: 0;font-size:14px;"/>
+				</td>
+				<td align="center">
+					<input type="text" name="State" class='State' id="State" value="<?php  ?>" style="width:110px;border: 0;font-size:14px;"/>
+				</td>
+				<td align="center">
+					<input type="text" name="Zip" class='Zip' id="Zip" value="<?php  ?>" style="width:110px;border: 0;font-size:14px;"/>
+				</td>
+			</tr>
+		</table>
 		</td>
 	</tr>
 	</table>
@@ -548,13 +550,23 @@ else{
 					</td>
 				</tr>
 			</table>
-			<table align="left" cellpadding="6" cellspacing="0">
-				<tr>
-					<td align="center">
-						<input type="text" name="City State Zip:" class='city_state_zip' id="city_state_zip" value="<?php echo $City_Two; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-					</td>
-				</tr>
-			</table>
+<table align="left" cellpadding="6" cellspacing="0">
+		<tr>
+			<td align="center">
+				<input type="text" name="City2" class='City2' id="City2" value="<?php  ?>"  style="width:110px;border: 0;font-size:14px;"/>
+			</td>
+			<td align="center">
+				<input type="text" name="State2" class='State2' id="State2" value="<?php  ?>" style="width:110px;border: 0;font-size:14px;"/>
+			</td>
+			<td align="center">
+				<input type="text" name="Zip2" class='Zip2' id="Zip2" value="<?php  ?>" style="width:110px;border: 0;font-size:14px;"/>
+			</td>
+		</tr>
+	</table>
+		
+		<!--new code-->	
+
+			
 		</td>
 	</tr>
 	</table>
