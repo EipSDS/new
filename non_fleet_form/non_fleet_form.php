@@ -57,19 +57,7 @@ if($rows1>=1){
 	}
 }
 
-$query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
-$result3 = pg_query($query3);
-$rows3 = pg_num_rows($result3);
-if($rows3>=1){
-	while ($row3 = pg_fetch_assoc($result3)) {
-	 echo $row3['year'];
-	 echo '<br>';	
-	 echo $row3['make'];
-	 echo '<br>';	
-	 echo $row3['vin'];
-	 echo '<br>';	 
-	}
-}		 
+		 
 echo $id=$check_token_valid['data'][0];
 echo $first_name=$check_token_valid['data'][0]['First_Name'];
 echo $effective_date=$check_token_valid['data'][0]['Policy_Effective_Date'];
@@ -135,19 +123,7 @@ if($rows1>=1){
 	}
 }
 	
-$query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
-$result3 = pg_query($query3);
-$rows3 = pg_num_rows($result3);
-if($rows3>=1){
-	while ($row3 = pg_fetch_assoc($result3)) {
-	 echo $row3['year'];
-	 echo '<br>';	
-	 echo $row3['make'];
-	 echo '<br>';	
-	 echo $row3['vin'];
-	 echo '<br>';	 
-	}
-}	
+	
 
 	 $url = "Contacts/$contact_id";
 	 $data = "";
@@ -1385,41 +1361,29 @@ while ($row22 = pg_fetch_assoc($result22)) {
 	</td>
 	</tr>
 	</table>
+	<?php
+$query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
+$result3 = pg_query($query3);
+$rows3 = pg_num_rows($result3);
+if($rows3>=1){
+	while ($row3 = pg_fetch_assoc($result3)) {
+ 
+?>
+	
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Make1" class='tractors' id="Make1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	
+	<input type="text" name="Make1" class='tractors' value="<?php echo $row3['year']; ?>" id="Make1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	
 	</td>
 	</tr>
 	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Make2" class='tractors' id="Make2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Make3" class='tractors' id="Make3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Make4" class='tractors' id="Make4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Make5" class='tractors' id="Make5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
+	<?php
+}
+}
+?>
+	
 	</td>
 	</tr>
 	</table>
@@ -1440,34 +1404,6 @@ while ($row22 = pg_fetch_assoc($result22)) {
 	</td>
 	</tr>
 	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="VIN_new2" class='tractors' id="VIN_new2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="VIN_new3" class='tractors' id="VIN_new3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="VIN_new" class='tractors' id="VIN_new4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="VIN_new" class='tractors' id="VIN_new5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
 	</td>
 	</tr>
 	</table>
@@ -1484,35 +1420,7 @@ while ($row22 = pg_fetch_assoc($result22)) {
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Amount1" class='tractors' id="Amount1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Amount2" class='tractors' id="Amount2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Amount3" class='tractors' id="Amount3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Amount4" class='tractors' id="Amount4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Amount5" class='tractors' id="Amount5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Amount1" class='tractors' value="<?php echo $row['make']; ?>" id="Amount1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
