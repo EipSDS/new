@@ -162,15 +162,14 @@ echo 'array print';
 	$response=array();	
 	 $response=$row2;
 	 // print_r($response);
-	 echo 'array print';
 	 foreach($response as $key => $value){
-		  echo 'jhklh<pre>';
+		  echo '<pre>';
 	 print_r($key);
-	 echo 'jhklh</pre>';		
+	 echo '</pre>';		
 
-		echo 'jhklh<pre>';
+		echo '<pre>';
 	 print_r($value);
-	 echo 'jhklh</pre>';
+	 echo '</pre>';
 	 }
 
 /* 	 echo '<br>';	
