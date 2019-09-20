@@ -1353,7 +1353,10 @@ if($rows3>=1){
 	</td>
 	</tr>
 	</table>
-	<?php
+
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<?php
 
 $query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
 $result3 = pg_query($query3);
@@ -1361,17 +1364,16 @@ $rows3 = pg_num_rows($result3);
 if($rows3>=1){
 	while ($row3 = pg_fetch_assoc($result3)) {	 
 ?>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
 	<td>
 	<input type="text" name="VIN1" class='vin' id="vin1" value="<?php echo $row3['vin']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
-	</tr>
-	</table>
-	<?php
+		<?php
 	}
 }
 	?>
+	</tr>
+	</table>
+
 	</td>
 	</tr>
 	</table>
@@ -1396,7 +1398,7 @@ if($rows3>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Stated1" class='Stated' id="Stated1" value="<?php echo $row['value']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Stated1" class='Stated' id="Stated1" value="<?php echo $rows3['value']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
