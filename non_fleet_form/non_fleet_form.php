@@ -58,8 +58,8 @@ echo "<pre>";
 print_r($check_token_valid);
 echo "</pre>";	
 
-$query = "SELECT * FROM public.contact_commodities where contact_id=".$contact_id."";
-$rs = pg_query($query);
+$query = "SELECT * FROM public.contact_commodities where contact_id='$contact_id'";
+$rs = pg_query($con,$query);
 if($result){
 	echo "connected susccessfully";
 
