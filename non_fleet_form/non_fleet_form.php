@@ -173,11 +173,22 @@ $row9 = pg_fetch_assoc($result3);
 	while ($row3 = pg_fetch_assoc($result3)) {
  if($row3['vehicle_type'] == 'Trailer'){
 	 $array[]=$row3['vin'];
+	 $arrayid[]=$row3['id'];
 	echo "test";
 
  }
 }
+echo "<pre>";
+print_r($arrayid);
+echo "</pre>";
+echo "<pre>";
 print_r($array);
+echo "</pre>";
+echo "<br>";
+echo $row9['vin'];
+echo $array[0];
+echo $array[1];
+echo $array[2];
 ?>
 <html>
 <head>
