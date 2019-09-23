@@ -242,7 +242,7 @@ echo $Hire_Date5=$check_token_valid['data'][0]['Drivers1'][5]['Hire_Date'];
 	
 }	
 
-$query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
+/* $query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
 $result3 = pg_query($query3);
 $row9 = pg_fetch_assoc($result3);
 
@@ -315,7 +315,7 @@ echo $arraymake[0];
 echo $arraymake[1];
 echo $arraymake[2];
 echo $arraymake[3];
-
+ */
 ?>
 <html>
 <head>
@@ -1444,19 +1444,27 @@ echo $arraymake[3];
 	</td>
 	</tr>
 	</table>
+		<?php
+$query5 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type !='Trailer'";
+$res5 = pg_query($query5);
+$rows5 = pg_num_rows($res5);
+if($rows5>=1){
+	while ($row5 = pg_fetch_assoc($res5)) {
+		 
+	?>
 	<table align="left" width="45%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Tractors1" class='tractors' id="tractors1" value="<?php echo $row6['year']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
-	<input type="text" name="make1" class='tractors' id="tractors1" value="<?php echo $row6['make']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	<input type="text" name="Tractors1" class='tractors' id="tractors1" value="<?php echo $row5['year']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	<input type="text" name="make1" class='tractors' id="tractors1" value="<?php echo $row5['make']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="30%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="VIN1" class='vin' id="vin1" value="<?php echo $row6['vin']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-    <input type="hidden" name="VINid1" class='vin' id="VINid1" value="<?php echo $row6['id']; ?>"/>
+	<input type="text" name="VIN1" class='vin' id="vin1" value="<?php echo $row5['vin']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+    <input type="hidden" name="VINid1" class='vin' id="VINid1" value="<?php echo $row5['id']; ?>"/>
 	</td>
 	</tr>
 	</table>
@@ -1468,6 +1476,10 @@ echo $arraymake[3];
 	</tr>
 	</table>
 
+		<?php
+	}
+	}
+	?>
 	
 	<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#c6d9f1" style="border: 2px solid #000000;">
 	<tr>
