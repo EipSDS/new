@@ -165,8 +165,17 @@ echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];
 
 	
 }	
-?>
 
+$query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
+$result3 = pg_query($query3);
+	while ($row3 = pg_fetch_assoc($result3)) {
+ if($row3['vehicle_type'] == 'Trailer'){
+	 print_r($row3);
+ 
+
+ }
+}
+?>
 <html>
 <head>
 	<title>
@@ -1361,15 +1370,7 @@ while ($row22 = pg_fetch_assoc($result22)) {
 	</td>
 	</tr>
 	</table>
-	<?php
-$query3 = "SELECT * FROM public.contact_vehicles where contact_id='4098623000000648059' AND vehicle_type='Trailer'";
-$result3 = pg_query($query3);
-$rows3 = pg_num_rows($result3);
-if($rows3>=1){
-	while ($row3 = pg_fetch_assoc($result3)) {
- 
-?>
-	
+
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
@@ -1379,10 +1380,6 @@ if($rows3>=1){
 	</td>
 	</tr>
 	</table>
-	<?php
-}
-}
-?>
 	
 	</td>
 	</tr>
