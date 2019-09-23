@@ -1525,7 +1525,8 @@ if($rows5>=1){
 <?php
 $query6 = "SELECT * FROM public.contact_vehicles where contact_id='".$_GET['contact_id']."' AND vehicle_type ='Trailer'";
 $res6 = pg_query($query6);
-
+$rows6 = pg_num_rows($res6);
+if($rows6>=1){
 	while ($row6 = pg_fetch_assoc($res6)) {	 
 ?>
 	<table align="left" width="45%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
@@ -1554,7 +1555,37 @@ $res6 = pg_query($query6);
 	</tr>
 	</table>
 	<?php
+}
+}
+else{
+	?>
+		<table align="left" width="45%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="trailer1" class='tractors' id="trailer1" value="" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	<input type="text" name="trailermake1" class='tractors' id="trailermake1" value="" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="30%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
 
+	<input type="text" name="VIN_new" class='vin' id="VIN_new" value="" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+    <input type="hidden" name="VIN_newid1" class='vin' id="VIN_newid1" value=""/>	
+	
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="25%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Amount1" class='tractors' id="Amount1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	
+<?php	
 }
 	?>
 	</td>
