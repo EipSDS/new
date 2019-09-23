@@ -177,9 +177,6 @@ $row9 = pg_fetch_assoc($result3);
 	 $arrmake[]=$row3['make'];
  }
 }
-echo "<pre>";
-print_r($arrayid);
-echo "</pre>";
 echo "<br>";
 echo $row9['vin'];
 echo $arrvin[0];
@@ -217,12 +214,6 @@ $row6 = pg_fetch_assoc($res5);
 	 $arraymake[]=$row5['make'];
  }
 }
-echo "<pre>";
-print_r($arrayid);
-echo "</pre>";
-echo "<pre>";
-print_r($array);
-echo "</pre>";
 echo "<br>";
 echo $row6['vin'];
 echo $arrayvin[0];
@@ -247,9 +238,6 @@ echo $arraymake[0];
 echo $arraymake[1];
 echo $arraymake[2];
 echo $arraymake[3];
-
-
-
 
 ?>
 <html>
