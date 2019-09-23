@@ -169,17 +169,17 @@ echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];
 $query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
 $result3 = pg_query($query3);
 $row9 = pg_fetch_assoc($result3);
-
+$array1=array();
 	while ($row3 = pg_fetch_assoc($result3)) {
  if($row3['vehicle_type'] == 'Trailer'){
-	 $array[]=$row3['vin'];
+	 $array1[]=$row3['vin'];
 	 $arrayid[]=$row3['id'];
 	echo "test";
 
  }
 }
 echo "<pre>";
-print_r($arrayid);
+print_r($array1);
 echo "</pre>";
 echo "<pre>";
 print_r($array);
@@ -189,6 +189,12 @@ echo $row9['vin'];
 echo $array[0];
 echo $array[1];
 echo $array[2];
+echo $array[3];
+$row3['id'];
+echo $array[0];
+echo $array[1];
+echo $array[2];
+echo $array[3];
 ?>
 <html>
 <head>
