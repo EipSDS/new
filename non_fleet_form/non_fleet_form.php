@@ -1415,7 +1415,46 @@ echo $arraymake[3];
 	</td>
 	</tr>
 	</table>
-
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Tractors1" class='tractors' id="tractors1" value="<?php echo $row6['year']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	<input type="text" name="make1" class='tractors' id="tractors1" value="<?php echo $row6['make']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Tractors2" class='tractors' id="tractors2" value="<?php echo $arrayyear[0]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
+	<input type="text" name="make2" class='tractors' id="make2" value="<?php echo $arraymake[0]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Tractors3" class='tractors' id="tractors3" value="<?php echo $arrayyear[1]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
+	<input type="text" name="make3" class='tractors' id="make3" value="<?php echo $arraymake[1]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Tractors4" class='tractors' id="tractors4" value="<?php echo $arrayyear[2]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
+	<input type="text" name="make4" class='tractors' id="make4" value="<?php echo $arraymake[2]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Tractors5" class='tractors' id="tractors5" value="<?php echo $arrayyear[3]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
+	<input type="text" name="make5" class='tractors' id="make5" value="<?php echo $arraymake[3]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
 	</td>
 	</tr>
 	</table>
@@ -1429,11 +1468,46 @@ echo $arraymake[3];
 	</td>
 	</tr>
 	</table>
-
-
-
-
-
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="VIN1" class='vin' id="vin1" value="<?php echo $row6['vin']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+    <input type="hidden" name="VINid1" class='vin' id="VINid1" value="<?php echo $row6['id']; ?>"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="vin2" class='tractors' id="vin2" value="<?php echo $arrayvin[0]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="hidden" name="VINid2" class='vin' id="VINid2" value="<?php echo $arrayid[0]; ?>"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="vin3" class='tractors' id="vin3" value="<?php echo $arrayvin[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="hidden" name="VINid3" class='vin' id="VINid3" value="<?php echo $arrayid[1]; ?>"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="vin4" class='tractors' id="vin4" value="<?php echo $arrayvin[2]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="hidden" name="VINid4" class='vin' id="VINid4" value="<?php echo $arrayid[2]; ?>"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="vin5" class='tractors' id="vin5" value="<?php echo $arrayvin[3]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="hidden" name="VINid5" class='vin' id="VINid5" value="<?php echo $arrayid[3]; ?>"/>
+	</td>
+	</tr>
+	</table>
 	</td>
 	</tr>
 	</table>
@@ -1447,20 +1521,38 @@ echo $arraymake[3];
 	</td>
 	</tr>
 	</table>
-		<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Tractors1" class='tractors' id="tractors1" value="<?php echo $row6['year']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
-	<input type="text" name="make1" class='tractors' id="tractors1" value="<?php echo $row6['make']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	
-	
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
 	<input type="text" name="Stated1" class='Stated' id="Stated1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Stated2" class='tractors' id="Stated2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Stated3" class='tractors' id="Stated3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Stated4" class='tractors' id="Stated4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Stated5" class='tractors' id="Stated5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
