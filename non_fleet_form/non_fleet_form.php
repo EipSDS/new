@@ -165,7 +165,7 @@ echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];
 	
 }	
 
-$query3 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_id."' AND vehicle_type='Trailer'";
+$query3 = "SELECT * FROM public.contact_vehicles where contact_id='4098623000001368004' AND vehicle_type='Trailer'";
 $result3 = pg_query($query3);
 $row9 = pg_fetch_assoc($result3);
 
@@ -202,7 +202,7 @@ echo $arrmake[1];
 echo $arrmake[2];
 echo $arrmake[3];
 echo "===========================";
-$query5 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_id."' AND vehicle_type !='Trailer'";
+$query5 = "SELECT * FROM public.contact_vehicles where contact_id='4098623000001368004' AND vehicle_type !='Trailer'";
 $res5 = pg_query($query5);
 $row6 = pg_fetch_assoc($res5);
 
