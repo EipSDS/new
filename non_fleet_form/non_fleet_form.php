@@ -1534,10 +1534,8 @@ $query6 = "SELECT * FROM public.contact_vehicles where contact_id='".$_GET['cont
 $res6 = pg_query($query6);
 $rows6 = pg_num_rows($res6);
 if($rows6>=1){
-	while ($row6 = pg_fetch_assoc($res6)) {
-		 
+	while ($row6 = pg_fetch_assoc($res6)) {	 
 ?>
-
 	<table align="left" width="45%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
@@ -1565,7 +1563,7 @@ if($rows6>=1){
 	</table>
 	<?php
 }
-	}
+}
 	?>
 	</td>
 	</tr>
