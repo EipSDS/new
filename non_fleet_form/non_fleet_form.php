@@ -2187,6 +2187,9 @@ echo $arraymake[3];
 	</td>
 	</tr>
 	</table>
+	</td>
+	</tr>
+	</table>
 	<?php
 $query = "SELECT * FROM public.contact_commodities where contact_id='".$contact_id."'";
 $result = pg_query($query);
@@ -2233,9 +2236,7 @@ if($rows>=1){
 	}
 	}
 	?>
-	</td>
-	</tr>
-	</table>
+	
 	</td>
 	</tr>
 	</table>
