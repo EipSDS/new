@@ -1341,7 +1341,7 @@ echo $arraymake[3];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Tractors1" class='tractors' id="tractors1" value="<?php echo $row6['vin']; ?>" width="50%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Tractors1" class='tractors' id="tractors1" value="<?php echo $row6['vin']; ?>" width="50%" style="width:50%;border: 0;font-size:14px;"/>
 	<input type="text" name="Tractors1" class='tractors' id="tractors1" value="<?php echo $row6['vin']; ?>" width="50%" style="width:50%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
