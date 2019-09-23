@@ -168,7 +168,7 @@ echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];
 
 $query3 = "SELECT * FROM public.contact_vehicles where contact_id='4098623000000784043' AND vehicle_type='Trailer'";
 $result3 = pg_query($query3);
-$row9 = pg_fetch_assoc($result3)
+$row9 = pg_fetch_assoc($result3);
 print_r($row9);
 
 	while ($row3 = pg_fetch_assoc($result3)) {
