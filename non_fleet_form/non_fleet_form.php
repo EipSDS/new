@@ -91,9 +91,7 @@ echo $LicenceNo=$str_arr[4];
 
 echo $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
 echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];	
-	echo "<pre>";
-    print_r($check_token_valid);
-	echo "</pre>";	
+	
 }
 else{
 
@@ -236,9 +234,6 @@ echo $LicenceNo5=$str_arr5[4];
 
 echo $Experience_Years5=$check_token_valid['data'][0]['Drivers1'][5]['Experience_Years'];	
 echo $Hire_Date5=$check_token_valid['data'][0]['Drivers1'][5]['Hire_Date'];	
-	echo "<pre>";
-    print_r($check_token_valid);
-	echo "</pre>";	
 	
 }	
 
@@ -1524,8 +1519,6 @@ if($rows5>=1){
 	</td>
 	</tr>
 	</table>
-	
-
 	</td>
 	</tr>
 	</table>
