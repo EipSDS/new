@@ -1395,6 +1395,7 @@ echo $arraymake[3];
 	<tr>
 	<td>
 	<input type="text" name="VIN1" class='vin' id="vin1" value="<?php echo $row6['vin']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+    <input type="hidden" name="VINid1" class='vin' id="VINid1" value="<?php echo $row6['id']; ?>"/>
 	</td>
 	</tr>
 	</table>
@@ -1402,6 +1403,7 @@ echo $arraymake[3];
 	<tr>
 	<td>
 	<input type="text" name="vin2" class='tractors' id="vin2" value="<?php echo $arrayvin[0]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="hidden" name="VINid2" class='vin' id="VINid2" value="<?php echo $arrayid[0]; ?>"/>
 	</td>
 	</tr>
 	</table>
@@ -1409,6 +1411,7 @@ echo $arraymake[3];
 	<tr>
 	<td>
 	<input type="text" name="vin3" class='tractors' id="vin3" value="<?php echo $arrayvin[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="hidden" name="VINid3" class='vin' id="VINid3" value="<?php echo $arrayid[1]; ?>"/>
 	</td>
 	</tr>
 	</table>
@@ -1416,6 +1419,7 @@ echo $arraymake[3];
 	<tr>
 	<td>
 	<input type="text" name="vin4" class='tractors' id="vin4" value="<?php echo $arrayvin[2]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="hidden" name="VINid4" class='vin' id="VINid4" value="<?php echo $arrayid[2]; ?>"/>
 	</td>
 	</tr>
 	</table>
@@ -1423,6 +1427,7 @@ echo $arraymake[3];
 	<tr>
 	<td>
 	<input type="text" name="vin5" class='tractors' id="vin5" value="<?php echo $arrayvin[3]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="hidden" name="VINid5" class='vin' id="VINid5" value="<?php echo $arrayid[3]; ?>"/>
 	</td>
 	</tr>
 	</table>
