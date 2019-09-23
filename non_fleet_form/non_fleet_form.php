@@ -1441,7 +1441,9 @@ echo $arraymake[3];
 	</td>
 	</tr>
 	</table>
-
+	</td>
+	</tr>
+	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
@@ -1466,9 +1468,7 @@ echo $arraymake[3];
 	</tr>
 	</table>
 
-	</td>
-	</tr>
-	</table>
+	
 	<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#c6d9f1" style="border: 2px solid #000000;">
 	<tr>
 	<td>
