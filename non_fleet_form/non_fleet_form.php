@@ -178,17 +178,17 @@ $row9 = pg_fetch_assoc($result3);
  }
 }
 echo "<br>";
-echo $row9['vin'];
-echo $arrvin[0];
-echo $arrvin[1];
-echo $arrvin[2];
-echo $arrvin[3];
-echo "<br>";
 echo $row9['id'];
 echo $arrid[0];
 echo $arrid[1];
 echo $arrid[2];
 echo $arrid[3];
+echo "<br>";
+echo $row9['vin'];
+echo $arrvin[0];
+echo $arrvin[1];
+echo $arrvin[2];
+echo $arrvin[3];
 echo "<br>";
 echo $row9['year'];
 echo $arryear[0];
@@ -215,17 +215,17 @@ $row6 = pg_fetch_assoc($res5);
  }
 }
 echo "<br>";
-echo $row6['vin'];
-echo $arrayvin[0];
-echo $arrayvin[1];
-echo $arrayvin[2];
-echo $arrayvin[3];
-echo "<br>";
 echo $row6['id'];
 echo $arrayid[0];
 echo $arrayid[1];
 echo $arrayid[2];
 echo $arrayid[3];
+echo "<br>";
+echo $row6['vin'];
+echo $arrayvin[0];
+echo $arrayvin[1];
+echo $arrayvin[2];
+echo $arrayvin[3];
 echo "<br>";
 echo $row6['year'];
 echo $arrayyear[0];
