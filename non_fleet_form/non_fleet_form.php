@@ -171,7 +171,8 @@ $result3 = pg_query($query3);
 	while ($row3 = pg_fetch_assoc($result3)) {
  if($row3['vehicle_type'] == 'Trailer'){
 	 print_r($row3);
- 
+	 $arr[]=$row3;
+     print_r($arr);
 
  }
 }
