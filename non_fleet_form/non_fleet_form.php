@@ -96,21 +96,7 @@ echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];
 	echo "</pre>";	
 }
 else{
-	$query = "SELECT * FROM public.contact_commodities where contact_id='".$contact_id."'";
-$result = pg_query($query);
-$rows = pg_num_rows($result);
-if($rows>=1){
-	while ($row = pg_fetch_assoc($result)) {
-	 echo $row['name'];
-	 echo '<br>';
-	 echo $row['value'];
-	 echo '<br>';
-	 echo $row['max_value'];
-	 echo '<br>';
-	 echo $row['average_value'];
-	 echo '<br>';			 
-	}
-}
+
 
 $query1 = "SELECT * FROM public.violation where contact_id='".$contact_id."'";
 $result1 = pg_query($query1);
@@ -2156,41 +2142,23 @@ echo $arraymake[3];
 	</td>
 	</tr>
 	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Commodity1" class='commodity' id="commodity" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Commodity2" class='commodity' id="commodity1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Commodity3" class='commodity' id="commodity2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Commodity4" class='commodity' id="commodity3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Commodity5" class='commodity' id="commodity4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
+		
+<?php
+$query = "SELECT * FROM public.contact_commodities where contact_id='".$contact_id."'";
+$result = pg_query($query);
+$rows = pg_num_rows($result);
+if($rows>=1){
+	while ($row = pg_fetch_assoc($result)) {
+	 echo '<br>';
+	 echo $row['value'];
+	 echo '<br>';
+	 echo $row['max_value'];
+	 echo '<br>';
+	 echo $row['average_value'];
+	 echo '<br>';			 
+	?>
+	
+
 	</td>
 	</tr>
 	</table>
@@ -2201,41 +2169,6 @@ echo $arraymake[3];
 	<tr>
 	<td align="center">
 	% Hauled  
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="hauled1" class='hauled' id="hauled1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="hauled2" class='hauled' id="hauled2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="hauled3" class='hauled' id="hauled3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="hauled4" class='hauled' id="hauled4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="hauled5" class='hauled' id="hauled5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -2252,41 +2185,11 @@ echo $arraymake[3];
 	</td>
 	</tr>
 	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Value1" class='value' id="value" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Value2" class='value' id="value1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Value3" class='value' id="value2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Value4" class='value' id="value3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Value5" class='value' id="value4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
+	
+	<?php
+		}
+}
+	?>
 	</td>
 	</tr>
 	</table>
@@ -2300,38 +2203,32 @@ echo $arraymake[3];
 	</td>
 	</tr>
 	</table>
+	
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Commodity1" class='commodity' value="<?php echo $row['value']; ?>" id="commodity" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="hauled1" class='hauled' value="<?php echo $row['max_value']; ?>" id="hauled1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Value1" class='value' id="value" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
 	<input type="text" name="Stated_Amount1" class='tractors' id="Stated_Amount1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Stated_Amount2" class='tractors' id="Stated_Amount2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Stated_Amount3" class='tractors' id="Stated_Amount3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Stated_Amount4" class='tractors' id="Stated_Amount4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Stated_Amount5" class='tractors' id="Stated_Amount5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
