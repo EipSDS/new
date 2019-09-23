@@ -2198,14 +2198,14 @@ if($rows>=1){
 	while ($row = pg_fetch_assoc($result)) {
 		 
 	?>
-	<table align="left" width="25%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<table align="left" width="30%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
 	<input type="text" name="Commodity1" class='commodity' value="<?php echo $row['value']; ?>" id="commodity" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
-	<table align="left" width="25%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<table align="left" width="20%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
 	<input type="text" name="hauled1" class='hauled' value="<?php echo $row['max_value']; ?>" id="hauled1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
