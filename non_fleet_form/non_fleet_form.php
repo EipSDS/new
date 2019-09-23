@@ -1415,6 +1415,35 @@ echo $arraymake[3];
 	</td>
 	</tr>
 	</table>
+	</td>
+	</tr>
+	</table>
+		<table align="left" width="30%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
+	
+	
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="25%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
+		<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	VIN 
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	Stated Amount 
+	</td>
+	</tr>
+	</table>
+
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
@@ -1423,37 +1452,11 @@ echo $arraymake[3];
 	</td>
 	</tr>
 	</table>
-	</td>
-	</tr>
-	</table>
-		<table align="left" width="30%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
-	<tr>
-	<td>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	VIN 
-	</td>
-	</tr>
-	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
 	<input type="text" name="VIN1" class='vin' id="vin1" value="<?php echo $row6['vin']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
     <input type="hidden" name="VINid1" class='vin' id="VINid1" value="<?php echo $row6['id']; ?>"/>
-	</td>
-	</tr>
-	</table>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="25%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
-	<tr>
-	<td>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	Stated Amount 
 	</td>
 	</tr>
 	</table>
