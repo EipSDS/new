@@ -174,6 +174,8 @@ $row9 = pg_fetch_assoc($result3);
  if($row3['vehicle_type'] == 'Trailer'){
 	 $arrid[]=$row3['id'];
 	 $arrvin[]=$row3['vin'];
+	 $arryear[]=$row3['year'];
+	 $arrmake[]=$row3['make'];
 	 
 	echo "test";
 
@@ -192,11 +194,24 @@ echo $arrvin[1];
 echo $arrvin[2];
 echo $arrvin[3];
 echo "<br>";
-$row9['id'];
+echo $row9['id'];
 echo $arrid[0];
 echo $arrid[1];
 echo $arrid[2];
 echo $arrid[3];
+echo "<br>";
+echo $row9['year'];
+echo $arryear[0];
+echo $arryear[1];
+echo $arryear[2];
+echo $arryear[3];
+echo "<br>";
+echo $row9['make'];
+echo $arrmake[0];
+echo $arrmake[1];
+echo $arrmake[2];
+echo $arrmake[3];
+
 ?>
 <html>
 <head>
