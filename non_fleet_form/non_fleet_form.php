@@ -1418,24 +1418,22 @@ echo $arraymake[3];
 	</td>
 	</tr>
 	</table>
-		<table align="left" width="30%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<table align="left" width="30%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
 	<tr>
 	<td>
-	
-	
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="25%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
-	<tr>
-	<td>
-		<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
 	VIN 
 	</td>
 	</tr>
 	</table>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="25%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
