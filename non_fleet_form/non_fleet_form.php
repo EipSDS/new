@@ -91,7 +91,9 @@ echo $LicenceNo=$str_arr[4];
 
 echo $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
 echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];	
-		
+	echo "<pre>";
+    print_r($check_token_valid);
+	echo "</pre>";	
 }
 else{
 	$query = "SELECT * FROM public.contact_commodities where contact_id='".$contact_id."'";
@@ -161,7 +163,9 @@ echo $LicenceNo=$str_arr[4];
 
 echo $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
 echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];	
-
+	echo "<pre>";
+    print_r($check_token_valid);
+	echo "</pre>";	
 	
 }	
 
@@ -1713,7 +1717,7 @@ echo $arraymake[3];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Name1" class='name' id="name1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Name1" class='name' id="name1" width="100%" value="<?php echo $driver_Name1; ?>" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
