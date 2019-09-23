@@ -174,11 +174,12 @@ print_r($arr);
 
 	while ($row3 = pg_fetch_assoc($result3)) {
  if($row3['vehicle_type'] == 'Trailer'){
-	 
-	
+	 $array=$row3['vin'];
+	echo "test";
 
  }
 }
+print_r($array);
 ?>
 <html>
 <head>
