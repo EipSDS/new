@@ -1341,15 +1341,16 @@ echo $arraymake[3];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Tractors1" class='tractors' id="tractors1" value="<?php echo $row6['vin']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
-	<input type="text" name="Tractors1" class='tractors' id="tractors1" value="<?php echo $row6['vin']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	<input type="text" name="Tractors1" class='tractors' id="tractors1" value="<?php echo $row6['year']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	<input type="text" name="make1" class='tractors' id="tractors1" value="<?php echo $row6['make']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Tractors2" class='tractors' id="tractors2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Tractors2" class='tractors' id="tractors2" value="<?php echo $arrayyear[0]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
+	<input type="text" name="make2" class='tractors' id="tractors1" value="<?php echo $arraymake[0]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
