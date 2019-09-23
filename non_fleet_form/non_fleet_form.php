@@ -2191,7 +2191,7 @@ echo $arraymake[3];
 	</tr>
 	</table>
 	<?php
-$query = "SELECT * FROM public.contact_commodities where contact_id='".$contact_id."'";
+$query = "SELECT * FROM public.contact_commodities where contact_id='4098623000000651027'";
 $result = pg_query($query);
 $rows = pg_num_rows($result);
 if($rows>=1){
