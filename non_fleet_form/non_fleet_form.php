@@ -2143,20 +2143,7 @@ echo $arraymake[3];
 	</tr>
 	</table>
 		
-<?php
-$query = "SELECT * FROM public.contact_commodities where contact_id='".$contact_id."'";
-$result = pg_query($query);
-$rows = pg_num_rows($result);
-if($rows>=1){
-	while ($row = pg_fetch_assoc($result)) {
-	 echo '<br>';
-	 echo $row['value'];
-	 echo '<br>';
-	 echo $row['max_value'];
-	 echo '<br>';
-	 echo $row['average_value'];
-	 echo '<br>';			 
-	?>
+
 	
 
 	</td>
@@ -2186,10 +2173,7 @@ if($rows>=1){
 	</tr>
 	</table>
 	
-	<?php
-		}
-}
-	?>
+
 	</td>
 	</tr>
 	</table>
@@ -2203,7 +2187,20 @@ if($rows>=1){
 	</td>
 	</tr>
 	</table>
-	
+	<?php
+$query = "SELECT * FROM public.contact_commodities where contact_id='".$contact_id."'";
+$result = pg_query($query);
+$rows = pg_num_rows($result);
+if($rows>=1){
+	while ($row = pg_fetch_assoc($result)) {
+	 echo '<br>';
+	 echo $row['value'];
+	 echo '<br>';
+	 echo $row['max_value'];
+	 echo '<br>';
+	 echo $row['average_value'];
+	 echo '<br>';			 
+	?>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
@@ -2232,6 +2229,10 @@ if($rows>=1){
 	</td>
 	</tr>
 	</table>
+	<?php
+	}
+	}
+	?>
 	</td>
 	</tr>
 	</table>
