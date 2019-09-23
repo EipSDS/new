@@ -1445,7 +1445,7 @@ echo $arraymake[3];
 	</tr>
 	</table>
 		<?php
-$query5 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type !='Trailer'";
+echo $query5 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type !='Trailer'";
 $res5 = pg_query($query5);
 $rows5 = pg_num_rows($res5);
 if($rows5>=1){
