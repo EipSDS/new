@@ -11,8 +11,7 @@ echo $contact_id;
 echo $phone_number;
 $phone_number=$_GET['phone'];
 
-if(!empty($phone_number)){		
-		echo "Contact ID found";	
+if(!empty($phone_number)){			
 				$url = "Contacts/search?phone=$phone_number";
 			$data = "";
 			 $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
@@ -166,7 +165,7 @@ echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];
 	
 }	
 
-$query3 = "SELECT * FROM public.contact_vehicles where contact_id='4098623000000784043' AND vehicle_type='Trailer'";
+$query3 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type='Trailer'";
 $result3 = pg_query($query3);
 $row9 = pg_fetch_assoc($result3);
 
@@ -176,16 +175,10 @@ $row9 = pg_fetch_assoc($result3);
 	 $arrvin[]=$row3['vin'];
 	 $arryear[]=$row3['year'];
 	 $arrmake[]=$row3['make'];
-	 
-	echo "test";
-
  }
 }
 echo "<pre>";
 print_r($arrayid);
-echo "</pre>";
-echo "<pre>";
-print_r($array);
 echo "</pre>";
 echo "<br>";
 echo $row9['vin'];
@@ -211,6 +204,52 @@ echo $arrmake[0];
 echo $arrmake[1];
 echo $arrmake[2];
 echo $arrmake[3];
+echo "===========================";
+$query5 = "SELECT * FROM public.contact_vehicles where contact_id='$contact_id' AND vehicle_type !='Trailer'";
+$res5 = pg_query($query5);
+$row6 = pg_fetch_assoc($res5);
+
+	while ($row5 = pg_fetch_assoc($res5)) {
+ if($row5['vehicle_type'] !== 'Trailer'){
+	 $arrayid[]=$row5['id'];
+	 $arrayvin[]=$row5['vin'];
+	 $arrayyear[]=$row5['year'];
+	 $arraymake[]=$row5['make'];
+ }
+}
+echo "<pre>";
+print_r($arrayid);
+echo "</pre>";
+echo "<pre>";
+print_r($array);
+echo "</pre>";
+echo "<br>";
+echo $row6['vin'];
+echo $arrayvin[0];
+echo $arrayvin[1];
+echo $arrayvin[2];
+echo $arrayvin[3];
+echo "<br>";
+echo $row6['id'];
+echo $arrayid[0];
+echo $arrayid[1];
+echo $arrayid[2];
+echo $arrayid[3];
+echo "<br>";
+echo $row6['year'];
+echo $arrayyear[0];
+echo $arrayyear[1];
+echo $arrayyear[2];
+echo $arrayyear[3];
+echo "<br>";
+echo $row6['make'];
+echo $arraymake[0];
+echo $arraymake[1];
+echo $arraymake[2];
+echo $arraymake[3];
+
+
+
 
 ?>
 <html>
