@@ -1825,7 +1825,7 @@ echo $arraymake[3];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="name4" class='name' id="name4" width="100%" value="<?php echo $driver_Name13; ?>" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="name4" class='name' id="name4" value="<?php echo $driver_Name13; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -1900,35 +1900,35 @@ echo $arraymake[3];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="state & license1" class='state&license' id="state&license1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="state_license1" class='state&license' id="state_license1" value="<?php echo $LicenceNo; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="state&license2" class='state&license' id="state&license2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="state&license2" class='state&license' value="<?php echo $LicenceNo1; ?>" id="state&license2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="state&license3" class='state&license' id="state&license3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="state&license3" class='state&license' id="state&license3" value="<?php echo $LicenceNo2; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="state&license4" class='state&license' id="state&license4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="state&license4" class='state&license' id="state&license4" value="<?php echo $LicenceNo3; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="state&license5" class='state&license' id="state&license5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="state&license5" class='state&license' id="state&license5" value="<?php echo $LicenceNo4; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -1948,35 +1948,35 @@ echo $arraymake[3];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Years of Experience1" class='experience' id="experience1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Years_of_Experience1" class='experience' id="experience1" value="<?php echo $Experience_Years; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Years of Experience2" class='experience' id="experience2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Years of Experience2" class='experience' id="experience2" value="<?php echo $Experience_Years1; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Years of Experience3" class='experience' id="experience3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Years of Experience3" class='experience' id="experience3" value="<?php echo $Experience_Years2; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Years of Experience4" class='experience' id="experience4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Years of Experience4" value="<?php echo $Experience_Years3; ?>" class='experience' id="experience4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Years of Experience5" class='experience' id="experience5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Years of Experience5" value="<?php echo $Experience_Years4; ?>" class='experience' id="experience5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -1996,35 +1996,35 @@ echo $arraymake[3];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="birth1" class='birth' id="birth" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="birth1" value="<?php echo $DOB; ?>" class='birth' id="birth" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="birth2" class='birth' id="birth1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="birth2" value="<?php echo $DOB1; ?>" class='birth' id="birth1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="birth2" class='birth' id="birth2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="birth2" class='birth' value="<?php echo $DOB2; ?>" id="birth2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="birth4" class='birth' id="birth3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="birth4" value="<?php echo $DOB3; ?>" class='birth' id="birth3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="birth5" class='birth' id="birth4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="birth5" value="<?php echo $DOB4; ?>" class='birth' id="birth4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -2044,35 +2044,35 @@ echo $arraymake[3];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="date1" class='date' id="date" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="date1" value="<?php echo $Hire_Date; ?>" class='date' id="date" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="date2" class='date' id="date1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="date2" value="<?php echo $Hire_Date1; ?>" class='date' id="date1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="date3" class='date' id="date2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="date3" class='date' value="<?php echo $Hire_Date2; ?>" id="date2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="date4" class='date' id="date3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="date4" value="<?php echo $Hire_Date3; ?>" class='date' id="date3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="date5" class='date' id="date4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="date5" value="<?php echo $Hire_Date4; ?>" class='date' id="date4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
