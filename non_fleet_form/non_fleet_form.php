@@ -2196,13 +2196,7 @@ $result = pg_query($query);
 $rows = pg_num_rows($result);
 if($rows>=1){
 	while ($row = pg_fetch_assoc($result)) {
-	 echo '<br>';
-	 echo $row['value'];
-	 echo '<br>';
-	 echo $row['max_value'];
-	 echo '<br>';
-	 echo $row['average_value'];
-	 echo '<br>';			 
+		 
 	?>
 	<table align="left" width="25%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
