@@ -172,8 +172,9 @@ $row9 = pg_fetch_assoc($result3);
 
 	while ($row3 = pg_fetch_assoc($result3)) {
  if($row3['vehicle_type'] == 'Trailer'){
-	 $array[]=$row3['vin'];
-	 $arrayid[]=$row3['id'];
+	 $arrid[]=$row3['id'];
+	 $arrvin[]=$row3['vin'];
+	 
 	echo "test";
 
  }
@@ -186,15 +187,16 @@ print_r($array);
 echo "</pre>";
 echo "<br>";
 echo $row9['vin'];
-echo $array[0];
-echo $array[1];
-echo $array[2];
-echo $array[3];
-$row3['id'];
-echo $array[0];
-echo $array[1];
-echo $array[2];
-echo $array[3];
+echo $arrvin[0];
+echo $arrvin[1];
+echo $arrvin[2];
+echo $arrvin[3];
+echo "<br>";
+$row9['id'];
+echo $arrid[0];
+echo $arrid[1];
+echo $arrid[2];
+echo $arrid[3];
 ?>
 <html>
 <head>
