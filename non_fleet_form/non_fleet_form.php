@@ -373,11 +373,13 @@ if($rows>=1){
 	font-family: Arial;
 	}
 	</style>
-	
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="http://givesurance.herokuapp.com/non_fleet_form/js/script.js"></script>
 	</head>
 	<body>
+	<fieldset class='dataform'>
 	<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<tr>
 	<td cellspacing="0">
@@ -3085,6 +3087,7 @@ if($rows>=1){
 	</td>
 		</tr>
 	</table>
+	</fieldset>
 </body>
 </html>
 
