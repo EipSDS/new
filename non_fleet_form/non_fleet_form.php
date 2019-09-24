@@ -261,7 +261,7 @@ echo $LicenceNo5=$str_arr5[4];
 echo $Experience_Years5=$check_token_valid['data'][0]['Drivers1'][5]['Experience_Years'];	
 echo $Hire_Date5=$check_token_valid['data'][0]['Drivers1'][5]['Hire_Date'];	
 	
-}	
+	
 
  $query3 = "SELECT * FROM public.contact_vehicles where contact_id='".$_GET['contact_id']."' AND vehicle_type='Trailer'";
 $result3 = pg_query($query3);
