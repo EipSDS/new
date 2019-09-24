@@ -159,19 +159,19 @@ echo "echjooo";
 echo"<pre>";
 print_r($array1);
 echo"</pre>";
-$str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);  
-echo $DOB=$str_arr[0]; 
-echo"<br>";
-echo $Age=$str_arr[1]; 
-echo"<br>";
-echo $MaritalStatus=$str_arr[2]; 
-echo"<br>";
-echo $Points=$str_arr[3]; 
-echo"<br>";
-echo $LicenceNo=$str_arr[4]; 
+// $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);  
+// echo $DOB=$str_arr[0]; 
+// echo"<br>";
+// echo $Age=$str_arr[1]; 
+// echo"<br>";
+// echo $MaritalStatus=$str_arr[2]; 
+// echo"<br>";
+// echo $Points=$str_arr[3]; 
+// echo"<br>";
+// echo $LicenceNo=$str_arr[4]; 
 
-echo $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
-echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];
+// echo $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
+// echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];
 
 }
 /* // New [1] driver data 
