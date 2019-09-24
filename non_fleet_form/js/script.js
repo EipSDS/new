@@ -9,8 +9,9 @@ $(document).ready(function(){
    type: "POST",   
    dataType: 'json',
    data: ({savedata: "success",contact_id:contact_id, dataform:dataform}),
-   success:function(result){		
-	  console.log("contact_id");
+   success:function(data){		
+      content.html(data);
+	  console.log(data);
    }	   
    });
     });
