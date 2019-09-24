@@ -8,7 +8,7 @@ console.log(dataform);
    url:"ajaxdata.php",
    type: "POST",   
    dataType: 'text',
-   data: ({savedata: "success",contact_id:contact_id }),
+   data: ({savedata: "success",contact_id:contact_id, dataform:dataform}),
    success:function(result){		
       content.html(result);
 	  console.log(result);
