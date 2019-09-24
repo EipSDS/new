@@ -137,7 +137,7 @@ echo $Radious_600_miles=$check_token_valid['data'][0]['Radious_600_miles'];
 
 $count=count($check_token_valid['data'][0]['Drivers1']);
 for($i = 0; $i<$count; $i++){
-echo $drivername=$check_token_valid['data'][0]['Drivers1'][$i]'Name1'];
+
 
 
 
