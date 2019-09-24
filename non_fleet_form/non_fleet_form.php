@@ -138,19 +138,7 @@ echo $Radious_600_miles=$check_token_valid['data'][0]['Radious_600_miles'];
 $count=count($check_token_valid['data'][0]['Drivers1']);
 for($i = 0; $i<$count; $i++){
 echo $drivername=$check_token_valid['data'][0]['Drivers1'][$i]'Name1'];
-echo $DOB_Age_MaritalStatus_Points_LicenceNo=$check_token_valid['data'][0]['Drivers1'][$i]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 
-$str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);  
-echo $DOB=$str_arr[0]; 
-echo"<br>";
-echo $Age=$str_arr[1]; 
-echo"<br>";
-echo $MaritalStatus=$str_arr[2]; 
-echo"<br>";
-echo $Points=$str_arr[3]; 
-echo"<br>";
-echo $LicenceNo=$str_arr[4];
-echo"<br>";
 
 
 
