@@ -373,6 +373,7 @@ if($rows>=1){
 	font-family: Arial;
 	}
 	</style>
+	<script src="js/script.js" type="text/javascript"></script>
 	</head>
 	<body>
 	<table width="100%" align="center" cellpadding="0" cellspacing="0">
@@ -3063,7 +3064,8 @@ if($rows>=1){
 	<table width="50%" align="right" height="10" cellpadding="0" cellspacing="0">
 	<tr>
 		<td align="right">
-			<button style="background: #004d96;color: #fff;border: 0;padding: 10px 35px;text-transform: capitalize;">Save</button>
+		<input type="button" name="submit" class="action-button save" value="save" style="background: #004d96;color: #fff;border: 0;padding: 10px 35px;text-transform: capitalize;"/>
+	
 		</td>
 	</tr>
 	</table>
