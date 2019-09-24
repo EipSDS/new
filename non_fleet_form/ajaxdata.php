@@ -8,7 +8,7 @@ echo $data = json_decode($_POST['dataform']);
 echo $jsondata = json_encode($data);
 echo "<br>";
 echo "break";
-echo $jsondata;
+print_r($jsondata);
 /* exit();
 	if(ISSET($_POST['savedata']) && $_POST['savedata']=='success'){
 		echo $data = json_encode($_POST);
