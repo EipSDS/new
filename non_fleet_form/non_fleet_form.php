@@ -135,7 +135,7 @@ echo $Radious_600_miles=$check_token_valid['data'][0]['Radious_600_miles'];
 echo $driver_Name1=$check_token_valid['data'][0]['Drivers1'][0]['Name1'];
 echo $DOB_Age_MaritalStatus_Points_LicenceNo=$check_token_valid['data'][0]['Drivers1'][0]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 
-$count=count($check_token_valid['data'][0]['Drivers1']);
+
 echo "got it";
 
 
