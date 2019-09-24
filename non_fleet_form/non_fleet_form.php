@@ -2185,35 +2185,35 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Commodity1" class='commodity' id="commodity" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Commodity1" class='commodity' value ="<?php echo $row4['name']; ?>" id="commodity" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Commodity2" class='commodity' id="commodity1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Commodity2" class='commodity' id="Commodity2" value ="<?php echo $array_name[0]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Commodity3" class='commodity' id="commodity2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Commodity3" class='commodity' id="commodity3" value ="<?php echo $array_name[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Commodity4" class='commodity' id="commodity3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Commodity4" class='commodity' id="Commodity4" value ="<?php echo $array_name[2]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Commodity5" class='commodity' id="commodity4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Commodity5" class='commodity' id="Commodity5" value ="<?php echo $array_name[3]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -2233,35 +2233,35 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="hauled1" class='hauled' id="hauled1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="hauled1" class='hauled' id="hauled1" value ="<?php echo $row4['value']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="hauled2" class='hauled' id="hauled2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="hauled2" class='hauled' id="hauled2" value ="<?php echo $array_value[0]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="hauled3" class='hauled' id="hauled3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="hauled3" class='hauled' id="hauled3" value ="<?php echo $array_value[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="hauled4" class='hauled' id="hauled4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="hauled4" class='hauled' id="hauled4" value ="<?php echo $array_value[2]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="hauled5" class='hauled' id="hauled5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="hauled5" class='hauled' id="hauled5" value ="<?php echo $array_value[3]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
