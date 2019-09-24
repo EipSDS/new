@@ -29,21 +29,7 @@ if(!empty($phone_number)){
 				 $url = "Contacts/$contact_id";
 				$data = "";
 				 $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
-$query = "SELECT * FROM public.contact_commodities where contact_id='".$contact_id."'";
-$result = pg_query($query);
-$rows = pg_num_rows($result);
-if($rows>=1){
-	while ($row = pg_fetch_assoc($result)) {
-	 echo $row['name'];
-	 echo '<br>';
-	 echo $row['value'];
-	 echo '<br>';
-	 echo $row['max_value'];
-	 echo '<br>';
-	 echo $row['average_value'];
-	 echo '<br>';			 
-	}
-}
+
 $query1 = "SELECT * FROM public.violation where contact_id='".$contact_id."'";
 $result1 = pg_query($query1);
 $rows1 = pg_num_rows($result1);
@@ -336,7 +322,40 @@ echo $arraymake[0];
 echo $arraymake[1];
 echo $arraymake[2];
 echo $arraymake[3];
+echo "=======================";
+$query = "SELECT * FROM public.contact_commodities where contact_id='".$contact_id."'";
+$result = pg_query($query);
+$row4 = pg_fetch_assoc($result);
+$rows = pg_num_rows($result);
+if($rows>=1){
+	while ($row = pg_fetch_assoc($result)) { 
+	 $array_id[]=$row5['id'];
+	 $array_name[]=$row5['name'];
+	 $array_value[]=$row5['value'];
+	 
 
+		 
+	}
+}
+	echo $row4['id'];
+	echo $array_id[0];
+	echo $array_id[1];
+	echo $array_id[2];
+	echo $array_id[3];
+	echo '<br>';
+	echo $row4['name'];
+	echo $array_name[0];
+	echo $array_name[1];
+	echo $array_name[2];
+	echo $array_name[3];	
+	echo '<br>';
+	echo $row4['value'];
+	echo $array_value[0];
+	echo $array_value[1];
+	echo $array_value[2];
+	echo $array_value[3];		
+	echo '<br>';
+		
 ?>
 <html>
 <head>
@@ -2211,14 +2230,7 @@ echo $arraymake[3];
 	</td>
 	</tr>
 	</table>
-	<?php
-$query = "SELECT * FROM public.contact_commodities where contact_id='4098623000000651027'";
-$result = pg_query($query);
-$rows = pg_num_rows($result);
-if($rows>=1){
-	while ($row = pg_fetch_assoc($result)) {
-		 
-	?>
+
 	<table align="left" width="30%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
@@ -2247,10 +2259,6 @@ if($rows>=1){
 	</td>
 	</tr>
 	</table>
-	<?php
-	}
-	}
-	?>
 	
 	</td>
 	</tr>
