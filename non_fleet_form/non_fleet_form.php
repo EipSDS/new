@@ -336,7 +336,7 @@ echo $arraymake[2];
 echo $arraymake[3];
  */
 ?>
-<html>
+<!--html>
 <head>
 	<title>
 		Microsoft Word - 38118152_ATU+Non-Fleet+App+(1-5+units)
@@ -678,7 +678,7 @@ echo $arraymake[3];
 		</tr>
 	</table>
 		
-		<!--new code-->	
+
 
 			
 		</td>
@@ -2873,7 +2873,7 @@ if($rows>=1){
 		</tr>
 	</table>
 </body>
-</html>
+</html-->
 
 <?php
 }
