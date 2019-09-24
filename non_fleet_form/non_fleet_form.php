@@ -3073,9 +3073,9 @@ if($rows>=1){
 		</td>
 	</tr>
 	</table>
-		<div role="alert" class='save_success' style='display:none;color:green';>
+		<span  class='save_success' style='display:none;color:green';>
 		Please Fill all fields.
-	</div>
+	</span>
 	<input type="hidden" name="contactId" value="<?php echo $_GET['contact_id']; ?>" placeholder="Phone Number" required class='contactId' />
 	</td>
 	</tr>
