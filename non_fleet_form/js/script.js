@@ -1,6 +1,6 @@
 
  $(document).ready(function(){
-  $('.save').submit(function(){
+  $('.save').click(function(){
   var contact_id =$(".ContactId").val();
 //console.log(contact_id);
   var dataform=	$('.dataform').find('select, textarea, input').serialize();
