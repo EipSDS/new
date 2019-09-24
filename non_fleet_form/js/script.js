@@ -8,9 +8,8 @@ $(document).ready(function(){
    url:"ajaxdata.php",
    type: "POST",   
    dataType: 'json',
-   data:({savedata: "success",contact_id:contact_id, dataform:dataform}),
-   success:function(data){
-		
+   data: ({savedata: "success",contact_id:contact_id, dataform:dataform}),
+   success:function(result){		
 	  console.log("contact_id");
    }	   
    });
