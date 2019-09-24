@@ -1696,7 +1696,7 @@ else{
 	<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#c6d9f1" style="border: 2px solid #000000;">
 	<tr>
 	<td>
-	<table align="left" width="100%" cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<table align="left" width="25%" cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
 	<tr>
 	<td>
 	<table align="left" height="42" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
@@ -1802,7 +1802,7 @@ $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);
 
 	
 ?>	
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<table align="left" width="25%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
 	<input type="text" name="Name1" class='name' id="name1" width="100%" value="<?php echo $check_token_valid['data'][0]['Drivers1'][$i]['Name1']; ?>" style="width:100%;border: 0;font-size:14px;"/>
@@ -1812,7 +1812,7 @@ $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);
 
 
 
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<table align="left" width="5%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
 	<input type="text" name="e/o1" class='e/o' id="e/o1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
@@ -1822,7 +1822,7 @@ $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);
 
 
 
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<table align="left" width="20%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
 	<input type="text" name="state_license1" class='state&license' id="state_license1" value="<?php echo $str_arr[4]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
@@ -1832,7 +1832,7 @@ $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);
 
 
 
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<table align="left" width="12%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
 	<input type="text" name="Years_of_Experience1" class='experience' id="experience1" value="<?php echo $check_token_valid['data'][0]['Drivers1'][$i]['Experience_Years']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
@@ -1841,7 +1841,7 @@ $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);
 	</table>
 
 
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<table align="left" width="12%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
 	<input type="text" name="birth1" value="<?php echo $DOB=$str_arr[0]; ?>" class='birth' id="birth" width="100%" style="width:100%;border: 0;font-size:14px;"/>
@@ -1850,7 +1850,7 @@ $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);
 	</table>
 
 
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<table align="left" width="10.9%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
 	<input type="text" name="date1" value="<?php echo $check_token_valid['data'][0]['Drivers1'][$i]['Hire_Date']; ?>" class='date' id="date" width="100%" style="width:100%;border: 0;font-size:14px;"/>
@@ -1860,7 +1860,7 @@ $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);
 
 
 
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<table align="left" width="10%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
 	<input type="text" name="Violations1" class='Violations' id="Violations1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
