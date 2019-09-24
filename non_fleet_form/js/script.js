@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $(".save").click(function(){
 var thanks= "Data saved";
-  var contact_id = "<?php echo $contact_id ?>";
+  var contact_id =$(".ContactId").val();
   
   var dataform=	$('.dataform').find('select, textarea, input').serialize();
    console.log(contact_id);
