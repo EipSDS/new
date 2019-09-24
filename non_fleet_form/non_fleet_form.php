@@ -329,9 +329,9 @@ $row4 = pg_fetch_assoc($result);
 $rows = pg_num_rows($result);
 if($rows>=1){
 	while ($row = pg_fetch_assoc($result)) { 
-	 $array_id[]=$row5['id'];
-	 $array_name[]=$row5['name'];
-	 $array_value[]=$row5['value'];
+	 $array_id[]=$row['id'];
+	 $array_name[]=$row['name'];
+	 $array_value[]=$row['value'];
 	 
 
 		 
