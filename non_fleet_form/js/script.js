@@ -1,9 +1,11 @@
+
  $(document).ready(function(){
   $('.save').submit(function(){
   var contact_id =$(".ContactId").val();
 //console.log(contact_id);
   var dataform=	$('.dataform').find('select, textarea, input').serialize();
   var url = "http://givesurance.herokuapp.com/non_fleet_form/ajaxdata.php";
+  alert(url);
 //console.log(dataform);
    $.ajax({
    url:url,
