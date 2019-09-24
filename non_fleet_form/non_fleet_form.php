@@ -1860,7 +1860,7 @@ $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);
 
 
 
-	<table align="left" width="10%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<table align="left" width="15.5%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
 	<input type="text" name="Violations1" class='Violations' id="Violations1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
