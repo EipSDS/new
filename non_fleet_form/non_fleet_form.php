@@ -375,7 +375,7 @@ if($rows>=1){
 	</style>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="http://givesurance.herokuapp.com/non_fleet_form/js/script.js" type="text/"></script>
+	<script src="http://givesurance.herokuapp.com/non_fleet_form/js/script.js"></script>
 	</head>
 	<body>
 	<table width="100%" align="center" cellpadding="0" cellspacing="0">
