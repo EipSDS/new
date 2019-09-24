@@ -20,7 +20,7 @@
    $.ajax({
       type: "POST",
       url: url,
-      data: {hi:hi},
+      data: {hi:'hi'},
       dataType: "text",
       success: function(resultData){
           alert(resultData);
