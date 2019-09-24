@@ -1,4 +1,4 @@
-$(document).ready(function(){
+ $(document).ready(function(){
   $(".save").click(function(event){
   var contact_id =$(".ContactId").val();
 //console.log(contact_id);
@@ -13,6 +13,6 @@ $(document).ready(function(){
     //  content.html(result);
 	  console.log(result);
    }	   
-   });
+   })
     });
 });
