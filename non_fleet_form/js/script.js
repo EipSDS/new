@@ -1,3 +1,5 @@
-$(".save").click(function(){
+$(document).ready(function(){
+  $(".save").click(function(){
     alert("The paragraph was clicked.");
   });
+});
