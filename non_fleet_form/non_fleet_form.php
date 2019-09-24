@@ -139,7 +139,7 @@ echo $count=count($check_token_valid['data'][0]['Drivers1']);
 echo "exit;"
 for($i = 0; $i<$count; $i++){
 echo $drivername=$check_token_valid['data'][0]['Drivers1'][$i]['Name1'];
- $DOB_Age_MaritalStatus_Points_LicenceNo=$check_token_valid['data'][0]['Drivers1'][$i]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+echo $DOB_Age_MaritalStatus_Points_LicenceNo=$check_token_valid['data'][0]['Drivers1'][$i]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 
 $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo); 
 echo"<br>"; 
