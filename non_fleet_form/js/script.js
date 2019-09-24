@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $(".save").click(function(event){
+  $(".save").click(function(){
   var contact_id =$(".ContactId").val();
   
   var dataform=	$('.dataform').find('select, textarea, input').serialize();
