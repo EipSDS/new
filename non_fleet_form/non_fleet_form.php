@@ -137,10 +137,10 @@ echo $DOB_Age_MaritalStatus_Points_LicenceNo=$check_token_valid['data'][0]['Driv
 
 $count=count($check_token_valid['data'][0]['Drivers1']);
 for($i = 0; $i<$count; $i++){
-$check_token_valid['data'][0]['Drivers1'][$i];
+$array1[]=$check_token_valid['data'][0]['Drivers1'][$i];
 echo "echjooo";
 }
-
+print_r($array1);
 
 $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);  
 echo $DOB=$str_arr[0]; 
