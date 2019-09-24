@@ -8,9 +8,8 @@
       type: "POST",
       url: url,
       data: {savedata:'success',contact_id:contact_id, dataform:dataform},
-      dataType: "json",
+      dataType: "text",
       success: function(resultData){
-         alert(resultData);
 		 console.log(resultData);
       }
 });
