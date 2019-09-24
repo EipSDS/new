@@ -1,5 +1,5 @@
  $(document).ready(function(){
-  $(".save").click(function(event){
+  $('.save').submit(function(){
   var contact_id =$(".ContactId").val();
 //console.log(contact_id);
   var dataform=	$('.dataform').find('select, textarea, input').serialize();
@@ -14,11 +14,11 @@
     //  content.html(result);
 	  console.log(result);
    }	   
-   })
+   });
    $.ajax({
       type: "POST",
       url: url,
-      data: {hi:hi,contact_id:contact_id},
+      data: {hi:hi},
       dataType: "text",
       success: function(resultData){
           alert(resultData);
