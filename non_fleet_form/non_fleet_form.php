@@ -1706,6 +1706,9 @@ else{
 	</td>
 	</tr>
 	</table>
+		<table align="left" width="5%" cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
 		<table align="left" width="100%" height="42"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td align="center">
@@ -1713,6 +1716,13 @@ else{
 	</td>
 	</tr>
 	</table>
+		</td>
+	</tr>
+	</table>
+		<table align="left" width="20%" cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
+	
 		<table align="left" width="100%" height="42"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td align="center">
@@ -1720,6 +1730,13 @@ else{
 	</td>
 	</tr>
 	</table>
+		</td>
+	</tr>
+	</table>
+		<table align="left" width="12%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
+	
 		<table align="left" width="100%" height="42"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td align="center">
@@ -1727,6 +1744,13 @@ else{
 	</td>
 	</tr>
 	</table>
+		</td>
+	</tr>
+	</table>
+	
+	<table align="left" width="12%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
 		<table align="left" width="100%" height="42"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td align="center">
@@ -1734,6 +1758,12 @@ else{
 	</td>
 	</tr>
 	</table>
+		</td>
+	</tr>
+	</table>
+		<table align="left" width="10.9%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
 		<table align="left" width="100%" height="42"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td align="center">
@@ -1741,11 +1771,20 @@ else{
 	</td>
 	</tr>
 	</table>
+		</td>
+	</tr>
+	</table>
+		<table align="left" width="10%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
 	<table align="left" width="100%" height="42"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td align="center">
 	# Accidents/Violations
 	</td>
+	</tr>
+	</table>
+		</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
@@ -1756,9 +1795,7 @@ else{
 	</tr>
 	</table>
 
-	<table align="left" width="5%" cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
-	<tr>
-	<td>
+
 
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
@@ -1767,12 +1804,8 @@ else{
 	</td>
 	</tr>
 	</table>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="20%" cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
-	<tr>
-	<td>
+
+
 
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
@@ -1781,12 +1814,8 @@ else{
 	</td>
 	</tr>
 	</table>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="12%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
-	<tr>
-	<td>
+
+
 
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
@@ -1795,12 +1824,7 @@ else{
 	</td>
 	</tr>
 	</table>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="12%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
-	<tr>
-	<td>
+
 
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
@@ -1809,12 +1833,8 @@ else{
 	</td>
 	</tr>
 	</table>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="10.9%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
-	<tr>
-	<td>
+
+
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
@@ -1822,12 +1842,8 @@ else{
 	</td>
 	</tr>
 	</table>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="10%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
-	<tr>
-	<td>
+
+
 
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
@@ -1836,9 +1852,7 @@ else{
 	</td>
 	</tr>
 	</table>
-	</td>
-	</tr>
-	</table>
+
 	</td>
 	</tr>
 	</table>
