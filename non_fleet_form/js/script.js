@@ -1,6 +1,5 @@
 $(document).ready(function(){
   $(".save").click(function(){
-    alert("The paragraph was clicked.");
 
   var contact_id = "<?php echo $contact_id ?>";
   
