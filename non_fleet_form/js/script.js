@@ -9,11 +9,11 @@ $(document).ready(function(){
    url:"ajaxdata.php",
    type: "POST",   
    dataType: 'json',
-   data : ({savedata:"success",contact_id:contact_id, dataform:dataform}),
+   data : ({savedata: "success",contact_id:contact_id, dataform:dataform}),
    success:function(result){
    $(".save_success").show();
       alert(contact_id);
    }	   
-   })
+   });
     });
 });
