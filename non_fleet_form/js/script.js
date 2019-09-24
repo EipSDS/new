@@ -10,9 +10,9 @@ $(document).ready(function(){
    dataType: 'json',
    data : ({savedata: "success",contact_id:contact_id, dataform:dataform}),
    success:function(result){
-      alert(contact_id);
+		
 	  console.log(contact_id);
    }	   
-   })
+   });
     });
 });
