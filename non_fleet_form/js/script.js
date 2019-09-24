@@ -11,6 +11,7 @@
       dataType: "text",
       success: function(resultData){
 		 console.log(resultData);
+		alert(resultData);
       }
 });
     });
