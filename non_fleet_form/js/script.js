@@ -20,7 +20,7 @@
    $.ajax({
       type: "POST",
       url: url,
-      data: {hi:'hi'contact_id:contact_id},
+      data: {hi:'hi',contact_id:contact_id},
       dataType: "text",
       success: function(resultData){
           alert(resultData);
