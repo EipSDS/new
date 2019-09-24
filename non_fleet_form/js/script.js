@@ -13,6 +13,6 @@ $(document).ready(function(){
       alert(contact_id);
 	  console.log(contact_id);
    }	   
-   });
+   })
     });
 });
