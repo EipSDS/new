@@ -1,7 +1,7 @@
 $(document).ready( function () {
 
 
-$(document).on("click", ".phone_number_next", function(event){
+$(document).on("click", ".save", function(event){
 
 alert(how is the josh);
 
