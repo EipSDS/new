@@ -373,15 +373,8 @@ if($rows>=1){
 	font-family: Arial;
 	}
 	</style>
-	<script src="js/script.js" type="text/javascript"></script>
+	<script src="http://givesurance.herokuapp.com/non_fleet_form/js/script.js" type="text/javascript"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script>
-		$(document).ready(function(){
-  $(".save").click(function(){
-    alert("The paragraph was clicked.");
-  });
-});
-	</script>
 	</head>
 	<body>
 	<table width="100%" align="center" cellpadding="0" cellspacing="0">
