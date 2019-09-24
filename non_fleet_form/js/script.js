@@ -10,7 +10,7 @@ console.log(dataform);
    dataType: 'text',
    data: ({savedata: "success",contact_id:contact_id, dataform:dataform}),
    success:function(result){		
-      content.html(result);
+    //  content.html(result);
 	  console.log(result);
    }	   
    });
