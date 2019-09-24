@@ -140,8 +140,9 @@ for($i = 0; $i<$count; $i++){
 $array1[]=$check_token_valid['data'][0]['Drivers1'][$i];
 echo "echjooo";
 }
+echo"<pre>";
 print_r($array1);
-
+echo"</pre>";
 $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);  
 echo $DOB=$str_arr[0]; 
 echo"<br>";
