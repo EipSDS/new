@@ -7,7 +7,7 @@
    $.ajax({
       type: "POST",
       url: url,
-      data: {hi:'hi',contact_id:contact_id, dataform:dataform},
+      data: {savedata:'success',contact_id:contact_id, dataform:dataform},
       dataType: "text",
       success: function(resultData){
          alert(resultData);
