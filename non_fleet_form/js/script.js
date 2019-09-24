@@ -1,10 +1,5 @@
-$(document).ready( function () {
-
-
-$(document).on("click", ".save", function(event){
-
-alert(how is the josh);
-
+$(document).ready(function(){
+  $(".save").click(function(){
+    alert("The paragraph was clicked.");
+  });
 });
-
-});	
