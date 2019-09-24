@@ -1,6 +1,6 @@
 <?php
 
-	if(ISSET($_POST['CargoRelated_next']) && $_POST['CargoRelated_next']=='success'){
+	if(ISSET($_POST['savedata']) && $_POST['savedata']=='success'){
 		echo $data = json_encode($_POST);
 	echo '<script type="text/javascript">alert("' . $data . '")</script>';
 	
