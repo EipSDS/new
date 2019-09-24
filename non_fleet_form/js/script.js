@@ -3,9 +3,10 @@
   var contact_id =$(".ContactId").val();
 //console.log(contact_id);
   var dataform=	$('.dataform').find('select, textarea, input').serialize();
+  var url = "http://givesurance.herokuapp.com/non_fleet_form/ajaxdata.php";
 //console.log(dataform);
    $.ajax({
-   url:"ajaxdata.php",
+   url:url,
    type: "POST",   
    dataType: 'json',
    data: {savedata: "success",contact_id:contact_id, dataform:dataform},
@@ -14,5 +15,14 @@
 	  console.log(result);
    }	   
    })
+   $.ajax({
+      type: "POST",
+      url: url,
+      data: {hi:hi,contact_id:contact_id},
+      dataType: "text",
+      success: function(resultData){
+          alert(resultData);
+      }
+});
     });
 });
