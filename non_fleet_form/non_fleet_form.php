@@ -535,8 +535,8 @@ if($rows>=1){
 			<table align="left" cellpadding="6" cellspacing="0">
 				<tr>
 					<td align="center">
-						<input type="text" name="Applicant_Name" class='applicant_name' id="applicant_name" value="<?php echo $first_name;?>" width="49%" style="width:180px;border: 0;font-size:14px;"/>
-						<input type="text" name="applicant_lastname" class='applicant_lastname' id="applicant_lastname" value="<?php echo $last_name;?>" width="49%" style="width:180px;border: 0;font-size:14px;"/>
+						<input type="text" name="Applicant_Name" class='applicant_name' id="applicant_name" value="<?php echo $first_name;?>" width="48%" style="width:160px;border: 0;font-size:14px;"/>
+						<input type="text" name="applicant_lastname" class='applicant_lastname' id="applicant_lastname" value="<?php echo $last_name;?>" width="48%" style="width:160px;border: 0;font-size:14px;"/>
 					</td>
 				</tr>
 			</table>
