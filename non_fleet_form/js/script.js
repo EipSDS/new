@@ -29,6 +29,7 @@
  var um_uim=$("#um_uim").val(); 
  var pip=$("#pip").val(); 
  var limit=$("#limit").val(); 
+ var deductible=$("#deductible").val(); 
  var motor_deductible=$("#motor_deductible").val(); 
  var cost=$("#cost").val(); 
  var effective_date=$("#employees").val(); 

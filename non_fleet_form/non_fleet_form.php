@@ -2343,7 +2343,7 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td align="center">
-	Stated Amount 
+	Average Value
 	</td>
 	</tr>
 	</table>
