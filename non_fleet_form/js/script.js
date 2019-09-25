@@ -1,14 +1,6 @@
-    // var effective_date=$("#interchange").val(); 
-	// var effective_date=$("#interchange_agreement").val();
-    // var effective_date=$("#comprehensive").val(); 
-    // var effective_date=$("#specified").val(); 
-    // var effective_date=$("#reefer").val(); 
-    // var effective_date=$("#hired").val(); 
-    // var effective_date=$("#owned").val(); 
-    // var effective_date=$("#truckers").val(); 
-	
  $(document).ready(function(){
   $('.save').click(function(){
+	  console.log(contact_id);
   var contact_id =$(".ContactId").val();
   var dataform=	$('.dataform').find('select, textarea, input').serialize();
  var submitting_agency=$("#submitting_agency").val(); 
