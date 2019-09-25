@@ -20,7 +20,7 @@ $Contact_Person=$_POST['Contact_Person'];
 //applicant info
 echo $Applicant_Name=$_POST['Applicant_Name'];
 echo $Applicant_lastName=$_POST['Applicant_lastName'];
-$effective_date=$_POST['effective_date'];
+$effective_date=date("Y-m-d", strtotime($_POST['effective_date']));
 $garaging_address=$_POST['garaging_address'];
 $dot=$_POST['dot'];
 $City=$_POST['City'];
