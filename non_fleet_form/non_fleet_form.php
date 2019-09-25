@@ -557,7 +557,7 @@ if($rows>=1){
 			<table align="left" cellpadding="6" cellspacing="0">
 				<tr>
 					<td align="center">
-						<input type="text" name="Effective Date" class=" datepicker" id="effective_date" value="<?php echo $effective_date; ?>" width="100%" placeholder="<?php echo date('m/d/Y');?>" style="width:125px;border: 0;font-size:14px;"/>
+						<input type="text" name="Effective Date" class="effective_date" id="effective_date" value="<?php echo $effective_date; ?>" width="100%" style="width:125px;border: 0;font-size:14px;"/>
 					</td>
 				</tr>
 			</table>
@@ -567,11 +567,6 @@ if($rows>=1){
 	</td>
 	</tr>
 	</table>
-<script>
-	$( function() {
-    $( ".datepicker" ).datepicker();
-  } );
-</script>
 	<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="border-bottom:2px solid #000;">
 	<tr>
 	<td align="left">				
