@@ -1,10 +1,10 @@
 <?php
-$dataform=$_POST['dataform'];
-echo $dataform;
-echo "<br>";
-echo $dataform['contactId'];
-echo $dataform['Tractors2'];
-echo $data = json_decode($_POST['dataform']);
+print_r($_POST['dataform']);
+echo $_POST['submitting_agency'];
+echo $_POST['Contact_Person'];
+echo $_POST['Applicant_Name'];
+echo $_POST['garaging_address'];
+echo $_POST['dot'];
 /* exit();
 	if(ISSET($_POST['savedata']) && $_POST['savedata']=='success'){
 		echo $data = json_encode($_POST);
