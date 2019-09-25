@@ -252,7 +252,7 @@ $Motor_Truck6=$_POST['Motor_Truck6'];
 			}]}'; 
 			
 			@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
-		  echo $zohoResponse;
+		 print_r($zohoResponse);
 			if($zohoResponse['data'][0]['code'] == "SUCCESS"){
 				echo "newdatae";
 				echo json_encode($zohoResponse);
