@@ -63,6 +63,7 @@ echo $Radious_0_50_miles=$check_token_valid['data'][0]['Radious_0_50_miles'];
 echo $Radious_50_200_miles=$check_token_valid['data'][0]['Radious_50_200_miles'];
 echo $Radious_400_miles=$check_token_valid['data'][0]['Radious_200_miles'];
 echo $Radious_600_miles=$check_token_valid['data'][0]['Radious_600_miles'];
+
 echo $count=count($check_token_valid['data'][0]['Drivers1']);
 echo "exit";
 for($i = 0; $i<$count; $i++){
@@ -103,7 +104,7 @@ echo "</pre>";
 // echo $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
 // echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];
 
-}
+
 // New [1] driver data 
 echo $driver_Name11=$check_token_valid['data'][0]['Drivers1'][1]['Name1'];
 echo $DOB_Age_MaritalStatus_Points_LicenceNo1=$check_token_valid['data'][0]['Drivers1'][1]['DOB_Age_MaritalStatus_Points_LicenceNo'];
@@ -194,7 +195,7 @@ echo $LicenceNo5=$str_arr5[4];
 
 echo $Experience_Years5=$check_token_valid['data'][0]['Drivers1'][5]['Experience_Years'];	
 echo $Hire_Date5=$check_token_valid['data'][0]['Drivers1'][5]['Hire_Date'];	
-$License_State5=$check_token_valid['data'][0]['Drivers1'][5]['License_State'];	
+$License_State5=$check_token_valid['data'][0]['Drivers1'][5]['License_State'];
 }
 else{
 
