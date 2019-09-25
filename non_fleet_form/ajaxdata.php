@@ -139,13 +139,19 @@ $name5id=$_POST['name5id'];
 $DOB_Age_MaritalStatus_Points_LicenceNo=$birth1.','','','','.$_POST['Years_of_Experience1'];
 
 
-$Name1=$_POST['Name1'];
+$drivername=$_POST['Name1'];
 $eo1=$_POST['eo1'];
 $state_license1=$_POST['state_license1'];
 $Years_of_Experience1=$_POST['Years_of_Experience1'];
 $birth1=$_POST['birth1'];
 $date1=$_POST['date1'];
 $Violations1=$_POST['Violations1'];
+echo $License_State=$_POST['License_State'];
+echo $License_State1=$_POST['License_State1'];
+echo $License_State2=$_POST['License_State2'];
+echo $License_State3=$_POST['License_State3'];
+echo $License_State4=$_POST['License_State4'];
+
 //second 
 $name2=$_POST['name2'];
 $eo2=$_POST['eo2'];
@@ -286,10 +292,16 @@ $Motor_Truck6=$_POST['Motor_Truck6'];
 			}
 			
 $new_array=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo,"SR22"=>$form_data['new_driver_SR22'],"Name1"=>$drivername,"Back_up_Driver"=>"".$add_driver_Backup."","Owner_Driver"=>$Owner_Driver,"License_State"=>$form_data['new_driver_license_state'],"Experience_Years"=>"".$new_driver_Exp."","Hire_Date"=>"".$Date_of_Hire.""
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo,"Name1"=>$drivername,"Owner_Driver"=>$eo1,"License_State"=>$form_data['new_driver_license_state'],"Experience_Years"=>"".$new_driver_Exp."","Hire_Date"=>"".$Date_of_Hire.""
 		) ;			
 
-			
+		$drivername=$_POST['Name1'];
+$eo1=$_POST['eo1'];
+$state_license1=$_POST['state_license1'];
+$Years_of_Experience1=$_POST['Years_of_Experience1'];
+$birth1=$_POST['birth1'];
+$date1=$_POST['date1'];
+$Violations1=$_POST['Violations1'];	
 			
 	$url = "Contacts/".$_POST['contact_id'];
 			 $data = '{
