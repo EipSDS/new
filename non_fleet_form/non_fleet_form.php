@@ -44,7 +44,8 @@ if($rows1>=1){
 
 		 
 echo $id=$check_token_valid['data'][0];
-echo $first_name=$check_token_valid['data'][0]['Full_Name'];
+echo $first_name=$check_token_valid['data'][0]['First_Name'];
+echo $last_name=$check_token_valid['data'][0]['Last_Name'];
 echo $effective_date=$check_token_valid['data'][0]['Policy_Effective_Date'];
 echo $garaging_address=$check_token_valid['data'][0]['Home_Address'];
 echo $USDOT_Assigned_to=$check_token_valid['data'][0]['USDOT_Assigned_to'];
@@ -102,7 +103,8 @@ if($rows1>=1){
 	 $data = "";
 	 $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 echo $contact_id=$check_token_valid['data'][0];
-echo $first_name=$check_token_valid['data'][0]['Full_Name'];
+echo $first_name=$check_token_valid['data'][0]['First_Name'];
+echo $last_name=$check_token_valid['data'][0]['Last_Name'];
 echo $effective_date=$check_token_valid['data'][0]['Policy_Effective_Date'];
 echo $garaging_address=$check_token_valid['data'][0]['Home_Address'];
 echo $USDOT_Assigned_to=$check_token_valid['data'][0]['USDOT_Assigned_to'];
@@ -533,7 +535,8 @@ if($rows>=1){
 			<table align="left" cellpadding="6" cellspacing="0">
 				<tr>
 					<td align="center">
-						<input type="text" name="Applicant_Name" class='applicant_name' id="applicant_name" value="<?php echo $first_name;?>" width="100%" style="width:360px;border: 0;font-size:14px;"/>
+						<input type="text" name="Applicant_Name" class='applicant_name' id="applicant_name" value="<?php echo $first_name;?>" width="49%" style="width:1600px;border: 0;font-size:14px;"/>
+						<input type="text" name="applicant_lastname" class='applicant_lastname' id="applicant_lastname" value="<?php echo $last_name;?>" width="49%" style="width:180px;border: 0;font-size:14px;"/>
 					</td>
 				</tr>
 			</table>
