@@ -1,5 +1,6 @@
 <?php
-print_r($_POST['dataform']);
+print_r($_POST['savedata']);
+echo $_POST['savedata'];
 echo $_POST['submitting_agency'];
 echo $_POST['Contact_Person'];
 echo $_POST['Applicant_Name'];
@@ -91,7 +92,8 @@ $Stated5=$_POST['Stated5'];
 //Trailer (Year, Make) data save in database in 
 // INSERT INTO public.contact_vehicles(id, contact_id, vehicle_type, vin, gross_weight, longest_trip, city_of_destination, category, year, make, model, body_style, garaging_zip_code, radius, is_business, is_comprehensive, value, loss_payee, trailer_type, non_owned_value, name, address, need_modification, vehicle_number, trailer_number, sub_category, power_unit, city_percent, physical_damage_coverage, is_owner_operator, is_team_driven, estimated_annual_miles) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
-
+//UPDATE public.contact_vehicles SET id=?, contact_id=?, vehicle_type=?, vin=?, gross_weight=?, longest_trip=?, city_of_destination=?, category=?, year=?, make=?, model=?, body_style=?, garaging_zip_code=?, radius=?, is_business=?, is_comprehensive=?, value=?, loss_payee=?, trailer_type=?, non_owned_value=?, name=?, address=?, need_modification=?, vehicle_number=?, trailer_number=?, sub_category=?, power_unit=?, city_percent=?, physical_damage_coverage=?, is_owner_operator=?, is_team_driven=?, estimated_annual_miles=? WHERE <condition>;
+	
 $trailer1id=$_POST['trailer1id'];
 $trailer1=$_POST['trailer1'];
 $trailermake1=$_POST['trailermake1'];
@@ -189,37 +191,47 @@ $Stated_Amount3=$_POST['Stated_Amount3'];
 $Stated_Amount4=$_POST['Stated_Amount4'];
 $Stated_Amount5=$_POST['Stated_Amount5'];
 
-//
+// INSERT INTO public."operation_history "(id, contact_id, of_power_units, total_miles, gross_receipts) VALUES (?, ?, ?, ?, ?);
+// UPDATE public."operation_history " SET id=?, contact_id=?, of_power_units=?, total_miles=?, gross_receipts=? WHERE <condition>;
 
 $Units_box1=$_POST['Units_box1'];
-$Units_box2=$_POST['Units_box2'];
-$Units_box3=$_POST['Units_box3'];
-$Units_box4=$_POST['Units_box4'];
 $Total_Miles1=$_POST['Total_Miles1'];
-$Total_Miles2=$_POST['Total_Miles2'];
-$Total_Miles3=$_POST['Total_Miles3'];
-$Total_Miles4=$_POST['Total_Miles4'];
 $Receipts1=$_POST['Receipts1'];
+
+$Units_box2=$_POST['Units_box2'];
+$Total_Miles2=$_POST['Total_Miles2'];
 $Receipts2=$_POST['Receipts2'];
+
+$Units_box3=$_POST['Units_box3'];
+$Total_Miles3=$_POST['Total_Miles3'];
 $Receipts3=$_POST['Receipts3'];
+
+$Units_box4=$_POST['Units_box4'];
+$Total_Miles4=$_POST['Total_Miles4'];
 $Receipts4=$_POST['Receipts4'];
+
+// INSERT INTO public.loss_history (id, contact_id, liability_of_losses, "total_incurred ", physical_damage_losses, physical_total_incurred, truck_cargo_losses, truck_cargo_total_incurred) VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+// UPDATE public.loss_history SET id=?, contact_id=?, liability_of_losses=?, "total_incurred "=?, physical_damage_losses=?, physical_total_incurred=?, truck_cargo_losses=?, truck_cargo_total_incurred=? WHERE <condition>;
+
 $Power_new2=$_POST['Power_new2'];
-$Power_new3=$_POST['Power_new3'];
-$Power_new4=$_POST['Power_new4'];
 $Total_Incurred1=$_POST['Total_Incurred1'];
-$Total_Incurred2=$_POST['Total_Incurred2'];
-$Total_Incurred3=$_POST['Total_Incurred3'];
 $Losses_Damage1=$_POST['Losses_Damage1'];
-$Losses_Damage2=$_POST['Losses_Damage2'];
-$Losses_Damage3=$_POST['Losses_Damage3'];
 $Total_Incurred_1=$_POST['Total_Incurred_1'];
-$Total_Incurred_2=$_POST['Total_Incurred_2'];
-$Total_Incurred_3=$_POST['Total_Incurred_3'];
 $Motor_Truck1=$_POST['Motor_Truck1'];
-$Motor_Truck2=$_POST['Motor_Truck2'];
-$Motor_Truck3=$_POST['Motor_Truck3'];
 $Motor_Truck4=$_POST['Motor_Truck4'];
+
+$Power_new3=$_POST['Power_new3'];
+$Total_Incurred2=$_POST['Total_Incurred2'];
+$Losses_Damage2=$_POST['Losses_Damage2'];
+$Total_Incurred_2=$_POST['Total_Incurred_2'];
+$Motor_Truck2=$_POST['Motor_Truck2'];
 $Motor_Truck5=$_POST['Motor_Truck5'];
+
+$Power_new4=$_POST['Power_new4'];
+$Total_Incurred3=$_POST['Total_Incurred3'];
+$Losses_Damage3=$_POST['Losses_Damage3'];
+$Total_Incurred_3=$_POST['Total_Incurred_3'];
+$Motor_Truck3=$_POST['Motor_Truck3'];
 $Motor_Truck6=$_POST['Motor_Truck6'];
 
 
