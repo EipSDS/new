@@ -567,11 +567,11 @@ if($rows>=1){
 	</td>
 	</tr>
 	</table>
-<?php	
+<script>
 	$( function() {
     $( ".datepicker" ).datepicker();
   } );
-  ?>
+</script>
 	<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="border-bottom:2px solid #000;">
 	<tr>
 	<td align="left">				
