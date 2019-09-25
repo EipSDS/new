@@ -1961,7 +1961,7 @@ if($rows>=1){
 	<tr>
 	<td>
 	<input type="text" name="state_license1" class='state&license' id="state_license1" value="<?php echo $LicenceNo; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
-	<input type="text" name="License_State" class='License_State' id="License_State" value="<?php echo $License_State; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
+	<input type="text" name="License_State" class='License_State' id="License_State" value="<?php echo $License_State; ?>" width="49%" style="width:48%;border: 0;font-size:14px;"/>
 	
 	</td>
 	</tr>
@@ -1970,7 +1970,7 @@ if($rows>=1){
 	<tr>
 	<td>
 	<input type="text" name="state_license2" class='state_license2' value="<?php echo $LicenceNo1; ?>" id="state_license2" width="49%" style="width:49%;border: 0;font-size:14px;"/>
-	<input type="text" name="License_State1" class='License_State1' id="License_State1" value="<?php echo $License_State1; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
+	<input type="text" name="License_State1" class='License_State1' id="License_State1" value="<?php echo $License_State1; ?>" width="49%" style="width:48%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -1978,7 +1978,7 @@ if($rows>=1){
 	<tr>
 	<td>
 	<input type="text" name="state_license3" class='state_license3' id="state_license3" value="<?php echo $LicenceNo2; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
-	<input type="text" name="License_State2" class='License_State2' id="License_State2" value="<?php echo $License_State2; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
+	<input type="text" name="License_State2" class='License_State2' id="License_State2" value="<?php echo $License_State2; ?>" width="49%" style="width:48%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -1986,7 +1986,7 @@ if($rows>=1){
 	<tr>
 	<td>
 	<input type="text" name="state_license4" class='state_license4' id="state_license4" value="<?php echo $LicenceNo3; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
-	<input type="text" name="License_State3" class='License_State3' id="License_State3" value="<?php echo $License_State3; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
+	<input type="text" name="License_State3" class='License_State3' id="License_State3" value="<?php echo $License_State3; ?>" width="49%" style="width:48%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -1994,7 +1994,7 @@ if($rows>=1){
 	<tr>
 	<td>
 	<input type="text" name="state_license5" class='state_license5' id="state_license5" value="<?php echo $LicenceNo4; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
-	<input type="text" name="License_State4" class='License_State4' id="License_State4" value="<?php echo $License_State4; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
+	<input type="text" name="License_State4" class='License_State4' id="License_State4" value="<?php echo $License_State4; ?>" width="49%" style="width:48%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
