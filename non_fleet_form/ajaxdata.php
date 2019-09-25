@@ -1,5 +1,7 @@
 <?php
-print_r($_POST['savedata']);
+
+
+if(ISSET($_POST['savedata']) && $_POST['savedata']=='success'){
 echo $_POST['savedata'];
 echo $_POST['submitting_agency'];
 echo $_POST['Contact_Person'];
@@ -242,5 +244,5 @@ $Motor_Truck6=$_POST['Motor_Truck6'];
 	if(ISSET($_POST['savedata']) && $_POST['savedata']=='success'){
 		echo $data = json_encode($_POST);
 	} */
-	
+}	
 ?>
