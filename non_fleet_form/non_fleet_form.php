@@ -1638,7 +1638,6 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="hidden" name="trailer2id" class='trailer2id' id="trailer2id" value="<?php echo $arrid[0]; ?>"/>
 	<input type="text" name="trailer2" class='tractors' id="trailer2" value="<?php echo $arryear[0]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	<input type="text" name="trailermake2" class='tractors' id="trailermake2" value="<?php echo $arrmake[0]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	</td>
@@ -1647,7 +1646,6 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="hidden" name="trailer3id" class='trailer3id' id="trailer3id" value="<?php echo $arrid[1]; ?>"/>
 	<input type="text" name="trailer3" class='tractors' id="trailer3" value="<?php echo $arryear[1]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	<input type="text" name="trailermake3" class='tractors' id="trailermake3" value="<?php echo $arrmake[1]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	</td>
@@ -1656,7 +1654,6 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="hidden" name="trailer4id" class='trailer4id' id="trailer4id" value="<?php echo $arrid[4]; ?>"/>
 	<input type="text" name="trailer4" class='tractors' id="trailer4" value="<?php echo $arryear[2]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	<input type="text" name="trailermake4" class='tractors' id="trailermake4" value="<?php echo $arrmake[2]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	</td>
@@ -1665,7 +1662,6 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="hidden" name="trailer5id" class='trailer5id' id="trailer5id" value="<?php echo $arrid[4]; ?>"/>
 	<input type="text" name="trailer5" class='tractors' id="trailer5" value="<?php echo $arryear[3]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	<input type="text" name="trailermake5" class='tractors' id="trailermake5" value="<?php echo $arrmake[3]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	</td>
@@ -1894,35 +1890,35 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="eo1" class='e/o' id="eo1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="e/o1" class='e/o' id="e/o1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="eo2" class='eo2' id="eo2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="e/o2" class='e/o' id="e/o2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="eo3" class='eo3' id="eo3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="e/o3" class='e/o' id="e/o3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="eo4" class='eo4' id="eo4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="e/o4" class='e/o' id="e/o4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="eo5" class='eo5' id="eo5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="e/o5" class='e/o' id="e/o5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -1949,28 +1945,28 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="state_license2" class='state_license2' value="<?php echo $LicenceNo1; ?>" id="state_license2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="state&license2" class='state&license' value="<?php echo $LicenceNo1; ?>" id="state&license2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="state_license3" class='state_license3' id="state_license3" value="<?php echo $LicenceNo2; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="state&license3" class='state&license' id="state&license3" value="<?php echo $LicenceNo2; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="state_license4" class='state_license4' id="state_license4" value="<?php echo $LicenceNo3; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="state&license4" class='state&license' id="state&license4" value="<?php echo $LicenceNo3; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="state_license5" class='state_license5' id="state_license5" value="<?php echo $LicenceNo4; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="state&license5" class='state&license' id="state&license5" value="<?php echo $LicenceNo4; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -1997,28 +1993,28 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="experience2" class='experience' id="experience2" value="<?php echo $Experience_Years1; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Years of Experience2" class='experience' id="experience2" value="<?php echo $Experience_Years1; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="experience3" class='experience' id="experience3" value="<?php echo $Experience_Years2; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Years of Experience3" class='experience' id="experience3" value="<?php echo $Experience_Years2; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="experience4" value="<?php echo $Experience_Years3; ?>" class='experience' id="experience4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Years of Experience4" value="<?php echo $Experience_Years3; ?>" class='experience' id="experience4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="experience5" value="<?php echo $Experience_Years4; ?>" class='experience' id="experience5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Years of Experience5" value="<?php echo $Experience_Years4; ?>" class='experience' id="experience5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -2052,21 +2048,21 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="birth3" class='birth' value="<?php echo $DOB2; ?>" id="birth3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="birth2" class='birth' value="<?php echo $DOB2; ?>" id="birth2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="birth4" value="<?php echo $DOB3; ?>" class='birth' id="birth4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="birth4" value="<?php echo $DOB3; ?>" class='birth' id="birth3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="birth5" value="<?php echo $DOB4; ?>" class='birth' id="birth5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="birth5" value="<?php echo $DOB4; ?>" class='birth' id="birth4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -2086,35 +2082,35 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="date1" value="<?php echo $Hire_Date; ?>" class='date' id="date1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="date1" value="<?php echo $Hire_Date; ?>" class='date' id="date" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="date2" value="<?php echo $Hire_Date1; ?>" class='date' id="date2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="date2" value="<?php echo $Hire_Date1; ?>" class='date' id="date1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="date3" class='date' value="<?php echo $Hire_Date2; ?>" id="date3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="date3" class='date' value="<?php echo $Hire_Date2; ?>" id="date2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="date4" value="<?php echo $Hire_Date3; ?>" class='date' id="date4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="date4" value="<?php echo $Hire_Date3; ?>" class='date' id="date3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="date5" value="<?php echo $Hire_Date4; ?>" class='date' id="date5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="date5" value="<?php echo $Hire_Date4; ?>" class='date' id="date4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -2201,31 +2197,27 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="hidden" name="Commodity1id" class='Commodity1id' value ="<?php echo $row4['id']; ?>" id="Commodity1id"/>
-	<input type="text" name="Commodity1" class='Commodity1' value ="<?php echo $row4['name']; ?>" id="Commodity1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Commodity1" class='commodity' value ="<?php echo $row4['name']; ?>" id="commodity" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="hidden" name="Commodity2id" class='Commodity2id' value ="<?php echo echo $array_id[0]; ?>" id="Commodity2id"/>
-	<input type="text" name="Commodity2" class='Commodity2' id="Commodity2" value ="<?php echo $array_name[0]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Commodity2" class='commodity' id="Commodity2" value ="<?php echo $array_name[0]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="hidden" name="Commodity3id" class='Commodity3id' value ="<?php echo echo $array_id[1]; ?>" id="Commodity3id"/>
-	<input type="text" name="Commodity3" class='Commodity3' id="commodity3" value ="<?php echo $array_name[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Commodity3" class='commodity' id="commodity3" value ="<?php echo $array_name[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="hidden" name="Commodity4id" class='Commodity4id' value ="<?php echo echo $array_id[1]; ?>" id="Commodity4id"/>
 	<input type="text" name="Commodity4" class='commodity' id="Commodity4" value ="<?php echo $array_name[2]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
@@ -2233,7 +2225,6 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="hidden" name="Commodity5id" class='Commodity5id' value ="<?php echo echo $array_id[1]; ?>" id="Commodity5id"/>
 	<input type="text" name="Commodity5" class='commodity' id="Commodity5" value ="<?php echo $array_name[3]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
@@ -2302,35 +2293,35 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Value1" class='value' id="Value1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Value1" class='value' id="value" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Value2" class='value' id="Value2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Value2" class='value' id="value1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Value3" class='value' id="Value3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Value3" class='value' id="value2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Value4" class='value' id="Value4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Value4" class='value' id="value3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Value5" class='value' id="Value5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Value5" class='value' id="value4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -2875,14 +2866,14 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#fff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td align="left">
-	Does the applicant have any owned, leased or operated equipment not listed on the vehicle schedule? <input type="checkbox" name="schedule" value="Yes" class='schedule' id="schedule"> Yes  <input type="checkbox" name="schedule" value="No" class='schedule2' id="schedule2"> No
+	Does the applicant have any owned, leased or operated equipment not listed on the vehicle schedule? <input type="checkbox" name="schedule" class='schedule' id="schedule"> Yes  <input type="checkbox" name="schedule" class='schedule2' id="schedule2"> No
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  height="32px"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	Are any vehicles leased, loaned or rented to others? <input type="checkbox" name="schedule" value="Yes" class='schedule' id="schedule"> Yes  <input type="checkbox" name="schedule" class='schedule2' id="schedule2"> No
+	Are any vehicles leased, loaned or rented to others? <input type="checkbox" name="schedule" class='schedule' id="schedule"> Yes  <input type="checkbox" name="schedule" class='schedule2' id="schedule2"> No
 	</td>
 	</tr>
 	</table>
