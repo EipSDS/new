@@ -260,7 +260,6 @@ $Motor_Truck6=$_POST['Motor_Truck6'];
             "City_Two":"'.$_POST['City2'].'", 
             "State_Two":"'.$_POST['State2'].'", 
             "ZIP_Code_Two":"'.$_POST['Zip2'].'", 
-            "First_Name":"'.$_POST['contact_name'].'", 
             "E_mail_Address":"'.$_POST['e_mail'].'", 
             "Phone":"'.$_POST['Phone'].'", 
             "Radious_0_50_miles":"'.$_POST['miles'].'", 
