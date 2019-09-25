@@ -1,8 +1,9 @@
 <?php
 
 
+
 if(ISSET($_POST['savedata']) && $_POST['savedata']=='success'){
-echo $_POST['savedata'];
+echo $_POST['contact_id'];
 echo $_POST['submitting_agency'];
 echo $_POST['Contact_Person'];
 echo $_POST['Applicant_Name'];
@@ -237,12 +238,20 @@ $Motor_Truck3=$_POST['Motor_Truck3'];
 $Motor_Truck6=$_POST['Motor_Truck6'];
 
 
-
-
-
-/* exit();
-	if(ISSET($_POST['savedata']) && $_POST['savedata']=='success'){
-		echo $data = json_encode($_POST);
-	} */
+		 // $contacturl = "Contacts/".$_POST['contact_id'];
+			 // $Contactdata = '{
+			// "data": [{
+            // "Home_Address":  "'.$_POST['physicaladdress'].'" 
+            
+			// }]}'; 
+			
+			// @$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
+		
+			// if($zohoResponse['data'][0]['code'] == "SUCCESS"){
+				// echo json_encode($zohoResponse);
+			// }
+	
+	
+	
 }	
 ?>
