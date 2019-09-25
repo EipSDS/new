@@ -13,8 +13,8 @@ echo $_POST['contact_id'];
 echo $_POST['submitting_agency'];
 echo $_POST['Contact_Person'];
 echo $_POST['Applicant_Name'];
-echo $_POST['garaging_address'];
-echo $_POST['dot'];
+// $_POST['garaging_address'];
+//echo $_POST['dot'];
 
 $submitting_agency=$_POST['submitting_agency'];
 $Contact_Person=$_POST['Contact_Person'];
@@ -247,7 +247,7 @@ $Motor_Truck6=$_POST['Motor_Truck6'];
 		 $contacturl = "Contacts/".$_POST['contact_id'];
 			 $Contactdata = '{
 			"data": [{
-            "First_Name":  "'.$_POST['Applicant_Name'].'" 
+            "First_Name":"'.$_POST['Applicant_Name'].'" 
             
 			}]}'; 
 			echo $Contactdata;
