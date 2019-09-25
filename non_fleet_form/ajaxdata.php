@@ -10,7 +10,7 @@ $refresh_token = file_get_contents("refresh_token.txt");
 
 if(ISSET($_POST['savedata']) && $_POST['savedata']=='success'){
 echo $_POST['contact_id'];
-echo $_POST['phone'];
+echo $_POST['Phone'];
 
 // $_POST['garaging_address'];
 //echo $_POST['dot'];
