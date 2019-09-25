@@ -247,7 +247,7 @@ $Motor_Truck6=$_POST['Motor_Truck6'];
 		 $contacturl = "Contacts/".$_POST['contact_id'];
 			 $Contactdata = '{
 			"data": [{
-            "Full_Name":  "'.$_POST['Applicant_Name'].'" 
+            "First_Name":  "'.$_POST['Applicant_Name'].'" 
             
 			}]}'; 
 			
