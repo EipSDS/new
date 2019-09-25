@@ -2209,7 +2209,7 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	
+	<input type="hidden" name="Commodity2id" class='Commodity2id' value ="<?php echo echo $array_id[0]; ?>" id="Commodity2id"/>
 	<input type="text" name="Commodity2" class='commodity' id="Commodity2" value ="<?php echo $array_name[0]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
