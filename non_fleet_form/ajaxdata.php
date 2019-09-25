@@ -1,6 +1,12 @@
 <?php
 
-
+$con = pg_connect("host=ec2-54-243-47-196.compute-1.amazonaws.com dbname=da75gbsng1e37m user=ikheqtaxeqwazi password=800c91378dbd23c1752ef5722ad7c40a4f727966939b44d58361184792659ebd");
+include('functions.php');
+$zoho_client_id='1000.G5ADCREZLWKQ37764DHC3ZZXAW4VEH';
+$zoho_client_secret='88c42ac4b05a8e341731956a233d89cb0399e7f3cb';
+$handleFunctionsObject = new handleFunctions;
+$old_access_token = file_get_contents("access_token.txt");
+$refresh_token = file_get_contents("refresh_token.txt");
 
 if(ISSET($_POST['savedata']) && $_POST['savedata']=='success'){
 echo $_POST['contact_id'];
@@ -238,18 +244,19 @@ $Motor_Truck3=$_POST['Motor_Truck3'];
 $Motor_Truck6=$_POST['Motor_Truck6'];
 
 
-		 // $contacturl = "Contacts/".$_POST['contact_id'];
-			 // $Contactdata = '{
-			// "data": [{
-            // "Home_Address":  "'.$_POST['physicaladdress'].'" 
+		 $contacturl = "Contacts/".$_POST['contact_id'];
+			 $Contactdata = '{
+			"data": [{
+            "Full_Name":  "'.$_POST['Applicant_Name'].'" 
             
-			// }]}'; 
+			}]}'; 
 			
-			// @$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
-		
-			// if($zohoResponse['data'][0]['code'] == "SUCCESS"){
-				// echo json_encode($zohoResponse);
-			// }
+			@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
+		  echo $zohoResponse;
+			if($zohoResponse['data'][0]['code'] == "SUCCESS"){
+				echo "newdatae";
+				echo json_encode($zohoResponse);
+			}
 	
 	
 	
