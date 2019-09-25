@@ -1,4 +1,12 @@
  $(document).ready(function(){
+	 $(".datepicker").datepicker({
+		changeMonth: true,
+		changeYear: true,
+		showButtonPanel: true,
+		dateFormat: 'mm/dd/yy',
+		yearRange: '-9:+100'
+		
+}); 
   $('.save').click(function(){
   var contact_id =$(".ContactId").val();
   var dataform=	$('.dataform').find('select, textarea, input').serialize();
