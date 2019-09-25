@@ -44,6 +44,7 @@ if($rows1>=1){
 
 		 
 echo $id=$check_token_valid['data'][0];
+echo $contact_name=$check_token_valid['data'][0]['First_Name_Two'];
 echo $first_name=$check_token_valid['data'][0]['First_Name'];
 echo $last_name=$check_token_valid['data'][0]['Last_Name'];
 echo $effective_date=$check_token_valid['data'][0]['Policy_Effective_Date'];
@@ -736,7 +737,7 @@ if($rows>=1){
 			<table align="left" width="123" cellpadding="6" cellspacing="0">
 				<tr>
 					<td align="center">
-						<input type="text" name="Contact Name" class='contact_name' id="contact_name" value="<?php echo $first_name; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+						<input type="text" name="Contact Name" class="contact_name" id="contact_name" value="<?php echo $contact_name; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 					</td>
 				</tr>
 			</table>
