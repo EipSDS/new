@@ -1,7 +1,6 @@
  $(document).ready(function(){
   $('.save').click(function(){
-	  console.log(contact_id);
-	  console.log(e_mail);
+
   var contact_id =$(".ContactId").val();
   var dataform=	$('.dataform').find('select, textarea, input').serialize();
  var submitting_agency=$("#submitting_agency").val(); 
@@ -177,7 +176,8 @@
  var Motor_Truck4=$("#Motor_Truck4").val(); 
  var Motor_Truck5=$("#Motor_Truck5").val(); 
  var Motor_Truck6=$("#Motor_Truck6").val(); 
-  
+  	  console.log(contact_id);
+	  console.log(e_mail);
   var url = "http://givesurance.herokuapp.com/non_fleet_form/ajaxdata.php";
    $.ajax({
       type: "POST",
