@@ -701,13 +701,13 @@ if($rows>=1){
 <table align="left" cellpadding="6" cellspacing="0">
 		<tr>
 			<td align="center">
-				<input type="text" name="City2" class="City2" id="City2" value="<?php  ?>"  style="width:110px;border: 0;font-size:14px;"/>
+				<input type="text" name="City2" class="City2" id="City2" value="<?php echo $City_Two; ?>"  style="width:110px;border: 0;font-size:14px;"/>
 			</td>
 			<td align="center">
-				<input type="text" name="State2" class="State2" id="State2" value="<?php  ?>" style="width:110px;border: 0;font-size:14px;"/>
+				<input type="text" name="State2" class="State2" id="State2" value="<?php echo $State_Two; ?>" style="width:110px;border: 0;font-size:14px;"/>
 			</td>
 			<td align="center">
-				<input type="text" name="Zip2" class="Zip2" id="Zip2" value="<?php  ?>" style="width:110px;border: 0;font-size:14px;"/>
+				<input type="text" name="Zip2" class="Zip2" id="Zip2" value="<?php echo $ZIP_Code_Two; ?>" style="width:110px;border: 0;font-size:14px;"/>
 			</td>
 		</tr>
 	</table>
