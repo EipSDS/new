@@ -248,7 +248,7 @@ $Motor_Truck6=$_POST['Motor_Truck6'];
 			 $Contactdata = '{
 			"data": [{
             "First_Name":"'.$_POST['Applicant_Name'].'", 
-            "Last_Name":"'.$_POST['applicant_lastname'].'", 
+            "Last_Name":"'.$_POST['Applicant_lastName'].'", 
             "Policy_Effective_Date":"'.$_POST['effective_date'].'", 
             "Home_Address":"'.$_POST['garaging_address'].'", 
             "USDOT_associated_with_the_insured_s_business":"'.$_POST['dot'].'", 

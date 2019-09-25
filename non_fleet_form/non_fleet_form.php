@@ -556,7 +556,7 @@ if($rows>=1){
 			<table align="left" cellpadding="6" cellspacing="0">
 				<tr>
 					<td align="center">
-						<input type="text" name="Effective Date" class='effective_date' id="effective_date" value="<?php echo $effective_date; ?>" width="100%" style="width:125px;border: 0;font-size:14px;"/>
+						<input type="text" name="Effective Date" class="effective_date" id="effective_date" value="<?php echo $effective_date; ?>" width="100%" style="width:125px;border: 0;font-size:14px;"/>
 					</td>
 				</tr>
 			</table>
@@ -700,13 +700,13 @@ if($rows>=1){
 <table align="left" cellpadding="6" cellspacing="0">
 		<tr>
 			<td align="center">
-				<input type="text" name="City2" class='City2' id="City2" value="<?php  ?>"  style="width:110px;border: 0;font-size:14px;"/>
+				<input type="text" name="City2" class="City2" id="City2" value="<?php  ?>"  style="width:110px;border: 0;font-size:14px;"/>
 			</td>
 			<td align="center">
-				<input type="text" name="State2" class='State2' id="State2" value="<?php  ?>" style="width:110px;border: 0;font-size:14px;"/>
+				<input type="text" name="State2" class="State2" id="State2" value="<?php  ?>" style="width:110px;border: 0;font-size:14px;"/>
 			</td>
 			<td align="center">
-				<input type="text" name="Zip2" class='Zip2' id="Zip2" value="<?php  ?>" style="width:110px;border: 0;font-size:14px;"/>
+				<input type="text" name="Zip2" class="Zip2" id="Zip2" value="<?php  ?>" style="width:110px;border: 0;font-size:14px;"/>
 			</td>
 		</tr>
 	</table>
