@@ -130,6 +130,15 @@ $Amount5=$_POST['Amount5'];
 
 // Driver insertion in zoho driver fields
 
+$name1id=$_POST['name1id'];
+$name2id=$_POST['name2id'];
+$name3id=$_POST['name3id'];
+$name4id=$_POST['name4id'];
+$name5id=$_POST['name5id'];
+
+$DOB_Age_MaritalStatus_Points_LicenceNo=$birth1.','','','','.$_POST['Years_of_Experience1'];
+
+
 $Name1=$_POST['Name1'];
 $eo1=$_POST['eo1'];
 $state_license1=$_POST['state_license1'];
@@ -275,6 +284,37 @@ $Motor_Truck6=$_POST['Motor_Truck6'];
 				echo "newdatae";
 				echo json_encode($zohoResponse);
 			}
+			
+$new_array=array(
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo,"SR22"=>$form_data['new_driver_SR22'],"Name1"=>$drivername,"Back_up_Driver"=>"".$add_driver_Backup."","Owner_Driver"=>$Owner_Driver,"License_State"=>$form_data['new_driver_license_state'],"Experience_Years"=>"".$new_driver_Exp."","Hire_Date"=>"".$Date_of_Hire.""
+		) ;			
+
+			
+			
+	$url = "Contacts/".$_POST['contact_id'];
+			 $data = '{
+			"data": [{
+            "First_Name":"'.$_POST['Applicant_Name'].'", 
+            "Last_Name":"'.$_POST['Applicant_lastName'].'"
+			}]}'; 
+			@$Response =  $handleFunctionsObject->zoho_curl($url,"PUT",$data,$old_access_token);
+		 print_r($Response);
+			if($Response['data'][0]['code'] == "SUCCESS"){
+				echo "newdatae";
+				echo json_encode($Response);
+			}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

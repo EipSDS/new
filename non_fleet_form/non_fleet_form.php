@@ -146,6 +146,7 @@ echo $LicenceNo=$str_arr[4];
 echo"<br>";
  $Experience_Years=$check_token_valid['data'][0]['Drivers1'][$i]['Experience_Years'];	
 $Hire_Date=$check_token_valid['data'][0]['Drivers1'][$i]['Hire_Date'];
+$License_State=$check_token_valid['data'][0]['Drivers1'][$i]['License_State'];
 echo "<pre>";
 print_r($check_token_valid['data']);
 echo "</pre>";
@@ -182,6 +183,7 @@ echo"<br>";
 echo $LicenceNo1=$str_arr1[4]; 
 
 echo $Experience_Years1=$check_token_valid['data'][0]['Drivers1'][1]['Experience_Years'];	
+echo $License_State1=$check_token_valid['data'][0]['Drivers1'][1]['License_State'];	
 echo $Hire_Date1=$check_token_valid['data'][0]['Drivers1'][1]['Hire_Date'];
 // New [2] driver data 
 echo $driver_Name12=$check_token_valid['data'][0]['Drivers1'][2]['Name1'];
@@ -200,6 +202,7 @@ echo $LicenceNo2=$str_arr2[4];
 
 echo $Experience_Years2=$check_token_valid['data'][0]['Drivers1'][2]['Experience_Years'];	
 echo $Hire_Date2=$check_token_valid['data'][0]['Drivers1'][2]['Hire_Date'];	
+echo $License_State2=$check_token_valid['data'][0]['Drivers1'][2]['License_State'];
 
 // New [3] driver data 
 echo $driver_Name13=$check_token_valid['data'][0]['Drivers1'][3]['Name1'];
@@ -217,7 +220,8 @@ echo"<br>";
 echo $LicenceNo3=$str_arr3[4]; 
 
 echo $Experience_Years3=$check_token_valid['data'][0]['Drivers1'][3]['Experience_Years'];	
-echo $Hire_Date3=$check_token_valid['data'][0]['Drivers1'][3]['Hire_Date'];	
+echo $Hire_Date3=$check_token_valid['data'][0]['Drivers1'][3]['Hire_Date'];
+echo $License_State3=$check_token_valid['data'][0]['Drivers1'][3]['License_State'];	
 // New [4] driver data 
 echo $driver_Name14=$check_token_valid['data'][0]['Drivers1'][4]['Name1'];
 echo $DOB_Age_MaritalStatus_Points_LicenceNo4=$check_token_valid['data'][0]['Drivers1'][4]['DOB_Age_MaritalStatus_Points_LicenceNo'];
@@ -235,6 +239,7 @@ echo $LicenceNo4=$str_arr4[4];
 
 echo $Experience_Years4=$check_token_valid['data'][0]['Drivers1'][4]['Experience_Years'];	
 echo $Hire_Date4=$check_token_valid['data'][0]['Drivers1'][4]['Hire_Date'];	
+$License_State4=$check_token_valid['data'][0]['Drivers1'][4]['License_State'];
 // New [5] driver data 
 echo $driver_Name15=$check_token_valid['data'][0]['Drivers1'][5]['Name1'];
 echo $DOB_Age_MaritalStatus_Points_LicenceNo5=$check_token_valid['data'][0]['Drivers1'][5]['DOB_Age_MaritalStatus_Points_LicenceNo'];
@@ -252,6 +257,7 @@ echo $LicenceNo5=$str_arr5[4];
 
 echo $Experience_Years5=$check_token_valid['data'][0]['Drivers1'][5]['Experience_Years'];	
 echo $Hire_Date5=$check_token_valid['data'][0]['Drivers1'][5]['Hire_Date'];	
+$License_State5=$check_token_valid['data'][0]['Drivers1'][5]['License_State'];
 	
 	
 
@@ -1854,6 +1860,7 @@ if($rows>=1){
 	<tr>
 	<td>
 	<input type="text" name="Name1" class='name' id="name1" width="100%" value="<?php echo $driver_Name1; ?>" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="hidden" name="name1id" class="name1id" id="name1id" value="0"/>
 	</td>
 	</tr>
 	</table>
@@ -1861,6 +1868,7 @@ if($rows>=1){
 	<tr>
 	<td>
 	<input type="text" name="name2" class='name' id="name2" width="100%" value="<?php echo $driver_Name11; ?>" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="hidden" name="name2id" class="name2id" id="name2id" value="1"/>
 	</td>
 	</tr>
 	</table>
@@ -1868,6 +1876,7 @@ if($rows>=1){
 	<tr>
 	<td>
 	<input type="text" name="name3" class='name' id="name3" width="100%" value="<?php echo $driver_Name12; ?>" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="hidden" name="name3id" class="name3id" id="name3id" value="2"/>
 	</td>
 	</tr>
 	</table>
@@ -1875,6 +1884,7 @@ if($rows>=1){
 	<tr>
 	<td>
 	<input type="text" name="name4" class='name' id="name4" value="<?php echo $driver_Name13; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="hidden" name="name4id" class="name4id" id="name4id" value="3"/>
 	</td>
 	</tr>
 	</table>
@@ -1882,6 +1892,7 @@ if($rows>=1){
 	<tr>
 	<td>
 	<input type="text" name="name5" class='name' id="name5" value="<?php echo $driver_Name14; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="hidden" name="name5id" class="name5id" id="name5id" value="4"/>
 	</td>
 	</tr>
 	</table>
@@ -1949,35 +1960,41 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="state_license1" class='state&license' id="state_license1" value="<?php echo $LicenceNo; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="state_license1" class='state&license' id="state_license1" value="<?php echo $LicenceNo; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
+	<input type="text" name="License_State" class='License_State' id="License_State" value="<?php echo $License_State; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
+	
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="state_license2" class='state_license2' value="<?php echo $LicenceNo1; ?>" id="state_license2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="state_license2" class='state_license2' value="<?php echo $LicenceNo1; ?>" id="state_license2" width="49%" style="width:49%;border: 0;font-size:14px;"/>
+	<input type="text" name="License_State1" class='License_State1' id="License_State1" value="<?php echo $License_State1; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="state_license3" class='state_license3' id="state_license3" value="<?php echo $LicenceNo2; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="state_license3" class='state_license3' id="state_license3" value="<?php echo $LicenceNo2; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
+	<input type="text" name="License_State2" class='License_State2' id="License_State2" value="<?php echo $License_State2; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="state_license4" class='state_license4' id="state_license4" value="<?php echo $LicenceNo3; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="state_license4" class='state_license4' id="state_license4" value="<?php echo $LicenceNo3; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
+	<input type="text" name="License_State3" class='License_State3' id="License_State3" value="<?php echo $License_State3; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="state_license5" class='state_license5' id="state_license5" value="<?php echo $LicenceNo4; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="state_license5" class='state_license5' id="state_license5" value="<?php echo $LicenceNo4; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
+	<input type="text" name="License_State4" class='License_State4' id="License_State4" value="<?php echo $License_State4; ?>" width="49%" style="width:49%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
