@@ -291,7 +291,7 @@ $Motor_Truck6=$_POST['Motor_Truck6'];
 $testurl = "Contacts/".$_POST['contact_id'];
 		$testdata = "";
 		$testingdata =  $handleFunctionsObject->zoho_curl($testurl,"GET",$testdata,$old_access_token);			
-$driversData = $testingdata['data'][0]['Drivers1'][0];			
+$driversData = $testingdata['data'][0]['Drivers1'];			
 $new_array=array(
 		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo,"Name1"=>$drivername,"Owner_Driver"=>$eo1,"License_State"=>$_POST['License_State'],"Experience_Years"=>"".$Years_of_Experience1."","Hire_Date"=>"".$date1.""
 		);			
