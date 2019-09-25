@@ -63,10 +63,14 @@ echo $Radious_0_50_miles=$check_token_valid['data'][0]['Radious_0_50_miles'];
 echo $Radious_50_200_miles=$check_token_valid['data'][0]['Radious_50_200_miles'];
 echo $Radious_400_miles=$check_token_valid['data'][0]['Radious_200_miles'];
 echo $Radious_600_miles=$check_token_valid['data'][0]['Radious_600_miles'];
-echo $driver_Name1=$check_token_valid['data'][0]['Drivers1'][0]['Name1'];
-echo "<br>";
-echo $DOB_Age_MaritalStatus_Points_LicenceNo=$check_token_valid['data'][0]['Drivers1'][0]['DOB_Age_MaritalStatus_Points_LicenceNo'];
-$str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);  
+echo $count=count($check_token_valid['data'][0]['Drivers1']);
+echo "exit";
+for($i = 0; $i<$count; $i++){
+echo $drivername=$check_token_valid['data'][0]['Drivers1'][$i]['Name1'];
+$DOB_Age_MaritalStatus_Points_LicenceNo=$check_token_valid['data'][0]['Drivers1'][$i]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+
+$str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo); 
+echo"<br>"; 
 echo $DOB=$str_arr[0]; 
 echo"<br>";
 echo $Age=$str_arr[1]; 
@@ -75,13 +79,122 @@ echo $MaritalStatus=$str_arr[2];
 echo"<br>";
 echo $Points=$str_arr[3]; 
 echo"<br>";
-echo $LicenceNo=$str_arr[4]; 
-
-echo $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
-echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];	
+echo $LicenceNo=$str_arr[4];
+echo"<br>";
+ $Experience_Years=$check_token_valid['data'][0]['Drivers1'][$i]['Experience_Years'];	
+$Hire_Date=$check_token_valid['data'][0]['Drivers1'][$i]['Hire_Date'];
+$License_State=$check_token_valid['data'][0]['Drivers1'][$i]['License_State'];
 echo "<pre>";
 print_r($check_token_valid['data']);
-echo "</pre>";	
+echo "</pre>";
+}
+
+// $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);  
+// echo $DOB=$str_arr[0]; 
+// echo"<br>";
+// echo $Age=$str_arr[1]; 
+// echo"<br>";
+// echo $MaritalStatus=$str_arr[2]; 
+// echo"<br>";
+// echo $Points=$str_arr[3]; 
+// echo"<br>";
+// echo $LicenceNo=$str_arr[4]; 
+
+// echo $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
+// echo $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];
+
+}
+// New [1] driver data 
+echo $driver_Name11=$check_token_valid['data'][0]['Drivers1'][1]['Name1'];
+echo $DOB_Age_MaritalStatus_Points_LicenceNo1=$check_token_valid['data'][0]['Drivers1'][1]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+
+$str_arr1 = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo1);  
+echo $DOB1=$str_arr1[0]; 
+echo"<br>";
+echo $Age1=$str_arr1[1]; 
+echo"<br>";
+echo $MaritalStatus1=$str_arr1[2]; 
+echo"<br>";
+echo $Points1=$str_arr1[3]; 
+echo"<br>";
+echo $LicenceNo1=$str_arr1[4]; 
+
+echo $Experience_Years1=$check_token_valid['data'][0]['Drivers1'][1]['Experience_Years'];	
+echo $License_State1=$check_token_valid['data'][0]['Drivers1'][1]['License_State'];	
+echo $Hire_Date1=$check_token_valid['data'][0]['Drivers1'][1]['Hire_Date'];
+// New [2] driver data 
+echo $driver_Name12=$check_token_valid['data'][0]['Drivers1'][2]['Name1'];
+echo $DOB_Age_MaritalStatus_Points_LicenceNo2=$check_token_valid['data'][0]['Drivers1'][2]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+
+$str_arr2 = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo2);  
+echo $DOB2=$str_arr2[0]; 
+echo"<br>";
+echo $Age2=$str_arr2[1]; 
+echo"<br>";
+echo $MaritalStatus2=$str_arr2[2]; 
+echo"<br>";
+echo $Points2=$str_arr2[3]; 
+echo"<br>";
+echo $LicenceNo2=$str_arr2[4]; 
+
+echo $Experience_Years2=$check_token_valid['data'][0]['Drivers1'][2]['Experience_Years'];	
+echo $Hire_Date2=$check_token_valid['data'][0]['Drivers1'][2]['Hire_Date'];	
+echo $License_State2=$check_token_valid['data'][0]['Drivers1'][2]['License_State'];
+
+// New [3] driver data 
+echo $driver_Name13=$check_token_valid['data'][0]['Drivers1'][3]['Name1'];
+echo $DOB_Age_MaritalStatus_Points_LicenceNo3=$check_token_valid['data'][0]['Drivers1'][3]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+
+$str_arr3 = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo3);  
+echo $DOB3=$str_arr3[0]; 
+echo"<br>";
+echo $Age3=$str_arr3[1]; 
+echo"<br>";
+echo $MaritalStatus3=$str_arr3[2]; 
+echo"<br>";
+echo $Points3=$str_arr3[3]; 
+echo"<br>";
+echo $LicenceNo3=$str_arr3[4]; 
+
+echo $Experience_Years3=$check_token_valid['data'][0]['Drivers1'][3]['Experience_Years'];	
+echo $Hire_Date3=$check_token_valid['data'][0]['Drivers1'][3]['Hire_Date'];
+echo $License_State3=$check_token_valid['data'][0]['Drivers1'][3]['License_State'];	
+// New [4] driver data 
+echo $driver_Name14=$check_token_valid['data'][0]['Drivers1'][4]['Name1'];
+echo $DOB_Age_MaritalStatus_Points_LicenceNo4=$check_token_valid['data'][0]['Drivers1'][4]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+
+$str_arr4= preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo4);  
+echo $DOB4=$str_arr4[0]; 
+echo"<br>";
+echo $Age4=$str_arr4[1]; 
+echo"<br>";
+echo $MaritalStatus4=$str_arr4[2]; 
+echo"<br>";
+echo $Points4=$str_arr4[3]; 
+echo"<br>";
+echo $LicenceNo4=$str_arr4[4]; 
+
+echo $Experience_Years4=$check_token_valid['data'][0]['Drivers1'][4]['Experience_Years'];	
+echo $Hire_Date4=$check_token_valid['data'][0]['Drivers1'][4]['Hire_Date'];	
+$License_State4=$check_token_valid['data'][0]['Drivers1'][4]['License_State'];
+// New [5] driver data 
+echo $driver_Name15=$check_token_valid['data'][0]['Drivers1'][5]['Name1'];
+echo $DOB_Age_MaritalStatus_Points_LicenceNo5=$check_token_valid['data'][0]['Drivers1'][5]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+
+$str_arr5= preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo5);  
+echo $DOB5=$str_arr5[0]; 
+echo"<br>";
+echo $Age5=$str_arr5[1]; 
+echo"<br>";
+echo $MaritalStatus5=$str_arr5[2]; 
+echo"<br>";
+echo $Points5=$str_arr4[3]; 
+echo"<br>";
+echo $LicenceNo5=$str_arr5[4]; 
+
+echo $Experience_Years5=$check_token_valid['data'][0]['Drivers1'][5]['Experience_Years'];	
+echo $Hire_Date5=$check_token_valid['data'][0]['Drivers1'][5]['Hire_Date'];	
+$License_State5=$check_token_valid['data'][0]['Drivers1'][5]['License_State'];	
 }
 else{
 
