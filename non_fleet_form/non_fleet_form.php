@@ -1288,7 +1288,7 @@ if($rows>=1){
 	<table align="left" width="110" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="employees" class='employees' id="employees" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="employees" class="employees" id="employees" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1308,7 +1308,7 @@ if($rows>=1){
 	<table align="left" width="110" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="payroll" class='payroll' id="payroll" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="payroll" class="payroll" id="payroll" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1328,7 +1328,7 @@ if($rows>=1){
 	<table align="left" width="110" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="owners" class='owners' id="owners" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="owners" class="owners" id="owners" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>

@@ -57,8 +57,8 @@ $motor_deductible=$_POST['motor_deductible'];
     //INSERT INTO public.additional_coverages(id, contact_id, hired_auto, non_owned_auto, truckers_gl, cost_of_hire, of_employees, non_driver_payroll, of_owners, trailer_interchange, additional_coverage_limit, of_trailers, of_days_active, interchange_agreement) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
  
 $cost=$_POST['cost'];
-$effective_date=$_POST['effective_date'];
 $employees=$_POST['employees'];
+$payroll=$_POST['payroll'];
 $owners=$_POST['owners'];
 $limit=$_POST['limit'];
 $trailers=$_POST['trailers'];
