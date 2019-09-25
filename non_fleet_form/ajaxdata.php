@@ -10,16 +10,16 @@ $refresh_token = file_get_contents("refresh_token.txt");
 
 if(ISSET($_POST['savedata']) && $_POST['savedata']=='success'){
 echo $_POST['contact_id'];
-echo $_POST['submitting_agency'];
-echo $_POST['Contact_Person'];
-echo $_POST['Applicant_Name'];
+echo $_POST['phone'];
+
 // $_POST['garaging_address'];
 //echo $_POST['dot'];
 
 $submitting_agency=$_POST['submitting_agency'];
 $Contact_Person=$_POST['Contact_Person'];
 //applicant info
-$Applicant_Name=$_POST['Applicant_Name'];
+echo $Applicant_Name=$_POST['Applicant_Name'];
+echo $Applicant_lastName=$_POST['Applicant_lastName'];
 $effective_date=$_POST['effective_date'];
 $garaging_address=$_POST['garaging_address'];
 $dot=$_POST['dot'];
