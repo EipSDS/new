@@ -485,7 +485,7 @@ if($rows>=1){
 	<table align="left" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="Contact_Person" class='contact_person' id="Contact_Person" width="100%" style="width:160px;border: 0;font-size:14px;"/>
+			<input type="text" name="Contact_Person" class="contact_person" id="Contact_Person" width="100%" style="width:160px;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>

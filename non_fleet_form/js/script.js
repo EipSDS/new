@@ -4,7 +4,7 @@
   var dataform=	$('.dataform').find('select, textarea, input').serialize();
  var submitting_agency=$("#submitting_agency").val(); 
  var Contact_Person=$("#Contact_Person").val(); 
- var Applicant_Name=$("#Applicant_Name").val(); 
+ var Applicant_Name=$("#applicant_name").val(); 
  var effective_date=$("#effective_date").val(); 
  var garaging_address=$("#garaging_address").val(); 
  var dot=$("#dot").val(); 
