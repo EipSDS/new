@@ -148,7 +148,12 @@ echo $License_State1=$_POST['License_State1'];
 echo $License_State2=$_POST['License_State2'];
 echo $License_State3=$_POST['License_State3'];
 echo $License_State4=$_POST['License_State4'];
-$DOB_Age_MaritalStatus_Points_LicenceNo=$birth1.','.$_POST['License_State'];
+
+$testage="test";
+$testmerital_status="test";
+
+$DOB_Age_MaritalStatus_Points_LicenceNo=$birth1.','.$age .','.$merital_status.','.$points.','.$_POST['License_State'];
+
 //second 
 $name2=$_POST['name2'];
 $eo2=$_POST['eo2'];
@@ -298,7 +303,7 @@ $new_array=array(
 
 
 	print_r($new_array);	
-	$driversData[]=$new_array;
+	$driversData[0]=$new_array;
 	echo $dd=json_encode($driversData);
 				  $Contdata = '{
 			"data": [{
