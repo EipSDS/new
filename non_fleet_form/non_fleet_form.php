@@ -518,6 +518,61 @@ if($rows22>=1){
 	echo $array3_receipts[3];		
 	echo '<br>';
 	
+$query33 = "SELECT * FROM public.loss_history where contact_id='".$_GET['contact_id']."'";
+$result33 = pg_query($query33);
+$rows33 = pg_num_rows($result33);
+if($rows33>=1){
+	while ($row33 = pg_fetch_assoc($result33)) {
+	 echo $loss_id[]=$row33['id'];
+	 echo '<br>';
+	 echo $liability_of_losses[]=$row33['liability_of_losses'];
+	 echo '<br>';	
+	 echo $total_incurred[]=$row33['total_incurred'];
+	 echo '<br>';
+	 echo $physical_damage_losses[]=$row33['physical_damage_losses'];
+	 echo '<br>';	 
+	 echo $physical_total_incurred[]=$row33['physical_total_incurred'];
+	 echo '<br>';	
+	 echo $truck_cargo_losses[]=$row33['truck_cargo_losses'];
+	 echo '<br>';
+	 echo $truck_cargo_total_incurred[]=$row33['truck_cargo_total_incurred'];
+	 echo '<br>';		
+	}
+}
+	echo $loss_id[0];
+	echo $loss_id[1];
+	echo $loss_id[2];
+	echo '<br>';
+
+	echo $liability_of_losses[0];
+	echo $liability_of_losses[1];
+	echo $liability_of_losses[2];
+	echo '<br>';
+
+	echo $total_incurred[0];
+	echo $total_incurred[1];
+	echo $total_incurred[2];		
+	echo '<br>';
+
+	echo $physical_damage_losses[0];
+	echo $physical_damage_losses[1];
+	echo $physical_damage_losses[2];		
+	echo '<br>';
+	
+	echo $physical_total_incurred[0];
+	echo $physical_total_incurred[1];
+	echo $physical_total_incurred[2];		
+	echo '<br>';	
+	
+	echo $truck_cargo_losses[0];
+	echo $truck_cargo_losses[1];
+	echo $truck_cargo_losses[2];		
+	echo '<br>';	
+	
+	echo $truck_cargo_total_incurred[0];
+	echo $truck_cargo_total_incurred[1];
+	echo $truck_cargo_total_incurred[2];		
+	echo '<br>';
 ?>
 <html>
 <head>
