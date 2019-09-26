@@ -195,7 +195,7 @@ console.log(loss3id);
  var Motor_Truck4=$("#Motor_Truck4").val(); 
  var Motor_Truck5=$("#Motor_Truck5").val(); 
  var Motor_Truck6=$("#Motor_Truck6").val(); 
- console.log(loss3id);
+ console.log(Power_new4);
  console.log(Total_Incurred3);
   // var url = "http://givesurance.herokuapp.com/non_fleet_form/ajaxdata.php";
    // $.ajax({
