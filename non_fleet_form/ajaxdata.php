@@ -597,7 +597,70 @@ else{
   }
 }
 
+ if(!empty($Commodity3) or !empty($hauled3)){
+	echo $query61 = "SELECT * FROM public.contact_commodities where contact_id='".$contact_Id."' AND id='".$Commodity3id."'";	
+	$rs61 = pg_query($query61);
+	$rows61 = pg_num_rows($rs61);
+	if($rows61==1){
+ 			echo $query62 = "UPDATE  public.contact_commodities SET name='".$Commodity3."', value='".$hauled3."', max_value='".$Value3."', average_value='".$Stated_Amount3."' WHERE contact_id='".$contact_Id."' AND id='".$Commodity3id."'";
+           $result62 = pg_query($query62);	
+	}
+	
+	else{
+	echo $query65 ="INSERT INTO public.contact_commodities(contact_id, name, value, max_value,average_value) VALUES ('$contact_Id','$Commodity3','$hauled3', '$Value3', '$Stated_Amount3')";
+	$result07 = pg_query($query65);
+			if($result07){
+			echo " 4 Record Created Sucessfully";
+		}
+		else
+		{
+			echo "failed to create";
+		} 	
+  }
+}
 
+ if(!empty($Commodity4) or !empty($hauled4)){
+	echo $query71 = "SELECT * FROM public.contact_commodities where contact_id='".$contact_Id."' AND id='".$Commodity4id."'";	
+	$rs71 = pg_query($query71);
+	$rows71 = pg_num_rows($rs71);
+	if($rows71==1){
+ 			echo $query72 = "UPDATE  public.contact_commodities SET name='".$Commodity4."', value='".$hauled4."', max_value='".$Value4."', average_value='".$Stated_Amount4."' WHERE contact_id='".$contact_Id."' AND id='".$Commodity4id."'";
+           $result72 = pg_query($query72);	
+	}
+	
+	else{
+	echo $query75 ="INSERT INTO public.contact_commodities(contact_id, name, value, max_value,average_value) VALUES ('$contact_Id','$Commodity4','$hauled4', '$Value4', '$Stated_Amount4')";
+	$result08 = pg_query($query75);
+			if($result08){
+			echo " 4 Record Created Sucessfully";
+		}
+		else
+		{
+			echo "failed to create";
+		} 	
+  }
+}
+ if(!empty($Commodity5) or !empty($hauled5)){
+	echo $query81 = "SELECT * FROM public.contact_commodities where contact_id='".$contact_Id."' AND id='".$Commodity5id."'";	
+	$rs81 = pg_query($query81);
+	$rows81 = pg_num_rows($rs81);
+	if($rows81==1){
+ 			echo $query82 = "UPDATE  public.contact_commodities SET name='".$Commodity5."', value='".$hauled5."', max_value='".$Value5."', average_value='".$Stated_Amount5."' WHERE contact_id='".$contact_Id."' AND id='".$Commodity5id."'";
+           $result82 = pg_query($query82);	
+	}
+	
+	else{
+	echo $query85 ="INSERT INTO public.contact_commodities(contact_id, name, value, max_value,average_value) VALUES ('$contact_Id','$Commodity5','$hauled5', '$Value5', '$Stated_Amount5')";
+	$result09 = pg_query($query85);
+			if($result09){
+			echo " 4 Record Created Sucessfully";
+		}
+		else
+		{
+			echo "failed to create";
+		} 	
+  }
+}
 
 }	
 
