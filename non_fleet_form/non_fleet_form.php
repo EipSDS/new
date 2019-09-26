@@ -2619,7 +2619,7 @@ if($rows22>=1){
 	<tr>
 	<td>
 	<input type="text" name="Units_box1" class='Units' id="Units_box1" value="<?php echo $array3_units[0]; ?>"  width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	<input type="hidden" name="Units_box1id" class="Units_box1id" id="Units_box1id" value="<?php echo $array3_id[0]; ?>" />
+	<input type="hidden" name="Units_box1id" id="Units_box1id" value="<?php echo $array3_id[0]; ?>"/>
 	</td>
 	</tr>
 	</table>
