@@ -497,25 +497,25 @@ if($rows22>=1){
 	 echo '<br>';	 
 	}
 }
-	echo $row22['id'];
+
 	echo $array3_id[0];
 	echo $array3_id[1];
 	echo $array3_id[2];
 	echo $array3_id[3];
 	echo '<br>';
-	echo $row22['of_power_units'];
+
 	echo $array3_units[0];
 	echo $array3_units[1];
 	echo $array3_units[2];
 	echo $array3_units[3];	
 	echo '<br>';
-	echo $row22['total_miles'];
+
 	echo $array3_miles[0];
 	echo $array3_miles[1];
 	echo $array3_miles[2];
 	echo $array3_miles[3];		
 	echo '<br>';
-	echo $row22['gross_receipts'];
+
 	echo $array3_receipts[0];
 	echo $array3_receipts[1];
 	echo $array3_receipts[2];
