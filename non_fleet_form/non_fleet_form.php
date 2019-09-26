@@ -1697,7 +1697,7 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="hidden" name="Tractors1id" class='tractors' id="tractors1id" value="<?php echo $row6['id']; ?>"/>
+	<input type="hidden" name="Tractors1id" class='tractors' id="Tractors1id" value="<?php echo $row6['id']; ?>"/>
 	<input type="text" name="Tractors1" class='tractors' id="tractors1" value="<?php echo $row6['year']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	<input type="text" name="make1" class='tractors' id="make1" value="<?php echo $row6['make']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	</td>
@@ -1725,7 +1725,7 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<tr>
 	<td>
 	<input type="hidden" name="Tractors4id" class='Tractors4id' id="Tractors4id" value="<?php echo $arrayid[2]; ?>"/>
-	<input type="text" name="Tractors4" class='tractors' id="tractors4" value="<?php echo $arrayyear[2]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
+	<input type="text" name="Tractors4" class='tractors' id="Tractors4" value="<?php echo $arrayyear[2]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
 	<input type="text" name="make4" class='tractors' id="make4" value="<?php echo $arraymake[2]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
@@ -1734,7 +1734,7 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<tr>
 	<td>
 	<input type="hidden" name="Tractors5id" class='Tractors5id' id="Tractors5id" value="<?php echo $arrayid[3]; ?>"/>
-	<input type="text" name="Tractors5" class='tractors' id="tractors5" value="<?php echo $arrayyear[3]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
+	<input type="text" name="Tractors5" class='tractors' id="Tractors5" value="<?php echo $arrayyear[3]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
 	<input type="text" name="make5" class='tractors' id="make5" value="<?php echo $arraymake[3]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
@@ -1755,7 +1755,7 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="VIN1" class='vin' id="vin1" value="<?php echo $row6['vin']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="VIN1" class='vin' id="VIN1" value="<?php echo $row6['vin']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
     <input type="hidden" name="VINid1" class='vin' id="VINid1" value="<?php echo $row6['id']; ?>"/>
 	</td>
 	</tr>
