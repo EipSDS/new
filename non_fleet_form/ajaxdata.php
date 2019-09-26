@@ -148,7 +148,7 @@ echo $License_State1=$_POST['License_State1'];
 echo $License_State2=$_POST['License_State2'];
 echo $License_State3=$_POST['License_State3'];
 echo $License_State4=$_POST['License_State4'];
-$DOB_Age_MaritalStatus_Points_LicenceNo=$birth1.','.$_POST['Years_of_Experience1'];
+$DOB_Age_MaritalStatus_Points_LicenceNo=$birth1.','.$_POST['License_State'];
 //second 
 $name2=$_POST['name2'];
 $eo2=$_POST['eo2'];
@@ -306,7 +306,7 @@ $new_array=array(
             
 			}]}';
 	@$driverResponse =  $handleFunctionsObject->zoho_curl($testurl,"PUT",$Contdata,$old_access_token);
-	print_r($driverResponse);
+
 
 	
 	
