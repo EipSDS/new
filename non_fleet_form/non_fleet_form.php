@@ -523,20 +523,20 @@ $result33 = pg_query($query33);
 $rows33 = pg_num_rows($result33);
 if($rows33>=1){
 	while ($row33 = pg_fetch_assoc($result33)) {
-	 echo $loss_id[]=$row33['id'];
-	 echo '<br>';
-	 echo $liability_of_losses[]=$row33['liability_of_losses'];
-	 echo '<br>';	
-	 echo $total_incurred[]=$row33['total_incurred'];
-	 echo '<br>';
-	 echo $physical_damage_losses[]=$row33['physical_damage_losses'];
-	 echo '<br>';	 
-	 echo $physical_total_incurred[]=$row33['physical_total_incurred'];
-	 echo '<br>';	
-	 echo $truck_cargo_losses[]=$row33['truck_cargo_losses'];
-	 echo '<br>';
-	 echo $truck_cargo_total_incurred[]=$row33['truck_cargo_total_incurred'];
-	 echo '<br>';		
+	 $loss_id[]=$row33['id'];
+
+$liability_of_losses[]=$row33['liability_of_losses'];
+
+ $total_incurred[]=$row33['total_incurred'];
+
+	  $physical_damage_losses[]=$row33['physical_damage_losses'];
+		 
+	 $physical_total_incurred[]=$row33['physical_total_incurred'];
+	// echo '<br>';	
+         $truck_cargo_losses[]=$row33['truck_cargo_losses'];
+	// echo '<br>';
+	$truck_cargo_total_incurred[]=$row33['truck_cargo_total_incurred'];
+	// echo '<br>';		
 	}
 }
 	echo $loss_id[0];
