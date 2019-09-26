@@ -148,7 +148,7 @@ echo $License_State1=$_POST['License_State1'];
 echo $License_State2=$_POST['License_State2'];
 echo $License_State3=$_POST['License_State3'];
 echo $License_State4=$_POST['License_State4'];
-$DOB_Age_MaritalStatus_Points_LicenceNo=$birth1.','.$_POST['Years_of_Experience1'];
+echo $DOB_Age_MaritalStatus_Points_LicenceNo=$birth1.','.$_POST['Years_of_Experience1'];
 //second 
 $name2=$_POST['name2'];
 $eo2=$_POST['eo2'];
@@ -291,9 +291,13 @@ $testurl = "Contacts/".$_POST['contact_id'];
 		$testdata = "";
 		$testingdata =  $handleFunctionsObject->zoho_curl($testurl,"GET",$testdata,$old_access_token);			
 $driversData = $testingdata['data'][0]['Drivers1'];			
-$new_array=array(drivername
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo,"Name1"=>$drivername,"Owner_Driver"=>$eo1,"License_State"=>$_POST['License_State'],"Experience_Years"=>"".$Years_of_Experience1."","Hire_Date"=>"".$date1.""
-		);			
+
+$new1="";
+$add_driver_Backup="";
+		$new_array=array(
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>"".$DOB_Age_MaritalStatus_Points_LicenceNo"","SR22"=>$new1,"Name1"=>"".$drivername."","Back_up_Driver"=>"".$add_driver_Backup."","Owner_Driver"=>"".$eol."","License_State"=>$_POST['License_State'],"Experience_Years"=>"".$Years_of_Experience1."","Hire_Date"=>"".$date1.""
+		) ;
+		
 	$driversData[]=$new_array;
 	echo $dd=json_encode($driversData);
 				  $Contdata = '{
