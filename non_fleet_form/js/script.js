@@ -180,7 +180,7 @@ console.log(Commodity1id);
  console.log(Commodity2id);
  console.log(Commodity3id);
  console.log(Commodity4id);
- console.log(Commodity4id);
+ console.log(Commodity5id);
  var Power_new2=$("#Power_new2").val(); 
  var Power_new3=$("#Power_new3").val(); 
  var Power_new4=$("#Power_new4").val(); 
