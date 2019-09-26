@@ -396,9 +396,7 @@ $new4_arr=array(
 			}]}';
 	@$driver4Response =  $handleFunctionsObject->zoho_curl($test4url,"PUT",$Cont4data,$old_access_token);
 }
-
-if(isset($_POST['Units_box1'])){
-	
+ if(!empty($Units_box1)){
 	$query ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box1','$Total_Miles1', '$Receipts1')";
 	$result = pg_query($query);
 			if($result){
@@ -409,7 +407,7 @@ if(isset($_POST['Units_box1'])){
 			echo "failed to create";
 		} 	
 }	
-if(isset($_POST['Units_box2'])){
+   if(!empty($Units_box2)){
 	
 	$query1 ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box2','$Total_Miles2', '$Receipts2')";
 	$result1 = pg_query($query1);
@@ -421,7 +419,7 @@ if(isset($_POST['Units_box2'])){
 			echo "failed to create";
 		} 	
 }
-if(isset($_POST['Units_box3'])){
+   if(!empty($Units_box3)){
 	
 	$query1 ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box3','$Total_Miles3', '$Receipts3')";
 	$result1 = pg_query($query1);
@@ -433,7 +431,7 @@ if(isset($_POST['Units_box3'])){
 			echo "failed to create";
 		} 	
 }
-if(isset($_POST['Units_box4'])){
+   if(!empty($Units_box4)){
 	
 	$query2 ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box4','$Total_Miles4', '$Receipts4')";
 	$result2 = pg_query($query2);
