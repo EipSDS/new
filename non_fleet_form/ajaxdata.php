@@ -363,7 +363,29 @@ $new1_arr=array(
 	@$driver2Response =  $handleFunctionsObject->zoho_curl($test2url,"PUT",$Cont2data,$old_access_token);
  print_r($driver2Response);
 }
+$DOB_Age_MaritalStatus_Points_LicenceNo3=$birth4.','.$age .','.$merital_status.','.$points.','.$_POST['state_license4'];
+if($name4 !== ""  or  $eo4 !== "" or $state_license4 !== ""){			
+$test3url = "Contacts/".$_POST['contact_id'];
+		$test3data = "";
+		$testing3data =  $handleFunctionsObject->zoho_curl($test3url,"GET",$test3data,$old_access_token);			
+$drivers3Data = $testing3data['data'][0]['Drivers1'];	
+		
+$new3_arr=array(
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo3,"Name1"=>$_POST['name4'],"Owner_Driver"=>$_POST['eo4'],"License_State"=>$_POST['License_State3'],"Experience_Years"=>$_POST['experience4'],"Hire_Date"=>"".$date4.""
+		);	
 
+
+	print_r($new3_arr);	
+	$drivers3Data[3]=$new3_arr;
+	echo $dd3=json_encode($drivers3Data);
+				  $Cont3data = '{
+			"data": [{
+           "Drivers1":'.$dd3.'
+            
+			}]}';
+	@$driver3Response =  $handleFunctionsObject->zoho_curl($test3url,"PUT",$Cont3data,$old_access_token);
+ print_r($driver3Response);
+}
 
 
 	
