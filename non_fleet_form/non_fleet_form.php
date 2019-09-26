@@ -1698,7 +1698,7 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<tr>
 	<td>
 	<input type="hidden" name="Tractors1id" class='tractors' id="Tractors1id" value="<?php echo $row6['id']; ?>"/>
-	<input type="text" name="Tractors1" class='tractors' id="tractors1" value="<?php echo $row6['year']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	<input type="text" name="Tractors1" class='tractors' id="Tractors1" value="<?php echo $row6['year']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	<input type="text" name="make1" class='tractors' id="make1" value="<?php echo $row6['make']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
@@ -1707,7 +1707,7 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<tr>
 	<td>
 	<input type="hidden" name="Tractors2id" class='Tractors2id' id="Tractors2id" value="<?php echo $arrayid[0]; ?>"/>
-	<input type="text" name="Tractors2" class='tractors' id="tractors2" value="<?php echo $arrayyear[0]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
+	<input type="text" name="Tractors2" class='tractors' id="Tractors2" value="<?php echo $arrayyear[0]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
 	<input type="text" name="make2" class='tractors' id="make2" value="<?php echo $arraymake[0]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
@@ -1716,7 +1716,7 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<tr>
 	<td>
 	<input type="hidden" name="Tractors3id" class='Tractors3id' id="Tractors3id" value="<?php echo $arrayid[1]; ?>"/>	
-	<input type="text" name="Tractors3" class='tractors' id="tractors3" value="<?php echo $arrayyear[1]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
+	<input type="text" name="Tractors3" class='tractors' id="Tractors3" value="<?php echo $arrayyear[1]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
 	<input type="text" name="make3" class='tractors' id="make3" value="<?php echo $arraymake[1]; ?>" width="48%" style="width:48%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>

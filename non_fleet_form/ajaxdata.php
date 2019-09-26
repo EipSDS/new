@@ -67,7 +67,7 @@ $active=$_POST['active'];
 // Tractors (Year, Make) data save in database in  
 // INSERT INTO public.contact_vehicles(id, contact_id, vehicle_type, vin, gross_weight, longest_trip, city_of_destination, category, year, make, model, body_style, garaging_zip_code, radius, is_business, is_comprehensive, value, loss_payee, trailer_type, non_owned_value, name, address, need_modification, vehicle_number, trailer_number, sub_category, power_unit, city_percent, physical_damage_coverage, is_owner_operator, is_team_driven, estimated_annual_miles)VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
-$tractors1id=$_POST['tractors1id'];
+$Tractors1id=$_POST['Tractors1id'];
 $Tractors1=$_POST['Tractors1'];
 $make1=$_POST['make1'];
 $VIN1=$_POST['VIN1'];
