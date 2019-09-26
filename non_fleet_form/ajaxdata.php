@@ -575,6 +575,28 @@ else{
   }
 }
 
+ if(!empty($Commodity2) or !empty($hauled2)){
+	echo $query51 = "SELECT * FROM public.contact_commodities where contact_id='".$contact_Id."' AND id='".$Commodity2id."'";	
+	$rs51 = pg_query($query51);
+	$rows51 = pg_num_rows($rs51);
+	if($rows51==1){
+ 			echo $query52 = "UPDATE  public.contact_commodities SET name='".$Commodity2."', value='".$hauled2."', max_value='".$Value2."', average_value='".$Stated_Amount2."' WHERE contact_id='".$contact_Id."' AND id='".$Commodity2id."'";
+           $result52 = pg_query($query52);	
+	}
+	
+	else{
+	echo $query55 ="INSERT INTO public.contact_commodities(contact_id, name, value, max_value,average_value) VALUES ('$contact_Id','$Commodity2','$hauled2', '$Value2', '$Stated_Amount2')";
+	$result06 = pg_query($query55);
+			if($result06){
+			echo " 4 Record Created Sucessfully";
+		}
+		else
+		{
+			echo "failed to create";
+		} 	
+  }
+}
+
 
 
 }	
