@@ -291,13 +291,13 @@ $testurl = "Contacts/".$_POST['contact_id'];
 		$testdata = "";
 		$testingdata =  $handleFunctionsObject->zoho_curl($testurl,"GET",$testdata,$old_access_token);			
 $driversData = $testingdata['data'][0]['Drivers1'];	
-print_r($new_array);		
+		
 $new_array=array(
 		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo,"Name1"=>$_POST['Name1'],"Owner_Driver"=>$_POST['eo1'],"License_State"=>$_POST['License_State'],"Experience_Years"=>$_POST['Years_of_Experience1'],"Hire_Date"=>"".$date1.""
 		);	
 
 
-		
+	print_r($new_array);	
 	$driversData[]=$new_array;
 	echo $dd=json_encode($driversData);
 				  $Contdata = '{
