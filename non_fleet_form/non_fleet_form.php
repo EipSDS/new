@@ -454,7 +454,8 @@ if($rows>=1){
 	 $array_id[]=$row['id'];
 	 $array_name[]=$row['name'];
 	 $array_value[]=$row['value'];
-	 
+	 $max_value[]=$row['max_value'];
+	 $average_value[]=$row['average_value'];
 
 		 
 	}
@@ -476,6 +477,20 @@ if($rows>=1){
 	echo $array_value[1];
 	echo $array_value[2];
 	echo $array_value[3];		
+	echo '<br>';
+		echo '<br>';
+	echo $row4['max_value'];
+	echo $max_value[0];
+	echo $max_value[1];
+	echo $max_value[2];
+	echo $max_value[3];		
+	echo '<br>';
+		echo '<br>';
+	echo $row4['average_value'];
+	echo $average_value[0];
+	echo $average_value[1];
+	echo $average_value[2];
+	echo $average_value[3];		
 	echo '<br>';
 	
 $query22 = "SELECT * FROM public.operation_history where contact_id='".$_GET['contact_id']."' ORDER BY id";
@@ -2531,35 +2546,35 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Value1" class='value' id="Value1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Value1" class='value' id="Value1" value="<?php echo $row4['max_value']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Value2" class='value' id="Value2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Value2" class='value' id="Value2" value="<?php echo $max_value[0]; ?>"  width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Value3" class='value' id="Value3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Value3" class='value' id="Value3" value="<?php echo $max_value[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Value4" class='value' id="Value4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Value4" class='value' id="Value4" value="<?php echo $max_value[2]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Value5" class='value' id="Value5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Value5" class='value' id="Value5" value="<?php echo $max_value[3]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -2579,35 +2594,35 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Stated_Amount1" class='tractors' id="Stated_Amount1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Stated_Amount1" class='tractors' id="Stated_Amount1" value="<?php echo $row4['average_value']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Stated_Amount2" class='tractors' id="Stated_Amount2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Stated_Amount2" class='tractors' id="Stated_Amount2" value="<?php echo $average_value[0]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Stated_Amount3" class='tractors' id="Stated_Amount3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Stated_Amount3" class='tractors' id="Stated_Amount3" value="<?php echo $average_value[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Stated_Amount4" class='tractors' id="Stated_Amount4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Stated_Amount4" class='tractors' id="Stated_Amount4" value="<?php echo $average_value[2]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Stated_Amount5" class='tractors' id="Stated_Amount5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Stated_Amount5" class='tractors' id="Stated_Amount5" value="<?php echo $average_value[3]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
