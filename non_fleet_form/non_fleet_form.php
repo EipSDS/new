@@ -1973,7 +1973,7 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Name1" class='Name1' id="Name1" width="100%" value="<?php echo $driver_Name1; ?>" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Name1" class='Name1' id="Name1" width="100%" value="<?php echo $driver_Name11; ?>" style="width:100%;border: 0;font-size:14px;"/>
 	<input type="hidden" name="name1id" class="name1id" id="name1id" value="0"/>
 	</td>
 	</tr>
