@@ -445,7 +445,7 @@ echo $arraymake[1];
 echo $arraymake[2];
 echo $arraymake[3];
 echo "=======================";
-$query = "SELECT * FROM public.contact_commodities where contact_id='".$contact_id."' ORDER BY id";
+$query = "SELECT * FROM public.contact_commodities where contact_id='".$contact_id."'";
 $result = pg_query($query);
 $row4 = pg_fetch_assoc($result);
 $rows = pg_num_rows($result);
@@ -478,7 +478,7 @@ if($rows>=1){
 	echo $array_value[3];		
 	echo '<br>';
 	
-$query22 = "SELECT * FROM public.operation_history where contact_id='".$_GET['contact_id']."' ORDER BY id";
+$query22 = "SELECT * FROM public.operation_history where contact_id='".$_GET['contact_id']."'";
 $result22 = pg_query($query22);
 $rows22 = pg_num_rows($result22);
 if($rows22>=1){
