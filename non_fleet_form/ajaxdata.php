@@ -510,7 +510,48 @@ else{
   }
 }
 
-
+   if(!empty($Power_new3) or !empty($Total_Incurred2)){
+		echo $query33 = "SELECT * FROM public.loss_history where contact_id='".$contact_Id."' AND id='".$loss2id."'";	
+	$rs33 = pg_query($query33);
+	$rows33 = pg_num_rows($rs33);
+	if($rows33==1){
+ 			echo $query27 = "UPDATE  public.loss_history SET liability_of_losses='".$Power_new3."', total_incurred='".$Total_Incurred2."', physical_damage_losses='".$Losses_Damage2."', physical_total_incurred='".$Total_Incurred_2."', truck_cargo_losses='".$Motor_Truck2."', truck_cargo_total_incurred='".$Motor_Truck5."' WHERE contact_id='".$contact_Id."' AND id='".$loss2id."'";
+           $result27 = pg_query($query27);	
+	}
+	
+	else{
+	echo $query34 ="INSERT INTO public.operation_history(contact_id, liability_of_losses, total_incurred, physical_damage_losses,physical_total_incurred, truck_cargo_losses, truck_cargo_total_incurred) VALUES ('$contact_Id','$Power_new3','$Total_Incurred2', '$Losses_Damage2', '$Total_Incurred_2', '$Motor_Truck2', '$Motor_Truck5')";
+	$result34 = pg_query($query34);
+			if($result34){
+			echo " 4 Record Created Sucessfully";
+		}
+		else
+		{
+			echo "failed to create";
+		} 	
+  }
+}
+  if(!empty($Power_new4) or !empty($Total_Incurred3)){
+		echo $query44 = "SELECT * FROM public.loss_history where contact_id='".$contact_Id."' AND id='".$loss3id."'";	
+	$rs44 = pg_query($query44);
+	$rows44 = pg_num_rows($rs44);
+	if($rows44==1){
+ 			echo $query47 = "UPDATE  public.loss_history SET liability_of_losses='".$Power_new4."', total_incurred='".$Total_Incurred3."', physical_damage_losses='".$Losses_Damage3."', physical_total_incurred='".$Total_Incurred_3."', truck_cargo_losses='".$Motor_Truck3."', truck_cargo_total_incurred='".$Motor_Truck6."' WHERE contact_id='".$contact_Id."' AND id='".$loss3id."'";
+           $result47 = pg_query($query47);	
+	}
+	
+	else{
+	echo $query45 ="INSERT INTO public.operation_history(contact_id, liability_of_losses, total_incurred, physical_damage_losses,physical_total_incurred, truck_cargo_losses, truck_cargo_total_incurred) VALUES ('$contact_Id','$Power_new4','$Total_Incurred3', '$Losses_Damage3', '$Total_Incurred_3', '$Motor_Truck3', '$Motor_Truck6')";
+	$result44 = pg_query($query45);
+			if($result44){
+			echo " 4 Record Created Sucessfully";
+		}
+		else
+		{
+			echo "failed to create";
+		} 	
+  }
+}
 
 
 
