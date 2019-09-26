@@ -498,7 +498,7 @@ else{
 	}
 	
 	else{
-	echo $query24 ="INSERT INTO public.operation_history(contact_id, liability_of_losses, total_incurred, physical_damage_losses,physical_total_incurred, truck_cargo_losses, truck_cargo_total_incurred) VALUES ('$contact_Id','$Power_new2','$Total_Incurred1', '$Losses_Damage1', '$Total_Incurred_1', '$Motor_Truck1', '$Motor_Truck4')";
+	echo $query24 ="INSERT INTO public.loss_history(contact_id, liability_of_losses, total_incurred, physical_damage_losses,physical_total_incurred, truck_cargo_losses, truck_cargo_total_incurred) VALUES ('$contact_Id','$Power_new2','$Total_Incurred1', '$Losses_Damage1', '$Total_Incurred_1', '$Motor_Truck1', '$Motor_Truck4')";
 	$result24 = pg_query($query24);
 			if($result24){
 			echo " 4 Record Created Sucessfully";
@@ -520,7 +520,7 @@ else{
 	}
 	
 	else{
-	echo $query34 ="INSERT INTO public.operation_history(contact_id, liability_of_losses, total_incurred, physical_damage_losses,physical_total_incurred, truck_cargo_losses, truck_cargo_total_incurred) VALUES ('$contact_Id','$Power_new3','$Total_Incurred2', '$Losses_Damage2', '$Total_Incurred_2', '$Motor_Truck2', '$Motor_Truck5')";
+	echo $query34 ="INSERT INTO public.loss_history(contact_id, liability_of_losses, total_incurred, physical_damage_losses,physical_total_incurred, truck_cargo_losses, truck_cargo_total_incurred) VALUES ('$contact_Id','$Power_new3','$Total_Incurred2', '$Losses_Damage2', '$Total_Incurred_2', '$Motor_Truck2', '$Motor_Truck5')";
 	$result34 = pg_query($query34);
 			if($result34){
 			echo " 4 Record Created Sucessfully";
@@ -541,7 +541,7 @@ else{
 	}
 	
 	else{
-	echo $query45 ="INSERT INTO public.operation_history(contact_id, liability_of_losses, total_incurred, physical_damage_losses,physical_total_incurred, truck_cargo_losses, truck_cargo_total_incurred) VALUES ('$contact_Id','$Power_new4','$Total_Incurred3', '$Losses_Damage3', '$Total_Incurred_3', '$Motor_Truck3', '$Motor_Truck6')";
+	echo $query45 ="INSERT INTO public.loss_history(contact_id, liability_of_losses, total_incurred, physical_damage_losses,physical_total_incurred, truck_cargo_losses, truck_cargo_total_incurred) VALUES ('$contact_Id','$Power_new4','$Total_Incurred3', '$Losses_Damage3', '$Total_Incurred_3', '$Motor_Truck3', '$Motor_Truck6')";
 	$result44 = pg_query($query45);
 			if($result44){
 			echo " 4 Record Created Sucessfully";
