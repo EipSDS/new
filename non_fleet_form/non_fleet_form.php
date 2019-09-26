@@ -518,7 +518,7 @@ if($rows22>=1){
 	echo $array3_receipts[3];		
 	echo '<br>';
 	
-$query33 = "SELECT * FROM public.loss_history where contact_id='".$_GET['contact_id']."' ORDER BY ID DESC LIMIT 1";
+$query33 = "SELECT * FROM public.loss_history where contact_id='".$_GET['contact_id']."' ORDER BY id DESC";
 $result33 = pg_query($query33);
 $rows33 = pg_num_rows($result33);
 if($rows33>=1){
