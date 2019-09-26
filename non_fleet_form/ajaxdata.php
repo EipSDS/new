@@ -319,26 +319,26 @@ $new_array=array(
 $DOB_Age_MaritalStatus_Points_LicenceNo1=$birth2.','.$age .','.$merital_status.','.$points.','.$_POST['state_license2'];
 
 if($name2 !== ""  or  $eo2 !== "" or $state_license2 !== "" or $License_State1 !== ""){			
-$testurl = "Contacts/".$_POST['contact_id'];
-		$testdata = "";
-		$testingdata =  $handleFunctionsObject->zoho_curl($testurl,"GET",$testdata,$old_access_token);			
-$driversData = $testingdata['data'][0]['Drivers1'];	
+$test1url = "Contacts/".$_POST['contact_id'];
+		$test1data = "";
+		$testing1data =  $handleFunctionsObject->zoho_curl($test1url,"GET",$test1data,$old_access_token);			
+$driversnewData = $testing1data['data'][0]['Drivers1'];	
 		
-$new_array=array(
+$new_arr=array(
 		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo1,"Name1"=>$_POST['name2'],"Owner_Driver"=>$_POST['eo2'],"License_State"=>$_POST['License_State1'],"Experience_Years"=>$_POST['experience2'],"Hire_Date"=>"".$date2.""
 		);	
 
 
-	print_r($new_array);	
-	$driversData[1]=$new_array;
-	echo $dd=json_encode($driversData);
-				  $Contdata = '{
+	print_r($new_arr);	
+	$driversnewData[1]=$new_arr;
+	echo $dd1=json_encode($driversnewData);
+				  $Cont1data = '{
 			"data": [{
-           "Drivers1":'.$dd.'
+           "Drivers1":'.$dd1.'
             
 			}]}';
-	@$driverResponse =  $handleFunctionsObject->zoho_curl($testurl,"PUT",$Contdata,$old_access_token);
-
+	@$driver1Response =  $handleFunctionsObject->zoho_curl($test1url,"PUT",$Cont1data,$old_access_token);
+ print_r($driver1Response);
 }
 
 
