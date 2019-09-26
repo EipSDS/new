@@ -498,7 +498,7 @@ else{
 	}
 	
 	else{
-	$query24 ="INSERT INTO public.operation_history(contact_id, liability_of_losses, total_incurred, physical_damage_losses,physical_total_incurred, truck_cargo_losses, truck_cargo_total_incurred) VALUES ('$contact_Id','$Power_new2','$Total_Incurred1', '$Losses_Damage1', '$Total_Incurred_1', '$Motor_Truck1', '$Motor_Truck4')";
+	echo $query24 ="INSERT INTO public.operation_history(contact_id, liability_of_losses, total_incurred, physical_damage_losses,physical_total_incurred, truck_cargo_losses, truck_cargo_total_incurred) VALUES ('$contact_Id','$Power_new2','$Total_Incurred1', '$Losses_Damage1', '$Total_Incurred_1', '$Motor_Truck1', '$Motor_Truck4')";
 	$result24 = pg_query($query24);
 			if($result24){
 			echo " 4 Record Created Sucessfully";
