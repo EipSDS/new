@@ -220,18 +220,23 @@ $Stated_Amount5=$_POST['Stated_Amount5'];
 // INSERT INTO public."operation_history "(id, contact_id, of_power_units, total_miles, gross_receipts) VALUES (?, ?, ?, ?, ?);
 // UPDATE public."operation_history " SET id=?, contact_id=?, of_power_units=?, total_miles=?, gross_receipts=? WHERE <condition>;
 
+$Units_box1id=$_POST['Units_box1id'];
 $Units_box1=$_POST['Units_box1'];
 $Total_Miles1=$_POST['Total_Miles1'];
 $Receipts1=$_POST['Receipts1'];
 
+
+$Units_box2id=$_POST['Units_box2id'];
 $Units_box2=$_POST['Units_box2'];
 $Total_Miles2=$_POST['Total_Miles2'];
 $Receipts2=$_POST['Receipts2'];
 
+$Units_box3id=$_POST['Units_box3id'];
 $Units_box3=$_POST['Units_box3'];
 $Total_Miles3=$_POST['Total_Miles3'];
 $Receipts3=$_POST['Receipts3'];
 
+$Units_box4id=$_POST['Units_box4id'];
 $Units_box4=$_POST['Units_box4'];
 $Total_Miles4=$_POST['Total_Miles4'];
 $Receipts4=$_POST['Receipts4'];
@@ -397,7 +402,14 @@ $new4_arr=array(
 	@$driver4Response =  $handleFunctionsObject->zoho_curl($test4url,"PUT",$Cont4data,$old_access_token);
 }
  if(!empty($Units_box1)){
-	$query ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box1','$Total_Miles1', '$Receipts1')";
+	$query6 = "SELECT * FROM public.contact_commodities where contact_id=".$contact_id." AND id='".$Units_box1id."'";	
+	$rs6 = pg_query($conn, $query6);
+	$rows6 = pg_num_rows($rs6);
+	if($rows6==1){
+ 			$query = "UPDATE  public.operation_history SET of_power_units='".$Units_box1."', , total_miles=".$Total_Miles1.", gross_receipts=".$Receipts1." WHERE contact_id=".$contact_id." AND name='".$Units_box1id."'";
+	}
+else{
+		$query ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box1','$Total_Miles1', '$Receipts1')";
 	$result = pg_query($query);
 			if($result){
 			echo "Record Created Sucessfully";
@@ -405,7 +417,8 @@ $new4_arr=array(
 		else
 		{
 			echo "failed to create";
-		} 	
+}	
+}	
 }	
    if(!empty($Units_box2)){
 	
