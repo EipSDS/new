@@ -85,9 +85,7 @@ echo"<br>";
  $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
 $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];
 $License_State=$check_token_valid['data'][0]['Drivers1'][0]['License_State'];
-echo "<pre>";
-print_r($check_token_valid['data']);
-echo "</pre>";
+
 
 
 // $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);  
@@ -261,9 +259,7 @@ echo"<br>";
  $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
 $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];
 $License_State=$check_token_valid['data'][0]['Drivers1'][0]['License_State'];
-echo "<pre>";
-print_r($check_token_valid['data']);
-echo "</pre>";
+
 }
 // New [1] driver data 
 echo $driver_Name11=$check_token_valid['data'][0]['Drivers1'][1]['Name1'];
