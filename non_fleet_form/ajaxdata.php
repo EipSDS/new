@@ -9,7 +9,7 @@ $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
 
 if(ISSET($_POST['savedata']) && $_POST['savedata']=='success'){
-echo $_POST['contact_id'];
+echo $contact_Id=$_POST['contact_id'];
 echo $_POST['Phone'];
 
 // $_POST['garaging_address'];
@@ -302,11 +302,9 @@ $driversData = $testingdata['data'][0]['Drivers1'];
 $new_array=array(
 		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo,"Name1"=>$_POST['Name1'],"Owner_Driver"=>$_POST['eo1'],"License_State"=>$_POST['License_State'],"Experience_Years"=>$_POST['Years_of_Experience1'],"Hire_Date"=>"".$date1.""
 		);	
-
-
-	print_r($new_array);	
+	
 	$driversData[0]=$new_array;
-	echo $dd=json_encode($driversData);
+ $dd=json_encode($driversData);
 				  $Contdata = '{
 			"data": [{
            "Drivers1":'.$dd.'
@@ -327,18 +325,14 @@ $driversnewData = $testing1data['data'][0]['Drivers1'];
 $new_arr=array(
 		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo1,"Name1"=>$_POST['name2'],"Owner_Driver"=>$_POST['eo2'],"License_State"=>$_POST['License_State1'],"Experience_Years"=>$_POST['experience2'],"Hire_Date"=>"".$date2.""
 		);	
-
-
-	print_r($new_arr);	
 	$driversnewData[1]=$new_arr;
-	echo $dd1=json_encode($driversnewData);
+	$dd1=json_encode($driversnewData);
 				  $Cont1data = '{
 			"data": [{
            "Drivers1":'.$dd1.'
             
 			}]}';
 	@$driver1Response =  $handleFunctionsObject->zoho_curl($test1url,"PUT",$Cont1data,$old_access_token);
- print_r($driver1Response);
 }
 $DOB_Age_MaritalStatus_Points_LicenceNo2=$birth3.','.$age .','.$merital_status.','.$points.','.$_POST['state_license3'];
 if($name3 !== ""  or  $eo3 !== "" or $state_license3 !== "" or $date3 !== ""){			
@@ -351,17 +345,14 @@ $new1_arr=array(
 		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo2,"Name1"=>$_POST['name3'],"Owner_Driver"=>$_POST['eo3'],"License_State"=>$_POST['License_State2'],"Experience_Years"=>$_POST['experience3'],"Hire_Date"=>"".$date3.""
 		);	
 
-
-	print_r($new1_arr);	
 	$drivers2Data[2]=$new1_arr;
-	echo $dd2=json_encode($drivers2Data);
+	$dd2=json_encode($drivers2Data);
 				  $Cont2data = '{
 			"data": [{
            "Drivers1":'.$dd2.'
             
 			}]}';
 	@$driver2Response =  $handleFunctionsObject->zoho_curl($test2url,"PUT",$Cont2data,$old_access_token);
- print_r($driver2Response);
 }
 $DOB_Age_MaritalStatus_Points_LicenceNo3=$birth4.','.$age .','.$merital_status.','.$points.','.$_POST['state_license4'];
 if($name4 !== ""  or  $eo4 !== "" or $state_license4 !== ""){			
@@ -375,16 +366,14 @@ $new3_arr=array(
 		);	
 
 
-	print_r($new3_arr);	
 	$drivers3Data[3]=$new3_arr;
-	echo $dd3=json_encode($drivers3Data);
+	$dd3=json_encode($drivers3Data);
 				  $Cont3data = '{
 			"data": [{
            "Drivers1":'.$dd3.'
             
 			}]}';
 	@$driver3Response =  $handleFunctionsObject->zoho_curl($test3url,"PUT",$Cont3data,$old_access_token);
- print_r($driver3Response);
 }
 $DOB_Age_MaritalStatus_Points_LicenceNo4=$birth5.','.$age .','.$merital_status.','.$points.','.$_POST['state_license5'];
 if($name5 !== ""  or  $eo5 !== "" or $state_license5 !== "" or $date5 !== ""){			
@@ -398,17 +387,42 @@ $new4_arr=array(
 		);	
 
 
-	print_r($new4_arr);	
 	$drivers4Data[4]=$new4_arr;
-	echo $dd4=json_encode($drivers4Data);
+    $dd4=json_encode($drivers4Data);
 				  $Cont4data = '{
 			"data": [{
            "Drivers1":'.$dd4.'
             
 			}]}';
 	@$driver4Response =  $handleFunctionsObject->zoho_curl($test4url,"PUT",$Cont4data,$old_access_token);
- print_r($driver4Response);
 }
+
+if(isset($_POST['Units_box1'])){
+	
+	$query ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box1','$Total_Miles1', '$Receipts1')";
+	$result = pg_query($query);
+			if($result){
+			echo "Record Created Sucessfully";
+		}
+		else
+		{
+			echo "failed to create";
+		} 	
+	
+	
 	
 }	
+}	
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
