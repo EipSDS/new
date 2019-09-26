@@ -402,7 +402,7 @@ $new4_arr=array(
 	@$driver4Response =  $handleFunctionsObject->zoho_curl($test4url,"PUT",$Cont4data,$old_access_token);
 }
  if(!empty($Units_box1)){
-	$query6 = "SELECT * FROM public.contact_commodities where contact_id=".$contact_id." AND id='".$Units_box1id."'";	
+	$query6 = "SELECT * FROM public.contact_commodities where contact_id=".$contact_Id." AND id='".$Units_box1id."'";	
 	$rs6 = pg_query($conn, $query6);
 	$rows6 = pg_num_rows($rs6);
 	if($rows6==1){
@@ -412,7 +412,7 @@ else{
 		$query ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box1','$Total_Miles1', '$Receipts1')";
 	$result = pg_query($query);
 			if($result){
-			echo "Record Created Sucessfully";
+			echo "1 Record Created Sucessfully";
 		}
 		else
 		{
@@ -425,7 +425,7 @@ else{
 	$query1 ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box2','$Total_Miles2', '$Receipts2')";
 	$result1 = pg_query($query1);
 			if($result1){
-			echo "Record Created Sucessfully";
+			echo "2 Record Created Sucessfully";
 		}
 		else
 		{
@@ -437,7 +437,7 @@ else{
 	$query1 ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box3','$Total_Miles3', '$Receipts3')";
 	$result1 = pg_query($query1);
 			if($result1){
-			echo "Record Created Sucessfully";
+			echo "3 Record Created Sucessfully";
 		}
 		else
 		{
@@ -449,7 +449,7 @@ else{
 	$query2 ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box4','$Total_Miles4', '$Receipts4')";
 	$result2 = pg_query($query2);
 			if($result2){
-			echo "Record Created Sucessfully";
+			echo " 4 Record Created Sucessfully";
 		}
 		else
 		{
