@@ -176,11 +176,11 @@
  var loss1id=$("#loss1id").val(); 
  var loss2id=$("#loss2id").val(); 
  var loss3id=$("#loss3id").val(); 
+ console.log(Commodity1);
+ console.log(hauled1);
+ console.log(hauled2);
+ console.log(Commodity2);
  console.log(Commodity1id);
- console.log(Commodity2id);
- console.log(Commodity3id);
- console.log(Commodity4id);
- console.log(Commodity5id);
  var Power_new2=$("#Power_new2").val(); 
  var Power_new3=$("#Power_new3").val(); 
  var Power_new4=$("#Power_new4").val(); 
