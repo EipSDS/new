@@ -662,11 +662,11 @@ else{
   }
 }
 if(!empty($make1) or !empty($VIN1)){
-	echo $query91 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_Id."' AND id='".$tractors1id."'";	
+	echo $query91 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_Id."' AND id='".$Tractors1id."'";	
 	$rs91 = pg_query($query91);
 	$rows91 = pg_num_rows($rs91);
 	if($rows91==1){
- 			echo $query92 = "UPDATE  public.contact_vehicles SET vin='".$VIN1."', year='".$Tractors1."', make='".$make1."' WHERE contact_id='".$contact_Id."' AND id='".$tractors1id."'";
+ 			echo $query92 = "UPDATE  public.contact_vehicles SET vin='".$VIN1."', year='".$Tractors1."', make='".$make1."' WHERE contact_id='".$contact_Id."' AND id='".$Tractors1id."'";
            $result92 = pg_query($query92);	
 	}
 	
