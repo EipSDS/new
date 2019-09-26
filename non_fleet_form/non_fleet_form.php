@@ -2447,7 +2447,7 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<tr>
 	<td>
 	<input type="hidden" name="Commodity3id" class='Commodity3id' value ="<?php echo $array_id[1]; ?>" id="Commodity3id"/>
-	<input type="text" name="Commodity3" class="Commodity3" id="commodity3" value ="<?php echo $array_name[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Commodity3" class="Commodity3" id="Commodity3" value ="<?php echo $array_name[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
