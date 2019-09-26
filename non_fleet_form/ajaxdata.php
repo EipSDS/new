@@ -405,7 +405,7 @@ $new4_arr=array(
 	$rs6 = pg_query($conn, $query6);
 	echo $rows6 = pg_num_rows($rs6);
 	if($rows6==1){
- 			echo $query7 = "UPDATE  public.operation_history SET of_power_units='".$Units_box1."', total_miles=".$Total_Miles1.", gross_receipts='".$Receipts1."' WHERE contact_id=".$contact_Id." AND id='".$Units_box1id."'";
+ 			echo $query7 = "UPDATE  public.operation_history SET of_power_units='".$Units_box1."', total_miles='".$Total_Miles1."', gross_receipts='".$Receipts1."' WHERE contact_id='".$contact_Id."' AND id='".$Units_box1id."'";
            $result7 = pg_query($conn, $query7);	
 	}
 else{
