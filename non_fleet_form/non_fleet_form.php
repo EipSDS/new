@@ -481,7 +481,47 @@ if($rows>=1){
 	echo $array_value[2];
 	echo $array_value[3];		
 	echo '<br>';
-		
+	
+$query22 = "SELECT * FROM public.operation_history where contact_id='".$_GET['contact_id']."'";
+$result22 = pg_query($query22);
+$rows22 = pg_num_rows($result22);
+if($rows22>=1){
+	while ($row22 = pg_fetch_assoc($result22)) {
+	 echo $array3_id[]=$row22['id'];
+	 echo '<br>';
+	 echo $array3_units[]=$row22['of_power_units'];
+	 echo '<br>';	
+	 echo $array3_miles[]=$row22['total_miles'];
+	 echo '<br>';
+	 echo $array3_receipts[]=$row22['gross_receipts'];
+	 echo '<br>';	 
+	}
+}
+	echo $row22['id'];
+	echo $array3_id[0];
+	echo $array3_id[1];
+	echo $array3_id[2];
+	echo $array3_id[3];
+	echo '<br>';
+	echo $row22['of_power_units'];
+	echo $array3_units[0];
+	echo $array3_units[1];
+	echo $array3_units[2];
+	echo $array3_units[3];	
+	echo '<br>';
+	echo $row22['total_miles'];
+	echo $array3_miles[0];
+	echo $array3_miles[1];
+	echo $array3_miles[2];
+	echo $array3_miles[3];		
+	echo '<br>';
+	echo $row22['gross_receipts'];
+	echo $array3_receipts[0];
+	echo $array3_receipts[1];
+	echo $array3_receipts[2];
+	echo $array3_receipts[3];		
+	echo '<br>';
+	
 ?>
 <html>
 <head>
@@ -2582,28 +2622,32 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Units_box1" class='Units' id="Units_box1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Units_box1" class='Units' id="Units_box1" value="<?php echo $row22['of_power_units']; ?>"  width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Units_box1id" class='Units_box1id' id="Units_box1id" value="<?php echo $row22['id']; ?>" />
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Units_box2" class='Units' id="Units_box2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Units_box2" class='Units' id="Units_box2" width="100%" value="<?php echo $array3_units[0]; ?>" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Units_box2id" class='Units_box2id' id="Units_box2id" value="<?php echo $array3_id[0]; ?>" />
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Units_box3" class='Units' id="Units_box3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Units_box3" class='Units' id="Units_box3" value="<?php echo $array3_units[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Units_box3id" class='Units_box3id' id="Units_box3id" value="<?php echo $array3_id[1]; ?>" />
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Units_box4" class='Units' id="Units_box4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Units_box4" class='Units' id="Units_box4" value="<?php echo $array3_units[2]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Units_box4id" class='Units_box4id' id="Units_box4id" value="<?php echo $array3_id[2]; ?>" />
 	</td>
 	</tr>
 	</table>
@@ -2751,7 +2795,7 @@ if($rows>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td align="center">
-	# of Power Units
+	Liability
 	</td>
 	</tr>
 	</table>
