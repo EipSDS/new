@@ -244,6 +244,10 @@ $Receipts4=$_POST['Receipts4'];
 // INSERT INTO public.loss_history (id, contact_id, liability_of_losses, "total_incurred ", physical_damage_losses, physical_total_incurred, truck_cargo_losses, truck_cargo_total_incurred) VALUES (?, ?, ?, ?, ?, ?, ?, ?);
 // UPDATE public.loss_history SET id=?, contact_id=?, liability_of_losses=?, "total_incurred "=?, physical_damage_losses=?, physical_total_incurred=?, truck_cargo_losses=?, truck_cargo_total_incurred=? WHERE <condition>;
 
+$loss1id=$_POST['loss1id'];
+$loss2id=$_POST['loss2id'];
+$loss3id=$_POST['loss3id'];
+
 $Power_new2=$_POST['Power_new2'];
 $Total_Incurred1=$_POST['Total_Incurred1'];
 $Losses_Damage1=$_POST['Losses_Damage1'];

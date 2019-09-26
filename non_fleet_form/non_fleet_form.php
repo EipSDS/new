@@ -2863,21 +2863,24 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 		<td>
-			<input type="text" name="Power_new2" class='Units' id="Power_new2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="Power_new2" class="Units" id="Power_new2" width="100%" value="<?php echo $liability_of_losses[0]; ?>" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="hidden" name="loss1id" class="loss1id" id="loss1id" value="<?php echo $loss_id[0]; ?>"/>
 		</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 		<td>
-			<input type="text" name="Power_new3" class='Units' id="Power_new3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="Power_new3" class="Units" id="Power_new3" width="100%" value="<?php echo $liability_of_losses[1]; ?>" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="hidden" name="loss2id" class="loss2id" id="loss2id" value="<?php echo $loss_id[1]; ?>"/>
 		</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 		<td>
-			<input type="text" name="Power_new4" class='Units' id="Power_new4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="Power_new4" class="Units" id="Power_new4" width="100%" value="<?php echo $liability_of_losses[2]; ?>" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="hidden" name="loss3id" class="loss3id" id="loss3id" value="<?php echo $loss_id[2]; ?>"/>
 		</td>
 	</tr>
 	</table>
