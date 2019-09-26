@@ -152,7 +152,7 @@ echo $License_State4=$_POST['License_State4'];
 $testage="test";
 $testmerital_status="test";
 
-$DOB_Age_MaritalStatus_Points_LicenceNo=$birth1.','.$age .','.$merital_status.','.$points.','.$_POST['License_State'];
+$DOB_Age_MaritalStatus_Points_LicenceNo=$birth1.','.$age .','.$merital_status.','.$points.','.$_POST['state_license1'];
 
 //second 
 $name2=$_POST['name2'];
