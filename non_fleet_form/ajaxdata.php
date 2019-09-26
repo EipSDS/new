@@ -136,12 +136,12 @@ $name3id=$_POST['name3id'];
 $name4id=$_POST['name4id'];
 $name5id=$_POST['name5id'];
 
-$drivername=$_POST['Name1'];
-$eo1=$_POST['eo1'];
-$state_license1=$_POST['state_license1'];
-$Years_of_Experience1=$_POST['Years_of_Experience1'];
-$birth1=$_POST['birth1'];
-$date1=$_POST['date1'];
+echo $drivername=$_POST['Name1'];
+echo $eo1=$_POST['eo1'];
+echo $state_license1=$_POST['state_license1'];
+echo $Years_of_Experience1=$_POST['Years_of_Experience1'];
+echo $birth1=$_POST['birth1'];
+echo $date1=$_POST['date1'];
 $Violations1=$_POST['Violations1'];
 echo $License_State=$_POST['License_State'];
 echo $License_State1=$_POST['License_State1'];
@@ -282,9 +282,8 @@ $Motor_Truck6=$_POST['Motor_Truck6'];
 			}]}'; 
 			echo $Contactdata;
 			@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
-		 print_r($zohoResponse);
 			if($zohoResponse['data'][0]['code'] == "SUCCESS"){
-				echo "newdatae";
+		
 			 json_encode($zohoResponse);
 			}
 			
@@ -292,7 +291,7 @@ $testurl = "Contacts/".$_POST['contact_id'];
 		$testdata = "";
 		$testingdata =  $handleFunctionsObject->zoho_curl($testurl,"GET",$testdata,$old_access_token);			
 $driversData = $testingdata['data'][0]['Drivers1'];			
-$new_array=array(
+$new_array=array(drivername
 		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo,"Name1"=>$drivername,"Owner_Driver"=>$eo1,"License_State"=>$_POST['License_State'],"Experience_Years"=>"".$Years_of_Experience1."","Hire_Date"=>"".$date1.""
 		);			
 	$driversData[]=$new_array;
