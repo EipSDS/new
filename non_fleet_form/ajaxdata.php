@@ -421,8 +421,16 @@ else{
 }	
 }	
    if(!empty($Units_box2)){
+	echo $query8 = "SELECT * FROM public.operation_history where contact_id='".$contact_Id."' AND id='".$Units_box2id."'";	
+	$rs8 = pg_query($query8);
+	$rows8 = pg_num_rows($rs8);
+	if($rows8==1){
+ 			echo $query9 = "UPDATE  public.operation_history SET of_power_units='".$Units_box2."', total_miles='".$Total_Miles2."', gross_receipts='".$Receipts2."' WHERE contact_id='".$contact_Id."' AND id='".$Units_box2id."'";
+           $result8 = pg_query($query9);	
+	}
 	
-	$query1 ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box2','$Total_Miles2', '$Receipts2')";
+	else{
+		$query1 ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box2','$Total_Miles2', '$Receipts2')";
 	$result1 = pg_query($query1);
 			if($result1){
 			echo "2 Record Created Sucessfully";
@@ -432,8 +440,18 @@ else{
 			echo "failed to create";
 		} 	
 }
+   }
+  
    if(!empty($Units_box3)){
+	echo $query11 = "SELECT * FROM public.operation_history where contact_id='".$contact_Id."' AND id='".$Units_box3id."'";	
+	$rs11 = pg_query($query11);
+	$rows11 = pg_num_rows($rs11);
+	if($rows11==1){
+ 			echo $query12 = "UPDATE  public.operation_history SET of_power_units='".$Units_box3."', total_miles='".$Total_Miles3."', gross_receipts='".$Receipts3."' WHERE contact_id='".$contact_Id."' AND id='".$Units_box3id."'";
+           $result12 = pg_query($query12);	
+	}
 	
+	else{
 	$query1 ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box3','$Total_Miles3', '$Receipts3')";
 	$result1 = pg_query($query1);
 			if($result1){
@@ -444,8 +462,17 @@ else{
 			echo "failed to create";
 		} 	
 }
+   }
    if(!empty($Units_box4)){
+		echo $query14 = "SELECT * FROM public.operation_history where contact_id='".$contact_Id."' AND id='".$Units_box4id."'";	
+	$rs13 = pg_query($query14);
+	$rows16 = pg_num_rows($rs13);
+	if($rows16==1){
+ 			echo $query15 = "UPDATE  public.operation_history SET of_power_units='".$Units_box4."', total_miles='".$Total_Miles4."', gross_receipts='".$Receipts4."' WHERE contact_id='".$contact_Id."' AND id='".$Units_box4id."'";
+           $result15 = pg_query($query15);	
+	}
 	
+	else{
 	$query2 ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box4','$Total_Miles4', '$Receipts4')";
 	$result2 = pg_query($query2);
 			if($result2){
@@ -456,7 +483,7 @@ else{
 			echo "failed to create";
 		} 	
 }
-
+   }
 
 
 
