@@ -2623,7 +2623,7 @@ if($rows22>=1){
 	<tr>
 	<td>
 	<input type="text" name="Units_box1" class='Units' id="Units_box1" value="<?php echo $row22['of_power_units']; ?>"  width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	<input type="text" name="Units_box1id" class='Units_box1id' id="Units_box1id" value="<?php echo $row22['id']; ?>" />
+	<input type="hidden" name="Units_box1id" class='Units_box1id' id="Units_box1id" value="<?php echo $row22['id']; ?>" />
 	</td>
 	</tr>
 	</table>
@@ -2631,7 +2631,7 @@ if($rows22>=1){
 	<tr>
 	<td>
 	<input type="text" name="Units_box2" class='Units' id="Units_box2" width="100%" value="<?php echo $array3_units[0]; ?>" style="width:100%;border: 0;font-size:14px;"/>
-	<input type="text" name="Units_box2id" class='Units_box2id' id="Units_box2id" value="<?php echo $array3_id[0]; ?>" />
+	<input type="hidden" name="Units_box2id" class='Units_box2id' id="Units_box2id" value="<?php echo $array3_id[0]; ?>" />
 	</td>
 	</tr>
 	</table>
@@ -2639,7 +2639,7 @@ if($rows22>=1){
 	<tr>
 	<td>
 	<input type="text" name="Units_box3" class='Units' id="Units_box3" value="<?php echo $array3_units[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	<input type="text" name="Units_box3id" class='Units_box3id' id="Units_box3id" value="<?php echo $array3_id[1]; ?>" />
+	<input type="hidden" name="Units_box3id" class='Units_box3id' id="Units_box3id" value="<?php echo $array3_id[1]; ?>" />
 	</td>
 	</tr>
 	</table>
@@ -2647,7 +2647,7 @@ if($rows22>=1){
 	<tr>
 	<td>
 	<input type="text" name="Units_box4" class='Units' id="Units_box4" value="<?php echo $array3_units[2]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	<input type="text" name="Units_box4id" class='Units_box4id' id="Units_box4id" value="<?php echo $array3_id[2]; ?>" />
+	<input type="hidden" name="Units_box4id" class='Units_box4id' id="Units_box4id" value="<?php echo $array3_id[2]; ?>" />
 	</td>
 	</tr>
 	</table>
