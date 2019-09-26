@@ -2667,28 +2667,28 @@ if($rows22>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Total_Miles1" class='Total' id="Total_Miles1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Total_Miles1" class='Total' id="Total_Miles1" value="<?php echo $array3_miles[0]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Total_Miles2" class='Total' id="Total_Miles2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Total_Miles2" class='Total' id="Total_Miles2" value="<?php echo $array3_miles[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Total_Miles3" class='Total' id="Total_Miles3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Total_Miles3" class='Total' id="Total_Miles3" value="<?php echo $array3_miles[2]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Total_Miles4" class='Total' id="Total_Miles4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Total_Miles4" class='Total' id="Total_Miles4" value="<?php echo $array3_miles[3]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -2708,28 +2708,28 @@ if($rows22>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Receipts1" class='Receipts' id="Receipts1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Receipts1" class='Receipts' id="Receipts1" width="100%"  value="<?php echo $array3_receipts[0]; ?>" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Receipts2" class='Receipts' id="Receipts2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Receipts2" class='Receipts' id="Receipts2" width="100%" value="<?php echo $array3_receipts[1]; ?>" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Receipts3" class='Receipts' id="Receipts3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Receipts3" class='Receipts' id="Receipts3" width="100%" value="<?php echo $array3_receipts[2]; ?>" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="Receipts4" class='Receipts' id="Receipts4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="Receipts4" class='Receipts' id="Receipts4" width="100%" value="<?php echo $array3_receipts[3]; ?>" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
