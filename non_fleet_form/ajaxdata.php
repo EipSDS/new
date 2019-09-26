@@ -9,8 +9,8 @@ $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
 
 if(ISSET($_POST['savedata']) && $_POST['savedata']=='success'){
-echo $contact_Id=$_POST['contact_id'];
-echo $_POST['Phone'];
+$contact_Id=$_POST['contact_id'];
+$_POST['Phone'];
 
 // $_POST['garaging_address'];
 //echo $_POST['dot'];
@@ -18,8 +18,8 @@ echo $_POST['Phone'];
 $submitting_agency=$_POST['submitting_agency'];
 $Contact_Person=$_POST['Contact_Person'];
 //applicant info
-echo $Applicant_Name=$_POST['Applicant_Name'];
-echo $Applicant_lastName=$_POST['Applicant_lastName'];
+$Applicant_Name=$_POST['Applicant_Name'];
+$Applicant_lastName=$_POST['Applicant_lastName'];
 $effective_date=date("Y-m-d", strtotime($_POST['effective_date']));
 $garaging_address=$_POST['garaging_address'];
 $dot=$_POST['dot'];
@@ -136,18 +136,18 @@ $name3id=$_POST['name3id'];
 $name4id=$_POST['name4id'];
 $name5id=$_POST['name5id'];
 
-echo $drivername=$_POST['Name1'];
-echo $eo1=$_POST['eo1'];
-echo $state_license1=$_POST['state_license1'];
-echo $Years_of_Experience1=$_POST['Years_of_Experience1'];
-echo $birth1=$_POST['birth1'];
-echo $date1=$_POST['date1'];
+ $drivername=$_POST['Name1'];
+ $eo1=$_POST['eo1'];
+ $state_license1=$_POST['state_license1'];
+ $Years_of_Experience1=$_POST['Years_of_Experience1'];
+$birth1=$_POST['birth1'];
+ $date1=$_POST['date1'];
 $Violations1=$_POST['Violations1'];
-echo $License_State=$_POST['License_State'];
-echo $License_State1=$_POST['License_State1'];
-echo $License_State2=$_POST['License_State2'];
-echo $License_State3=$_POST['License_State3'];
-echo $License_State4=$_POST['License_State4'];
+ $License_State=$_POST['License_State'];
+ $License_State1=$_POST['License_State1'];
+ $License_State2=$_POST['License_State2'];
+ $License_State3=$_POST['License_State3'];
+ $License_State4=$_POST['License_State4'];
 
 $testage="test";
 $testmerital_status="test";
@@ -290,7 +290,6 @@ $Motor_Truck6=$_POST['Motor_Truck6'];
             "Radious_200_miles":"'.$_POST['miles_3'].'", 
             "Radious_600_miles":"'.$_POST['miles_4'].'"
 			}]}'; 
-			echo $Contactdata;
 			@$zohoResponse =  $handleFunctionsObject->zoho_curl($contacturl,"PUT",$Contactdata,$old_access_token);
 			if($zohoResponse['data'][0]['code'] == "SUCCESS"){
 		
@@ -402,14 +401,14 @@ $new4_arr=array(
 	@$driver4Response =  $handleFunctionsObject->zoho_curl($test4url,"PUT",$Cont4data,$old_access_token);
 }
  if(!empty($Units_box1)){
-	$query6 = "SELECT * FROM public.contact_commodities where contact_id=".$contact_Id." AND id='".$Units_box1id."'";	
+	echo $query6 = "SELECT * FROM public.contact_commodities where contact_id=".$contact_Id." AND id='".$Units_box1id."'";	
 	$rs6 = pg_query($conn, $query6);
 	$rows6 = pg_num_rows($rs6);
 	if($rows6==1){
- 			$query = "UPDATE  public.operation_history SET of_power_units='".$Units_box1."', , total_miles=".$Total_Miles1.", gross_receipts=".$Receipts1." WHERE contact_id=".$contact_id." AND name='".$Units_box1id."'";
+ 			echo $query = "UPDATE  public.operation_history SET of_power_units='".$Units_box1."', , total_miles=".$Total_Miles1.", gross_receipts=".$Receipts1." WHERE contact_id=".$contact_id." AND name='".$Units_box1id."'";
 	}
 else{
-		$query ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box1','$Total_Miles1', '$Receipts1')";
+		echo $query ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box1','$Total_Miles1', '$Receipts1')";
 	$result = pg_query($query);
 			if($result){
 			echo "1 Record Created Sucessfully";
