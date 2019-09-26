@@ -2947,21 +2947,21 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 		<td>
-			<input type="text" name="Losses_Damage1" class="Damage" id="Damage2" value="<?php echo $physical_damage_losses[0]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="Losses_Damage1" class="Damage" id="Losses_Damage1" value="<?php echo $physical_damage_losses[0]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 		<td>
-			<input type="text" name="Losses_Damage2" class="Damage" id="Damage3" value="<?php echo $physical_damage_losses[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="Losses_Damage2" class="Damage" id="Losses_Damage2" value="<?php echo $physical_damage_losses[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 		<td>
-			<input type="text" name="Losses_Damage3" class="Damage" value="<?php echo $physical_damage_losses[2]; ?>" id="Damage4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="Losses_Damage3" class="Damage" value="<?php echo $physical_damage_losses[2]; ?>" id="Losses_Damage3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -2981,21 +2981,21 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 		<td>
-			<input type="text" name="Total_Incurred_1" class="Damage" id="Damage5" width="100%" value="<?php echo $physical_total_incurred[0]; ?>" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="Total_Incurred_1" class="Damage" id="Total_Incurred_1" width="100%" value="<?php echo $physical_total_incurred[0]; ?>" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 		<td>
-			<input type="text" name="Total_Incurred_2" class="Damage" id="Damage6" value="<?php echo $physical_total_incurred[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="Total_Incurred_2" class="Damage" id="Total_Incurred_2" value="<?php echo $physical_total_incurred[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 		<td>
-			<input type="text" name="Total_Incurred_3" class="Damage" value="<?php echo $physical_total_incurred[2]; ?>" id="Damage7" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="Total_Incurred_3" class="Damage" value="<?php echo $physical_total_incurred[2]; ?>" id="Total_Incurred_3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -3028,21 +3028,21 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 		<td>
-			<input type="text" name="Motor_Truck1" class="Cargo" id="Cargo2" value="<?php echo $truck_cargo_losses[0]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="Motor_Truck1" class="Cargo" id="Motor_Truck1" value="<?php echo $truck_cargo_losses[0]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 		<td>
-			<input type="text" name="Motor_Truck2" class="Cargo" id="Cargo3" value="<?php echo $truck_cargo_losses[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="Motor_Truck2" class="Cargo" id="Motor_Truck2" value="<?php echo $truck_cargo_losses[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 		<td>
-			<input type="text" name="Motor_Truck3" class="Cargo" value="<?php echo $truck_cargo_losses[2]; ?>" id="Cargo4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="Motor_Truck3" class="Cargo" value="<?php echo $truck_cargo_losses[2]; ?>" id="Motor_Truck3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -3062,21 +3062,21 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 		<td>
-			<input type="text" name="Motor_Truck4" class='Cargo' id="Cargo5" value="<?php echo $truck_cargo_total_incurred[0]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="Motor_Truck4" class='Cargo' id="Motor_Truck4" value="<?php echo $truck_cargo_total_incurred[0]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 		<td>
-			<input type="text" name="Motor_Truck5" class='Cargo' id="Cargo6" value="<?php echo $truck_cargo_total_incurred[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="Motor_Truck5" class='Cargo' id="Motor_Truck5" value="<?php echo $truck_cargo_total_incurred[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 		<td>
-			<input type="text" name="Motor_Truck6" class="Cargo" id="Cargo7" value="<?php echo $truck_cargo_total_incurred[2]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="Motor_Truck6" class="Cargo" id="Motor_Truck6" value="<?php echo $truck_cargo_total_incurred[2]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
