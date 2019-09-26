@@ -671,7 +671,7 @@ if(!empty($make1) or !empty($VIN1)){
 	}
 	
 	else{
-	echo $query95 ="INSERT INTO public.contact_vehicles(contact_id, vin, year, make) VALUES ('$contact_Id','$VIN1','$Tractors1', '$make1')";
+	echo $query95 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make) VALUES ('$contact_Id','1981 or newer vehicle','$VIN1','$Tractors1', '$make1')";
 	$result011 = pg_query($query95);
 			if($result011){
 			echo " 4 Record Created Sucessfully";
