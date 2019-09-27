@@ -652,8 +652,9 @@ if($rows1>=1){
 	 
 $query255 = "SELECT * FROM public.additional_info where contact_id='".$contact_id."' ORDER BY id DESC";
 $result255 = pg_query($query255);
-$rows88 = pg_num_rows($result255);
-if($rows88>=1){
+$rows88 = pg_fetch_assoc($result255)
+$row88 = pg_num_rows($result255);
+if($row88>=1){
 	while ($row99 = pg_fetch_assoc($result255)) {
 	 
 	}
