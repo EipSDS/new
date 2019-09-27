@@ -1231,8 +1231,8 @@ if($rows1>=1){
 	<table align="left" width="143" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="csl" class='csl' id="csl" value="<?php echo $csl; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-			<input type="hidden" name="cslid" class='csl' id="cslid" value="<?php echo $new_id; ?>"/>
+			<input type="text" name="csl" class='csl' id="csl" value="<?php echo $row55['csl']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="hidden" name="cslid" class='csl' id="cslid" value="<?php echo $row55['id']; ?>"/>
 		</td>
 	</tr>
 	</table>
@@ -1252,7 +1252,7 @@ if($rows1>=1){
 	<table align="left" width="143" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="UM_UIM:" class='um_uim' id="um_uim" value="<?php echo $um_uim; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="UM_UIM:" class='um_uim' id="um_uim" value="<?php echo $row55['um_uim']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1272,7 +1272,7 @@ if($rows1>=1){
 	<table align="left" width="143" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="pip" class='pip' id="pip" value="<?php echo $pip; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="pip" class='pip' id="pip" value="<?php echo $row55['pip']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1305,7 +1305,7 @@ if($rows1>=1){
 	<table align="left" width="142" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="deductible" class='deductible' id="deductible" value="<?php echo $deductible; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="deductible" class='deductible' id="deductible" value="<?php echo $row55['deductible']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1378,7 +1378,7 @@ if($rows1>=1){
 	<table align="left" width="142" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="limit" class='limit' id="limit" width="100%" value="<?php echo $limit; ?>" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="limit" class='limit' id="limit" width="100%" value="<?php echo $row55["cargo_limit"]; ?>" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1398,7 +1398,7 @@ if($rows1>=1){
 	<table align="left" width="142" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="motor_deductible" class='motor_deductible' id="motor_deductible" value="<?php echo $truck_cargo_deductible; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="motor_deductible" class='motor_deductible' id="motor_deductible" value="<?php echo $row55['truck_cargo_deductible']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
