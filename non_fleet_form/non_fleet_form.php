@@ -608,24 +608,7 @@ echo 	$truck_cargo_total_incurred[]=$row56['truck_cargo_total_incurred'];
 	}
 }	
 
-$query55 = "SELECT * FROM public.liability_damage_truck_cargo_coverage where contact_id='".$_GET['contact_id']."' ORDER BY id";
-$result55 = pg_query($query55);
-$row55 = pg_fetch_assoc($result55);
-if($row55>=1){
-	while ($row56 = pg_fetch_assoc($result33)) {
-echo    $new_id=$row56['id'];
-echo 	$csl=$row56['csl'];
-echo 	$pip=$row56['pip'];
-echo 	$deductible=$row56['deductible'];
-echo 	$comprehensive=$row56['comprehensive'];
-echo 	$specified_perils=$row56['specified_perils'];
-echo 	$limit=$row56['limit'];
-echo 	$specified_perils=$row56['truck_cargo_deductible'];
-echo 	$specified_perils=$row56['reefer_breakdown'];
-echo 	$truck_cargo_total_incurred[]=$row56['truck_cargo_total_incurred'];
-			
-	}
-}	
+	
 ?>
 <html>
 <head>
