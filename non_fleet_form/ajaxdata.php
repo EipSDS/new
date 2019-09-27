@@ -876,8 +876,59 @@ if(!empty($trailermake5) or !empty($VIN_new5)){
 		} 	
   }
 }
+$cslid=$_POST['cslid'];
+$Cost_id=$_POST['Cost_id'];
+$comprehensive=$_POST['comprehensive'];
+$specified=$_POST['specified'];
+$reefer=$_POST['reefer'];
+$interchange=$_POST['interchange'];
+$interchange_agreement=$_POST['interchange_agreement'];
+$hired=$_POST['hired'];
+$owned=$_POST['owned'];
+$truckers=$_POST['truckers'];
+
+if(!empty($csl) or !empty($um_uim) or !empty($pip) or !empty($limit) or !empty($deductible)){
+	echo $query130 = "SELECT * FROM public.liability_damage_truck_cargo_coverage where contact_id='".$contact_Id."' AND id='".$cslid."'";	
+	$rs130 = pg_query($query130);
+	$rows130 = pg_num_rows($rs130);
+	if($rows130==1){
+ 			echo $query131 = "UPDATE  public.liability_damage_truck_cargo_coverage SET csl='".$csl."', um_uim='".$um_uim."', pip='".$pip."', deductible='".$deductible."', comprehensive='".$comprehensive."', specified_perils='".$specified."', limit='".$limit."', truck_cargo_deductible='".$motor_deductible."', reefer_breakdown='".$reefer."' WHERE contact_id='".$contact_Id."' AND id='".$cslid."'";
+           $result130 = pg_query($query131);	
+	}
+	
+	else{
+	echo $query132 ="INSERT INTO public.liability_damage_truck_cargo_coverage(contact_id, csl, um_uim, pip, deductible,comprehensive,specified_perils,limit,truck_cargo_deductible,reefer_breakdown) VALUES ('$contact_Id','$csl','$um_uim','$pip','$deductible','$comprehensive','$specified','$limit','$motor_deductible','$reefer')";
+	$result132 = pg_query($query132);
+			if($result132){
+			echo " 4 Record Created Sucessfully";
+		}
+		else
+		{
+			echo "failed to create";
+		} 	
+  }
+}
 
 
+if(!empty($cost) or !empty($employees) or !empty($payroll) or !empty($owners) or !empty($limit)){
+	echo $query135 = "SELECT * FROM public.liability_damage_truck_cargo_coverage where contact_id='".$contact_Id."' AND id='".$Cost_id."'";	
+	$rs135 = pg_query($query135);
+	$rows135 = pg_num_rows($rs135);
+	if($rows135==1){
+ 			echo $query136 = "UPDATE  public.additional_coverages SET hired_auto='".$hired."', non_owned_auto='".$owned."', truckers_gl='".$truckers."', cost_of_hire='".$cost."', of_employees='".$employees."', non_driver_payroll='".$payroll."', of_owners='".$owners."', trailer_interchange='".$interchange."', additional_coverage_limit='".$limit."', of_trailers='".$trailers."', of_days_active='".$active."', interchange_agreement='".$interchange_agreement."' WHERE contact_id='".$contact_Id."' AND id='".$Cost_id."'";
+           $result136 = pg_query($query136);	
+	}	else{
+	echo $query136 ="INSERT INTO public.additional_coverages(contact_id, hired_auto, non_owned_auto, truckers_gl, cost_of_hire,of_employees,non_driver_payroll,of_owners,trailer_interchange,additional_coverage_limit,of_trailers,of_days_active,interchange_agreement) VALUES ('$contact_Id','$hired','$owned','$truckers','$cost','$employees','$payroll','$owners','$interchange','$limit','$trailers','$active','$interchange_agreement')";
+	$result137 = pg_query($query136);
+			if($result137){
+			echo " 4 Record Created Sucessfully";
+		}
+		else
+		{
+			echo "failed to create";
+		} 	
+  }
+}
 
 
 

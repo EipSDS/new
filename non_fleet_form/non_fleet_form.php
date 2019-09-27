@@ -621,6 +621,7 @@ $result66 = pg_query($query66);
 $row67 = pg_fetch_assoc($result66);
 if($row67>=1){
 	while ($row66 = pg_fetch_assoc($result66)) {
+    $new1_id=$row66['id'];
     $hired_auto=$row66['hired_auto'];
 	$non_owned_auto=$row66['non_owned_auto'];
 	$truckers_gl=$row66['truckers_gl'];
@@ -1549,7 +1550,8 @@ if($row67>=1){
 	<table align="left" width="110" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="Cost" class='cost' id="cost" value="<?php echo $cost_of_hire; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="Cost" class='cost' id="Cost" value="<?php echo $cost_of_hire; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="hidden" name="Cost_id" class='cost' id="Cost_id" value="<?php echo $new1_id; ?>"/>
 		</td>
 	</tr>
 	</table>
