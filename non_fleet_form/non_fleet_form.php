@@ -661,8 +661,8 @@ if($rows1>=1){
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="http://givesurance.herokuapp.com/non_fleet_form/js/script.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 	</head>
 	<body>
 	<fieldset class='dataform'>
@@ -1706,14 +1706,16 @@ if($rows1>=1){
 	<tr>
 		<td align="left" height="30" style="font-size:12px;">
 			Is a signed interchange agreement in place?
-			<input type="checkbox" name="interchange_agreement" class="slectOne" value="" id="interchange_agreement" <?php echo $row67['interchange_agreement']; ?> >Yes
-			<input type="checkbox" name="interchange_agreement_no" value="" class="slectOne" id="interchange_agreement_no" <?php echo $row67['no_interchange']; ?>>No
+			<input type="checkbox" name="interchange_agreement" class="check" value="" id="interchange_agreement" <?php echo $row67['interchange_agreement']; ?> >Yes
+			<input type="checkbox" name="interchange_agreement_no" value="" class="check" id="interchange_agreement_no" <?php echo $row67['no_interchange']; ?>>No
 		</td>
-		    <script type="text/javascript">
-    $('.slectOnet').on('change', function() {
-        $('.slectOne').not(this).prop('checked', false);  
+		<script>
+$(document).ready(function(){
+    $('.check').click(function() {
+        $('.check').not(this).prop('checked', false);
     });
-  </script>
+});
+</script>
 	</tr>
 	</table>
 	</td>
