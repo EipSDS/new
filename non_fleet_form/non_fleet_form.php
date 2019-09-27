@@ -603,9 +603,7 @@ if($row55>=1){
  	$specified_perils=$row56['specified_perils'];
  	$limit=$row56["limit"];
  	$truck_cargo_deductible=$row56['truck_cargo_deductible'];
- 	$reefer_breakdown=$row56['reefer_breakdown'];
-	
-			
+ 	$reefer_breakdown=$row56['reefer_breakdown'];	
 	}
 }	
 
@@ -617,7 +615,32 @@ echo 	$comprehensive;
 echo 	$specified_perils;
 echo 	$limit;
 echo 	$truck_cargo_deductible;
-echo 	$reefer_breakdown;	
+echo 	$reefer_breakdown;
+$query66 = "SELECT * FROM public.additional_coverages where contact_id='".$_GET['contact_id']."' ORDER BY id DESC";
+$result66 = pg_query($query66);
+$row67 = pg_fetch_assoc($result66);
+if($row67>=1){
+	while ($row66 = pg_fetch_assoc($result66)) {
+    $hired_auto=$row66['hired_auto'];
+	$non_owned_auto=$row66['non_owned_auto'];
+	$truckers_gl=$row66['truckers_gl'];
+ 	
+	$cost_of_hire=$row66['cost_of_hire'];
+ 	$of_employees=$row66['of_employees'];
+ 	$non_driver_payroll=$row66['non_driver_payroll'];
+ 	$of_owners=$row66['of_owners'];
+	
+ 	$trailer_interchange=$row66["trailer_interchange"];
+ 	
+	$additional_coverage_limit=$row66['additional_coverage_limit'];
+ 	$of_trailers=$row66['of_trailers'];	
+ 	$of_days_active=$row66['of_days_active'];
+	
+ 	$interchange_agreement=$row66['interchange_agreement'];	
+
+	}
+}	
+	
 ?>
 <html>
 <head>
@@ -1299,7 +1322,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="30" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="checkbox" name="comprehensive" class='comprehensive' id="comprehensive" value="Yes" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="checkbox" name="comprehensive" class='comprehensive' id="comprehensive" value="yes" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1319,7 +1342,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="30" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="checkbox" name="specified" class='specified' id="specified" value="Yes" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="checkbox" name="specified" class='specified' id="specified" value="yes" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>																
@@ -1526,7 +1549,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="110" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="Cost" class='cost' id="cost" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="Cost" class='cost' id="cost" value="<?php echo $cost_of_hire; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1546,7 +1569,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="110" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="employees" class="employees" id="employees" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="employees" class="employees" id="employees" width="100%" value="<?php echo $of_employees; ?>" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1566,7 +1589,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="110" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="payroll" class="payroll" id="payroll" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="payroll" class="payroll" id="payroll" value="<?php echo $non_driver_payroll; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1586,7 +1609,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="110" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="owners" class="owners" id="owners" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="owners" class="owners" id="owners" value="<?php echo $of_owners; ?>"  width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1605,7 +1628,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="30" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="checkbox" name="interchange" class='interchange' id="interchange" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="checkbox" name="interchange" class='interchange' id="interchange" value="yes"width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1628,7 +1651,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="100" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="limit" class='limit' id="limit" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="limit" class='limit' value="<?php echo $additional_coverage_limit; ?>" id="limit" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1648,7 +1671,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="250" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="trailers" class='trailers' id="trailers" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="trailers" class='trailers' id="trailers" value="<?php echo $of_trailers; ?>"  width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1668,7 +1691,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="250" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="active" class='active' id="active" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="active" class='active' id="active" value="<?php echo $of_days_active; ?>"  width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1682,8 +1705,8 @@ echo 	$reefer_breakdown;
 	<tr>
 		<td align="left" height="30" style="font-size:12px;">
 			Is a signed interchange agreement in place?
-			<input type="checkbox" name="interchange_agreement" class='interchange_agreement' id="interchange_agreement">Yes
-			<input type="checkbox" name="place" class='place' id="place">No
+			<input type="checkbox" name="interchange_agreement" class='interchange_agreement' value="yes" id="interchange_agreement">Yes
+			<input type="checkbox" name="place" value="no" class='place' id="place">No
 		</td>
 	</tr>
 	</table>
@@ -3157,14 +3180,14 @@ echo 	$reefer_breakdown;
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#fff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td align="left">
-	Does the applicant have any owned, leased or operated equipment not listed on the vehicle schedule? <input type="checkbox" name="schedule" value="Yes" class='schedule' id="schedule"> Yes  <input type="checkbox" name="schedule" value="No" class='schedule2' id="schedule2"> No
+	Does the applicant have any owned, leased or operated equipment not listed on the vehicle schedule? <input type="checkbox" name="schedule" value="yes" class='schedule' id="schedule"> Yes  <input type="checkbox" name="schedule" value="No" class='schedule2' id="schedule2"> No
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  height="32px"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	Are any vehicles leased, loaned or rented to others? <input type="checkbox" name="schedule" value="Yes" class='schedule' id="schedule"> Yes  <input type="checkbox" name="schedule" class='schedule2' id="schedule2"> No
+	Are any vehicles leased, loaned or rented to others? <input type="checkbox" name="schedule" value="yes" class='schedule' id="schedule"> Yes  <input type="checkbox" name="schedule" class='schedule2' id="schedule2"> No
 	</td>
 	</tr>
 	</table>
