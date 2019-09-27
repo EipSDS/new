@@ -589,7 +589,7 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	echo $truck_cargo_total_incurred[2];		
 	echo '<br>';
 	
-$query55 = "SELECT * FROM public.liability_damage_truck_cargo_coverage where contact_id='".$_GET['contact_id']."' ORDER BY id";
+$query55 = "SELECT * FROM public.liability_damage_truck_cargo_coverage where contact_id='".$_GET['contact_id']."' ORDER BY id DESC";
 $result55 = pg_query($query55);
 $row55 = pg_fetch_assoc($result55);
 if($row55>=1){
@@ -600,10 +600,10 @@ if($row55>=1){
  	$deductible=$row56['deductible'];
  	$comprehensive=$row56['comprehensive'];
  	$specified_perils=$row56['specified_perils'];
- 	$limit=$row56['limit'];
- 	$specified_perils=$row56['truck_cargo_deductible'];
- 	$specified_perils=$row56['reefer_breakdown'];
- 	$truck_cargo_total_incurred=$row56['truck_cargo_total_incurred'];	
+ 	$limit=$row56["limit"];
+ 	$truck_cargo_deductible=$row56['truck_cargo_deductible'];
+ 	$reefer_breakdown=$row56['reefer_breakdown'];
+	
 			
 	}
 }	
@@ -615,9 +615,8 @@ echo 	$deductible;
 echo 	$comprehensive;
 echo 	$specified_perils;
 echo 	$limit;
-echo 	$specified_perils;
-echo 	$specified_perils;
-echo 	$truck_cargo_total_incurred;	
+echo 	$truck_cargo_deductible;
+echo 	$reefer_breakdown;	
 ?>
 <html>
 <head>
