@@ -1464,7 +1464,7 @@ if($row67>=1){
 	<table align="left" width="30" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="checkbox" name="hired" class='hired' id="hired" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="checkbox" name="hired" class='hired' id="hired" value="yes"  width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>																
@@ -1484,7 +1484,7 @@ if($row67>=1){
 	<table align="left" width="30" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="checkbox" name="owned" class='owned' id="owned" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="checkbox" name="owned" class='owned' id="owned" value="yes" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>																
@@ -1504,7 +1504,7 @@ if($row67>=1){
 	<table align="left" width="30" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="checkbox" name="truckers" class='truckers' id="truckers" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="checkbox" name="truckers" class='truckers' value="yes" id="truckers" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>																
@@ -1630,7 +1630,7 @@ if($row67>=1){
 	<table align="left" width="30" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="checkbox" name="interchange" class='interchange' id="interchange" value="yes"width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="checkbox" name="interchange" class='interchange' id="interchange" value="yes" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -3182,7 +3182,7 @@ if($row67>=1){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#fff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td align="left">
-	Does the applicant have any owned, leased or operated equipment not listed on the vehicle schedule? <input type="checkbox" name="schedule" value="yes" class='schedule' id="schedule"> Yes  <input type="checkbox" name="schedule" value="No" class='schedule2' id="schedule2"> No
+	Does the applicant have any owned, leased or operated equipment not listed on the vehicle schedule? <input type="checkbox" name="schedule" value="yes" class='schedule' id="schedule"> Yes  <input type="checkbox" name="schedule" value="no" class='schedule2' id="schedule2"> No
 	</td>
 	</tr>
 	</table>
@@ -3196,7 +3196,7 @@ if($row67>=1){
 	<table align="left" width="100%"  height="32px" cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	Has the applicant’s policy canceled or non-renewed in the prior 3 years? <input type="checkbox" name="schedule" class='schedule' id="schedule"> Yes  <input type="checkbox" name="schedule" class='schedule2' id="schedule2"> No
+	Has the applicant’s policy canceled or non-renewed in the prior 3 years? <input type="checkbox" name="schedule"  value="yes" class='schedule' id="schedule"> Yes  <input type="checkbox" name="schedule" value="no" class='schedule2' id="schedule2"> No
 	</td>
 	</tr>
 	</table>
