@@ -198,7 +198,7 @@ $License_State5=$check_token_valid['data'][0]['Drivers1'][5]['License_State'];
 else{
 
 
-$query1 = "SELECT * FROM public.violation where contact_id='".$contact_id."'";
+$query1 = "SELECT * FROM public.violation where contact_id='".$contact_id."' ORDER BY id";
 $result1 = pg_query($query1);
 $rows1 = pg_num_rows($result1);
 if($rows1>=1){

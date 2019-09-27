@@ -105,6 +105,7 @@ $Stated5=$_POST['Stated5'];
 	
 $trailer1id=$_POST['trailer1id'];
 $trailer1=$_POST['trailer1'];
+$trailer2=$_POST['trailer2'];
 $trailermake1=$_POST['trailermake1'];
 $trailer2id=$_POST['trailer2id'];
 $trailermake2=$_POST['trailermake2'];
@@ -767,6 +768,119 @@ if(!empty($make5) or !empty($vin5)){
 		} 	
   }
 }
+
+if(!empty($trailermake1) or !empty($VIN_new)){
+	echo $query108 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_Id."' AND id='".$trailer1id."'";	
+	$rs108 = pg_query($query108);
+	$rows108 = pg_num_rows($rs108);
+	if($rows108==1){
+ 			echo $query109 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new."', year='".$trailer1."', make='".$trailermake1."' WHERE contact_id='".$contact_Id."' AND id='".$trailer1id."'";
+           $result108 = pg_query($query109);	
+	}
+	
+	else{
+	echo $query10 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make) VALUES ('$contact_Id','Trailer','$VIN_new','$trailer1', '$trailermake1')";
+	$result10 = pg_query($query10);
+			if($result10){
+			echo " 4 Record Created Sucessfully";
+		}
+		else
+		{
+			echo "failed to create";
+		} 	
+  }
+}
+if(!empty($trailermake2) or !empty($VIN_new2)){
+	echo $query111 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_Id."' AND id='".$trailer2id."'";	
+	$rs111 = pg_query($query111);
+	$rows111 = pg_num_rows($rs111);
+	if($rows111==1){
+ 			echo $query112 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new2."', year='".$trailer2."', make='".$trailermake2."' WHERE contact_id='".$contact_Id."' AND id='".$trailer2id."'";
+           $result111 = pg_query($query112);	
+	}
+	
+	else{
+	echo $query113 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make) VALUES ('$contact_Id','Trailer','$VIN_new2','$trailer2', '$trailermake2')";
+	$result112 = pg_query($query113);
+			if($result112){
+			echo " 4 Record Created Sucessfully";
+		}
+		else
+		{
+			echo "failed to create";
+		} 	
+  }
+}
+
+if(!empty($trailermake3) or !empty($VIN_new3)){
+	echo $query115 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_Id."' AND id='".$trailer3id."'";	
+	$rs115 = pg_query($query115);
+	$rows115 = pg_num_rows($rs115);
+	if($rows115==1){
+ 			echo $query116 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new3."', year='".$trailer3."', make='".$trailermake3."' WHERE contact_id='".$contact_Id."' AND id='".$trailer3id."'";
+           $result115 = pg_query($query116);	
+	}
+	
+	else{
+	echo $query117 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make) VALUES ('$contact_Id','Trailer','$VIN_new3','$trailer3', '$trailermake3')";
+	$result117 = pg_query($query117);
+			if($result117){
+			echo " 4 Record Created Sucessfully";
+		}
+		else
+		{
+			echo "failed to create";
+		} 	
+  }
+}
+if(!empty($trailermake4) or !empty($VIN_new4)){
+	echo $query121 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_Id."' AND id='".$trailer4id."'";	
+	$rs121 = pg_query($query121);
+	$rows121 = pg_num_rows($rs121);
+	if($rows121==1){
+ 			echo $query122 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new4."', year='".$trailer4."', make='".$trailermake4."' WHERE contact_id='".$contact_Id."' AND id='".$trailer4id."'";
+           $result121 = pg_query($query122);	
+	}
+	
+	else{
+	echo $query123 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make) VALUES ('$contact_Id','Trailer','$VIN_new4','$trailer4', '$trailermake4')";
+	$result123 = pg_query($query123);
+			if($result123){
+			echo " 4 Record Created Sucessfully";
+		}
+		else
+		{
+			echo "failed to create";
+		} 	
+  }
+}
+
+if(!empty($trailermake5) or !empty($VIN_new5)){
+	echo $query125 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_Id."' AND id='".$trailer5id."'";	
+	$rs125 = pg_query($query125);
+	$rows125 = pg_num_rows($rs125);
+	if($rows125==1){
+ 			echo $query126 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new5."', year='".$trailer5."', make='".$trailermake5."' WHERE contact_id='".$contact_Id."' AND id='".$trailer5id."'";
+           $result126 = pg_query($query126);	
+	}
+	
+	else{
+	echo $query127 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make) VALUES ('$contact_Id','Trailer','$VIN_new5','$trailer5', '$trailermake5')";
+	$result127 = pg_query($query127);
+			if($result127){
+			echo " 4 Record Created Sucessfully";
+		}
+		else
+		{
+			echo "failed to create";
+		} 	
+  }
+}
+
+
+
+
+
 
 
 }	
