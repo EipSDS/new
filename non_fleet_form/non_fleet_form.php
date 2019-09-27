@@ -1550,7 +1550,7 @@ if($row67>=1){
 	<table align="left" width="110" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="Cost" class='cost' id="Cost" value="<?php echo $cost_of_hire; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="cost" class='cost' id="cost" value="<?php echo $cost_of_hire; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 			<input type="hidden" name="Cost_id" class='cost' id="Cost_id" value="<?php echo $new1_id; ?>"/>
 		</td>
 	</tr>
