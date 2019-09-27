@@ -60,7 +60,7 @@ $cost=$_POST['cost'];
 $employees=$_POST['employees'];
 $payroll=$_POST['payroll'];
 $owners=$_POST['owners'];
-$limit=$_POST['limit'];
+$coverage_limit=$_POST['coverage_limit'];
 $trailers=$_POST['trailers'];
 $active=$_POST['active'];
 
@@ -624,7 +624,7 @@ else{
 	echo $query71 = "SELECT * FROM public.contact_commodities where contact_id='".$contact_Id."' AND id='".$Commodity4id."'";	
 	$rs71 = pg_query($query71);
 	$rows71 = pg_num_rows($rs71);
-	if($rows71==1){
+	if($rows71>=1){
  			echo $query72 = "UPDATE  public.contact_commodities SET name='".$Commodity4."', value='".$hauled4."', max_value='".$Value4."', average_value='".$Stated_Amount4."' WHERE contact_id='".$contact_Id."' AND id='".$Commodity4id."'";
            $result72 = pg_query($query72);	
 	}
@@ -645,7 +645,7 @@ else{
 	echo $query81 = "SELECT * FROM public.contact_commodities where contact_id='".$contact_Id."' AND id='".$Commodity5id."'";	
 	$rs81 = pg_query($query81);
 	$rows81 = pg_num_rows($rs81);
-	if($rows81==1){
+	if($rows81>=1){
  			echo $query82 = "UPDATE  public.contact_commodities SET name='".$Commodity5."', value='".$hauled5."', max_value='".$Value5."', average_value='".$Stated_Amount5."' WHERE contact_id='".$contact_Id."' AND id='".$Commodity5id."'";
            $result82 = pg_query($query82);	
 	}
@@ -666,7 +666,7 @@ if(!empty($make1) or !empty($VIN1)){
 	echo $query91 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_Id."' AND id='".$Tractors1id."'";	
 	$rs91 = pg_query($query91);
 	$rows91 = pg_num_rows($rs91);
-	if($rows91==1){
+	if($rows91>=1){
  			echo $query92 = "UPDATE  public.contact_vehicles SET vin='".$VIN1."', year='".$Tractors1."', make='".$make1."' WHERE contact_id='".$contact_Id."' AND id='".$Tractors1id."'";
            $result92 = pg_query($query92);	
 	}
@@ -687,7 +687,7 @@ if(!empty($make2) or !empty($vin2)){
 	echo $query99 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_Id."' AND id='".$Tractors2id."'";	
 	$rs99 = pg_query($query99);
 	$rows99 = pg_num_rows($rs99);
-	if($rows99==1){
+	if($rows99>=1){
  			echo $query53 = "UPDATE  public.contact_vehicles SET vin='".$VIN1."', year='".$Tractors2."', make='".$make2."' WHERE contact_id='".$contact_Id."' AND id='".$Tractors2id."'";
            $result53 = pg_query($query53);	
 	}
@@ -708,7 +708,7 @@ if(!empty($make3) or !empty($vin3)){
 	echo $query101 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_Id."' AND id='".$Tractors3id."'";	
 	$rs101 = pg_query($query101);
 	$rows101 = pg_num_rows($rs101);
-	if($rows101==1){
+	if($rows101>=1){
  			echo $query102 = "UPDATE  public.contact_vehicles SET vin='".$vin3."', year='".$Tractors3."', make='".$make3."' WHERE contact_id='".$contact_Id."' AND id='".$Tractors3id."'";
            $result101 = pg_query($query102);	
 	}
@@ -729,7 +729,7 @@ if(!empty($make4) or !empty($vin4)){
 	echo $query105 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_Id."' AND id='".$Tractors4id."'";	
 	$rs105 = pg_query($query105);
 	$rows105 = pg_num_rows($rs105);
-	if($rows105==1){
+	if($rows105>=1){
  			echo $query106 = "UPDATE  public.contact_vehicles SET vin='".$vin4."', year='".$Tractors4."', make='".$make4."' WHERE contact_id='".$contact_Id."' AND id='".$Tractors4id."'";
            $result106 = pg_query($query106);	
 	}
@@ -751,7 +751,7 @@ if(!empty($make5) or !empty($vin5)){
 	echo $query201 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_Id."' AND id='".$Tractors5id."'";	
 	$rs201 = pg_query($query201);
 	$rows201 = pg_num_rows($rs201);
-	if($rows201==1){
+	if($rows201>=1){
  			echo $query202 = "UPDATE  public.contact_vehicles SET vin='".$vin5."', year='".$Tractors5."', make='".$make5."' WHERE contact_id='".$contact_Id."' AND id='".$Tractors5id."'";
            $result201 = pg_query($query202);	
 	}
@@ -773,7 +773,7 @@ if(!empty($trailermake1) or !empty($VIN_new)){
 	echo $query108 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_Id."' AND id='".$trailer1id."'";	
 	$rs108 = pg_query($query108);
 	$rows108 = pg_num_rows($rs108);
-	if($rows108==1){
+	if($rows108>=1){
  			echo $query109 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new."', year='".$trailer1."', make='".$trailermake1."' WHERE contact_id='".$contact_Id."' AND id='".$trailer1id."'";
            $result108 = pg_query($query109);	
 	}
@@ -794,7 +794,7 @@ if(!empty($trailermake2) or !empty($VIN_new2)){
 	echo $query111 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_Id."' AND id='".$trailer2id."'";	
 	$rs111 = pg_query($query111);
 	$rows111 = pg_num_rows($rs111);
-	if($rows111==1){
+	if($rows111>=1){
  			echo $query112 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new2."', year='".$trailer2."', make='".$trailermake2."' WHERE contact_id='".$contact_Id."' AND id='".$trailer2id."'";
            $result111 = pg_query($query112);	
 	}
@@ -816,7 +816,7 @@ if(!empty($trailermake3) or !empty($VIN_new3)){
 	echo $query115 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_Id."' AND id='".$trailer3id."'";	
 	$rs115 = pg_query($query115);
 	$rows115 = pg_num_rows($rs115);
-	if($rows115==1){
+	if($rows115>=1){
  			echo $query116 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new3."', year='".$trailer3."', make='".$trailermake3."' WHERE contact_id='".$contact_Id."' AND id='".$trailer3id."'";
            $result115 = pg_query($query116);	
 	}
@@ -837,7 +837,7 @@ if(!empty($trailermake4) or !empty($VIN_new4)){
 	echo $query121 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_Id."' AND id='".$trailer4id."'";	
 	$rs121 = pg_query($query121);
 	$rows121 = pg_num_rows($rs121);
-	if($rows121==1){
+	if($rows121>=1){
  			echo $query122 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new4."', year='".$trailer4."', make='".$trailermake4."' WHERE contact_id='".$contact_Id."' AND id='".$trailer4id."'";
            $result121 = pg_query($query122);	
 	}
@@ -859,7 +859,7 @@ if(!empty($trailermake5) or !empty($VIN_new5)){
 	echo $query125 = "SELECT * FROM public.contact_vehicles where contact_id='".$contact_Id."' AND id='".$trailer5id."'";	
 	$rs125 = pg_query($query125);
 	$rows125 = pg_num_rows($rs125);
-	if($rows125==1){
+	if($rows125>=1){
  			$query126 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new5."', year='".$trailer5."', make='".$trailermake5."' WHERE contact_id='".$contact_Id."' AND id='".$trailer5id."'";
            $result126 = pg_query($query126);	
 	}
@@ -891,7 +891,7 @@ if(!empty($csl) or !empty($um_uim) or !empty($pip) or !empty($limit) or !empty($
 	echo $query130 = "SELECT * FROM public.liability_damage_truck_cargo_coverage where contact_id='".$contact_Id."' AND id='".$cslid."'";	
 	$rs130 = pg_query($query130);
 	$rows130 = pg_num_rows($rs130);
-	if($rows130==1){
+	if($rows130>=1){
  			echo $query131 = "UPDATE  public.liability_damage_truck_cargo_coverage SET csl='".$csl."', um_uim='".$um_uim."', pip='".$pip."', deductible='".$deductible."', comprehensive='".$comprehensive."', specified_perils='".$specified."', cargo_limit='".$limit."', truck_cargo_deductible='".$motor_deductible."', reefer_breakdown='".$reefer."' WHERE contact_id='".$contact_Id."' AND id='".$cslid."'";
            $result130 = pg_query($query131);	
 	}
@@ -910,15 +910,15 @@ if(!empty($csl) or !empty($um_uim) or !empty($pip) or !empty($limit) or !empty($
 }
 
 
-if(!empty($cost) or !empty($employees) or !empty($payroll) or !empty($owners) or !empty($limit)){
+if(!empty($cost) or !empty($employees) or !empty($payroll) or !empty($owners) or !empty($coverage_limit)){
 	echo $query135 = "SELECT * FROM public.additional_coverages where contact_id='".$contact_Id."' AND id='".$Cost_id."'";	
 	$rs135 = pg_query($query135);
 	$rows135 = pg_num_rows($rs135);
-	if($rows135==1){
- 			echo $query136 = "UPDATE  public.additional_coverages SET hired_auto='".$hired."', non_owned_auto='".$owned."', truckers_gl='".$truckers."', cost_of_hire='".$cost."', of_employees='".$employees."', non_driver_payroll='".$payroll."', of_owners='".$owners."', trailer_interchange='".$interchange."', additional_coverage_limit='".$limit."', of_trailers='".$trailers."', of_days_active='".$active."', interchange_agreement='".$interchange_agreement."' WHERE contact_id='".$contact_Id."' AND id='".$Cost_id."'";
+	if($rows135>=1){
+ 			echo $query136 = "UPDATE  public.additional_coverages SET hired_auto='".$hired."', non_owned_auto='".$owned."', truckers_gl='".$truckers."', cost_of_hire='".$cost."', of_employees='".$employees."', non_driver_payroll='".$payroll."', of_owners='".$owners."', trailer_interchange='".$interchange."', additional_coverage_limit='".$coverage_limit."', of_trailers='".$trailers."', of_days_active='".$active."', interchange_agreement='".$interchange_agreement."' WHERE contact_id='".$contact_Id."' AND id='".$Cost_id."'";
            $result136 = pg_query($query136);	
 	}	else{
-	echo $query136 ="INSERT INTO public.additional_coverages(contact_id, hired_auto, non_owned_auto, truckers_gl, cost_of_hire,of_employees,non_driver_payroll,of_owners,trailer_interchange,additional_coverage_limit,of_trailers,of_days_active,interchange_agreement) VALUES ('$contact_Id','$hired','$owned','$truckers','$cost','$employees','$payroll','$owners','$interchange','$limit','$trailers','$active','$interchange_agreement')";
+echo $query136 ="INSERT INTO public.additional_coverages(contact_id,hired_auto,non_owned_auto,truckers_gl,cost_of_hire,of_employees,non_driver_payroll,of_owners,trailer_interchange,additional_coverage_limit,of_trailers,of_days_active,interchange_agreement) VALUES ('$contact_Id','$hired','$owned','$truckers','$cost','$employees','$payroll','$owners','$interchange','$coverage_limit','$trailers','$active','$interchange_agreement')";
 	$result137 = pg_query($query136);
 			if($result137){
 			echo " 4 Record Created Sucessfully";
