@@ -596,6 +596,7 @@ if($row55>=1){
 	while ($row56 = pg_fetch_assoc($result55)) {
     $new_id=$row56['id'];
 	$csl=$row56['csl'];
+	$um_uim=$row56['um_uim'];
  	$pip=$row56['pip'];
  	$deductible=$row56['deductible'];
  	$comprehensive=$row56['comprehensive'];
@@ -1212,6 +1213,7 @@ echo 	$reefer_breakdown;
 	<tr>
 		<td align="center">
 			<input type="text" name="csl" class='csl' id="csl" value="<?php echo $csl; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="hidden" name="cslid" class='csl' id="cslid" value="<?php echo $new_id; ?>"/>
 		</td>
 	</tr>
 	</table>
@@ -1231,7 +1233,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="143" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="UM_UIM:" class='um_uim' id="um_uim" value="<?php echo $umn_uim; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="UM_UIM:" class='um_uim' id="um_uim" value="<?php echo $um_uim; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
