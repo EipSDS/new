@@ -2,7 +2,7 @@
  
 	    $('#comprehensive').change(function() {
         if(this.checked) {
-            var comprehensive = "yes";
+            var comp = "yes";
         }      
 
 	});	 
@@ -15,7 +15,7 @@
     var hired=$("#hired").val(); 
     var owned=$("#owned").val(); 
     var truckers=$("#truckers").val();
-    console.log(comprehensive);
+    console.log(comp);
 var contact_id =$(".ContactId").val();
 var dataform=	$('.dataform').find('select, textarea, input').serialize();
  var submitting_agency=$("#submitting_agency").val(); 
