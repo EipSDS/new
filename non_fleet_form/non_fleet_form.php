@@ -635,7 +635,7 @@ if($row67>=1){
  	$canceled_no=$row67['canceled_no'];
 
 
-$query1 = "SELECT * FROM public.violation where contact_id='".$contact_id."' ORDER BY id";
+$query1 = "SELECT * FROM public.violation where contact_id='".$contact_id."' ORDER BY id ";
 $result1 = pg_query($query1);
 $rows1 = pg_num_rows($result1);
 if($rows1>=1){
@@ -649,6 +649,26 @@ if($rows1>=1){
 }	
 	 echo $accident_violation[]=$row1['accident_violation'];
      echo $e_o=$row1['e_o'];
+	 
+$query255 = "SELECT * FROM public.additional_info where contact_id='".$contact_id."' ORDER BY id DESC";
+$result255 = pg_query($query255);
+$rows88 = pg_num_rows($result255);
+if($rows88>=1){
+	while ($row99 = pg_fetch_assoc($result255)) {
+	 
+	}
+}	 
+echo $rows88['id'];	 
+echo $rows88['agency_name'];	 
+echo $rows88['contact_person'];	 
+echo $rows88['print_name'];	 
+echo $rows88['applicant_sig'];	 
+echo $rows88['agent_sig'];	 
+echo $rows88['date1'];	 
+echo $rows88['title'];	 
+echo $rows88['date2'];	 
+echo $rows88['major_cities'];	  
+	 
 ?>
 <html>
 <head>
@@ -756,7 +776,8 @@ if($rows1>=1){
 	<table align="left" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="submitting_agency" class='submitting_agency' id="submitting_agency" width="100%" style="width:314px;border: 0;font-size:14px;"/>
+	         <input type="hidden" name="agency_id" class='agency_id' id="agency_id" value="<?php echo $rows88['id']; ?>"/>	
+			<input type="text" name="submitting_agency" class='submitting_agency' id="submitting_agency" value="<?php echo $rows88['agency_name']; ?>" width="100%" style="width:314px;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -776,7 +797,7 @@ if($rows1>=1){
 	<table align="left" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="Contact_Person" class="Contact_Person" id="Contact_Person" width="100%" style="width:160px;border: 0;font-size:14px;"/>
+			<input type="text" name="Contact_Person" class="Contact_Person" id="Contact_Person"  value="<?php echo $rows88['contact_person']; ?>" width="100%" style="width:160px;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1199,7 +1220,7 @@ if($rows1>=1){
 	<table align="left" width="500" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="major" class='major' id="major" width="100%" style="width:86;border: 0;font-size:14px;"/>
+			<input type="text" name="major" class='major' id="major" width="100%" style="width:450;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -3347,10 +3368,10 @@ $(document).ready(function(){
 	<table cellpadding="0" cellspacing="0" WIDTH="100%"; style="border:2px solid #000;">
 	<tr>
 	<td  width="70%">
-	<input type="text" name="applicant_sig" class='applicant_sig' id="applicant_sig" style="width:100%;">
+	<input type="text" name="applicant_sig" class='applicant_sig' id="applicant_sig" value="<?php echo $rows88['applicant_sig']; ?>" style="width:100%;">
 	</td>
 	<td  width="30%">
-	<input type="text" name="date11" class='date11' id="date11"  style="width:100%;">
+	<input type="text" name="date11" class='date11' id="date11"  value="<?php echo $rows88['date1']; ?>"  style="width:100%;">
 	</td>
 	</tr>														
 	</table>
@@ -3372,10 +3393,10 @@ $(document).ready(function(){
 	<table cellpadding="0" cellspacing="0" WIDTH="100%"; style="border:2px solid #000;">
 	<tr>
 	<td  width="70%"> 
-	<input type="text" name="print_name" class='Cargo' id="print_name" style="width:100%;">
+	<input type="text" name="print_name" class='Cargo' id="print_name" value="<?php echo $rows88['print_name'];; ?>" style="width:100%;">
 	</td>
 	<td  width="30%">
-	<input type="text" name="title" class='Cargo' id="title"  style="width:100%;">
+	<input type="text" name="title" class='Cargo' id="title" value="<?php echo $rows88['date2'];; ?>" style="width:100%;">
 	</td>
 	</tr>														
 	</table>
@@ -3397,7 +3418,7 @@ $(document).ready(function(){
 	<table cellpadding="0" cellspacing="0" WIDTH="100%"; style="border:2px solid #000;">
 	<tr>
 	<td  width="70%">
-	<input type="text" name="Cargo" class='Cargo' id="agent_sig" style="width:100%;">
+	<input type="text" name="agent_sig" class='Cargo' id="agent_sig" value="<?php echo $rows88['title']; ?>" style="width:100%;">
 	</td>
 	<td  width="30%">
 	<input type="text" name="date22" class='title' id="date22"  style="width:100%;">

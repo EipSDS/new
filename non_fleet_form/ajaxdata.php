@@ -944,6 +944,7 @@ echo $query136 ="INSERT INTO public.additional_coverages(contact_id,hired_auto,n
 		} 	
   }
 }
+$agency_id=$_POST['agency_id'];
 
 if(!empty($submitting_agency) or !empty($Contact_Person) or !empty($applicant_sig) or !empty($date11) or !empty($print_name)){
 	echo $query145 = "SELECT * FROM public.additional_info where contact_id='".$contact_Id."' AND id='".$agency_id."'";	
@@ -968,7 +969,15 @@ echo $query148 ="INSERT INTO public.additional_info(contact_id,agency_name,conta
 }	
 
 
-
+echo $rows88['id'];	 
+echo $rows88['agency_name'];	 
+echo $rows88['contact_person'];	 
+echo $rows88['applicant_sig'];	 
+echo $rows88['agent_sig'];	 
+echo $rows88['date1'];	 
+echo $rows88['title'];	 
+echo $rows88['date2'];	 
+echo $rows88['major_cities'];
 
 
 
