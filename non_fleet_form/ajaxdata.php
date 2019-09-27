@@ -888,6 +888,13 @@ $hired=$_POST['hired'];
 $owned=$_POST['owned'];
 $truckers=$_POST['truckers'];
 
+$schedule_yes=$_POST['schedule_yes'];
+$schedule_no=$_POST['schedule_no'];
+$loaned_yes=$_POST['loaned_yes'];
+$loaned_no=$_POST['loaned_no'];
+$canceled_yes=$_POST['canceled_yes'];
+$canceled_no=$_POST['canceled_no'];
+
 if(!empty($csl) or !empty($um_uim) or !empty($pip) or !empty($limit) or !empty($deductible)){
 	echo $query130 = "SELECT * FROM public.liability_damage_truck_cargo_coverage where contact_id='".$contact_Id."' AND id='".$cslid."'";	
 	$rs130 = pg_query($query130);
@@ -916,10 +923,10 @@ if(!empty($cost) or !empty($employees) or !empty($payroll) or !empty($owners) or
 	$rs135 = pg_query($query135);
 	$rows135 = pg_num_rows($rs135);
 	if($rows135>=1){
- 			echo $query136 = "UPDATE  public.additional_coverages SET hired_auto='".$hired."', non_owned_auto='".$owned."', truckers_gl='".$truckers."', cost_of_hire='".$cost."', of_employees='".$employees."', non_driver_payroll='".$payroll."', of_owners='".$owners."', trailer_interchange='".$interchange."', additional_coverage_limit='".$coverage_limit."', of_trailers='".$trailers."', of_days_active='".$active."', interchange_agreement='".$interchange_agreement."', no_interchange='".$interchange_agreement_no."' WHERE contact_id='".$contact_Id."' AND id='".$Cost_id."'";
+ 			echo $query136 = "UPDATE  public.additional_coverages SET hired_auto='".$hired."', non_owned_auto='".$owned."', truckers_gl='".$truckers."', cost_of_hire='".$cost."', of_employees='".$employees."', non_driver_payroll='".$payroll."', of_owners='".$owners."', trailer_interchange='".$interchange."', additional_coverage_limit='".$coverage_limit."', of_trailers='".$trailers."', of_days_active='".$active."', interchange_agreement='".$interchange_agreement."', schedule_yes='".$schedule_yes."', schedule_no='".$schedule_no."', loaned_yes='".$loaned_yes."', loaned_no='".$loaned_no."', canceled_yes='".$canceled_yes."', canceled_no='".$canceled_no."' WHERE contact_id='".$contact_Id."' AND id='".$Cost_id."'";
            $result136 = pg_query($query136);	
 	}	else{
-echo $query136 ="INSERT INTO public.additional_coverages(contact_id,hired_auto,non_owned_auto,truckers_gl,cost_of_hire,of_employees,non_driver_payroll,of_owners,trailer_interchange,additional_coverage_limit,of_trailers,of_days_active,interchange_agreement,no_interchange) VALUES ('$contact_Id','$hired','$owned','$truckers','$cost','$employees','$payroll','$owners','$interchange','$coverage_limit','$trailers','$active','$interchange_agreement','$interchange_agreement_no')";
+echo $query136 ="INSERT INTO public.additional_coverages(contact_id,hired_auto,non_owned_auto,truckers_gl,cost_of_hire,of_employees,non_driver_payroll,of_owners,trailer_interchange,additional_coverage_limit,of_trailers,of_days_active,interchange_agreement,no_interchange,schedule_yes,schedule_no,loaned_yes,loaned_no,canceled_yes,canceled_no) VALUES ('$contact_Id','$hired','$owned','$truckers','$cost','$employees','$payroll','$owners','$interchange','$coverage_limit','$trailers','$active','$interchange_agreement','$interchange_agreement_no','$schedule_yes','$schedule_no','$loaned_yes','$loaned_no','$canceled_yes','$canceled_no')";
 	$result137 = pg_query($query136);
 			if($result137){
 			echo " 4 Record Created Sucessfully";

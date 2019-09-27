@@ -12,27 +12,23 @@ echo $phone_number;
 $phone_number=$_GET['phone'];
 
 if(!empty($phone_number)){			
-				$url = "Contacts/search?phone=$phone_number";
-			$data = "";
-			 $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
-			if($check_token_valid['code']== "INVALID_TOKEN"){
-				$url = "token";
-				$data = array("refresh_token"=>$refresh_token,"client_id"=>"".$zoho_client_id."","client_secret"=>"".$zoho_client_secret."","grant_type"=>"refresh_token");
-				$get_new_token = $handleFunctionsObject-> zoho_auth($url,"POST",$data);
-				if(isset($get_new_token['access_token'])){
-					file_put_contents("access_token.txt",$get_new_token['access_token']);
-				}
-				if(isset($get_new_token['refresh_token'])){
-					file_put_contents("refresh_token.txt",$get_new_token['refresh_token']);
-				}
-				$old_access_token = file_get_contents("access_token.txt");
-				 $url = "Contacts/$contact_id";
-				$data = "";
-				 $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
-
-
-
-		 
+		$url = "Contacts/search?phone=$phone_number";
+		$data = "";
+		$check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
+		if($check_token_valid['code']== "INVALID_TOKEN"){
+		$url = "token";
+		$data = array("refresh_token"=>$refresh_token,"client_id"=>"".$zoho_client_id."","client_secret"=>"".$zoho_client_secret."","grant_type"=>"refresh_token");
+		$get_new_token = $handleFunctionsObject-> zoho_auth($url,"POST",$data);
+		if(isset($get_new_token['access_token'])){
+		file_put_contents("access_token.txt",$get_new_token['access_token']);
+		}
+		if(isset($get_new_token['refresh_token'])){
+		file_put_contents("refresh_token.txt",$get_new_token['refresh_token']);
+		}
+		$old_access_token = file_get_contents("access_token.txt");
+		$url = "Contacts/$contact_id";
+		$data = "";
+$check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);		 
 echo $id=$check_token_valid['data'][0];
 echo $contact_name=$check_token_valid['data'][0]['First_Name_Two'];
 echo $first_name=$check_token_valid['data'][0]['First_Name'];
@@ -75,8 +71,7 @@ echo"<br>";
  $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
 $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];
 $License_State=$check_token_valid['data'][0]['Drivers1'][0]['License_State'];
-
-
+$Owner_Driver=$check_token_valid['data'][0]['Drivers1'][0]['Owner_Driver'];
 
 // $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);  
 // echo $DOB=$str_arr[0]; 
@@ -111,6 +106,7 @@ echo $LicenceNo1=$str_arr1[4];
 echo $Experience_Years1=$check_token_valid['data'][0]['Drivers1'][1]['Experience_Years'];	
 echo $License_State1=$check_token_valid['data'][0]['Drivers1'][1]['License_State'];	
 echo $Hire_Date1=$check_token_valid['data'][0]['Drivers1'][1]['Hire_Date'];
+echo $Owner_Driver1=$check_token_valid['data'][0]['Drivers1'][1]['Owner_Driver'];
 // New [2] driver data 
 echo $driver_Name12=$check_token_valid['data'][0]['Drivers1'][2]['Name1'];
 echo $DOB_Age_MaritalStatus_Points_LicenceNo2=$check_token_valid['data'][0]['Drivers1'][2]['DOB_Age_MaritalStatus_Points_LicenceNo'];
@@ -129,6 +125,7 @@ echo $LicenceNo2=$str_arr2[4];
 echo $Experience_Years2=$check_token_valid['data'][0]['Drivers1'][2]['Experience_Years'];	
 echo $Hire_Date2=$check_token_valid['data'][0]['Drivers1'][2]['Hire_Date'];	
 echo $License_State2=$check_token_valid['data'][0]['Drivers1'][2]['License_State'];
+echo $Owner_Driver2=$check_token_valid['data'][0]['Drivers1'][2]['Owner_Driver'];
 
 // New [3] driver data 
 echo $driver_Name13=$check_token_valid['data'][0]['Drivers1'][3]['Name1'];
@@ -148,6 +145,7 @@ echo $LicenceNo3=$str_arr3[4];
 echo $Experience_Years3=$check_token_valid['data'][0]['Drivers1'][3]['Experience_Years'];	
 echo $Hire_Date3=$check_token_valid['data'][0]['Drivers1'][3]['Hire_Date'];
 echo $License_State3=$check_token_valid['data'][0]['Drivers1'][3]['License_State'];	
+echo $Owner_Driver3=$check_token_valid['data'][0]['Drivers1'][3]['Owner_Driver'];	
 // New [4] driver data 
 echo $driver_Name14=$check_token_valid['data'][0]['Drivers1'][4]['Name1'];
 echo $DOB_Age_MaritalStatus_Points_LicenceNo4=$check_token_valid['data'][0]['Drivers1'][4]['DOB_Age_MaritalStatus_Points_LicenceNo'];
@@ -166,6 +164,7 @@ echo $LicenceNo4=$str_arr4[4];
 echo $Experience_Years4=$check_token_valid['data'][0]['Drivers1'][4]['Experience_Years'];	
 echo $Hire_Date4=$check_token_valid['data'][0]['Drivers1'][4]['Hire_Date'];	
 $License_State4=$check_token_valid['data'][0]['Drivers1'][4]['License_State'];
+$Owner_Driver4=$check_token_valid['data'][0]['Drivers1'][4]['Owner_Driver'];
 // New [5] driver data 
 echo $driver_Name15=$check_token_valid['data'][0]['Drivers1'][5]['Name1'];
 echo $DOB_Age_MaritalStatus_Points_LicenceNo5=$check_token_valid['data'][0]['Drivers1'][5]['DOB_Age_MaritalStatus_Points_LicenceNo'];
@@ -239,7 +238,7 @@ echo"<br>";
  $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
 $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];
 $License_State=$check_token_valid['data'][0]['Drivers1'][0]['License_State'];
-
+$Owner_Driver=$check_token_valid['data'][0]['Drivers1'][0]['Owner_Driver'];
 }
 // New [1] driver data 
 echo $driver_Name11=$check_token_valid['data'][0]['Drivers1'][1]['Name1'];
@@ -259,6 +258,7 @@ echo $LicenceNo1=$str_arr1[4];
 echo $Experience_Years1=$check_token_valid['data'][0]['Drivers1'][1]['Experience_Years'];	
 echo $License_State1=$check_token_valid['data'][0]['Drivers1'][1]['License_State'];	
 echo $Hire_Date1=$check_token_valid['data'][0]['Drivers1'][1]['Hire_Date'];
+echo $Owner_Driver1=$check_token_valid['data'][0]['Drivers1'][1]['Owner_Driver'];
 // New [2] driver data 
 echo $driver_Name12=$check_token_valid['data'][0]['Drivers1'][2]['Name1'];
 echo $DOB_Age_MaritalStatus_Points_LicenceNo2=$check_token_valid['data'][0]['Drivers1'][2]['DOB_Age_MaritalStatus_Points_LicenceNo'];
@@ -277,7 +277,7 @@ echo $LicenceNo2=$str_arr2[4];
 echo $Experience_Years2=$check_token_valid['data'][0]['Drivers1'][2]['Experience_Years'];	
 echo $Hire_Date2=$check_token_valid['data'][0]['Drivers1'][2]['Hire_Date'];	
 echo $License_State2=$check_token_valid['data'][0]['Drivers1'][2]['License_State'];
-
+echo $Owner_Driver2=$check_token_valid['data'][0]['Drivers1'][2]['Owner_Driver'];
 // New [3] driver data 
 echo $driver_Name13=$check_token_valid['data'][0]['Drivers1'][3]['Name1'];
 echo $DOB_Age_MaritalStatus_Points_LicenceNo3=$check_token_valid['data'][0]['Drivers1'][3]['DOB_Age_MaritalStatus_Points_LicenceNo'];
@@ -296,6 +296,7 @@ echo $LicenceNo3=$str_arr3[4];
 echo $Experience_Years3=$check_token_valid['data'][0]['Drivers1'][3]['Experience_Years'];	
 echo $Hire_Date3=$check_token_valid['data'][0]['Drivers1'][3]['Hire_Date'];
 echo $License_State3=$check_token_valid['data'][0]['Drivers1'][3]['License_State'];	
+echo $Owner_Driver3=$check_token_valid['data'][0]['Drivers1'][3]['Owner_Driver'];
 // New [4] driver data 
 echo $driver_Name14=$check_token_valid['data'][0]['Drivers1'][4]['Name1'];
 echo $DOB_Age_MaritalStatus_Points_LicenceNo4=$check_token_valid['data'][0]['Drivers1'][4]['DOB_Age_MaritalStatus_Points_LicenceNo'];
@@ -314,6 +315,7 @@ echo $LicenceNo4=$str_arr4[4];
 echo $Experience_Years4=$check_token_valid['data'][0]['Drivers1'][4]['Experience_Years'];	
 echo $Hire_Date4=$check_token_valid['data'][0]['Drivers1'][4]['Hire_Date'];	
 $License_State4=$check_token_valid['data'][0]['Drivers1'][4]['License_State'];
+$Owner_Driver4=$check_token_valid['data'][0]['Drivers1'][4]['Owner_Driver'];
 // New [5] driver data 
 echo $driver_Name15=$check_token_valid['data'][0]['Drivers1'][5]['Name1'];
 echo $DOB_Age_MaritalStatus_Points_LicenceNo5=$check_token_valid['data'][0]['Drivers1'][5]['DOB_Age_MaritalStatus_Points_LicenceNo'];
@@ -623,7 +625,14 @@ if($row67>=1){
  	$of_days_active=$row67['of_days_active'];
 	
  	$interchange_agreement=$row67['interchange_agreement'];
- 	$interchange_agreement=$row67['no_interchange'];
+ 	$interchange_agreement_no=$row67['no_interchange'];
+	
+ 	$schedule_yes=$row67['schedule_yes'];
+ 	$schedule_no=$row67['schedule_no'];
+ 	$loaned_yes=$row67['loaned_yes'];
+ 	$loaned_no=$row67['loaned_no'];
+ 	$canceled_yes=$row67['canceled_yes'];
+ 	$canceled_no=$row67['canceled_no'];
 
 
 $query1 = "SELECT * FROM public.violation where contact_id='".$contact_id."' ORDER BY id";
@@ -2194,35 +2203,35 @@ $(document).ready(function(){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="eo1" class='e/o' id="eo1" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="eo1" class='eo1' id="eo1" value="<?php echo $Owner_Driver; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="eo2" class='eo2' id="eo2" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="eo2" class='eo2' id="eo2" value="<?php echo $Owner_Driver1; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="eo3" class='eo3' id="eo3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="eo3" class='eo3' id="eo3"  value="<?php echo $Owner_Driver2; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="eo4" class='eo4' id="eo4" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="eo4" class='eo4' id="eo4" value="<?php echo $Owner_Driver3; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="text" name="eo5" class='eo5' id="eo5" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="text" name="eo5" class='eo5' id="eo5" value="<?php echo $Owner_Driver4; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
@@ -3188,21 +3197,21 @@ $(document).ready(function(){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#fff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td align="left">
-	Does the applicant have any owned, leased or operated equipment not listed on the vehicle schedule? <input type="checkbox" name="schedule" value="yes" class='schedule' id="schedule"> Yes  <input type="checkbox" name="schedule" value="no" class='schedule2' id="schedule2"> No
+	Does the applicant have any owned, leased or operated equipment not listed on the vehicle schedule? <input type="checkbox" name="schedule_yes" value="" class="schedule" id="schedule_yes" <?php echo $row67['schedule_yes']; ?>> Yes  <input type="checkbox" name="schedule_no" value="" class="schedule" id="schedule_no" <?php echo $row67['schedule_no']; ?>> No
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  height="32px"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	Are any vehicles leased, loaned or rented to others? <input type="checkbox" name="schedule" value="yes" class='schedule' id="schedule"> Yes  <input type="checkbox" name="schedule" class='schedule2' id="schedule2"> No
+	Are any vehicles leased, loaned or rented to others? <input type="checkbox" name="loaned_yes" value="yes" class='schedule2' id="loaned_yes" <?php echo $row67['loaned_yes']; ?>> Yes  <input type="checkbox" name="loaned_no" class='schedule2' id="loaned_no" <?php echo $row67['loaned_no']; ?>> No
 	</td>
 	</tr>
 	</table>
 	<table align="left" width="100%"  height="32px" cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	Has the applicant’s policy canceled or non-renewed in the prior 3 years? <input type="checkbox" name="schedule"  value="yes" class='schedule' id="schedule"> Yes  <input type="checkbox" name="schedule" value="no" class='schedule2' id="schedule2"> No
+	Has the applicant’s policy canceled or non-renewed in the prior 3 years? <input type="checkbox" name="canceled_yes"  value="" class='canceled' id="canceled_yes"<?php echo $row67['canceled_yes']; ?>> Yes  <input type="checkbox" name="canceled_no" value="" class='canceled' id="canceled_no" <?php echo $row67['canceled_no']; ?>> No
 	</td>
 	</tr>
 	</table>
