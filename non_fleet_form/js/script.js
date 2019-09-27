@@ -106,7 +106,7 @@ var dataform=	$('.dataform').find('select, textarea, input').serialize();
  var print_name=$("#print_name").val();
  var title=$("#title").val();
  var agent_sig=$("#agent_sig").val();
- var date22=$("#date2").val();
+ var date22=$("#date22").val();
  
  var Applicant_Name=$("#applicant_name").val(); 
  var Applicant_lastName=$("#applicant_lastname").val(); 

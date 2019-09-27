@@ -650,7 +650,7 @@ if($rows1>=1){
 	 echo $accident_violation[]=$row1['accident_violation'];
      echo $e_o=$row1['e_o'];
 	 
-$query255 = "SELECT * FROM public.additional_info where contact_id='".$contact_id."' ORDER BY id DESC";
+$query255 = "SELECT * FROM public.additional_info where contact_id='".$_GET['contact_id']."' ORDER BY id DESC";
 $result255 = pg_query($query255);
 $rows88 = pg_fetch_assoc($result255);
 $row88 = pg_num_rows($result255);

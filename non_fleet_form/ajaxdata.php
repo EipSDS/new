@@ -969,16 +969,6 @@ echo $query148 ="INSERT INTO public.additional_info(contact_id,agency_name,conta
 }	
 
 
-echo $rows88['id'];	 
-echo $rows88['agency_name'];	 
-echo $rows88['contact_person'];	 
-echo $rows88['applicant_sig'];	 
-echo $rows88['agent_sig'];	 
-echo $rows88['date1'];	 
-echo $rows88['title'];	 
-echo $rows88['date2'];	 
-echo $rows88['major_cities'];
-
 
 
 
