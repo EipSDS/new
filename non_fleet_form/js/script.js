@@ -1,15 +1,19 @@
  $(document).ready(function(){
  
-	    $('#comprehensive').change(function() {
-        if(this.checked) {
-            var comprehensive = "yes";
-        }      
-
-	});	 
 	
   $('.save').click(function(){
-	var comprehensive =$("#comprehensive").prop('checked');
-	var specified =$("#specified").prop('checked');
+	var comprehensivetest =$("#comprehensive").prop('checked');
+	if( comprehensivetest == "true"){
+		var comprehensive = "checked";
+	}else{
+		var comprehensive = "false";
+	}
+	var specifiedtest =$("#specified").prop('checked');
+		if( specifiedtest == "true"){
+		var specified = "checked";
+	}else{
+		var specified = "false";
+	}
 	var reefer =$("#reefer").prop('checked');
 	var interchange =$("#interchange").prop('checked');
 	var interchange_agreement =$("#interchange_agreement").prop('checked');
@@ -17,6 +21,7 @@
 	var owned =$("#owned").prop('checked');
 	var truckers =$("#truckers").prop('checked');
     console.log(comprehensive);
+    console.log(specified);
 	
 var contact_id =$(".ContactId").val();
 var dataform=	$('.dataform').find('select, textarea, input').serialize();

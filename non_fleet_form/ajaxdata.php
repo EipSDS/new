@@ -930,10 +930,6 @@ echo $query136 ="INSERT INTO public.additional_coverages(contact_id,hired_auto,n
   }
 }
 
-
-
-
-
 }	
 
 
