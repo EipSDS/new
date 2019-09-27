@@ -603,26 +603,28 @@ $result66 = pg_query($query66);
 $row67 = pg_fetch_assoc($result66);
 if($row67>=1){
 	while ($row66 = pg_fetch_assoc($result66)) {
-    $new1_id=$row66['id'];
-    $hired_auto=$row66['hired_auto'];
-	$non_owned_auto=$row66['non_owned_auto'];
-	$truckers_gl=$row66['truckers_gl'];
- 	
-	$cost_of_hire=$row66['cost_of_hire'];
- 	$of_employees=$row66['of_employees'];
- 	$non_driver_payroll=$row66['non_driver_payroll'];
- 	$of_owners=$row66['of_owners'];
-	
- 	$trailer_interchange=$row66["trailer_interchange"];
- 	
-	$additional_coverage_limit=$row66['additional_coverage_limit'];
- 	$of_trailers=$row66['of_trailers'];	
- 	$of_days_active=$row66['of_days_active'];
-	
- 	$interchange_agreement=$row66['interchange_agreement'];	
-
 	}
 }
+
+	$new1_id=$row67['id'];
+    $hired_auto=$row67['hired_auto'];
+	$non_owned_auto=$row67['non_owned_auto'];
+	$truckers_gl=$row67['truckers_gl'];
+ 	
+	$cost_of_hire=$row67['cost_of_hire'];
+ 	$of_employees=$row67['of_employees'];
+ 	$non_driver_payroll=$row67['non_driver_payroll'];
+ 	$of_owners=$row67['of_owners'];
+	
+ 	$trailer_interchange=$row67["trailer_interchange"];
+ 	
+	$additional_coverage_limit=$row67['additional_coverage_limit'];
+ 	$of_trailers=$row67['of_trailers'];	
+ 	$of_days_active=$row67['of_days_active'];
+	
+ 	$interchange_agreement=$row67['interchange_agreement'
+
+
 $query1 = "SELECT * FROM public.violation where contact_id='".$contact_id."' ORDER BY id";
 $result1 = pg_query($query1);
 $rows1 = pg_num_rows($result1);
