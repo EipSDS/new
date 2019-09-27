@@ -365,31 +365,27 @@ $row9 = pg_fetch_assoc($result3);
 	 $arrmake[]=$row3['make'];
  }
 }
-echo "<br>";
-echo $row9['id'];
-echo $arrid[0];
-echo "==========".$arrid[1];
-echo "==========".$arrid[2];
-echo "==========".$arrid[3];
-echo "<br>";
-echo $row9['vin'];
-echo $arrvin[0];
-echo $arrvin[1];
-echo $arrvin[2];
-echo $arrvin[3];
-echo "<br>";
-echo $row9['year'];
-echo $arryear[0];
-echo $arryear[1];
-echo $arryear[2];
-echo $arryear[3];
-echo "<br>";
-echo "==========".$row9['make'];
-echo "==========".$arrmake[0];
-echo "==========".$arrmake[1];
-echo "==========".$arrmake[2];
-echo "==========".$arrmake[3];
-echo "===========================";
+
+ $row9['id'];
+ $arrid[0];
+$arrid[1];
+$arrid[2];
+$arrid[3];
+ $row9['vin'];
+ $arrvin[0];
+ $arrvin[1];
+ $arrvin[2];
+ $arrvin[3];
+ $row9['year'];
+ $arryear[0];
+ $arryear[1];
+ $arryear[2];
+ $arryear[3];
+$row9['make'];
+$arrmake[0];
+$arrmake[1];
+$arrmake[2];
+$arrmake[3];
 $query5 = "SELECT * FROM public.contact_vehicles where contact_id='".$_GET['contact_id']."' AND vehicle_type !='Trailer' ORDER BY id";
 $res5 = pg_query($query5);
 $row6 = pg_fetch_assoc($res5);
@@ -402,31 +398,28 @@ $row6 = pg_fetch_assoc($res5);
 	 $arraymake[]=$row5['make'];
  }
 }
-echo "<br>";
-echo $row6['id'];
-echo $arrayid[0];
-echo $arrayid[1];
-echo $arrayid[2];
-echo $arrayid[3];
-echo "<br>";
-echo $row6['vin'];
-echo $arrayvin[0];
-echo $arrayvin[1];
-echo $arrayvin[2];
-echo $arrayvin[3];
-echo "<br>";
-echo $row6['year'];
-echo $arrayyear[0];
-echo $arrayyear[1];
-echo $arrayyear[2];
-echo $arrayyear[3];
-echo "<br>";
-echo $row6['make'];
-echo $arraymake[0];
-echo $arraymake[1];
-echo $arraymake[2];
-echo $arraymake[3];
-echo "=======================";
+
+ $row6['id'];
+ $arrayid[0];
+ $arrayid[1];
+ $arrayid[2];
+ $arrayid[3];
+
+ $row6['vin'];
+ $arrayvin[0];
+ $arrayvin[1];
+ $arrayvin[2];
+ $arrayvin[3];
+ $row6['year'];
+ $arrayyear[0];
+ $arrayyear[1];
+ $arrayyear[2];
+ $arrayyear[3];
+ $row6['make'];
+ $arraymake[0];
+ $arraymake[1];
+ $arraymake[2];
+ $arraymake[3];
 $query = "SELECT * FROM public.contact_commodities where contact_id='".$_GET['contact_id']."' ORDER BY id";
 $result = pg_query($query);
 $row4 = pg_fetch_assoc($result);
@@ -442,78 +435,65 @@ if($rows>=1){
 		 
 	}
 }
-	echo $row4['id'];
-	echo $array_id[0];
-	echo $array_id[1];
-	echo $array_id[2];
-	echo $array_id[3];
-	echo '<br>';
-	echo $row4['name'];
-	echo $array_name[0];
-	echo $array_name[1];
-	echo $array_name[2];
-	echo $array_name[3];	
-	echo '<br>';
-	echo $row4['value'];
-	echo $array_value[0];
-	echo $array_value[1];
-	echo $array_value[2];
-	echo $array_value[3];		
-	echo '<br>';
-		echo '<br>';
-	echo $row4['max_value'];
-	echo $max_value[0];
-	echo $max_value[1];
-	echo $max_value[2];
-	echo $max_value[3];		
-	echo '<br>';
-		echo '<br>';
-	echo $row4['average_value'];
-	echo $average_value[0];
-	echo $average_value[1];
-	echo $average_value[2];
-	echo $average_value[3];		
-	echo '<br>';
+	 $row4['id'];
+	 $array_id[0];
+	 $array_id[1];
+	 $array_id[2];
+	 $array_id[3];
+	
+	 $row4['name'];
+	 $array_name[0];
+	 $array_name[1];
+	 $array_name[2];
+	 $array_name[3];	
+	 $row4['value'];
+	 $array_value[0];
+	 $array_value[1];
+	 $array_value[2];
+	 $array_value[3];		
+
+	 $row4['max_value'];
+	 $max_value[0];
+	 $max_value[1];
+	 $max_value[2];
+	 $max_value[3];		
+	 $row4['average_value'];
+	 $average_value[0];
+	 $average_value[1];
+	 $average_value[2];
+	 $average_value[3];		
 	
 $query22 = "SELECT * FROM public.operation_history where contact_id='".$_GET['contact_id']."' ORDER BY id";
 $result22 = pg_query($query22);
 $rows22 = pg_num_rows($result22);
 if($rows22>=1){
 	while ($row22 = pg_fetch_assoc($result22)) {
-	 echo $array3_id[]=$row22['id'];
-	 echo '<br>';
-	 echo $array3_units[]=$row22['of_power_units'];
-	 echo '<br>';	
-	 echo $array3_miles[]=$row22['total_miles'];
-	 echo '<br>';
-	 echo $array3_receipts[]=$row22['gross_receipts'];
-	 echo '<br>';	 
+	  $array3_id[]=$row22['id'];
+	  $array3_units[]=$row22['of_power_units'];
+	  $array3_miles[]=$row22['total_miles'];
+	  $array3_receipts[]=$row22['gross_receipts'];	 
 	}
 }
 
-	echo $array3_id[0];
-	echo $array3_id[1];
-	echo $array3_id[2];
-	echo $array3_id[3];
-	echo '<br>';
+	 $array3_id[0];
+	 $array3_id[1];
+	 $array3_id[2];
+	 $array3_id[3];
 
-	echo $array3_units[0];
-	echo $array3_units[1];
-	echo $array3_units[2];
-	echo $array3_units[3];	
-	echo '<br>';
+	 $array3_units[0];
+	 $array3_units[1];
+	 $array3_units[2];
+	 $array3_units[3];	
+	 
+	 $array3_miles[0];
+	 $array3_miles[1];
+	 $array3_miles[2];
+	 $array3_miles[3];	
 
-	echo $array3_miles[0];
-	echo $array3_miles[1];
-	echo $array3_miles[2];
-	echo $array3_miles[3];		
-	echo '<br>';
-
-	echo $array3_receipts[0];
-	echo $array3_receipts[1];
-	echo $array3_receipts[2];
-	echo $array3_receipts[3];		
-	echo '<br>';
+	 $array3_receipts[0];
+	 $array3_receipts[1];
+	 $array3_receipts[2];
+	 $array3_receipts[3];		
 	
 $query33 = "SELECT * FROM public.loss_history where contact_id='".$_GET['contact_id']."' ORDER BY id";
 $result33 = pg_query($query33);
@@ -536,40 +516,33 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	// echo '<br>';		
 	}
 }
-	echo $loss_id[0];
-	echo $loss_id[1];
-	echo $loss_id[2];
-	echo '<br>';
+	 $loss_id[0];
+	 $loss_id[1];
+	 $loss_id[2];
 
-	echo $liability_of_losses[0];
-	echo $liability_of_losses[1];
-	echo $liability_of_losses[2];
-	echo '<br>';
+	 $liability_of_losses[0];
+	 $liability_of_losses[1];
+	 $liability_of_losses[2];
 
-	echo $total_incurred[0];
-	echo $total_incurred[1];
-	echo $total_incurred[2];		
-	echo '<br>';
+	 $total_incurred[0];
+	 $total_incurred[1];
+	 $total_incurred[2];		
 
-	echo $physical_damage_losses[0];
-	echo $physical_damage_losses[1];
-	echo $physical_damage_losses[2];		
-	echo '<br>';
+	 $physical_damage_losses[0];
+	 $physical_damage_losses[1];
+	 $physical_damage_losses[2];		
 	
-	echo $physical_total_incurred[0];
-	echo $physical_total_incurred[1];
-	echo $physical_total_incurred[2];		
-	echo '<br>';	
+	 $physical_total_incurred[0];
+	 $physical_total_incurred[1];
+	 $physical_total_incurred[2];			
 	
-	echo $truck_cargo_losses[0];
-	echo $truck_cargo_losses[1];
-	echo $truck_cargo_losses[2];		
-	echo '<br>';	
+	 $truck_cargo_losses[0];
+	 $truck_cargo_losses[1];
+	 $truck_cargo_losses[2];		
 	
-	echo $truck_cargo_total_incurred[0];
-	echo $truck_cargo_total_incurred[1];
-	echo $truck_cargo_total_incurred[2];		
-	echo '<br>';
+	 $truck_cargo_total_incurred[0];
+	 $truck_cargo_total_incurred[1];
+	 $truck_cargo_total_incurred[2];		
 	
 $query55 = "SELECT * FROM public.liability_damage_truck_cargo_coverage where contact_id='".$_GET['contact_id']."'";
 $result55 = pg_query($query55);
@@ -589,16 +562,16 @@ if($row55>=1){
 	}
 }	
 
-echo    $row55['id'];
-echo  	$row55['csl'];
-echo  	$row55['um_uim'];
-echo   	$row55['pip'];
-echo   	$row55['deductible'];
-echo      $row55['comprehensive'];
-echo      $row55['specified_perils'];
-echo   	$row55["cargo_limit"];
-echo      $row55['truck_cargo_deductible'];
-echo   	$row55['reefer_breakdown'];
+    $row55['id'];
+  	$row55['csl'];
+  	$row55['um_uim'];
+   	$row55['pip'];
+   	$row55['deductible'];
+      $row55['comprehensive'];
+      $row55['specified_perils'];
+   	$row55["cargo_limit"];
+      $row55['truck_cargo_deductible'];
+   	$row55['reefer_breakdown'];
 	
 $query66 = "SELECT * FROM public.additional_coverages where contact_id='".$_GET['contact_id']."' ORDER BY id DESC";
 $result66 = pg_query($query66);
@@ -641,14 +614,12 @@ $rows1 = pg_num_rows($result1);
 if($rows1>=1){
 	while ($row1 = pg_fetch_assoc($result1)) {
 		
-	 echo $arr_accident_violation[]=$row1['accident_violation'];
-	 echo '<br>';	
-	 echo $arr_e_o[]=$row1['e_o'];
-	 echo '<br>';		 
+	  $arr_accident_violation[]=$row1['accident_violation'];
+	  $arr_e_o[]=$row1['e_o'];		 
 	}
 }	
-	 echo $accident_violation[]=$row1['accident_violation'];
-     echo $e_o=$row1['e_o'];
+	  $accident_violation[]=$row1['accident_violation'];
+      $e_o=$row1['e_o'];
 	 
 $query255 = "SELECT * FROM public.additional_info where contact_id='".$_GET['contact_id']."' ORDER BY id DESC";
 $result255 = pg_query($query255);
@@ -659,16 +630,16 @@ if($row88>=1){
 	 
 	}
 }	 
-echo $rows88['id'];	 
-echo $rows88['agency_name'];	 
-echo $rows88['contact_person'];	 
-echo $rows88['print_name'];	 
-echo $rows88['applicant_sig'];	 
-echo $rows88['agent_sig'];	 
-echo $rows88['date1'];	 
-echo $rows88['title'];	 
-echo $rows88['date2'];	 
-echo $rows88['major_cities'];	  
+ $rows88['id'];	 
+ $rows88['agency_name'];	 
+ $rows88['contact_person'];	 
+ $rows88['print_name'];	 
+ $rows88['applicant_sig'];	 
+ $rows88['agent_sig'];	 
+ $rows88['date1'];	 
+ $rows88['title'];	 
+ $rows88['date2'];	 
+ $rows88['major_cities'];	  
 	 
 ?>
 <html>
