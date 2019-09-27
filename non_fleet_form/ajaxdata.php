@@ -892,12 +892,12 @@ if(!empty($csl) or !empty($um_uim) or !empty($pip) or !empty($limit) or !empty($
 	$rs130 = pg_query($query130);
 	$rows130 = pg_num_rows($rs130);
 	if($rows130==1){
- 			echo $query131 = "UPDATE  public.liability_damage_truck_cargo_coverage SET csl='".$csl."', um_uim='".$um_uim."', pip='".$pip."', deductible='".$deductible."', comprehensive='".$comprehensive."', specified_perils='".$specified."', limit='".$limit."', truck_cargo_deductible='".$motor_deductible."', reefer_breakdown='".$reefer."' WHERE contact_id='".$contact_Id."' AND id='".$cslid."'";
+ 			echo $query131 = "UPDATE  public.liability_damage_truck_cargo_coverage SET csl='".$csl."', um_uim='".$um_uim."', pip='".$pip."', deductible='".$deductible."', comprehensive='".$comprehensive."', specified_perils='".$specified."', cargo_limit='".$limit."', truck_cargo_deductible='".$motor_deductible."', reefer_breakdown='".$reefer."' WHERE contact_id='".$contact_Id."' AND id='".$cslid."'";
            $result130 = pg_query($query131);	
 	}
 	
 	else{
-	echo $query132 ="INSERT INTO public.liability_damage_truck_cargo_coverage(csl, um_uim,pip,deductible,comprehensive,specified_perils,limit,truck_cargo_deductible,reefer_breakdown,contact_id) VALUES ('$csl','$um_uim','$pip','$deductible','$comprehensive','$specified','$limit','$motor_deductible','$reefer','$contact_Id')";
+	echo $query132 ="INSERT INTO public.liability_damage_truck_cargo_coverage(csl, um_uim,pip,deductible,comprehensive,specified_perils,cargo_limit,truck_cargo_deductible,reefer_breakdown,contact_id) VALUES ('$csl','$um_uim','$pip','$deductible','$comprehensive','$specified','$limit','$motor_deductible','$reefer','$contact_Id')";
 	$result132 = pg_query($query132);
 			if($result132){
 			echo " 4 Record Created Sucessfully";
