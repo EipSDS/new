@@ -17,6 +17,13 @@ $_POST['Phone'];
 
 $submitting_agency=$_POST['submitting_agency'];
 $Contact_Person=$_POST['Contact_Person'];
+$applicant_sig=$_POST['applicant_sig'];
+$date11=$_POST['date11'];
+$print_name=$_POST['print_name'];
+$title=$_POST['title'];
+$agent_sig=$_POST['agent_sig'];
+$date22=$_POST['date22'];
+ 
 //applicant info
 $Applicant_Name=$_POST['Applicant_Name'];
 $Applicant_lastName=$_POST['Applicant_lastName'];
@@ -923,13 +930,33 @@ if(!empty($cost) or !empty($employees) or !empty($payroll) or !empty($owners) or
 	$rs135 = pg_query($query135);
 	$rows135 = pg_num_rows($rs135);
 	if($rows135>=1){
- 			echo $query136 = "UPDATE  public.additional_coverages SET hired_auto='".$hired."', non_owned_auto='".$owned."', truckers_gl='".$truckers."', cost_of_hire='".$cost."', of_employees='".$employees."', non_driver_payroll='".$payroll."', of_owners='".$owners."', trailer_interchange='".$interchange."', additional_coverage_limit='".$coverage_limit."', of_trailers='".$trailers."', of_days_active='".$active."', interchange_agreement='".$interchange_agreement."', schedule_yes='".$schedule_yes."', schedule_no='".$schedule_no."', loaned_yes='".$loaned_yes."', loaned_no='".$loaned_no."', canceled_yes='".$canceled_yes."', canceled_no='".$canceled_no."' WHERE contact_id='".$contact_Id."' AND id='".$Cost_id."'";
-           $result136 = pg_query($query136);	
+ 			echo $query137 = "UPDATE  public.additional_coverages SET hired_auto='".$hired."', non_owned_auto='".$owned."', truckers_gl='".$truckers."', cost_of_hire='".$cost."', of_employees='".$employees."', non_driver_payroll='".$payroll."', of_owners='".$owners."', trailer_interchange='".$interchange."', additional_coverage_limit='".$coverage_limit."', of_trailers='".$trailers."', of_days_active='".$active."', interchange_agreement='".$interchange_agreement."', schedule_yes='".$schedule_yes."', schedule_no='".$schedule_no."', loaned_yes='".$loaned_yes."', loaned_no='".$loaned_no."', canceled_yes='".$canceled_yes."', canceled_no='".$canceled_no."' WHERE contact_id='".$contact_Id."' AND id='".$Cost_id."'";
+           $result136 = pg_query($query137);	
 	}	else{
 echo $query136 ="INSERT INTO public.additional_coverages(contact_id,hired_auto,non_owned_auto,truckers_gl,cost_of_hire,of_employees,non_driver_payroll,of_owners,trailer_interchange,additional_coverage_limit,of_trailers,of_days_active,interchange_agreement,no_interchange,schedule_yes,schedule_no,loaned_yes,loaned_no,canceled_yes,canceled_no) VALUES ('$contact_Id','$hired','$owned','$truckers','$cost','$employees','$payroll','$owners','$interchange','$coverage_limit','$trailers','$active','$interchange_agreement','$interchange_agreement_no','$schedule_yes','$schedule_no','$loaned_yes','$loaned_no','$canceled_yes','$canceled_no')";
 	$result137 = pg_query($query136);
 			if($result137){
 			echo " 4 Record Created Sucessfully";
+		}
+		else
+		{
+			echo "failed to create";
+		} 	
+  }
+}
+
+if(!empty($submitting_agency) or !empty($Contact_Person) or !empty($applicant_sig) or !empty($date11) or !empty($print_name)){
+	echo $query145 = "SELECT * FROM public.additional_info where contact_id='".$contact_Id."' AND id='".$agency_id."'";	
+	$rs145 = pg_query($query145);
+	$rows145 = pg_num_rows($rs145);
+	if($rows145>=1){
+ 			echo $query146 = "UPDATE  public.additional_info SET agency_name='".$submitting_agency."', contact_person='".$Contact_Person."', applicant_sig='".$applicant_sig."', print_name='".$print_name."', agent_sig='".$agent_sig."', date1='".$date11."', title='".$title."', date2='".$date22."', major_cities='".$major."' WHERE contact_id='".$contact_Id."' AND id='".$agency_id."'";
+           $result136 = pg_query($query146);	
+	}	else{
+echo $query148 ="INSERT INTO public.additional_info(contact_id,agency_name,contact_person,applicant_sig,print_name,agent_sig,date1,title,date2,major_cities) VALUES ('$contact_Id','$submitting_agency','$Contact_Person','$applicant_sig','$print_name','$agent_sig','$date11','$title','$date22','$major')";
+	$result148 = pg_query($query148);
+			if($result148){
+			echo " additional_info Record Created Sucessfully";
 		}
 		else
 		{

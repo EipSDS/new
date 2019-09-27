@@ -756,7 +756,7 @@ if($rows1>=1){
 	<table align="left" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="Submitting Agency" class='submitting_agency' id="submitting_agency" width="100%" style="width:314px;border: 0;font-size:14px;"/>
+			<input type="text" name="submitting_agency" class='submitting_agency' id="submitting_agency" width="100%" style="width:314px;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -776,7 +776,7 @@ if($rows1>=1){
 	<table align="left" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="Contact_Person" class="contact_person" id="Contact_Person" width="100%" style="width:160px;border: 0;font-size:14px;"/>
+			<input type="text" name="Contact_Person" class="Contact_Person" id="Contact_Person" width="100%" style="width:160px;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -3347,10 +3347,10 @@ $(document).ready(function(){
 	<table cellpadding="0" cellspacing="0" WIDTH="100%"; style="border:2px solid #000;">
 	<tr>
 	<td  width="70%">
-	<input type="text" name="Cargo" class='Cargo' id="Cargo7" style="width:100%;">
+	<input type="text" name="applicant_sig" class='applicant_sig' id="applicant_sig" style="width:100%;">
 	</td>
 	<td  width="30%">
-	<input type="text" name="Cargo" class='Cargo' id="Cargo7"  style="width:100%;">
+	<input type="text" name="date11" class='date11' id="date11"  style="width:100%;">
 	</td>
 	</tr>														
 	</table>
@@ -3372,10 +3372,10 @@ $(document).ready(function(){
 	<table cellpadding="0" cellspacing="0" WIDTH="100%"; style="border:2px solid #000;">
 	<tr>
 	<td  width="70%"> 
-	<input type="text" name="Cargo" class='Cargo' id="Cargo7" style="width:100%;">
+	<input type="text" name="print_name" class='Cargo' id="print_name" style="width:100%;">
 	</td>
 	<td  width="30%">
-	<input type="text" name="Cargo" class='Cargo' id="Cargo7"  style="width:100%;">
+	<input type="text" name="title" class='Cargo' id="title"  style="width:100%;">
 	</td>
 	</tr>														
 	</table>
@@ -3387,20 +3387,20 @@ $(document).ready(function(){
 	<table cellpadding="0" cellspacing="0" WIDTH="100%"; >
 	<tr>
 	<td  width="70%"> 
-	Signature of Applicant
+	Print Name
 	</td>
 	<td  width="30%">
-	Date
+	Title
 	</td>
 	</tr>														
 	</table>
 	<table cellpadding="0" cellspacing="0" WIDTH="100%"; style="border:2px solid #000;">
 	<tr>
 	<td  width="70%">
-	<input type="text" name="Cargo" class='Cargo' id="Cargo7" style="width:100%;">
+	<input type="text" name="Cargo" class='Cargo' id="agent_sig" style="width:100%;">
 	</td>
 	<td  width="30%">
-	<input type="text" name="Cargo" class='Cargo' id="Cargo7"  style="width:100%;">
+	<input type="text" name="date22" class='title' id="date22"  style="width:100%;">
 	</td>
 	</tr>														
 	</table>
@@ -3409,6 +3409,16 @@ $(document).ready(function(){
 	<td align="center">											
 	</td>
 	</tr></table>
+		<table cellpadding="0" cellspacing="0" WIDTH="100%"; >
+	<tr>
+	<td  width="70%"> 
+	Signature of Agent
+	</td>
+	<td  width="30%">
+	Date
+	</td>
+	</tr>														
+	</table>
 	<table width="100%" align="center" height="10" cellpadding="0" cellspacing="0">
 	<tr>
 	<td align="center">											
