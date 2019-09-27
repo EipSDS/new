@@ -3199,13 +3199,27 @@ $(document).ready(function(){
 	<td align="left">
 	Does the applicant have any owned, leased or operated equipment not listed on the vehicle schedule? <input type="checkbox" name="schedule_yes" value="" class="schedule" id="schedule_yes" <?php echo $row67['schedule_yes']; ?>> Yes  <input type="checkbox" name="schedule_no" value="" class="schedule" id="schedule_no" <?php echo $row67['schedule_no']; ?>> No
 	</td>
+<script>
+$(document).ready(function(){
+    $('.schedule').click(function() {
+        $('.schedule').not(this).prop('checked', false);
+    });
+});
+</script>
 	</tr>
 	</table>
 	<table align="left" width="100%"  height="32px"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	Are any vehicles leased, loaned or rented to others? <input type="checkbox" name="loaned_yes" value="yes" class='schedule2' id="loaned_yes" <?php echo $row67['loaned_yes']; ?>> Yes  <input type="checkbox" name="loaned_no" class='schedule2' id="loaned_no" <?php echo $row67['loaned_no']; ?>> No
+	Are any vehicles leased, loaned or rented to others? <input type="checkbox" name="loaned_yes" value="yes" class="schedule2" id="loaned_yes" <?php echo $row67['loaned_yes']; ?>> Yes  <input type="checkbox" name="loaned_no" class="schedule2" id="loaned_no" <?php echo $row67['loaned_no']; ?>> No
 	</td>
+<script>
+$(document).ready(function(){
+    $('.schedule2').click(function() {
+        $('.schedule2').not(this).prop('checked', false);
+    });
+});
+</script>
 	</tr>
 	</table>
 	<table align="left" width="100%"  height="32px" cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
@@ -3213,6 +3227,13 @@ $(document).ready(function(){
 	<td>
 	Has the applicant’s policy canceled or non-renewed in the prior 3 years? <input type="checkbox" name="canceled_yes"  value="" class='canceled' id="canceled_yes"<?php echo $row67['canceled_yes']; ?>> Yes  <input type="checkbox" name="canceled_no" value="" class='canceled' id="canceled_no" <?php echo $row67['canceled_no']; ?>> No
 	</td>
+<script>
+$(document).ready(function(){
+    $('.canceled').click(function() {
+        $('.canceled').not(this).prop('checked', false);
+    });
+});
+</script>
 	</tr>
 	</table>
 	</td>
