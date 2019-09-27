@@ -587,15 +587,17 @@ if($row55>=1){
 	}
 }	
 
-echo    $new_id;
-echo 	$csl;
-echo 	$pip;
-echo 	$deductible;
-echo 	$comprehensive;
-echo 	$specified_perils;
-echo 	$limit;
-echo 	$truck_cargo_deductible;
-echo 	$reefer_breakdown;
+echo    $row55['id'];
+echo  	$row55['csl'];
+echo  	$row55['um_uim'];
+echo   	$row55['pip'];
+echo   	$row55['deductible'];
+echo      $row55['comprehensive'];
+echo      $row55['specified_perils'];
+echo   	$row55["cargo_limit"];
+echo      $row55['truck_cargo_deductible'];
+echo   	$row55['reefer_breakdown'];
+	
 $query66 = "SELECT * FROM public.additional_coverages where contact_id='".$_GET['contact_id']."' ORDER BY id DESC";
 $result66 = pg_query($query66);
 $row67 = pg_fetch_assoc($result66);
