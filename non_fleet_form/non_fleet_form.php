@@ -1706,7 +1706,7 @@ if($rows1>=1){
 		<td align="left" height="30" style="font-size:12px;">
 			Is a signed interchange agreement in place?
 			<input type="checkbox" name="interchange_agreement" class="slectOne" value="" id="interchange_agreement" <?php echo $row67['interchange_agreement']; ?> >Yes
-			<input type="checkbox" name="interchange_agreement_no" value="" class="slectOne" id="interchange_agreement_no" <?php echo $row67['no_interchange']; ?>>No
+			<input type="checkbox" name="interchange_agreement" value="" class="slectOne" id="interchange_agreement_no" <?php echo $row67['no_interchange']; ?>>No
 		</td>
 	</tr>
 	</table>
