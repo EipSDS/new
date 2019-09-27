@@ -1211,7 +1211,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="143" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="csl" class='csl' id="csl" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="csl" class='csl' id="csl" value="<?php echo $csl; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1231,7 +1231,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="143" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="UM_UIM:" class='um_uim' id="um_uim" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="UM_UIM:" class='um_uim' id="um_uim" value="<?php echo $umn_uim; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1251,7 +1251,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="143" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="pip" class='pip' id="pip" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="pip" class='pip' id="pip" value="<?php echo $pip; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1284,7 +1284,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="142" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="deductible" class='deductible' id="deductible" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="deductible" class='deductible' id="deductible" value="<?php echo $deductible; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1297,7 +1297,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="30" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="checkbox" name="comprehensive" class='comprehensive' id="comprehensive" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="checkbox" name="comprehensive" class='comprehensive' id="comprehensive" value="Yes" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1317,7 +1317,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="30" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="checkbox" name="specified" class='specified' id="specified" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="checkbox" name="specified" class='specified' id="specified" value="Yes" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>																
@@ -1357,7 +1357,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="142" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="limit" class='limit' id="limit" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="limit" class='limit' id="limit" width="100%" value="<?php echo $limit; ?>" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1377,7 +1377,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="142" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="motor_deductible" class='motor_deductible' id="motor_deductible" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="text" name="motor_deductible" class='motor_deductible' id="motor_deductible" value="<?php echo $truck_cargo_deductible; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
@@ -1390,7 +1390,7 @@ echo 	$reefer_breakdown;
 	<table align="left" width="30" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="checkbox" name="reefer" class='reefer' id="reefer" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="checkbox" name="reefer" class='reefer' id="reefer" value="yes" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>																
