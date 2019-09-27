@@ -1,13 +1,15 @@
  $(document).ready(function(){
  
-	    $('#comprehensive').change(function() {
-        if(this.checked) {
-            var comp = "yes";
-        }      
-
-	});	 
+ 
 	
   $('.save').click(function(){
+	  	    $('#comprehensive').change(function() {
+        if(this.checked) {
+            var comp= "yes";
+        }      
+
+	});	
+	  
     var specified=$("#specified").val(); 
     var reefer=$("#reefer").val(); 
   	var interchange=$("#interchange").val(); 
