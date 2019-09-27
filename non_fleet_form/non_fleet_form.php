@@ -589,7 +589,7 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	echo $truck_cargo_total_incurred[2];		
 	echo '<br>';
 	
-$query55 = "SELECT * FROM public.liability_damage_truck_cargo_coverage where contact_id='".$_GET['contact_id']."' ORDER BY id DESC";
+$query55 = "SELECT * FROM public.liability_damage_truck_cargo_coverage where contact_id='".$_GET['contact_id']."' ORDER BY id";
 $result55 = pg_query($query55);
 $row55 = pg_fetch_assoc($result55);
 if($row55>=1){
