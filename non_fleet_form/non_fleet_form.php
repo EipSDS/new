@@ -1221,7 +1221,7 @@ echo $rows88['major_cities'];
 	<table align="left" width="500" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="text" name="major" class='major' id="major" width="100%" style="width:450;border: 0;font-size:14px;"/>
+			<input type="text" name="major" class='major' id="major" value="<?php echo $rows88['major_cities']; ?>" width="100%" style="width:450;border: 0;font-size:14px;"/>
 		</td>
 	</tr>
 	</table>
