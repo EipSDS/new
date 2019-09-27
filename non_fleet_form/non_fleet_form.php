@@ -29,45 +29,45 @@ if(!empty($phone_number)){
 		$url = "Contacts/$contact_id";
 		$data = "";
 $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);		 
-echo $id=$check_token_valid['data'][0];
-echo $contact_name=$check_token_valid['data'][0]['First_Name_Two'];
-echo $first_name=$check_token_valid['data'][0]['First_Name'];
-echo $last_name=$check_token_valid['data'][0]['Last_Name'];
-echo $effective_date=$check_token_valid['data'][0]['Policy_Effective_Date'];
-echo $garaging_address=$check_token_valid['data'][0]['Home_Address'];
-echo $USDOT_Assigned_to=$check_token_valid['data'][0]['USDOT_associated_with_the_insured_s_business'];
-echo $garaging_City=$check_token_valid['data'][0]['City'];
-echo $garaging_State=$check_token_valid['data'][0]['State'];
-echo $garaging_ZIP_Code=$check_token_valid['data'][0]['ZIP_Code'];
-echo $Yrs_in_business=$check_token_valid['data'][0]['Yrs_in_business'];
-echo $Mailing_Address=$check_token_valid['data'][0]['Mailing_Address'];
-echo $City_Two=$check_token_valid['data'][0]['City_Two'];
-echo $State_Two=$check_token_valid['data'][0]['State_Two'];
-echo $ZIP_Code_Two=$check_token_valid['data'][0]['ZIP_Code_Two'];
-echo $E_mail_Address=$check_token_valid['data'][0]['E_mail_Address'];
-echo $Radious_0_50_miles=$check_token_valid['data'][0]['Radious_0_50_miles'];
-echo $Radious_50_200_miles=$check_token_valid['data'][0]['Radious_50_200_miles'];
-echo $Radious_400_miles=$check_token_valid['data'][0]['Radious_200_miles'];
-echo $Radious_600_miles=$check_token_valid['data'][0]['Radious_600_miles'];
+ $id=$check_token_valid['data'][0];
+ $contact_name=$check_token_valid['data'][0]['First_Name_Two'];
+ $first_name=$check_token_valid['data'][0]['First_Name'];
+ $last_name=$check_token_valid['data'][0]['Last_Name'];
+ $effective_date=$check_token_valid['data'][0]['Policy_Effective_Date'];
+ $garaging_address=$check_token_valid['data'][0]['Home_Address'];
+ $USDOT_Assigned_to=$check_token_valid['data'][0]['USDOT_associated_with_the_insured_s_business'];
+ $garaging_City=$check_token_valid['data'][0]['City'];
+ $garaging_State=$check_token_valid['data'][0]['State'];
+ $garaging_ZIP_Code=$check_token_valid['data'][0]['ZIP_Code'];
+ $Yrs_in_business=$check_token_valid['data'][0]['Yrs_in_business'];
+ $Mailing_Address=$check_token_valid['data'][0]['Mailing_Address'];
+ $City_Two=$check_token_valid['data'][0]['City_Two'];
+ $State_Two=$check_token_valid['data'][0]['State_Two'];
+ $ZIP_Code_Two=$check_token_valid['data'][0]['ZIP_Code_Two'];
+ $E_mail_Address=$check_token_valid['data'][0]['E_mail_Address'];
+ $Radious_0_50_miles=$check_token_valid['data'][0]['Radious_0_50_miles'];
+ $Radious_50_200_miles=$check_token_valid['data'][0]['Radious_50_200_miles'];
+ $Radious_400_miles=$check_token_valid['data'][0]['Radious_200_miles'];
+ $Radious_600_miles=$check_token_valid['data'][0]['Radious_600_miles'];
 
-echo $count=count($check_token_valid['data'][0]['Drivers1']);
-echo "exit";
+ $count=count($check_token_valid['data'][0]['Drivers1']);
+ "exit";
 
-echo $drivername=$check_token_valid['data'][0]['Drivers1'][0]['Name1'];
+ $drivername=$check_token_valid['data'][0]['Drivers1'][0]['Name1'];
 $DOB_Age_MaritalStatus_Points_LicenceNo=$check_token_valid['data'][0]['Drivers1'][0]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 
 $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo); 
-echo"<br>"; 
-echo $DOB=$str_arr[0]; 
-echo"<br>";
-echo $Age=$str_arr[1]; 
-echo"<br>";
-echo $MaritalStatus=$str_arr[2]; 
-echo"<br>";
-echo $Points=$str_arr[3]; 
-echo"<br>";
-echo $LicenceNo=$str_arr[4];
-echo"<br>";
+
+ $DOB=$str_arr[0]; 
+
+ $Age=$str_arr[1]; 
+
+ $MaritalStatus=$str_arr[2]; 
+
+ $Points=$str_arr[3]; 
+
+ $LicenceNo=$str_arr[4];
+
  $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
 $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];
 $License_State=$check_token_valid['data'][0]['Drivers1'][0]['License_State'];
@@ -89,99 +89,99 @@ $Owner_Driver=$check_token_valid['data'][0]['Drivers1'][0]['Owner_Driver'];
 
 
 // New [1] driver data 
-echo $driver_Name11=$check_token_valid['data'][0]['Drivers1'][1]['Name1'];
-echo $DOB_Age_MaritalStatus_Points_LicenceNo1=$check_token_valid['data'][0]['Drivers1'][1]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+ $driver_Name11=$check_token_valid['data'][0]['Drivers1'][1]['Name1'];
+ $DOB_Age_MaritalStatus_Points_LicenceNo1=$check_token_valid['data'][0]['Drivers1'][1]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 
 $str_arr1 = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo1);  
-echo $DOB1=$str_arr1[0]; 
-echo"<br>";
-echo $Age1=$str_arr1[1]; 
-echo"<br>";
-echo $MaritalStatus1=$str_arr1[2]; 
-echo"<br>";
-echo $Points1=$str_arr1[3]; 
-echo"<br>";
-echo $LicenceNo1=$str_arr1[4]; 
+ $DOB1=$str_arr1[0]; 
 
-echo $Experience_Years1=$check_token_valid['data'][0]['Drivers1'][1]['Experience_Years'];	
-echo $License_State1=$check_token_valid['data'][0]['Drivers1'][1]['License_State'];	
-echo $Hire_Date1=$check_token_valid['data'][0]['Drivers1'][1]['Hire_Date'];
-echo $Owner_Driver1=$check_token_valid['data'][0]['Drivers1'][1]['Owner_Driver'];
+ $Age1=$str_arr1[1]; 
+
+ $MaritalStatus1=$str_arr1[2]; 
+
+ $Points1=$str_arr1[3]; 
+
+ $LicenceNo1=$str_arr1[4]; 
+
+ $Experience_Years1=$check_token_valid['data'][0]['Drivers1'][1]['Experience_Years'];	
+ $License_State1=$check_token_valid['data'][0]['Drivers1'][1]['License_State'];	
+ $Hire_Date1=$check_token_valid['data'][0]['Drivers1'][1]['Hire_Date'];
+ $Owner_Driver1=$check_token_valid['data'][0]['Drivers1'][1]['Owner_Driver'];
 // New [2] driver data 
-echo $driver_Name12=$check_token_valid['data'][0]['Drivers1'][2]['Name1'];
-echo $DOB_Age_MaritalStatus_Points_LicenceNo2=$check_token_valid['data'][0]['Drivers1'][2]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+ $driver_Name12=$check_token_valid['data'][0]['Drivers1'][2]['Name1'];
+ $DOB_Age_MaritalStatus_Points_LicenceNo2=$check_token_valid['data'][0]['Drivers1'][2]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 
 $str_arr2 = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo2);  
-echo $DOB2=$str_arr2[0]; 
-echo"<br>";
-echo $Age2=$str_arr2[1]; 
-echo"<br>";
-echo $MaritalStatus2=$str_arr2[2]; 
-echo"<br>";
-echo $Points2=$str_arr2[3]; 
-echo"<br>";
-echo $LicenceNo2=$str_arr2[4]; 
+ $DOB2=$str_arr2[0]; 
 
-echo $Experience_Years2=$check_token_valid['data'][0]['Drivers1'][2]['Experience_Years'];	
-echo $Hire_Date2=$check_token_valid['data'][0]['Drivers1'][2]['Hire_Date'];	
-echo $License_State2=$check_token_valid['data'][0]['Drivers1'][2]['License_State'];
-echo $Owner_Driver2=$check_token_valid['data'][0]['Drivers1'][2]['Owner_Driver'];
+ $Age2=$str_arr2[1]; 
+
+ $MaritalStatus2=$str_arr2[2]; 
+
+ $Points2=$str_arr2[3]; 
+
+ $LicenceNo2=$str_arr2[4]; 
+
+ $Experience_Years2=$check_token_valid['data'][0]['Drivers1'][2]['Experience_Years'];	
+ $Hire_Date2=$check_token_valid['data'][0]['Drivers1'][2]['Hire_Date'];	
+ $License_State2=$check_token_valid['data'][0]['Drivers1'][2]['License_State'];
+ $Owner_Driver2=$check_token_valid['data'][0]['Drivers1'][2]['Owner_Driver'];
 
 // New [3] driver data 
-echo $driver_Name13=$check_token_valid['data'][0]['Drivers1'][3]['Name1'];
-echo $DOB_Age_MaritalStatus_Points_LicenceNo3=$check_token_valid['data'][0]['Drivers1'][3]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+ $driver_Name13=$check_token_valid['data'][0]['Drivers1'][3]['Name1'];
+ $DOB_Age_MaritalStatus_Points_LicenceNo3=$check_token_valid['data'][0]['Drivers1'][3]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 
 $str_arr3 = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo3);  
-echo $DOB3=$str_arr3[0]; 
-echo"<br>";
-echo $Age3=$str_arr3[1]; 
-echo"<br>";
-echo $MaritalStatus3=$str_arr3[2]; 
-echo"<br>";
-echo $Points3=$str_arr3[3]; 
-echo"<br>";
-echo $LicenceNo3=$str_arr3[4]; 
+ $DOB3=$str_arr3[0]; 
 
-echo $Experience_Years3=$check_token_valid['data'][0]['Drivers1'][3]['Experience_Years'];	
-echo $Hire_Date3=$check_token_valid['data'][0]['Drivers1'][3]['Hire_Date'];
-echo $License_State3=$check_token_valid['data'][0]['Drivers1'][3]['License_State'];	
-echo $Owner_Driver3=$check_token_valid['data'][0]['Drivers1'][3]['Owner_Driver'];	
+ $Age3=$str_arr3[1]; 
+
+ $MaritalStatus3=$str_arr3[2]; 
+
+ $Points3=$str_arr3[3]; 
+
+ $LicenceNo3=$str_arr3[4]; 
+
+ $Experience_Years3=$check_token_valid['data'][0]['Drivers1'][3]['Experience_Years'];	
+ $Hire_Date3=$check_token_valid['data'][0]['Drivers1'][3]['Hire_Date'];
+ $License_State3=$check_token_valid['data'][0]['Drivers1'][3]['License_State'];	
+ $Owner_Driver3=$check_token_valid['data'][0]['Drivers1'][3]['Owner_Driver'];	
 // New [4] driver data 
-echo $driver_Name14=$check_token_valid['data'][0]['Drivers1'][4]['Name1'];
-echo $DOB_Age_MaritalStatus_Points_LicenceNo4=$check_token_valid['data'][0]['Drivers1'][4]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+ $driver_Name14=$check_token_valid['data'][0]['Drivers1'][4]['Name1'];
+ $DOB_Age_MaritalStatus_Points_LicenceNo4=$check_token_valid['data'][0]['Drivers1'][4]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 
 $str_arr4= preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo4);  
-echo $DOB4=$str_arr4[0]; 
-echo"<br>";
-echo $Age4=$str_arr4[1]; 
-echo"<br>";
-echo $MaritalStatus4=$str_arr4[2]; 
-echo"<br>";
-echo $Points4=$str_arr4[3]; 
-echo"<br>";
-echo $LicenceNo4=$str_arr4[4]; 
+ $DOB4=$str_arr4[0]; 
 
-echo $Experience_Years4=$check_token_valid['data'][0]['Drivers1'][4]['Experience_Years'];	
-echo $Hire_Date4=$check_token_valid['data'][0]['Drivers1'][4]['Hire_Date'];	
+ $Age4=$str_arr4[1]; 
+
+ $MaritalStatus4=$str_arr4[2]; 
+
+ $Points4=$str_arr4[3]; 
+
+ $LicenceNo4=$str_arr4[4]; 
+
+ $Experience_Years4=$check_token_valid['data'][0]['Drivers1'][4]['Experience_Years'];	
+ $Hire_Date4=$check_token_valid['data'][0]['Drivers1'][4]['Hire_Date'];	
 $License_State4=$check_token_valid['data'][0]['Drivers1'][4]['License_State'];
 $Owner_Driver4=$check_token_valid['data'][0]['Drivers1'][4]['Owner_Driver'];
 // New [5] driver data 
-echo $driver_Name15=$check_token_valid['data'][0]['Drivers1'][5]['Name1'];
-echo $DOB_Age_MaritalStatus_Points_LicenceNo5=$check_token_valid['data'][0]['Drivers1'][5]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+ $driver_Name15=$check_token_valid['data'][0]['Drivers1'][5]['Name1'];
+ $DOB_Age_MaritalStatus_Points_LicenceNo5=$check_token_valid['data'][0]['Drivers1'][5]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 
 $str_arr5= preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo5);  
-echo $DOB5=$str_arr5[0]; 
-echo"<br>";
-echo $Age5=$str_arr5[1]; 
-echo"<br>";
-echo $MaritalStatus5=$str_arr5[2]; 
-echo"<br>";
-echo $Points5=$str_arr4[3]; 
-echo"<br>";
-echo $LicenceNo5=$str_arr5[4]; 
+ $DOB5=$str_arr5[0]; 
 
-echo $Experience_Years5=$check_token_valid['data'][0]['Drivers1'][5]['Experience_Years'];	
-echo $Hire_Date5=$check_token_valid['data'][0]['Drivers1'][5]['Hire_Date'];	
+ $Age5=$str_arr5[1]; 
+
+ $MaritalStatus5=$str_arr5[2]; 
+
+ $Points5=$str_arr4[3]; 
+
+ $LicenceNo5=$str_arr5[4]; 
+
+ $Experience_Years5=$check_token_valid['data'][0]['Drivers1'][5]['Experience_Years'];	
+ $Hire_Date5=$check_token_valid['data'][0]['Drivers1'][5]['Hire_Date'];	
 $License_State5=$check_token_valid['data'][0]['Drivers1'][5]['License_State'];
 }
 else{
@@ -194,145 +194,145 @@ else{
 	 $url = "Contacts/$contact_id";
 	 $data = "";
 	 $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
-echo $contact_id=$check_token_valid['data'][0];
-echo $first_name=$check_token_valid['data'][0]['First_Name'];
-echo $last_name=$check_token_valid['data'][0]['Last_Name'];
-echo $effective_date=$check_token_valid['data'][0]['Policy_Effective_Date'];
-echo $garaging_address=$check_token_valid['data'][0]['Home_Address'];
-echo $USDOT_Assigned_to=$check_token_valid['data'][0]['USDOT_Assigned_to'];
-echo $garaging_City=$check_token_valid['data'][0]['City'];
-echo $garaging_State=$check_token_valid['data'][0]['State'];
-echo $garaging_ZIP_Code=$check_token_valid['data'][0]['ZIP_Code'];
-echo $Yrs_in_business=$check_token_valid['data'][0]['Yrs_in_business'];
-echo $Mailing_Address=$check_token_valid['data'][0]['Mailing_Address'];
-echo $City_Two=$check_token_valid['data'][0]['City_Two'];
-echo $State_Two=$check_token_valid['data'][0]['State_Two'];
-echo $ZIP_Code_Two=$check_token_valid['data'][0]['ZIP_Code_Two'];
-echo $E_mail_Address=$check_token_valid['data'][0]['E_mail_Address'];
-echo $Radious_0_50_miles=$check_token_valid['data'][0]['Radious_0_50_miles'];
-echo $Radious_50_200_miles=$check_token_valid['data'][0]['Radious_50_200_miles'];
-echo $Radious_400_miles=$check_token_valid['data'][0]['Radious_200_miles'];
-echo $Radious_600_miles=$check_token_valid['data'][0]['Radious_600_miles'];	
+ $contact_id=$check_token_valid['data'][0];
+ $first_name=$check_token_valid['data'][0]['First_Name'];
+ $last_name=$check_token_valid['data'][0]['Last_Name'];
+ $effective_date=$check_token_valid['data'][0]['Policy_Effective_Date'];
+ $garaging_address=$check_token_valid['data'][0]['Home_Address'];
+ $USDOT_Assigned_to=$check_token_valid['data'][0]['USDOT_Assigned_to'];
+ $garaging_City=$check_token_valid['data'][0]['City'];
+ $garaging_State=$check_token_valid['data'][0]['State'];
+ $garaging_ZIP_Code=$check_token_valid['data'][0]['ZIP_Code'];
+ $Yrs_in_business=$check_token_valid['data'][0]['Yrs_in_business'];
+ $Mailing_Address=$check_token_valid['data'][0]['Mailing_Address'];
+ $City_Two=$check_token_valid['data'][0]['City_Two'];
+ $State_Two=$check_token_valid['data'][0]['State_Two'];
+ $ZIP_Code_Two=$check_token_valid['data'][0]['ZIP_Code_Two'];
+ $E_mail_Address=$check_token_valid['data'][0]['E_mail_Address'];
+ $Radious_0_50_miles=$check_token_valid['data'][0]['Radious_0_50_miles'];
+ $Radious_50_200_miles=$check_token_valid['data'][0]['Radious_50_200_miles'];
+ $Radious_400_miles=$check_token_valid['data'][0]['Radious_200_miles'];
+ $Radious_600_miles=$check_token_valid['data'][0]['Radious_600_miles'];	
 //Number [0] driver data 
 // echo $driver_Name1=$check_token_valid['data'][0]['Drivers1'][0]['Name1'];
 // echo $DOB_Age_MaritalStatus_Points_LicenceNo=$check_token_valid['data'][0]['Drivers1'][0]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 
-echo $count=count($check_token_valid['data'][0]['Drivers1']);
-echo "start";
+ $count=count($check_token_valid['data'][0]['Drivers1']);
+ "start";
 for($i = 0; $i<$count; $i++){
-echo $drivername=$check_token_valid['data'][0]['Drivers1'][0]['Name1'];
+ $drivername=$check_token_valid['data'][0]['Drivers1'][0]['Name1'];
 $DOB_Age_MaritalStatus_Points_LicenceNo=$check_token_valid['data'][0]['Drivers1'][0]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 
 $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo); 
-echo"<br>"; 
-echo $DOB=$str_arr[0]; 
-echo"<br>";
-echo $Age=$str_arr[1]; 
-echo"<br>";
-echo $MaritalStatus=$str_arr[2]; 
-echo"<br>";
-echo $Points=$str_arr[3]; 
-echo"<br>";
-echo $LicenceNo=$str_arr[4];
-echo"<br>";
+
+ $DOB=$str_arr[0]; 
+
+ $Age=$str_arr[1]; 
+
+ $MaritalStatus=$str_arr[2]; 
+
+ $Points=$str_arr[3]; 
+
+ $LicenceNo=$str_arr[4];
+
  $Experience_Years=$check_token_valid['data'][0]['Drivers1'][0]['Experience_Years'];	
 $Hire_Date=$check_token_valid['data'][0]['Drivers1'][0]['Hire_Date'];
 $License_State=$check_token_valid['data'][0]['Drivers1'][0]['License_State'];
 $Owner_Driver=$check_token_valid['data'][0]['Drivers1'][0]['Owner_Driver'];
 }
 // New [1] driver data 
-echo $driver_Name11=$check_token_valid['data'][0]['Drivers1'][1]['Name1'];
-echo $DOB_Age_MaritalStatus_Points_LicenceNo1=$check_token_valid['data'][0]['Drivers1'][1]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+ $driver_Name11=$check_token_valid['data'][0]['Drivers1'][1]['Name1'];
+ $DOB_Age_MaritalStatus_Points_LicenceNo1=$check_token_valid['data'][0]['Drivers1'][1]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 
 $str_arr1 = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo1);  
-echo $DOB1=$str_arr1[0]; 
-echo"<br>";
-echo $Age1=$str_arr1[1]; 
-echo"<br>";
-echo $MaritalStatus1=$str_arr1[2]; 
-echo"<br>";
-echo $Points1=$str_arr1[3]; 
-echo"<br>";
-echo $LicenceNo1=$str_arr1[4]; 
+ $DOB1=$str_arr1[0]; 
 
-echo $Experience_Years1=$check_token_valid['data'][0]['Drivers1'][1]['Experience_Years'];	
-echo $License_State1=$check_token_valid['data'][0]['Drivers1'][1]['License_State'];	
-echo $Hire_Date1=$check_token_valid['data'][0]['Drivers1'][1]['Hire_Date'];
-echo $Owner_Driver1=$check_token_valid['data'][0]['Drivers1'][1]['Owner_Driver'];
+ $Age1=$str_arr1[1]; 
+
+ $MaritalStatus1=$str_arr1[2]; 
+
+ $Points1=$str_arr1[3]; 
+
+ $LicenceNo1=$str_arr1[4]; 
+
+ $Experience_Years1=$check_token_valid['data'][0]['Drivers1'][1]['Experience_Years'];	
+ $License_State1=$check_token_valid['data'][0]['Drivers1'][1]['License_State'];	
+ $Hire_Date1=$check_token_valid['data'][0]['Drivers1'][1]['Hire_Date'];
+ $Owner_Driver1=$check_token_valid['data'][0]['Drivers1'][1]['Owner_Driver'];
 // New [2] driver data 
-echo $driver_Name12=$check_token_valid['data'][0]['Drivers1'][2]['Name1'];
-echo $DOB_Age_MaritalStatus_Points_LicenceNo2=$check_token_valid['data'][0]['Drivers1'][2]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+ $driver_Name12=$check_token_valid['data'][0]['Drivers1'][2]['Name1'];
+ $DOB_Age_MaritalStatus_Points_LicenceNo2=$check_token_valid['data'][0]['Drivers1'][2]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 
 $str_arr2 = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo2);  
-echo $DOB2=$str_arr2[0]; 
-echo"<br>";
-echo $Age2=$str_arr2[1]; 
-echo"<br>";
-echo $MaritalStatus2=$str_arr2[2]; 
-echo"<br>";
-echo $Points2=$str_arr2[3]; 
-echo"<br>";
-echo $LicenceNo2=$str_arr2[4]; 
+ $DOB2=$str_arr2[0]; 
 
-echo $Experience_Years2=$check_token_valid['data'][0]['Drivers1'][2]['Experience_Years'];	
-echo $Hire_Date2=$check_token_valid['data'][0]['Drivers1'][2]['Hire_Date'];	
-echo $License_State2=$check_token_valid['data'][0]['Drivers1'][2]['License_State'];
-echo $Owner_Driver2=$check_token_valid['data'][0]['Drivers1'][2]['Owner_Driver'];
+ $Age2=$str_arr2[1]; 
+
+ $MaritalStatus2=$str_arr2[2]; 
+
+ $Points2=$str_arr2[3]; 
+
+ $LicenceNo2=$str_arr2[4]; 
+
+ $Experience_Years2=$check_token_valid['data'][0]['Drivers1'][2]['Experience_Years'];	
+ $Hire_Date2=$check_token_valid['data'][0]['Drivers1'][2]['Hire_Date'];	
+ $License_State2=$check_token_valid['data'][0]['Drivers1'][2]['License_State'];
+ $Owner_Driver2=$check_token_valid['data'][0]['Drivers1'][2]['Owner_Driver'];
 // New [3] driver data 
-echo $driver_Name13=$check_token_valid['data'][0]['Drivers1'][3]['Name1'];
-echo $DOB_Age_MaritalStatus_Points_LicenceNo3=$check_token_valid['data'][0]['Drivers1'][3]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+ $driver_Name13=$check_token_valid['data'][0]['Drivers1'][3]['Name1'];
+ $DOB_Age_MaritalStatus_Points_LicenceNo3=$check_token_valid['data'][0]['Drivers1'][3]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 
 $str_arr3 = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo3);  
-echo $DOB3=$str_arr3[0]; 
-echo"<br>";
-echo $Age3=$str_arr3[1]; 
-echo"<br>";
-echo $MaritalStatus3=$str_arr3[2]; 
-echo"<br>";
-echo $Points3=$str_arr3[3]; 
-echo"<br>";
-echo $LicenceNo3=$str_arr3[4]; 
+ $DOB3=$str_arr3[0]; 
 
-echo $Experience_Years3=$check_token_valid['data'][0]['Drivers1'][3]['Experience_Years'];	
-echo $Hire_Date3=$check_token_valid['data'][0]['Drivers1'][3]['Hire_Date'];
-echo $License_State3=$check_token_valid['data'][0]['Drivers1'][3]['License_State'];	
-echo $Owner_Driver3=$check_token_valid['data'][0]['Drivers1'][3]['Owner_Driver'];
+ $Age3=$str_arr3[1]; 
+
+ $MaritalStatus3=$str_arr3[2]; 
+
+ $Points3=$str_arr3[3]; 
+
+ $LicenceNo3=$str_arr3[4]; 
+
+ $Experience_Years3=$check_token_valid['data'][0]['Drivers1'][3]['Experience_Years'];	
+ $Hire_Date3=$check_token_valid['data'][0]['Drivers1'][3]['Hire_Date'];
+ $License_State3=$check_token_valid['data'][0]['Drivers1'][3]['License_State'];	
+ $Owner_Driver3=$check_token_valid['data'][0]['Drivers1'][3]['Owner_Driver'];
 // New [4] driver data 
-echo $driver_Name14=$check_token_valid['data'][0]['Drivers1'][4]['Name1'];
-echo $DOB_Age_MaritalStatus_Points_LicenceNo4=$check_token_valid['data'][0]['Drivers1'][4]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+ $driver_Name14=$check_token_valid['data'][0]['Drivers1'][4]['Name1'];
+ $DOB_Age_MaritalStatus_Points_LicenceNo4=$check_token_valid['data'][0]['Drivers1'][4]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 
 $str_arr4= preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo4);  
-echo $DOB4=$str_arr4[0]; 
-echo"<br>";
-echo $Age4=$str_arr4[1]; 
-echo"<br>";
-echo $MaritalStatus4=$str_arr4[2]; 
-echo"<br>";
-echo $Points4=$str_arr4[3]; 
-echo"<br>";
-echo $LicenceNo4=$str_arr4[4]; 
+ $DOB4=$str_arr4[0]; 
 
-echo $Experience_Years4=$check_token_valid['data'][0]['Drivers1'][4]['Experience_Years'];	
-echo $Hire_Date4=$check_token_valid['data'][0]['Drivers1'][4]['Hire_Date'];	
+ $Age4=$str_arr4[1]; 
+
+ $MaritalStatus4=$str_arr4[2]; 
+
+ $Points4=$str_arr4[3]; 
+
+ $LicenceNo4=$str_arr4[4]; 
+
+ $Experience_Years4=$check_token_valid['data'][0]['Drivers1'][4]['Experience_Years'];	
+ $Hire_Date4=$check_token_valid['data'][0]['Drivers1'][4]['Hire_Date'];	
 $License_State4=$check_token_valid['data'][0]['Drivers1'][4]['License_State'];
 $Owner_Driver4=$check_token_valid['data'][0]['Drivers1'][4]['Owner_Driver'];
 // New [5] driver data 
-echo $driver_Name15=$check_token_valid['data'][0]['Drivers1'][5]['Name1'];
-echo $DOB_Age_MaritalStatus_Points_LicenceNo5=$check_token_valid['data'][0]['Drivers1'][5]['DOB_Age_MaritalStatus_Points_LicenceNo'];
+ $driver_Name15=$check_token_valid['data'][0]['Drivers1'][5]['Name1'];
+ $DOB_Age_MaritalStatus_Points_LicenceNo5=$check_token_valid['data'][0]['Drivers1'][5]['DOB_Age_MaritalStatus_Points_LicenceNo'];
 
 $str_arr5= preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo5);  
-echo $DOB5=$str_arr5[0]; 
-echo"<br>";
-echo $Age5=$str_arr5[1]; 
-echo"<br>";
-echo $MaritalStatus5=$str_arr5[2]; 
-echo"<br>";
-echo $Points5=$str_arr4[3]; 
-echo"<br>";
-echo $LicenceNo5=$str_arr5[4]; 
+ $DOB5=$str_arr5[0]; 
 
-echo $Experience_Years5=$check_token_valid['data'][0]['Drivers1'][5]['Experience_Years'];	
-echo $Hire_Date5=$check_token_valid['data'][0]['Drivers1'][5]['Hire_Date'];	
+ $Age5=$str_arr5[1]; 
+
+ $MaritalStatus5=$str_arr5[2]; 
+
+ $Points5=$str_arr4[3]; 
+
+ $LicenceNo5=$str_arr5[4]; 
+
+ $Experience_Years5=$check_token_valid['data'][0]['Drivers1'][5]['Experience_Years'];	
+ $Hire_Date5=$check_token_valid['data'][0]['Drivers1'][5]['Hire_Date'];	
 $License_State5=$check_token_valid['data'][0]['Drivers1'][5]['License_State'];
 // $str_arr = preg_split ("/\,/", $DOB_Age_MaritalStatus_Points_LicenceNo);  
 // echo $DOB=$str_arr[0]; 
