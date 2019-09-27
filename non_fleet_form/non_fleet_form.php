@@ -1320,7 +1320,7 @@ if($rows1>=1){
 	<table align="left" width="30" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="checkbox" name="comprehensive" class='comprehensive' id="comprehensive" value="" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="checkbox" name="comprehensive" class='comprehensive' id="comprehensive" value="" width="100%" style="width:100%;border: 0;font-size:14px;" <?php echo $row55['comprehensive']; ?>/>
 		</td>
 	</tr>
 	</table>
@@ -1340,7 +1340,7 @@ if($rows1>=1){
 	<table align="left" width="30" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="checkbox" name="specified" class='specified' id="specified" value="yes" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="checkbox" name="specified" class='specified' id="specified" value="yes" width="100%" style="width:100%;border: 0;font-size:14px;" <?php echo $row55['specified_perils']; ?>/>
 		</td>
 	</tr>
 	</table>																
