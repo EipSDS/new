@@ -908,13 +908,13 @@ if($row67>=1){
 <table align="left" cellpadding="6" cellspacing="0">
 			<tr>
 				<td align="center">
-					<input type="text" name="City" class='City' id="City" value="<?php  ?>"  style="width:110px;border: 0;font-size:14px;"/>
+					<input type="text" name="City" class='City' id="City" value="<?php echo $garaging_City; ?>"  style="width:74px;border: 0;font-size:14px;"/>
 				</td>
 				<td align="center">
-					<input type="text" name="State" class='State' id="State" value="<?php  ?>" style="width:110px;border: 0;font-size:14px;"/>
+					<input type="text" name="State" class='State' id="State" value="<?php echo $garaging_State; ?>" style="width:74px;border: 0;font-size:14px;"/>
 				</td>
 				<td align="center">
-					<input type="text" name="Zip" class='Zip' id="Zip" value="<?php  ?>" style="width:110px;border: 0;font-size:14px;"/>
+					<input type="text" name="Zip" class='Zip' id="Zip" value="<?php echo $garaging_ZIP_Code; ?>" style="width:73px;border: 0;font-size:14px;"/>
 				</td>
 			</tr>
 		</table>
