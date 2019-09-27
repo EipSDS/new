@@ -3,13 +3,13 @@
 	
   $('.save').click(function(){
 	var comprehensivetest =$("#comprehensive").prop('checked');
-	if( comprehensivetest == "true"){
+	if( comprehensivetest == true){
 		var comprehensive = "checked";
 	}else{
 		var comprehensive = "false";
 	}
 	var specifiedtest =$("#specified").prop('checked');
-		if( specifiedtest == "true"){
+		if( specifiedtest == true){
 		var specified = "checked";
 	}else{
 		var specified = "false";
