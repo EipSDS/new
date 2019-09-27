@@ -371,7 +371,7 @@ $License_State5=$check_token_valid['data'][0]['Drivers1'][5]['License_State'];
 	
 	
 
- $query3 = "SELECT * FROM public.contact_vehicles where contact_id='".$_GET['contact_id']."' AND vehicle_type='Trailer'  ORDER BY id";
+ $query3 = "SELECT * FROM public.contact_vehicles where contact_id='".$_GET['contact_id']."' AND vehicle_type='Trailer' ";
 $result3 = pg_query($query3);
 $row9 = pg_fetch_assoc($result3);
 
@@ -408,7 +408,7 @@ echo $arrmake[1];
 echo $arrmake[2];
 echo $arrmake[3];
 echo "===========================";
-$query5 = "SELECT * FROM public.contact_vehicles where contact_id='".$_GET['contact_id']."' AND vehicle_type !='Trailer' ORDER BY id";
+$query5 = "SELECT * FROM public.contact_vehicles where contact_id='".$_GET['contact_id']."' AND vehicle_type !='Trailer' ";
 $res5 = pg_query($query5);
 $row6 = pg_fetch_assoc($res5);
 
@@ -1900,7 +1900,7 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<td>
 	<input type="hidden" name="trailer5id" class='trailer5id' id="trailer5id" value="<?php echo $arrid[4]; ?>"/>
 	<input type="text" name="trailer5" class='tractors' id="trailer5" value="<?php echo $arryear[3]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
-	<input type="text" name="trailermake5" class='tractors' id="trailermake5" value="<?php echo $arrmake[3]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	<input type="text" name="trailermake5" class="tractors" id="trailermake5" value="<?php echo $arrmake[3]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
 	</table>
