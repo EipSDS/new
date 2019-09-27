@@ -601,7 +601,7 @@ if($row55>=1){
  	$deductible=$row56['deductible'];
  	$comprehensive=$row56['comprehensive'];
  	$specified_perils=$row56['specified_perils'];
- 	$limit=$row56["limit"];
+ 	$limit=$row56["cargo_limit"];
  	$truck_cargo_deductible=$row56['truck_cargo_deductible'];
  	$reefer_breakdown=$row56['reefer_breakdown'];	
 	}
