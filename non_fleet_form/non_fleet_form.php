@@ -622,7 +622,7 @@ if($row67>=1){
  	$of_trailers=$row67['of_trailers'];	
  	$of_days_active=$row67['of_days_active'];
 	
- 	$interchange_agreement=$row67['interchange_agreement'
+ 	$interchange_agreement=$row67['interchange_agreement'];
 
 
 $query1 = "SELECT * FROM public.violation where contact_id='".$contact_id."' ORDER BY id";
