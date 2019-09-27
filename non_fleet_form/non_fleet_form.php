@@ -623,6 +623,7 @@ if($row67>=1){
  	$of_days_active=$row67['of_days_active'];
 	
  	$interchange_agreement=$row67['interchange_agreement'];
+ 	$interchange_agreement=$row67['no_interchange'];
 
 
 $query1 = "SELECT * FROM public.violation where contact_id='".$contact_id."' ORDER BY id";
@@ -1413,7 +1414,7 @@ if($rows1>=1){
 	<table align="left" width="30" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="checkbox" name="reefer" class='reefer' id="reefer" value="yes" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="checkbox" name="reefer" class='reefer' id="reefer" value="yes" width="100%" style="width:100%;border: 0;font-size:14px;"<?php echo $row55['reefer_breakdown']; ?>/>
 		</td>
 	</tr>
 	</table>																
@@ -1461,7 +1462,7 @@ if($rows1>=1){
 	<table align="left" width="30" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="checkbox" name="hired" class='hired' id="hired" value="yes"  width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="checkbox" name="hired" class='hired' id="hired" value="yes"  width="100%" style="width:100%;border: 0;font-size:14px;" <?php echo $hired_auto=$row67['hired_auto']; ?>/>
 		</td>
 	</tr>
 	</table>																
@@ -1481,7 +1482,7 @@ if($rows1>=1){
 	<table align="left" width="30" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="checkbox" name="owned" class='owned' id="owned" value="yes" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="checkbox" name="owned" class='owned' id="owned" value="yes" width="100%" style="width:100%;border: 0;font-size:14px;" <?php echo $row67['non_owned_auto']; ?>/>
 		</td>
 	</tr>
 	</table>																
@@ -1501,7 +1502,7 @@ if($rows1>=1){
 	<table align="left" width="30" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="checkbox" name="truckers" class='truckers' value="yes" id="truckers" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="checkbox" name="truckers" class='truckers' value="yes" id="truckers" width="100%" style="width:100%;border: 0;font-size:14px;" <?php echo $row67['truckers_gl']; ?>/>
 		</td>
 	</tr>
 	</table>																
@@ -1627,7 +1628,7 @@ if($rows1>=1){
 	<table align="left" width="30" cellpadding="6" cellspacing="0">
 	<tr>
 		<td align="center">
-			<input type="checkbox" name="interchange" class='interchange' id="interchange" value="yes" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="checkbox" name="interchange" class='interchange' id="interchange" value="yes" width="100%" style="width:100%;border: 0;font-size:14px;" <?php echo $row67["trailer_interchange"]; ?>/>
 		</td>
 	</tr>
 	</table>
@@ -1704,8 +1705,8 @@ if($rows1>=1){
 	<tr>
 		<td align="left" height="30" style="font-size:12px;">
 			Is a signed interchange agreement in place?
-			<input type="checkbox" name="interchange_agreement" class='interchange_agreement' value="yes" id="interchange_agreement">Yes
-			<input type="checkbox" name="place" value="no" class='place' id="place">No
+			<input type="checkbox" name="interchange_agreement" class="slectOne" value="" id="interchange_agreement" <?php echo $row67['interchange_agreement']; ?> >Yes
+			<input type="checkbox" name="interchange_agreement_no" value="" class="slectOne" id="interchange_agreement_no" <?php echo $row67['no_interchange']; ?>>No
 		</td>
 	</tr>
 	</table>
