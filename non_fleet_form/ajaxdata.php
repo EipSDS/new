@@ -897,7 +897,7 @@ if(!empty($csl) or !empty($um_uim) or !empty($pip) or !empty($limit) or !empty($
 	}
 	
 	else{
-	echo $query132 ="INSERT INTO public.liability_damage_truck_cargo_coverage(csl, um_uim, pip, deductible,comprehensive,specified_perils,limit,truck_cargo_deductible,reefer_breakdown,contact_id) VALUES ('$csl','$um_uim','$pip','$deductible','$comprehensive','$specified','$limit','$motor_deductible','$reefer','$contact_Id')";
+	echo $query132 ="INSERT INTO public.liability_damage_truck_cargo_coverage(csl, um_uim,pip,deductible,comprehensive,specified_perils,limit,truck_cargo_deductible,reefer_breakdown,contact_id) VALUES ('$csl','$um_uim','$pip','$deductible','$comprehensive','$specified','$limit','$motor_deductible','$reefer','$contact_Id')";
 	$result132 = pg_query($query132);
 			if($result132){
 			echo " 4 Record Created Sucessfully";
