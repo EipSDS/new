@@ -14,12 +14,43 @@
 	}else{
 		var specified = "false";
 	}
-	var reefer =$("#reefer").prop('checked');
-	var interchange =$("#interchange").prop('checked');
-	var interchange_agreement =$("#interchange_agreement").prop('checked');
-	var hired =$("#hired").prop('checked');
-	var owned =$("#owned").prop('checked');
-	var truckers =$("#truckers").prop('checked');
+		var reefertest =$("#reefer").prop('checked');
+		if( reefertest == true){
+		var reefer = "checked";
+	}else{
+		var reefer = "false";
+	}
+	
+	var interchangetest =$("#interchange").prop('checked');
+		if( interchangetest == true){
+		var interchange = "checked";
+	}else{
+		var interchange = "false";
+	}
+	var interchange_agreementtest =$("#interchange_agreement").prop('checked');
+		if( interchange_agreementtest == true){
+		var interchange_agreement = "checked";
+	}else{
+		var interchange_agreement = "false";
+	}	
+	var hiredtest =$("#hired").prop('checked');
+		if( hiredtest == true){
+		var hired = "checked";
+	}else{
+		var hired = "false";
+	}
+	var ownedtest =$("#owned").prop('checked');
+		if( ownedtest == true){
+		var owned = "checked";
+	}else{
+		var owned = "false";
+	}	
+	var truckerstest =$("#truckers").prop('checked');
+		if( truckerstest == true){
+		var truckers = "checked";
+	}else{
+		var truckers = "false";
+	}	
     console.log(comprehensive);
     console.log(specified);
 	
