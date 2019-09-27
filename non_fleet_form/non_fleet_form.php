@@ -3422,7 +3422,7 @@ $(document).ready(function(){
 	<input type="text" name="agent_sig" class='Cargo' id="agent_sig" value="<?php echo $rows88['title']; ?>" style="width:100%;">
 	</td>
 	<td  width="30%">
-	<input type="text" name="date22" class='title' id="date22"  style="width:100%;">
+	<input type="text" name="date22" class='title' id="date22" value="<?php echo $rows88['date2']; ?>"  style="width:100%;">
 	</td>
 	</tr>														
 	</table>
