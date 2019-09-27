@@ -860,7 +860,7 @@ if(!empty($trailermake5) or !empty($VIN_new5)){
 	$rs125 = pg_query($query125);
 	$rows125 = pg_num_rows($rs125);
 	if($rows125==1){
- 			echo $query126 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new5."', year='".$trailer5."', make='".$trailermake5."' WHERE contact_id='".$contact_Id."' AND id='".$trailer5id."'";
+ 			$query126 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new5."', year='".$trailer5."', make='".$trailermake5."' WHERE contact_id='".$contact_Id."' AND id='".$trailer5id."'";
            $result126 = pg_query($query126);	
 	}
 	
