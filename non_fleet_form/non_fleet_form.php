@@ -1889,7 +1889,7 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="hidden" name="trailer4id" class='trailer4id' id="trailer4id" value="<?php echo $arrid[4]; ?>"/>
+	<input type="hidden" name="trailer4id" class='trailer4id' id="trailer4id" value="<?php echo $arrid[2]; ?>"/>
 	<input type="text" name="trailer4" class='tractors' id="trailer4" value="<?php echo $arryear[2]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	<input type="text" name="trailermake4" class='tractors' id="trailermake4" value="<?php echo $arrmake[2]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	</td>
@@ -1898,7 +1898,7 @@ $liability_of_losses[]=$row33['liability_of_losses'];
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
-	<input type="hidden" name="trailer5id" class='trailer5id' id="trailer5id" value="<?php echo $arrid[4]; ?>"/>
+	<input type="hidden" name="trailer5id" class='trailer5id' id="trailer5id" value="<?php echo $arrid[3]; ?>"/>
 	<input type="text" name="trailer5" class='tractors' id="trailer5" value="<?php echo $arryear[3]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	<input type="text" name="trailermake5" class="tractors" id="trailermake5" value="<?php echo $arrmake[3]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
 	</td>
