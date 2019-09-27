@@ -692,7 +692,14 @@ echo $rows88['major_cities'];
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	<script src="http://givesurance.herokuapp.com/non_fleet_form/js/script.js"></script>
+	      <script>
+         $(function() {
+            $( "#effective_date" ).datepicker();
+         });
+      </script>
 	</head>
 	<body>
 	<fieldset class='dataform'>
@@ -867,7 +874,7 @@ echo $rows88['major_cities'];
 			<table align="left" cellpadding="6" cellspacing="0">
 				<tr>
 					<td align="center">
-						<input type="text" name="Effective Date" class="effective_date" id="effective_date" value="<?php echo $effective_date; ?>" width="100%" style="width:125px;border: 0;font-size:14px;"/>
+						<input type="text" name="effective_date" class="effective_date" id="effective_date" value="<?php echo $effective_date; ?>" width="100%" style="width:125px;border: 0;font-size:14px;"/>
 					</td>
 				</tr>
 			</table>
