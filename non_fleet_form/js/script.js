@@ -15,8 +15,8 @@
     var hired=$("#hired").val(); 
     var owned=$("#owned").val(); 
     var truckers=$("#truckers").val();
-	var checkbox_to_update =$("#comprehensive").prop('checked');
-    console.log(checkbox_to_update);
+	var comprehensive =$("#comprehensive").prop('checked');
+    console.log(comprehensive);
 var contact_id =$(".ContactId").val();
 var dataform=	$('.dataform').find('select, textarea, input').serialize();
  var submitting_agency=$("#submitting_agency").val(); 
