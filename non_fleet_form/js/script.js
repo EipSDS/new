@@ -1,7 +1,23 @@
- $(document).ready(function(){ 
+ $(document).ready(function(){
+ 
+	    $('#comprehensive').change(function() {
+        if(this.checked) {
+            var comprehensive = confirm("Are you sure?");
+            $(this).prop("checked", returnVal);
+        }      
+    });	 
+	
   $('.save').click(function(){
-  var contact_id =$(".ContactId").val();
-  var dataform=	$('.dataform').find('select, textarea, input').serialize();
+    var specified=$("#specified").val(); 
+    var reefer=$("#reefer").val(); 
+  	var interchange=$("#interchange").val(); 
+	var interchange_agreement=$("#interchange_agreement").val();
+    var hired=$("#hired").val(); 
+    var owned=$("#owned").val(); 
+    var truckers=$("#truckers").val();
+    var comprehensive=$("#comprehensive").val(); 
+var contact_id =$(".ContactId").val();
+var dataform=	$('.dataform').find('select, textarea, input').serialize();
  var submitting_agency=$("#submitting_agency").val(); 
  var Contact_Person=$("#Contact_Person").val(); 
  var Applicant_Name=$("#applicant_name").val(); 
@@ -61,14 +77,8 @@
  console.log(Tractors3);
  console.log(Tractors4);
  console.log(Tractors5);
-    var comprehensive=$("#comprehensive").val(); 
-    var specified=$("#specified").val(); 
-    var reefer=$("#reefer").val(); 
-  	var interchange=$("#interchange").val(); 
-	var interchange_agreement=$("#interchange_agreement").val();
-    var hired=$("#hired").val(); 
-    var owned=$("#owned").val(); 
-    var truckers=$("#truckers").val(); 
+
+ 
  var make5=$("#make5").val(); 
  var VIN1=$("#VIN1").val(); 
  var vin2=$("#vin2").val(); 

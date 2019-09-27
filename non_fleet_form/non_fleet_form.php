@@ -30,17 +30,7 @@ if(!empty($phone_number)){
 				$data = "";
 				 $check_token_valid =  $handleFunctionsObject->zoho_curl($url,"GET",$data,$old_access_token);
 
-$query1 = "SELECT * FROM public.violation where contact_id='".$contact_id."'";
-$result1 = pg_query($query1);
-$rows1 = pg_num_rows($result1);
-if($rows1>=1){
-	while ($row1 = pg_fetch_assoc($result1)) {
-	 echo $row1['accident_violation'];
-	 echo '<br>';	
-	 echo $row1['date'];
-	 echo '<br>';		 
-	}
-}
+
 
 		 
 echo $id=$check_token_valid['data'][0];
@@ -198,17 +188,7 @@ $License_State5=$check_token_valid['data'][0]['Drivers1'][5]['License_State'];
 else{
 
 
-$query1 = "SELECT * FROM public.violation where contact_id='".$contact_id."' ORDER BY id";
-$result1 = pg_query($query1);
-$rows1 = pg_num_rows($result1);
-if($rows1>=1){
-	while ($row1 = pg_fetch_assoc($result1)) {
-	 echo $row1['accident_violation'];
-	 echo '<br>';	
-	 echo $row1['date'];
-	 echo '<br>';		 
-	}
-}
+
 	
 	
 
@@ -640,8 +620,21 @@ if($row67>=1){
  	$interchange_agreement=$row66['interchange_agreement'];	
 
 	}
+}
+$query1 = "SELECT * FROM public.violation where contact_id='".$contact_id."' ORDER BY id";
+$result1 = pg_query($query1);
+$rows1 = pg_num_rows($result1);
+if($rows1>=1){
+	while ($row1 = pg_fetch_assoc($result1)) {
+		
+	 echo $arr_accident_violation[]=$row1['accident_violation'];
+	 echo '<br>';	
+	 echo $arr_e_o[]=$row1['e_o'];
+	 echo '<br>';		 
+	}
 }	
-	
+	 echo $accident_violation[]=$row1['accident_violation'];
+     echo $e_o=$row1['e_o'];
 ?>
 <html>
 <head>
