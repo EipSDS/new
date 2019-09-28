@@ -3469,12 +3469,10 @@ $(document).ready(function(){
 	
 		</td>
 	</tr>
-	</table>
-			<div class="alert save_success" style='display:none;color:green;' id='final_thanku_message' style='display:none'>
-		  Thank you Data saved
-		</div>
+			<div class="alert save_success" style=
 
 	<input type="hidden" name="contactId" value="<?php echo $_GET['contact_id']; ?>" placeholder="Phone Number" required class='contactId' />
+	</table>
 	</td>
 	</tr>
 	</table>
