@@ -413,15 +413,15 @@ $new4_arr=array(
 	@$driver4Response =  $handleFunctionsObject->zoho_curl($test4url,"PUT",$Cont4data,$old_access_token);
 }
  if(!empty($Units_box1)){
-	echo $query6 = "SELECT * FROM public.operation_history where contact_id='".$contact_Id."' AND id='".$Units_box1id."'";	
+	 $query6 = "SELECT * FROM public.operation_history where contact_id='".$contact_Id."' AND id='".$Units_box1id."'";	
 	$rs6 = pg_query($query6);
-	echo $rows6 = pg_num_rows($rs6);
+	 $rows6 = pg_num_rows($rs6);
 	if($rows6==1){
- 			echo $query7 = "UPDATE  public.operation_history SET of_power_units='".$Units_box1."', total_miles='".$Total_Miles1."', gross_receipts='".$Receipts1."' WHERE contact_id='".$contact_Id."' AND id='".$Units_box1id."'";
+ 			 $query7 = "UPDATE  public.operation_history SET of_power_units='".$Units_box1."', total_miles='".$Total_Miles1."', gross_receipts='".$Receipts1."' WHERE contact_id='".$contact_Id."' AND id='".$Units_box1id."'";
            $result7 = pg_query($query7);	
 	}
 else{
-		echo $query ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box1','$Total_Miles1', '$Receipts1')";
+		 $query ="INSERT INTO public.operation_history(contact_id, of_power_units, total_miles, gross_receipts) VALUES ('$contact_Id','$Units_box1','$Total_Miles1', '$Receipts1')";
 	$result = pg_query($query);
 			if($result){
 			echo "1 Record Created Sucessfully";
@@ -437,7 +437,7 @@ else{
 	$rs8 = pg_query($query8);
 	$rows8 = pg_num_rows($rs8);
 	if($rows8==1){
- 			echo $query9 = "UPDATE  public.operation_history SET of_power_units='".$Units_box2."', total_miles='".$Total_Miles2."', gross_receipts='".$Receipts2."' WHERE contact_id='".$contact_Id."' AND id='".$Units_box2id."'";
+ 			 $query9 = "UPDATE  public.operation_history SET of_power_units='".$Units_box2."', total_miles='".$Total_Miles2."', gross_receipts='".$Receipts2."' WHERE contact_id='".$contact_Id."' AND id='".$Units_box2id."'";
            $result8 = pg_query($query9);	
 	}
 	

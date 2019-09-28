@@ -3471,7 +3471,7 @@ $(document).ready(function(){
 	</tr>
 	</table>
 		<span  class='save_success' style='display:none;color:green';>
-		Please Fill all fields.
+		Data saved
 	</span>
 	<input type="hidden" name="contactId" value="<?php echo $_GET['contact_id']; ?>" placeholder="Phone Number" required class='contactId' />
 	</td>
