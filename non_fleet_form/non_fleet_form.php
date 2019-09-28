@@ -3470,9 +3470,9 @@ $(document).ready(function(){
 		</td>
 	</tr>
 	</table>
-		<span  class='save_success' style='display:none;color:green align:left';>
-		Data saved
-	</span>
+			<div class="alert save_success" style='display:none;color:green;' id='final_thanku_message' style='display:none'>
+		  Thank you Data saved
+		</div>
 
 	<input type="hidden" name="contactId" value="<?php echo $_GET['contact_id']; ?>" placeholder="Phone Number" required class='contactId' />
 	</td>
