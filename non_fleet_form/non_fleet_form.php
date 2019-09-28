@@ -3468,10 +3468,11 @@ $(document).ready(function(){
 		<input type="button" name="submit" class="action-button save" value="save" style="background: #004d96;color: #fff;border: 0;padding: 10px 35px;text-transform: capitalize;"/>
 	
 		</td>
-	</tr>
-<div class="alert save_success" style='display:none;color:green;' id='final_thanku_message' style='display:none'>
+	<div class="alert save_success" style='display:none;color:green;' id='final_thanku_message' style='display:none'>
 Thank you Form Data saved
 </div>
+	</tr>
+
 	</table>
 
 
