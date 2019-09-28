@@ -3368,7 +3368,7 @@ $(document).ready(function(){
 	<input type="text" name="applicant_sig" class='applicant_sig' id="applicant_sig" value="<?php echo $rows88['applicant_sig']; ?>" style="width:100%;">
 	</td>
 	<td  width="30%">
-	<input type="text" name="date11" class='date11' id="date11"  value="<?php echo $rows88['date1']; ?>"  style="width:100%;">
+	<input type="text" name="date11" class="date11" id="date11"  value="<?php echo $rows88['date1']; ?>"  style="width:100%;">
 	</td>
 	</tr>														
 	</table>
@@ -3473,13 +3473,10 @@ $(document).ready(function(){
 
 	</table>
 
-<table>
-</table>
-<table>
+
 	<div class="alert save_success" style='display:none;color:green;' id='final_thanku_message' align="right" style='display:none'>
 Thank you Form Data saved
 </div>
-</table>
 	<input type="hidden" name="contactId" value="<?php echo $_GET['contact_id']; ?>" placeholder="Phone Number" required class='contactId' />
 	</td>
 	</tr>
