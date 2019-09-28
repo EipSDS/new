@@ -3470,9 +3470,11 @@ $(document).ready(function(){
 		</td>
 	</tr>
 	</table>
-		<span  class='save_success' style='display:none;color:green align:center';>
+	<table width="100%" align="center" class="save_success" style='display:none;color:green align:center'; height="10" cellpadding="0" cellspacing="0">
+		<span  style='color:green align:center';>
 		Data saved
 	</span>
+</table>
 	<input type="hidden" name="contactId" value="<?php echo $_GET['contact_id']; ?>" placeholder="Phone Number" required class='contactId' />
 	</td>
 	</tr>
