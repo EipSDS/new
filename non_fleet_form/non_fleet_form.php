@@ -671,7 +671,6 @@ if($row88>=1){
 	margin:0;
 	font-family: Arial;
 	}
-	  <script src="html2pdf.bundle.min.js"></script>
 	</style>
 <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
          rel = "stylesheet">
@@ -689,8 +688,6 @@ if($row88>=1){
       </script>
 	</head>
 	<body>
-	<div id="invoice">
-	
 	<fieldset class='dataform'>
 	<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<tr>
@@ -3448,19 +3445,9 @@ $(document).ready(function(){
 	<table width="50%" align="left" height="10" cellpadding="0" cellspacing="0">
 	<tr>
 		<td align="left">
-			<button onclick="generatePDF()" style="background: #004d96;color: #fff;border: 0;padding: 10px 35px;text-transform: capitalize;">print</button>
+			<button style="background: #004d96;color: #fff;border: 0;padding: 10px 35px;text-transform: capitalize;">print</button>
 		</td>
 	</tr>
-	
-	  <script>
-    function generatePDF() {
-      // Choose the element that our invoice is rendered in.
-      const element = document.getElementById("invoice");
-      // Choose the element and save the PDF for our user.
-      html2pdf().from(element).save();
-    }
-  </script>
-	
 	</table>
 	<table width="50%" align="right" height="10" cellpadding="0" cellspacing="0">
 	<tr>
@@ -3470,8 +3457,8 @@ $(document).ready(function(){
 		</td>
 	</tr>
 	</table>
-		<span  class='save_success' style='display:none;color:green align:center';>
-		Data saved
+		<span  class='save_success' style='display:none;color:green';>
+		Please Fill all fields.
 	</span>
 	<input type="hidden" name="contactId" value="<?php echo $_GET['contact_id']; ?>" placeholder="Phone Number" required class='contactId' />
 	</td>
@@ -3489,9 +3476,7 @@ $(document).ready(function(){
 		</tr>
 	</table>
 	</fieldset>
-  </div>
 </body>
-
 </html>
 
 <?php
