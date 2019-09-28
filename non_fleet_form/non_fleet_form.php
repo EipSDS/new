@@ -3476,7 +3476,7 @@ $(document).ready(function(){
 <table>
 </table>
 <table>
-	<div class="alert save_success" style='display:none;color:green;' id='final_thanku_message' align="left" style='display:none'>
+	<div class="alert save_success" style='display:none;color:green;' id='final_thanku_message' align="right" style='display:none'>
 Thank you Form Data saved
 </div>
 </table>
