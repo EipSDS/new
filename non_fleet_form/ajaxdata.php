@@ -674,12 +674,12 @@ if(!empty($make1) or !empty($VIN1)){
 	$rs91 = pg_query($query91);
 	$rows91 = pg_num_rows($rs91);
 	if($rows91>=1){
- 			echo $query92 = "UPDATE  public.contact_vehicles SET vin='".$VIN1."', year='".$Tractors1."', make='".$make1."' WHERE contact_id='".$contact_Id."' AND id='".$Tractors1id."'";
+ 			echo $query92 = "UPDATE  public.contact_vehicles SET vin='".$VIN1."', year='".$Tractors1."', make='".$make1."', value='".$Stated1."' WHERE contact_id='".$contact_Id."' AND id='".$Tractors1id."'";
            $result92 = pg_query($query92);	
 	}
 	
 	else{
-	echo $query95 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make) VALUES ('$contact_Id','1981 or newer vehicle','$VIN1','$Tractors1', '$make1')";
+	echo $query95 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make,value ) VALUES ('$contact_Id','1981 or newer vehicle','$VIN1','$Tractors1', '$make1','$Stated1')";
 	$result011 = pg_query($query95);
 			if($result011){
 			echo " 4 Record Created Sucessfully";
@@ -695,12 +695,12 @@ if(!empty($make2) or !empty($vin2)){
 	$rs99 = pg_query($query99);
 	$rows99 = pg_num_rows($rs99);
 	if($rows99>=1){
- 			echo $query53 = "UPDATE  public.contact_vehicles SET vin='".$VIN1."', year='".$Tractors2."', make='".$make2."' WHERE contact_id='".$contact_Id."' AND id='".$Tractors2id."'";
+ 			echo $query53 = "UPDATE  public.contact_vehicles SET vin='".$VIN1."', year='".$Tractors2."', make='".$make2."', value='".$Stated2."' WHERE contact_id='".$contact_Id."' AND id='".$Tractors2id."'";
            $result53 = pg_query($query53);	
 	}
 	
 	else{
-	echo $query29 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make) VALUES ('$contact_Id','1981 or newer vehicle','$vin2','$Tractors2', '$make2')";
+	echo $query29 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make, value) VALUES ('$contact_Id','1981 or newer vehicle','$vin2','$Tractors2', '$make2', '$Stated2')";
 	$result0111 = pg_query($query29);
 			if($result0111){
 			echo " 4 Record Created Sucessfully";
@@ -716,12 +716,12 @@ if(!empty($make3) or !empty($vin3)){
 	$rs101 = pg_query($query101);
 	$rows101 = pg_num_rows($rs101);
 	if($rows101>=1){
- 			echo $query102 = "UPDATE  public.contact_vehicles SET vin='".$vin3."', year='".$Tractors3."', make='".$make3."' WHERE contact_id='".$contact_Id."' AND id='".$Tractors3id."'";
+ 			echo $query102 = "UPDATE  public.contact_vehicles SET vin='".$vin3."', year='".$Tractors3."', make='".$make3."', value='".$Stated3."' WHERE contact_id='".$contact_Id."' AND id='".$Tractors3id."'";
            $result101 = pg_query($query102);	
 	}
 	
 	else{
-	echo $query103 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make) VALUES ('$contact_Id','1981 or newer vehicle','$vin3','$Tractors3', '$make3')";
+	echo $query103 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make,value) VALUES ('$contact_Id','1981 or newer vehicle','$vin3','$Tractors3', '$make3', '$Stated3')";
 	$result104 = pg_query($query103);
 			if($result104){
 			echo " 4 Record Created Sucessfully";
@@ -781,12 +781,12 @@ if(!empty($trailermake1) or !empty($VIN_new)){
 	$rs108 = pg_query($query108);
 	$rows108 = pg_num_rows($rs108);
 	if($rows108>=1){
- 			echo $query109 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new."', year='".$trailer1."', make='".$trailermake1."' WHERE contact_id='".$contact_Id."' AND id='".$trailer1id."'";
+ 			echo $query109 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new."', year='".$trailer1."', make='".$trailermake1."', value= '".$Amount1."' WHERE contact_id='".$contact_Id."' AND id='".$trailer1id."'";
            $result108 = pg_query($query109);	
 	}
 	
 	else{
-	echo $query10 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make) VALUES ('$contact_Id','Trailer','$VIN_new','$trailer1', '$trailermake1')";
+	echo $query10 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make, value) VALUES ('$contact_Id','Trailer','$VIN_new','$trailer1', '$trailermake1', '$Amount1')";
 	$result10 = pg_query($query10);
 			if($result10){
 			echo " 4 Record Created Sucessfully";
@@ -802,12 +802,12 @@ if(!empty($trailermake2) or !empty($VIN_new2)){
 	$rs111 = pg_query($query111);
 	$rows111 = pg_num_rows($rs111);
 	if($rows111>=1){
- 			echo $query112 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new2."', year='".$trailer2."', make='".$trailermake2."' WHERE contact_id='".$contact_Id."' AND id='".$trailer2id."'";
+ 			echo $query112 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new2."', year='".$trailer2."', make='".$trailermake2."' , value='".$Amount2."'  WHERE contact_id='".$contact_Id."' AND id='".$trailer2id."'";
            $result111 = pg_query($query112);	
 	}
 	
 	else{
-	echo $query113 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make) VALUES ('$contact_Id','Trailer','$VIN_new2','$trailer2', '$trailermake2')";
+	echo $query113 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make, value) VALUES ('$contact_Id','Trailer','$VIN_new2','$trailer2', '$trailermake2', '$Amount2')";
 	$result112 = pg_query($query113);
 			if($result112){
 			echo " 4 Record Created Sucessfully";
@@ -824,12 +824,12 @@ if(!empty($trailermake3) or !empty($VIN_new3)){
 	$rs115 = pg_query($query115);
 	$rows115 = pg_num_rows($rs115);
 	if($rows115>=1){
- 			echo $query116 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new3."', year='".$trailer3."', make='".$trailermake3."' WHERE contact_id='".$contact_Id."' AND id='".$trailer3id."'";
+ 			echo $query116 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new3."', year='".$trailer3."', make='".$trailermake3."', value='".$Amount3."' WHERE contact_id='".$contact_Id."' AND id='".$trailer3id."'";
            $result115 = pg_query($query116);	
 	}
 	
 	else{
-	echo $query117 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make) VALUES ('$contact_Id','Trailer','$VIN_new3','$trailer3', '$trailermake3')";
+	echo $query117 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make, value) VALUES ('$contact_Id','Trailer','$VIN_new3','$trailer3', '$trailermake3', '$Amount3')";
 	$result117 = pg_query($query117);
 			if($result117){
 			echo " 4 Record Created Sucessfully";
