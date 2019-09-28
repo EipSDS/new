@@ -7,8 +7,8 @@ $handleFunctionsObject = new handleFunctions;
 $old_access_token = file_get_contents("access_token.txt");
 $refresh_token = file_get_contents("refresh_token.txt");
 $contact_id=$_GET['contact_id'];
-$contact_id;
-$phone_number;
+echo $contact_id;
+echo $phone_number;
 $phone_number=$_GET['phone'];
 
 if(!empty($phone_number)){			
@@ -3368,7 +3368,7 @@ $(document).ready(function(){
 	<input type="text" name="applicant_sig" class='applicant_sig' id="applicant_sig" value="<?php echo $rows88['applicant_sig']; ?>" style="width:100%;">
 	</td>
 	<td  width="30%">
-	<input type="text" name="date11" class="date11" id="date11"  value="<?php echo $rows88['date1']; ?>"  style="width:100%;">
+	<input type="text" name="date11" class='date11' id="date11"  value="<?php echo $rows88['date1']; ?>"  style="width:100%;">
 	</td>
 	</tr>														
 	</table>
@@ -3468,18 +3468,11 @@ $(document).ready(function(){
 		<input type="button" name="submit" class="action-button save" value="save" style="background: #004d96;color: #fff;border: 0;padding: 10px 35px;text-transform: capitalize;"/>
 	
 		</td>
-
 	</tr>
-
 	</table>
-
-<table>
-</table>
-<table>
-	<div class="alert save_success" style='display:none;color:green;' id='final_thanku_message' align="right" style='display:none'>
-Thank you Form Data saved
-</div>
-</table>
+		<span  class='save_success' style='display:none;color:green align:center';>
+		Data saved
+	</span>
 	<input type="hidden" name="contactId" value="<?php echo $_GET['contact_id']; ?>" placeholder="Phone Number" required class='contactId' />
 	</td>
 	</tr>
