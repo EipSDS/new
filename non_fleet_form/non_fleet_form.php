@@ -3470,7 +3470,7 @@ $(document).ready(function(){
 		</td>
 	</tr>
 	</table>
-		<span width="100%" class='save_success' style='display:none;color:green align:center';>
+		<span  class='save_success' style='display:none;color:green align:left';>
 		Data saved
 	</span>
 
