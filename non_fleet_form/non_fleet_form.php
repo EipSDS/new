@@ -29,7 +29,7 @@ $mpdf->WriteHTML($html);
 
 // generate the output
 $mpdf->Output();
-exit;
+
 	
 }
 
