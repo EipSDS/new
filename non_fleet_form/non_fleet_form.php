@@ -19,7 +19,7 @@ $html .= '<h1>This is my first pdf</h1>';
 $html .= '<p>This is the paragraph</p>';
 
 //include your mpdf library here
-require('fpdf.php');
+require("fpdf.php");
 
 // create an object of the class mpdf
 $mpdf=new mPDF("c"); 
