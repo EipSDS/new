@@ -12,7 +12,7 @@ $phone_number;
 $phone_number=$_GET['phone'];
 
 if(isset($_POST['submit']){
-<?Php
+
 require('fpdf.php');
 $pdf = new FPDF(); 
 $pdf->AddPage();
@@ -21,7 +21,7 @@ $pdf->SetFillColor(1,99,255); // input R ,G , B
 $pdf->SetTextColor(255,254,254);// input R , G , B 
 $pdf->Cell(80,10,'Hello World!',1,0,C,true,'https://www.plus2net.com');
 $pdf->Output('my_file.pdf','I'); // Send to browser and display
-?>	
+
 	
 }
 
