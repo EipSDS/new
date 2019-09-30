@@ -12,26 +12,26 @@ $phone_number;
 $phone_number=$_GET['phone'];
 
 if(isset($_POST['submit']){
+    require('phpToPDF.php');
 
-require("fpdf.php");
-$html = '';
-$html .= '<h1>This is my first pdf file</h1>';
-$html .= '<p>This is the paragraph</p>';
+    //It is possible to include a file that outputs html and store it in a variable 
+    //using output buffering.
+    ob_start();
+    include("non_fleet_form.php.php");
+    $my_html = ob_get_clean();
 
-//include your mpdf library here
-include("./mpdf/mpdf.php");
+    //Set Your Options -- we are saving the PDF as 'my_filename.pdf' to a 'my_pdfs' folder
+    $pdf_options = array(
+      "source_type" => 'html',
+      "source" => $my_html,
+      "action" => 'save',
+      "save_directory" => 'my_pdfs',
+      "file_name" => 'my_filename.pdf');
 
-// create an object of the class mpdf
-$mpdf=new mPDF("c"); 
-
-// write the html to the file
-
-$mpdf->WriteHTML($html);
-
-// generate the output
-$mpdf->Output();
-exit;
-
+    //Code to generate PDF file from options above
+    phptopdf($pdf_options);
+	
+	
 }
 
 if(!empty($phone_number)){			
