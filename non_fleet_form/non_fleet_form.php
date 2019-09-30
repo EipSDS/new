@@ -12,7 +12,9 @@ $phone_number;
 $phone_number=$_GET['phone'];
 
 if(isset($_POST['submit'])){
+$html = '';
 $html .= '<h1>This is my first pdf file</h1>';
+$html .= '<p>This is the paragraph</p>';
 require('fpdf.php');
  
 $pdf=new FPDF();
