@@ -13,15 +13,23 @@ $phone_number=$_GET['phone'];
 
 if(isset($_POST['submit']){
 
-require('fpdf.php');
-$pdf = new FPDF(); 
-$pdf->AddPage();
-$pdf->SetFont('Arial','B',16);
-$pdf->SetFillColor(1,99,255); // input R ,G , B 
-$pdf->SetTextColor(255,254,254);// input R , G , B 
-$pdf->Cell(80,10,'Hello World!',1,0,C,true,'https://www.plus2net.com');
-$pdf->Output('my_file.pdf','I'); // Send to browser and display
 
+$html = '';
+$html .= '<h1>This is my first pdf</h1>';
+$html .= '<p>This is the paragraph</p>';
+
+//include your mpdf library here
+require('fpdf.php');
+
+// create an object of the class mpdf
+$mpdf=new mPDF("c"); 
+
+// write the html to the file
+$mpdf->WriteHTML($html);
+
+// generate the output
+$mpdf->Output();
+exit;
 	
 }
 
