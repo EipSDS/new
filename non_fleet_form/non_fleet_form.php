@@ -11,10 +11,7 @@ $contact_id;
 $phone_number;
 $phone_number=$_GET['phone'];
 
-if(isset($_POST['submit']){
-	
-	
-}
+
 
 if(!empty($phone_number)){			
 		$url = "Contacts/search?phone=$phone_number";
