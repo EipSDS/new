@@ -11,41 +11,16 @@ $contact_id;
 $phone_number;
 $phone_number=$_GET['phone'];
 
-if(isset($_POST['submit'])){
+if(isset($_POST['submit']){
 
-require 'pdfcrowd.php';
+require("fpdf.php");
+ 
+$pdf=new FPDF();
+$pdf->AddPage();
+$pdf->SetFont('Arial','B',16);
+$pdf->Cell(40,10,'Hello World!');
+$pdf->Output();
 
-function generatePDF()
-{
-    if (!$_GET["pdf"])
-        return False;
-
-    try {
-        // build the url and remove the pdf field from the query string
-        $url = "http://" . $_SERVER["SERVER_NAME"] . $_SERVER["PHP_SELF"];
-        if (count($_GET) > 1) {
-            unset($_GET["pdf"]);
-            $url = $url . "?" . http_build_query($_GET, '', '&');
-        }
-
-        // call the API
-        $client = new \Pdfcrowd\HtmlToPdfClient("username", "apikey");
-        $pdf = $client->convertUrl($url);
-
-        // send the generated pdf to the browser
-        header("Content-Type: application/pdf");
-        header("Cache-Control: no-cache");
-        header("Accept-Ranges: none");
-        header("Content-Disposition: attachment; filename=\"created.pdf\"");
-
-        echo $pdf;
-    }
-    catch(\Pdfcrowd\Error $why) {
-        fwrite(STDERR, "Pdfcrowd Error: {$why}\n");
-    }
-
-    return True;
-}
 }
 
 if(!empty($phone_number)){			
