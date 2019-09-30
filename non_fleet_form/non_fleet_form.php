@@ -13,10 +13,11 @@ $phone_number=$_GET['phone'];
 
 if(isset($_POST['submit']){
 
+require("fpdf.php");
 $pdf=new FPDF();
 $pdf->AddPage();
 $pdf->SetFont('Arial','B',16);
-$pdf->Cell(40,10,'','http://www.fpdf.org');
+$pdf->Cell(40,10,'http://www.fpdf.org');
 $pdf->Output();
 	
 }
