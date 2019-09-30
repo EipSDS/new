@@ -17,16 +17,24 @@ require("fpdf.php");
 $html = 'You can now easily print text mixing different styles: <b>bold</b>, <i>italic</i>,
 <u>underlined</u>, or <b><i><u>all at once</u></i></b>!<br><br>You can also insert links on
 text, such as <a href="http://www.fpdf.org">www.fpdf.org</a>, or on an image: click on the logo.';
-$pdf = new FPDF(); 
+
+$pdf = new PDF();
+// First page
 $pdf->AddPage();
-$pdf->SetFont('Arial','B',16);
-$pdf->SetFillColor(1,99,255); // input R ,G , B 
-$pdf->SetTextColor(255,254,254);// input R , G , B 
-$pdf->SetDrawColor(255,1,1);// input R , G , B 
-$pdf->SetLineWidth(1);
-$pdf->Cell(80,10,'Hello World!',1,0,C,true,'https://www.plus2net.com');
+$pdf->SetFont('Arial','',20);
+$pdf->Write(5,"To find out what's new in this tutorial, click ");
+$pdf->SetFont('','U');
+$link = $pdf->AddLink();
+$pdf->Write(5,'here',$link);
+$pdf->SetFont('');
+// Second page
+$pdf->AddPage();
+$pdf->SetLink($link);
+$pdf->Image('logo.png',10,12,30,0,'','http://www.fpdf.org');
+$pdf->SetLeftMargin(45);
+$pdf->SetFontSize(14);
 $pdf->WriteHTML($html);
-$pdf->Output('my_file.pdf','I'); // Send to browser and display
+$pdf->Output();
 	
 }
 
