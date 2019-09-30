@@ -11,6 +11,9 @@ $contact_id;
 $phone_number;
 $phone_number=$_GET['phone'];
 
+if(isset($_POST()){
+	
+
 if(!empty($phone_number)){			
 		$url = "Contacts/search?phone=$phone_number";
 		$data = "";
@@ -689,6 +692,7 @@ if($row88>=1){
       </script>
 	</head>
 	<body>
+	<form action="" method="post">
 	<div id="invoice">
 	
 	<fieldset class='dataform'>
@@ -3448,18 +3452,9 @@ $(document).ready(function(){
 	<table width="50%" align="left" height="10" cellpadding="0" cellspacing="0">
 	<tr>
 		<td align="left">
-			<button onclick="generatePDF()" style="background: #004d96;color: #fff;border: 0;padding: 10px 35px;text-transform: capitalize;">print</button>
+			<input type="submit" name="submit" value="Print" style="background: #004d96;color: #fff;border: 0;padding: 10px 35px;text-transform: capitalize;"/>
 		</td>
 	</tr>
-	
-	  <script>
-    function generatePDF() {
-      // Choose the element that our invoice is rendered in.
-      const element = document.getElementById("invoice");
-      // Choose the element and save the PDF for our user.
-      html2pdf().from(element).save();
-    }
-  </script>
 	
 	</table>
 	<table width="50%" align="right" height="10" cellpadding="0" cellspacing="0">
@@ -3497,6 +3492,7 @@ Thank you Form Data saved
 	</table>
 	</fieldset>
   </div>
+  </form>
 </body>
 
 </html>
