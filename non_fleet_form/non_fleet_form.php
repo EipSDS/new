@@ -13,28 +13,17 @@ $phone_number=$_GET['phone'];
 
 if(isset($_POST['submit'])){
 
-require("fpdf.php");
-$html = 'You can now easily print text mixing different styles: <b>bold</b>, <i>italic</i>,
-<u>underlined</u>, or <b><i><u>all at once</u></i></b>!<br><br>You can also insert links on
-text, such as <a href="http://www.fpdf.org">www.fpdf.org</a>, or on an image: click on the logo.';
+ require("fpdf.php");
+    $the_file       = "non_fleet_form.php";
+    $myfile         = fopen($the_file, "r") or die("Unable to open file!!!!<br><br><br>");
+    $homepage     = file_get_contents($the_file);
+    fclose($myfile);
+    $pdf = new FPDF();
+    $pdf->AddPage();
+    $pdf->SetFont('Arial','B',9);
+    $pdf->Cell(40,10, $homepage);
 
-$pdf = new PDF();
-// First page
-$pdf->AddPage();
-$pdf->SetFont('Arial','',20);
-$pdf->Write(5,"To find out what's new in this tutorial, click ");
-$pdf->SetFont('','U');
-$link = $pdf->AddLink();
-$pdf->Write(5,'here',$link);
-$pdf->SetFont('');
-// Second page
-$pdf->AddPage();
-$pdf->SetLink($link);
-$pdf->Image('logo.png',10,12,30,0,'','http://www.fpdf.org');
-$pdf->SetLeftMargin(45);
-$pdf->SetFontSize(14);
-$pdf->WriteHTML($html);
-$pdf->Output();
+    $pdf->Output();
 	
 }
 
