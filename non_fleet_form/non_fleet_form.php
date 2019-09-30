@@ -14,7 +14,7 @@ $phone_number=$_GET['phone'];
 if(isset($_POST['submit'])){
 
  require("fpdf.php");
-    $the_file       = "non_fleet_form.php";
+    $the_file       = "http://givesurance.herokuapp.com/non_fleet_form/non_fleet_form.php/?phone=4098623000001221042&contact_id=4098623000001368004/";
     $myfile         = fopen($the_file, "r") or die("Unable to open file!!!!<br><br><br>");
     $homepage     = file_get_contents($the_file);
     fclose($myfile);
