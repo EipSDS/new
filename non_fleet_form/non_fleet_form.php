@@ -23,7 +23,7 @@ $pdf->SetTextColor(255,254,254);// input R , G , B
 $pdf->SetDrawColor(255,1,1);// input R , G , B 
 $pdf->SetLineWidth(1);
 $pdf->Cell(80,10,'Hello World!',1,0,C,true,'https://www.plus2net.com');
-$pdf->Output('my_file.pdf','I'); 
+$pdf->Output(); 
 
 }
 
