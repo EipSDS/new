@@ -11,9 +11,9 @@ $contact_id;
 $phone_number;
 $phone_number=$_GET['phone'];
 
-if(isset($_POST['submit']){
+if(isset($_POST['submit'])){
 
-require("fpdf.php");
+require('fpdf.php');
  
 $pdf=new FPDF();
 $pdf->AddPage();
