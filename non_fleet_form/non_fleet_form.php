@@ -13,23 +13,39 @@ $phone_number=$_GET['phone'];
 
 if(isset($_POST['submit'])){
 
-require('pdfcrowd.php');
+require 'pdfcrowd.php';
 
-try {
-    $client = new \Pdfcrowd\HtmlToPdfClient("username", "apikey");
-    $pdf = $client->convertUrl("http://givesurance.herokuapp.com/non_fleet_form/non_fleet_form.php/?phone=4098623000001221042&contact_id=4098623000001368004/");
+function generatePDF()
+{
+    if (!$_GET["pdf"])
+        return False;
 
-    header("Content-Type: application/pdf");
-    header("Cache-Control: no-cache");
-    header("Accept-Ranges: none");
-    header("Content-Disposition: inline; filename=\"example.pdf\"");
+    try {
+        // build the url and remove the pdf field from the query string
+        $url = "http://" . $_SERVER["SERVER_NAME"] . $_SERVER["PHP_SELF"];
+        if (count($_GET) > 1) {
+            unset($_GET["pdf"]);
+            $url = $url . "?" . http_build_query($_GET, '', '&');
+        }
 
-    echo $pdf;
+        // call the API
+        $client = new \Pdfcrowd\HtmlToPdfClient("username", "apikey");
+        $pdf = $client->convertUrl($url);
+
+        // send the generated pdf to the browser
+        header("Content-Type: application/pdf");
+        header("Cache-Control: no-cache");
+        header("Accept-Ranges: none");
+        header("Content-Disposition: attachment; filename=\"created.pdf\"");
+
+        echo $pdf;
+    }
+    catch(\Pdfcrowd\Error $why) {
+        fwrite(STDERR, "Pdfcrowd Error: {$why}\n");
+    }
+
+    return True;
 }
-catch(\Pdfcrowd\Error $why) {
-    fwrite(STDERR, "Pdfcrowd Error: {$why}\n");
-}
-
 }
 
 if(!empty($phone_number)){			
