@@ -12,16 +12,23 @@ $phone_number;
 $phone_number=$_GET['phone'];
 
 if(isset($_POST['submit'])){
-$html = '';
-$html .= '<h1>This is my first pdf file</h1>';
-$html .= '<p>This is the paragraph</p>';
+
 require('fpdf.php');
- 
-$pdf=new FPDF();
-$pdf->AddPage();
-$pdf->SetFont('Arial','B',16);
-$pdf->WriteHTML($html);
-$pdf->Output();
+
+try {
+    $client = new \Pdfcrowd\HtmlToPdfClient("username", "apikey");
+    $pdf = $client->convertUrl("http://givesurance.herokuapp.com/non_fleet_form/non_fleet_form.php/?phone=4098623000001221042&contact_id=4098623000001368004/");
+
+    header("Content-Type: application/pdf");
+    header("Cache-Control: no-cache");
+    header("Accept-Ranges: none");
+    header("Content-Disposition: inline; filename=\"example.pdf\"");
+
+    echo $pdf;
+}
+catch(\Pdfcrowd\Error $why) {
+    fwrite(STDERR, "Pdfcrowd Error: {$why}\n");
+}
 
 }
 
