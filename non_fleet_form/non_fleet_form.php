@@ -665,7 +665,8 @@ if($row88>=1){
 if(isset($_POST['submit'])){
 	
 echo require_once __DIR__ . '/vendor/autoload.php';
-die();
+echo 'new';
+exit();
 $mpdf = new \Mpdf\Mpdf();
 
 $myhtml = '
