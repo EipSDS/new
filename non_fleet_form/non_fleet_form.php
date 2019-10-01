@@ -3483,7 +3483,6 @@ $mpdf->WriteHTML($myhtml2);
 $mpdf->WriteHTML($myhtml3);
 $mpdf->WriteHTML($myhtml4);
 
-$mpdf->Output('pdf/'.$_GET['contact_id'].'.pdf', 'F');
 $mpdf->Output();
 
 	
