@@ -663,6 +663,7 @@ if($row88>=1){
 ///// PDF DOOWNLOAD FUNCTION
 
 if(isset($_POST['submit'])){
+	
 require_once __DIR__ . '/vendor/autoload.php';
 //include ('.//vendor/autoload.php');
 $mpdf = new \Mpdf\Mpdf();
@@ -3476,7 +3477,7 @@ Thank you Form Data saved
 
 </html>
 ';
-	//echo $myhtml; die();
+	echo $myhtml; die();
 $mpdf->WriteHTML($myhtml);
 $mpdf->WriteHTML($myhtml1);
 $mpdf->WriteHTML($myhtml2);
