@@ -1,4 +1,6 @@
 <?php
+
+echo __DIR__;
 echo $login=getcwd();
-echo 'new image';
+
 ?>
