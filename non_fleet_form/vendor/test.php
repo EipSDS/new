@@ -1,6 +1,6 @@
 <?php
 
-echo __DIR__;
+ echo phpversion();
 echo '<br>';
 
 echo $login=getcwd();
