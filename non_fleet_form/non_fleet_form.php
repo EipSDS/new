@@ -663,11 +663,9 @@ if($row88>=1){
 ///// PDF DOOWNLOAD FUNCTION
 
 if(isset($_POST['submit'])){
-	
-echo require_once __DIR__ . '/vendor/autoload.php';
-echo 'new';
-exit();
-$mpdf = new \Mpdf\Mpdf();
+require_once __DIR__ . '/vendor/autoload.php';
+
+$mpdf = new \mpdf\mpdf();
 
 $myhtml = '
 <html>
