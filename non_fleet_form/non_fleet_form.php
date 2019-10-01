@@ -663,7 +663,7 @@ if($row88>=1){
 ///// PDF DOOWNLOAD FUNCTION
 
 if(isset($_POST['submit'])){
-require_once __DIR__ . 'http://givesurance.herokuapp.com/non_fleet_form/vendor/autoload.php';
+require_once __DIR__ . '../vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf();
 
@@ -3527,7 +3527,6 @@ $mpdf->Output();
 	</head>
 	<body>
 	<form action="" method="post">
-	<div id="invoice">
 	
 	<fieldset class='dataform'>
 	<table width="100%" align="center" cellpadding="0" cellspacing="0">
@@ -6324,7 +6323,6 @@ Thank you Form Data saved
 		</tr>
 	</table>
 	</fieldset>
-  </div>
   </form>
 </body>
 
