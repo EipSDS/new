@@ -1133,8 +1133,381 @@ $html = '<table width="100%" align="center" cellpadding="0" cellspacing="0" styl
 	</table>';
 $pdf->writeHTML($html, true, false, true, false, '');
 // ---------------------------------------------------------
+$html='
+		<table width="100%" align="center" cellpadding="0" cellspacing="0" height="10">
+	<tr>
+	<td>
+	</td>
+	</tr>
+	</table>
+	<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#c6d9f1" style="border: 2px solid #000000;">
+	<tr>
+	<td>
+	<table width="100%" height="30" align="center" cellpadding="3" cellspacing="3" style="border-bottom: 1px solid #000000;">
+	<tr>
+	<td align="left" style="font-size: 12px;">				
+	<b>Applicant Information</b>
+	</td>
+	</tr>
+	</table>
+	<table cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+	<tr>
+	<td>
+	<table align="left" width="25%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+	<tr>
+	<td align="left" style="border-right: 1px solid #000000;">	
+	<table align="left" width="100"  cellpadding="6" cellspacing="0" bgcolor="#eeece1">
+	<tr>
+		<td align="center" height="30"  style="font-size:12px;">
+			0-100 Miles 
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="86" cellpadding="6" cellspacing="0">
+	<tr>
+		<td align="center">
+			<input type="text" name="miles" class="miles" id="miles" value="'.$Radious_0_50_miles.'" width="100%" style="width:86;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table align="right" width="25%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+	<tr>
+	<td align="left" style="border-left: 1px solid #000000;">		
+	<table align="left" width="100" cellpadding="6" cellspacing="0" bgcolor="#eeece1">
+	<tr>
+		<td align="center" height="30" style="font-size:12px;">
+			100-300 Miles 
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="86" cellpadding="6" cellspacing="0">
+	<tr>
+		<td align="center">
+			<input type="text" name="miles_2" class="miles_2" id="miles_2" value="'.$Radious_50_200_miles.'" width="100%" style="width:86px;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table align="right" width="25%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+	<tr>
+	<td align="left" style="border-left: 1px solid #000000;">		
+	<table align="left" width="100" cellpadding="6" cellspacing="0" bgcolor="#eeece1">
+	<tr>
+		<td align="center" height="30" style="font-size:12px;">
+			300-500 Miles
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="86" cellpadding="6" cellspacing="0">
+	<tr>
+		<td align="center">
+			<input type="text" name="miles_3" class="miles_3" id="miles_3" value="'.$Radious_400_miles.'" width="100%" style="width:86;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table align="right" width="25%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+	<tr>
+	<td align="left" style="border-left: 1px solid #000000;">		
+	<table align="left" width="100" cellpadding="6" cellspacing="0" bgcolor="#eeece1">
+	<tr>
+		<td align="center" height="30" style="font-size:12px;">
+			500 Miles + 
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="86" cellpadding="6" cellspacing="0">
+	<tr>
+		<td align="center">
+			<input type="text" name="miles_4" class="miles_4" id="miles_4" value="'.$Radious_600_miles.'" width="100%" style="width:86;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+	<tr>
+	<td>
+	<table align="left" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="border-top:2px solid #000;">
+	<tr>
+	<td align="left">	
+	<table align="left" width="295"  cellpadding="6" cellspacing="0" bgcolor="#eeece1">
+	<tr>
+		<td align="center" height="30"  style="font-size:12px;">
+			Major cities travelled through:
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="500" cellpadding="6" cellspacing="0">
+	<tr>
+		<td align="center">
+			<input type="text" name="major" class="major" id="major" value="'.$rows88["major_cities"].'" width="100%" style="width:450;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table width="100%" align="center" cellpadding="0" cellspacing="0" height="10">
+	<tr>
+	<td>
+	</td>
+	</tr>
+	</table>
+	<table width="100%" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+	<td>
+	<table width="33.3%" align="left" cellpadding="0" cellspacing="0">
+	<tr>
+	<td>
+	<table width="100%" align="left" height="30" cellpadding="3" cellspacing="0" bgcolor="#c6d9f1" style="border: 2px solid #000000;">
+	<tr>
+	<td style="font-size:12px;">
+	<b>Auto Liability Coverage</b>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+	<tr>
+	<td align="left" style="border: 2px solid #000000;">		
+	<table align="left" width="100" cellpadding="6" cellspacing="0" bgcolor="#eeece1">
+	<tr>
+		<td align="center" height="30" style="font-size:12px;">
+			CSL:
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="143" cellpadding="6" cellspacing="0">
+	<tr>
+		<td align="center">
+			<input type="text" name="csl" class="csl" id="csl" value="'.$row55["csl"].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="hidden" name="cslid" class="csl" id="cslid" value="'.$row55["id"].'"/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+	<tr>
+	<td align="left" style="border: 2px solid #000000;">		
+	<table align="left" width="100" cellpadding="6" cellspacing="0" bgcolor="#eeece1">
+	<tr>
+		<td align="center" height="30" style="font-size:12px;">
+			UM/UIM:
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="143" cellpadding="6" cellspacing="0">
+	<tr>
+		<td align="center">
+			<input type="text" name="UM_UIM:" class="um_uim" id="um_uim" value="'.$row55["um_uim"].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+	<tr>
+	<td align="left" style="border: 2px solid #000000;">		
+	<table align="left" width="100" cellpadding="6" cellspacing="0" bgcolor="#eeece1">
+	<tr>
+		<td align="center" height="30" style="font-size:12px;">
+			PIP:
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="143" cellpadding="6" cellspacing="0">
+	<tr>
+		<td align="center">
+			<input type="text" name="pip" class="pip" id="pip" value="'.$row55["pip"].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table width="33.3%" align="left" cellpadding="0" cellspacing="0" style="padding: 0 10px;">
+	<tr>
+	<td>
+	<table width="100%" align="left" height="30" cellpadding="3" cellspacing="0" bgcolor="#c6d9f1" style="border: 2px solid #000000;">
+	<tr>
+	<td style="font-size:12px;">
+	<b>Physical Damage Coverage </b>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+	<tr>
+	<td align="left" style="border: 2px solid #000000;">		
+	<table align="left" width="100" cellpadding="6" cellspacing="0" bgcolor="#eeece1">
+	<tr>
+		<td align="center" height="30" style="font-size:12px;">
+			Deductible:
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="142" cellpadding="6" cellspacing="0">
+	<tr>
+		<td align="center">
+			<input type="text" name="deductible" class="deductible" id="deductible" value="'.$row55["deductible"].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+	<tr>
+	<td align="left" style="border: 2px solid #000000;">		
+	<table align="left" width="30" cellpadding="6" cellspacing="0">
+	<tr>
+		<td align="center">
+			<input type="checkbox" name="comprehensive" class="comprehensive" id="comprehensive" value="" width="100%" style="width:100%;border: 0;font-size:14px;" '.$row55["comprehensive"].'/>
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="200" cellpadding="6" cellspacing="0">
+	<tr>
+		<td align="center" height="30" style="font-size:12px;">
+			Comprehensive / Collision
+		</td>
+	</tr>
+	</table>																	
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+	<tr>
+	<td align="left" style="border: 2px solid #000000;">
+	<table align="left" width="30" cellpadding="6" cellspacing="0">
+	<tr>
+		<td align="center">
+			<input type="checkbox" name="specified" class="specified" id="specified" value="yes" width="100%" style="width:100%;border: 0;font-size:14px;" '.$row55["specified_perils"].'/>
+		</td>
+	</tr>
+	</table>																
+	<table align="left" width="200" cellpadding="6" cellspacing="0">
+	<tr>
+		<td align="center" height="30" style="font-size:12px;">
+			 Specified Perils / Collision 
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table width="33.3%" align="left" cellpadding="0" cellspacing="0">
+	<tr>
+	<td>
+	<table width="100%" align="left" height="30" cellpadding="3" cellspacing="0" bgcolor="#c6d9f1" style="border: 2px solid #000000;">
+	<tr>
+	<td style="font-size:12px;">
+	<b>Motor Truck Cargo Coverage</b>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+	<tr>
+	<td align="left" style="border: 2px solid #000000;">		
+	<table align="left" width="100" cellpadding="6" cellspacing="0" bgcolor="#eeece1">
+	<tr>
+		<td align="center" height="30" style="font-size:12px;">
+			Limit:
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="142" cellpadding="6" cellspacing="0">
+	<tr>
+		<td align="center">
+			<input type="text" name="limit" class="limit" id="limit" width="100%" value="'.$row55["cargo_limit"].'" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+	<tr>
+	<td align="left" style="border: 2px solid #000000;">		
+	<table align="left" width="100" cellpadding="6" cellspacing="0" bgcolor="#eeece1">
+	<tr>
+		<td align="center" height="30" style="font-size:12px;">
+			Deductible:
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="142" cellpadding="6" cellspacing="0">
+	<tr>
+		<td align="center">
+			<input type="text" name="motor_deductible" class="motor_deductible" id="motor_deductible" value="'.$row55["truck_cargo_deductible"].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+	<tr>
+	<td align="left" style="border: 2px solid #000000;">
+	<table align="left" width="30" cellpadding="6" cellspacing="0">
+	<tr>
+		<td align="center">
+			<input type="checkbox" name="reefer" class="reefer" id="reefer" value="yes" width="100%" style="width:100%;border: 0;font-size:14px;"'.$row55["reefer_breakdown"].'/>
+		</td>
+	</tr>
+	</table>																
+	<table align="left" width="200" cellpadding="6" cellspacing="0">
+	<tr>
+		<td align="center" height="30" style="font-size:12px;">
+			 Reefer Breakdown?
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table width="100%" align="center" cellpadding="0" cellspacing="0" height="10">
+	<tr>
+	<td>
+	</td>
+	</tr>
+';
+$pdf->writeHTML($html, true, false, true, false, '');
+
 
 //Close and output PDF document
+
 $pdf->Output('example_006.pdf', 'I');
 	
 
