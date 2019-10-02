@@ -845,8 +845,6 @@ $html = '<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	</td>
 	</tr>
 	</table>
-	';
-$myhtml1 = '
 		<table width="100%" align="center" cellpadding="0" cellspacing="0" style="border: 2px solid #000000; border-bottom:0;">
 	<tr>
 	<td>
