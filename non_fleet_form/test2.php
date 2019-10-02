@@ -745,7 +745,6 @@ $html = '<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<table width="50%" align="left" cellpadding="0" cellspacing="0">
 	<tr>
 	<td align="left">		
-	<img src="http://givesurance.herokuapp.com/non_fleet_form/img/logo.jpg" alt="logo"/>
 	</td>
 	</tr>
 	</table>
