@@ -3455,21 +3455,6 @@ $html='
 	<td align="center">											
 	</td>
 	</tr></table>
-
-<table>
-	<div class="alert save_success" style="display:none;color:green;" id="final_thanku_message" align="right" style="display:none">
-Thank you Form Data saved
-</div>
-</table>
-	<input type="hidden" name="contactId" value="'.$_GET["contact_id"].'" placeholder="Phone Number" required class="contactId" />
-	</td>
-	</tr>
-	</table>
-	</td>
-	</tr>
-	</table>
-	</tr>
-	</table>
 	</td>
 	</tr>
 	</table>
