@@ -849,7 +849,7 @@ $html = '<table width="100%" align="center" cellpadding="0" cellspacing="0">
 // output the HTML content
 $pdf->writeHTML($html, true, false, true, false, '');
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-$html = '<table width="100%" align="center" cellpadding="0" cellspacing="0" style="border: 2px solid #000000; border-bottom:0;">
+$html1 = '<table width="100%" align="center" cellpadding="0" cellspacing="0" style="border: 2px solid #000000; border-bottom:0;">
 	<tr>
 	<td>
 	<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#c6d9f1">
@@ -1131,7 +1131,7 @@ $html = '<table width="100%" align="center" cellpadding="0" cellspacing="0" styl
 	</td>
 	</tr>
 	</table>';
-$pdf->writeHTML($html, true, false, true, false, '');/ ---------------------------------------------------------
+$pdf->writeHTML($html1, true, false, true, false, '');/ ---------------------------------------------------------
 
 //Close and output PDF document
 $pdf->Output('example_006.pdf', 'I');
