@@ -3349,8 +3349,7 @@ $html='
 	</tr>
 	</table>
 	<tr>
-	<td align="left" style="font-size:12px;">	
-	The Applicant hereby applies to the Company for a policy of insurance as set forth in this application on the basis of
+	<p>The Applicant hereby applies to the Company for a policy of insurance as set forth in this application on the basis of
 	statements contained herein. Applicant agrees that such policy shall be null and void if such information is materially false or
 	misleading so that the Company would have rejected the risk, prior to inception. Applicant understands that an inquiry may
 	be made which will provide applicable information concerning character, general reputation, financial stability and other
@@ -3358,8 +3357,8 @@ $html='
 	necessary in order to determine whether the Company will accept or reject Applicant for coverage. Upon written request,
 	additional information as to the nature and scope of the inquiry, if one is made, will be provided. The Applicant understands
 	this application is a request for quotation and no information provided herein shall be construed by either party as creating a
-	binding contract for insurance. 
-	</td>
+	binding contract for insurance. </p>
+
 	<table width="100%" align="center" height="10" cellpadding="0" cellspacing="0">
 	<tr>
 	<td align="center">											
