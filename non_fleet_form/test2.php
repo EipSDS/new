@@ -796,7 +796,7 @@ $html = '<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<td align="left" style="border-right: 1px solid #000000;">	
 	<table align="left" width="140"  cellpadding="6" cellspacing="0" bgcolor="#eeece1">
 	<tr>
-		<td align="center" height="30"  style="font-size:12px;">
+	<td align="center" height="30"  style="font-size:12px;">
 			Submitting Agency:
 		</td>
 	</tr>
@@ -853,7 +853,7 @@ $html = '<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<table width="100%" height="30" align="center" cellpadding="3" cellspacing="3" style="border-bottom: 1px solid #000000;">
 	<tr>
 	<td align="left" style="font-size: 12px;">				
-	<b>Applicant Information</b>
+	Applicant Information
 	</td>
 	</tr>
 	</table>
@@ -997,9 +997,6 @@ $html = '<table width="100%" align="center" cellpadding="0" cellspacing="0">
 				</tr>
 			</table>
 		</td>
-	</tr>
-	</table>
-	</td>
 	</tr>
 	</table>';
 
