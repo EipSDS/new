@@ -6,5 +6,5 @@ $ch = curl_init('https://webtopdf.expeditedaddons.com/?api_key=7ZFW82HETUNMVPKI4
 $response = curl_exec($ch);
 curl_close($ch);
 
-var_dump($response);
+echo $response;
 ?>
