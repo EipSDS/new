@@ -745,6 +745,7 @@ $html = '<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<table width="50%" align="left" cellpadding="0" cellspacing="0">
 	<tr>
 	<td align="left">		
+	<img src="http://givesurance.herokuapp.com/non_fleet_form/img/logo.jpg" alt="logo"/>
 	</td>
 	</tr>
 	</table>
@@ -796,7 +797,7 @@ $html = '<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<td align="left" style="border-right: 1px solid #000000;">	
 	<table align="left" width="140"  cellpadding="6" cellspacing="0" bgcolor="#eeece1">
 	<tr>
-	<td align="center" height="30"  style="font-size:12px;">
+		<td align="center" height="30"  style="font-size:12px;">
 			Submitting Agency:
 		</td>
 	</tr>
@@ -842,161 +843,6 @@ $html = '<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<tr>
 	<td>
 	</td>
-	</tr>
-	</table>
-		<table width="100%" align="center" cellpadding="0" cellspacing="0" style="border: 2px solid #000000; border-bottom:0;">
-	<tr>
-	<td>
-	<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#c6d9f1">
-	<tr>
-	<td>
-	<table width="100%" height="30" align="center" cellpadding="3" cellspacing="3" style="border-bottom: 1px solid #000000;">
-	<tr>
-	<td align="left" style="font-size: 12px;">				
-	Applicant Information
-	</td>
-	</tr>
-	</table>
-	<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="border-bottom:2px solid #000;">
-	<tr>
-	<td align="left">				
-	<table align="left" width="65%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
-	<tr>
-		<td align="left" style="border-right: 1px solid #000000;">	
-			<table align="left" width="140"  cellpadding="6" cellspacing="0" bgcolor="#eeece1">
-				<tr>
-					<td align="center" height="30" style="font-size:12px;">
-						Applicant Name:
-					</td>
-				</tr>
-			</table>
-			<table align="left" cellpadding="6" cellspacing="0">
-				<tr>
-					<td align="center">
-						<input type="text" name="Applicant_Name" class="applicant_name" id="applicant_name" value="'.$first_name.'" width="49%" style="width:180px;border: 0;font-size:14px;"/>
-						<input type="text" name="applicant_lastname" class="applicant_lastname" id="applicant_lastname" value="'.$last_name.'" width="49%" style="width:179px;border: 0;font-size:14px;"/>
-					</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	</table>
-	<table align="right" width="35%" height="30"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
-	<tr>
-		<td align="left" style="border-left: 1px solid #000000;">		
-			<table align="left" height="30"  width="140" cellpadding="6" cellspacing="0" bgcolor="#eeece1">
-				<tr>
-					<td align="center" style="font-size:12px;">
-						Effective Date: 
-					</td>
-				</tr>
-			</table>
-			<table align="left" cellpadding="6" cellspacing="0">
-				<tr>
-					<td align="center">
-						<input type="text" name="effective_date" class="effective_date" id="effective_date" value="'.$effective_date.'" width="100%" style="width:125px;border: 0;font-size:14px;"/>
-					</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	</table>
-	</td>
-	</tr>
-	</table>
-	<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="border-bottom:2px solid #000;">
-	<tr>
-	<td align="left">				
-	<table align="left" width="65%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
-	<tr>
-		<td align="left" style="border-right: 1px solid #000000;">	
-			<table align="left" width="140"  cellpadding="6" cellspacing="0" bgcolor="#eeece1">
-				<tr>
-					<td align="center" height="30" style="font-size:12px;">
-						Garaging Address:
-					</td>
-				</tr>
-			</table>
-			<table align="left" cellpadding="6" cellspacing="0">
-				<tr>
-					<td align="center">
-						<input type="text" name="Garaging_Address" class="garaging_address" id="garaging_address" value="'.$garaging_address.'" width="100%" style="width:360px;border: 0;font-size:14px;"/>
-					</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	</table>
-	<table align="right" width="35%" height="30"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
-	<tr>
-		<td align="left" style="border-left: 1px solid #000000;">		
-			<table align="left" height="30" cellpadding="6" cellspacing="0" width="140px" bgcolor="#eeece1">
-				<tr>
-					<td align="center" style="font-size:12px;">
-						DOT #: 
-					</td>
-				</tr>
-			</table>
-			<table align="left" cellpadding="6" cellspacing="0">
-				<tr>
-					<td align="center">
-						<input type="text" name="DOT" class="dot" id="dot" width="100%" value="'.$USDOT_Assigned_to.'" style="width:125px;border: 0;font-size:14px;"/>
-					</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	</table>
-	</td>
-	</tr>
-	</table>
-	<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="border-bottom:2px solid #000;">
-	<tr>
-	<td align="left">				
-	<table align="left" width="65%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
-	<tr>
-		<td align="left" style="border-right: 1px solid #000000;">	
-			<table align="left" width="140"  cellpadding="6" cellspacing="0" bgcolor="#eeece1">
-				<tr>
-					<td align="center" height="30" style="font-size:12px;">
-						City, State, Zip: 
-					</td>
-				</tr>
-			</table>
-<table align="left" cellpadding="6" cellspacing="0">
-			<tr>
-				<td align="center">
-					<input type="text" name="City" class="City" id="City" value="'.$garaging_City.'"  style="width:74px;border: 0;font-size:14px;"/>
-				</td>
-				<td align="center">
-					<input type="text" name="State" class="State" id="State" value="'.$garaging_State.'" style="width:74px;border: 0;font-size:14px;"/>
-				</td>
-				<td align="center">
-					<input type="text" name="Zip" class="Zip" id="Zip" value="'.$garaging_ZIP_Code.'" style="width:73px;border: 0;font-size:14px;"/>
-				</td>
-			</tr>
-		</table>
-		</td>
-	</tr>
-	</table>
-	<table align="right" width="35%" height="30"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
-	<tr>
-		<td align="left" style="border-left: 1px solid #000000;">		
-			<table align="left" height="30"  width="140" cellpadding="6" cellspacing="0" bgcolor="#eeece1">
-				<tr>
-					<td align="center" style="font-size:12px;">
-						Years in Bus:
-					</td>
-				</tr>
-			</table>
-			<table align="left" cellpadding="6" cellspacing="0">
-				<tr>
-					<td align="center">
-						<input type="text" name="Years in Bus:" class="years_in_bus:" id="years_in_bus" value="'.$Yrs_in_business.'" width="100%" style="width:125px;border: 0;font-size:14px;"/>
-					</td>
-				</tr>
-			</table>
-		</td>
 	</tr>
 	</table>';
 
