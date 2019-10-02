@@ -2760,7 +2760,758 @@ $(document).ready(function(){
 	</table>';
 $pdf->writeHTML($html, true, false, true, false, '');
 //Close and output PDF document
+$html='
+<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#c6d9f1" style="border: 2px solid #000000;">
+	<tr>
+	<td>
+	<table width="100%" height="30" align="center" cellpadding="3" cellspacing="3" style="border-bottom: 1px solid #000000;">
+	<tr>
+	<td align="left" style="font-size: 12px;">				
+	<b>Operation History</b>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="30%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
+	<table align="left" width="100%" height="60"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td align="center">
+	Projected Year  
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  height="32px"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	Current Year 
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  height="32px" cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	1 Years Prior 
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  height="32px" cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	2 Years Prior
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="20%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td align="center">
+	# of Power Units
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Units_box1" class="Units" id="Units_box1" value="'.$array3_units[0].'"  width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="hidden" name="Units_box1id" id="Units_box1id" value="'.$array3_id[0].'"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Units_box2" class="Units" id="Units_box2" width="100%" value="'.$array3_units[1].'" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="hidden" name="Units_box2id" class="Units_box2id" id="Units_box2id" value="'.$array3_id[1].'"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Units_box3" class="Units" id="Units_box3" value="'.$array3_units[2].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="hidden" name="Units_box3id" class="Units_box3id" id="Units_box3id" value="'.$array3_id[2].'"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Units_box4" class="Units" id="Units_box4" value="'.$array3_units[3].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	<input type="hidden" name="Units_box4id" class="Units_box4id" id="Units_box4id" value="'.$array3_id[3].'"/>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="25%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td align="center">
+	Total Miles 
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Total_Miles1" class="Total" id="Total_Miles1" value="'.$array3_miles[0].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Total_Miles2" class="Total" id="Total_Miles2" value="'.$array3_miles[1].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Total_Miles3" class="Total" id="Total_Miles3" value="'.$array3_miles[2].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Total_Miles4" class="Total" id="Total_Miles4" value="'.$array3_miles[3].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="25%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td align="center">
+	Gross Receipts
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Receipts1" class="Receipts" id="Receipts1" width="100%"  value="'.$array3_receipts[0].'" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Receipts2" class="Receipts" id="Receipts2" width="100%" value="'.$array3_receipts[1].'" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Receipts3" class="Receipts" id="Receipts3" width="100%" value="'.$array3_receipts[2].'" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Receipts4" class="Receipts" id="Receipts4" width="100%" value="'.$array3_receipts[3].'" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table width="100%" align="center" cellpadding="0" cellspacing="0" height="10">
+	<tr>
+	<td>
+	</td>
+	</tr>
+	</table>
+	<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#c6d9f1" style="border: 2px solid #000000;">
+	<tr>
+	<td>
+	<table width="100%" height="30" align="center" cellpadding="3" cellspacing="3" style="border-bottom: 1px solid #000000;">
+	<tr>
+	<td align="left" style="font-size: 12px;">				
+	<b>Loss History</b>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="15%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
+	<table align="left" width="100%" height="60"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td align="center">
 
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  height="32px"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	Current Year 
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  height="32px" cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	1 Years Prior 
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  height="32px" cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	2 Years Prior
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="28.3%" cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td align="center">
+	Liability
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="50%" cellpadding="0" cellspacing="0">
+	<tr>
+	<td>
+	<table align="left" width="100%" height="32" cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td align="center">
+			# of Losses 
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Power_new2" class="Units" id="Power_new2" width="100%" value="'.$liability_of_losses[0].'" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="hidden" name="loss1id" class="loss1id" id="loss1id" value="'.$loss_id[0].'"/>
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Power_new3" class="Units" id="Power_new3" width="100%" value="'.$liability_of_losses[1].'" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="hidden" name="loss2id" class="loss2id" id="loss2id" value="'.$loss_id[1].'"/>
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Power_new4" class="Units" id="Power_new4" width="100%" value="'.$liability_of_losses[2].'" style="width:100%;border: 0;font-size:14px;"/>
+			<input type="hidden" name="loss3id" class="loss3id" id="loss3id" value="'.$loss_id[2].'"/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table width="50%" align="right" cellpadding="0" cellspacing="0">
+	<tr>
+	<td>
+	<table align="left" width="100%"  cellpadding="6" height="32" bgcolor="#eeeeef" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			Total Incurred 
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Total_Incurred1 " class="Incurred" id="Total_Incurred1" width="100%"  value="'.$total_incurred[0].'" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Total_Incurred2" class="Incurred" id="Total_Incurred2" value="'.$total_incurred[1].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Total_Incurred3" class="Incurred" id="Total_Incurred3" value="'.$total_incurred[2].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="28.4%" cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td align="center">
+	Physical Damage 
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="50%" cellpadding="0" cellspacing="0">
+	<tr>
+	<td>
+	<table align="left" width="100%" height="32" cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td align="center">
+			# of Losses 
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Losses_Damage1" class="Damage" id="Losses_Damage1" value="'.$physical_damage_losses[0].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Losses_Damage2" class="Damage" id="Losses_Damage2" value="'.$physical_damage_losses[1].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Losses_Damage3" class="Damage" value="'.$physical_damage_losses[2].'" id="Losses_Damage3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table width="50%" align="right" cellpadding="0" cellspacing="0">
+	<tr>
+	<td>
+	<table align="left" width="100%"  cellpadding="6" height="32" bgcolor="#eeeeef" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			Total Incurred 
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Total_Incurred_1" class="Damage" id="Total_Incurred_1" width="100%" value="'.$physical_total_incurred[0].'" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Total_Incurred_2" class="Damage" id="Total_Incurred_2" value="'.$physical_total_incurred[1].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Total_Incurred_3" class="Damage" value="'.$physical_total_incurred[2].'" id="Total_Incurred_3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="28.3%" cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td align="center">
+	Motor Truck Cargo
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="50%" cellpadding="0" cellspacing="0">
+	<tr>
+	<td>
+	<table align="left" width="100%" height="32" cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td align="center">
+			# of Losses 
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Motor_Truck1" class="Cargo" id="Motor_Truck1" value="'.$truck_cargo_losses[0].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Motor_Truck2" class="Cargo" id="Motor_Truck2" value="'.$truck_cargo_losses[1].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Motor_Truck3" class="Cargo" value="'.$truck_cargo_losses[2].'" id="Motor_Truck3" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table width="50%" align="right" cellpadding="0" cellspacing="0">
+	<tr>
+	<td>
+	<table align="left" width="100%"  cellpadding="6" height="32" bgcolor="#eeeeef" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			Total Incurred 
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Motor_Truck4" class="Cargo" id="Motor_Truck4" value="'.$truck_cargo_total_incurred[0].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Motor_Truck5" class="Cargo" id="Motor_Truck5" value="'.$truck_cargo_total_incurred[1].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+		<td>
+			<input type="text" name="Motor_Truck6" class="Cargo" id="Motor_Truck6" value="'.$truck_cargo_total_incurred[2].'" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table width="100%" align="center" cellpadding="0" cellspacing="0" height="10">
+	<tr>
+	<td>
+	</td>
+	</tr>
+	</table>
+	<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#c6d9f1" style="border: 2px solid #000000;">
+	<tr>
+	<td>
+	<table width="100%" height="30" align="center" cellpadding="3" cellspacing="3" style="border-bottom: 1px solid #000000;">
+	<tr>
+	<td align="left" style="font-size: 12px;">				
+	<b>Additional Questions </b>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<tr>
+	<td>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#fff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td align="left">
+	Does the applicant have any owned, leased or operated equipment not listed on the vehicle schedule? <input type="checkbox" name="schedule_yes" value="" class="schedule" id="schedule_yes" '.$row67["schedule_yes"].'> Yes  <input type="checkbox" name="schedule_no" value="" class="schedule" id="schedule_no" '.$row67["schedule_no"].'> No
+	</td>
+<script>
+$(document).ready(function(){
+    $(".schedule").click(function() {
+        $(".schedule").not(this).prop("checked", false);
+    });
+});
+</script>
+	</tr>
+	</table>
+	<table align="left" width="100%"  height="32px"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	Are any vehicles leased, loaned or rented to others? <input type="checkbox" name="loaned_yes" value="yes" class="schedule2" id="loaned_yes" '.$row67["loaned_yes"].'> Yes  <input type="checkbox" name="loaned_no" class="schedule2" id="loaned_no" '.$row67["loaned_no"].'> No
+	</td>
+<script>
+$(document).ready(function(){
+    $(".schedule2").click(function() {
+        $(".schedule2").not(this).prop("checked", false);
+    });
+});
+</script>
+	</tr>
+	</table>
+	<table align="left" width="100%"  height="32px" cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	Has the applicant’s policy canceled or non-renewed in the prior 3 years? <input type="checkbox" name="canceled_yes"  value="" class="canceled" id="canceled_yes"'.$row67["canceled_yes"].'> Yes  <input type="checkbox" name="canceled_no" value="" class="canceled" id="canceled_no" '.$row67["canceled_no"].'> No
+	</td>
+<script>
+$(document).ready(function(){
+    $(".canceled").click(function() {
+        $(".canceled").not(this).prop("checked", false);
+    });
+});
+</script>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table width="100%" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+	<td>
+	<table width="100%" align="center" height="60" cellpadding="0" cellspacing="0">
+	<tr>
+	<td align="center">											
+	</td>
+	</tr>
+	</table>
+	<table width="100%" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+	<td>
+	<table width="50%" align="left" cellpadding="0" cellspacing="0">
+	<tr>
+	<td align="left">		
+	<img src="http://givesurance.herokuapp.com/non_fleet_form/img/logo.png" alt="logo"/>
+	</td>
+	</tr>
+	</table>
+	<table width="50%" align="right" cellpadding="0" cellspacing="0">
+	<tr>
+	<td align="right" style="font-size:18px;color: #5081bd;height: 30px;">		
+	<b>ATU Non-Fleet Application (1-5 Units)</b>
+	</td>
+	</tr>
+	<tr>
+	<td align="right" style="font-size: 14px;color: #5081bd;">		
+	<i>Auto Liability – Cargo – Physical Damage – General Liability </i>
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	<table width="100%" align="center" height="10" cellpadding="0" cellspacing="0">
+	<tr>
+	<td align="center">											
+	</td>
+	</tr>
+	</table>
+	<table width="100%" align="center" height="10" cellpadding="0" cellspacing="0">
+	<tr>
+	<td align="left" style="font-size:12px;">	
+	<b>Attention all applicants in the states of AL, AR, AZ, CO, DE, FL, IN, KY, MN, NH, NJ, NY, OH, OK, PA, TN, UT – For
+	your protection, the preceding states’ laws require the following to appear on this form:</b> Any person who knowingly,
+	and with intent to defraud any insurance company or other person, files an application for insurance or statement of claim
+	containing any materially false, incomplete, or misleading information, or conceals information concerning any material fact
+	thereto, commits a fraudulent insurance act, which is a crime punishable by incarceration, and shall also be subject to civil
+	penalties. 
+	</td>
+	</tr>
+	<table width="100%" align="center" height="10" cellpadding="0" cellspacing="0">
+	<tr>
+	<td align="center">											
+	</td>
+	</tr>
+	</table>
+	<tr>
+	<td align="left" style="font-size:12px;">	
+	<b>For risks located in New York, Pennsylvania, and California: </b> Any person who knowingly makes
+	or assists, abets, solicits	or conspires with another to make a false or misleading reports or the theft, destruction, damage
+	or conversion of any motor vehicle to a law enforcement agency, a state department of motor vehicles, or an insurance company,
+	commits perjury or a fraudulent insurance act, which are crimes punishable by incarceration, and shall also be subject to a
+	civil penalty. 
+	</td>
+	</tr>
+	<table width="100%" align="center" height="10" cellpadding="0" cellspacing="0">
+	<tr>
+	<td align="center">											
+	</td>
+	</tr>
+	</table>
+	<tr>
+	<td align="left" style="font-size:12px;">	
+	The Applicant hereby applies to the Company for a policy of insurance as set forth in this application on the basis of
+	statements contained herein. Applicant agrees that such policy shall be null and void if such information is materially false or
+	misleading so that the Company would have rejected the risk, prior to inception. Applicant understands that an inquiry may
+	be made which will provide applicable information concerning character, general reputation, financial stability and other
+	pertinent financial data, personal characteristics, mode of living or other background information the company deems
+	necessary in order to determine whether the Company will accept or reject Applicant for coverage. Upon written request,
+	additional information as to the nature and scope of the inquiry, if one is made, will be provided. The Applicant understands
+	this application is a request for quotation and no information provided herein shall be construed by either party as creating a
+	binding contract for insurance. 
+	</td>
+	<table width="100%" align="center" height="10" cellpadding="0" cellspacing="0">
+	<tr>
+	<td align="center">											
+	</td>
+	</tr>
+	</table>
+	<table width="100%" align="center" height="10" cellpadding="0" cellspacing="0">
+	<tr>
+	<td align="center">											
+	</td>
+	</tr>
+	</table>
+	<table width="800" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+	<td>
+	<table cellpadding="0" cellspacing="0" WIDTH="100%"; style="border:2px solid #000;">
+	<tr>
+	<td  width="70%">
+	<input type="text" name="applicant_sig" class="applicant_sig" id="applicant_sig" value="'.$rows88["applicant_sig"].'" style="width:100%;">
+	</td>
+	<td  width="30%">
+	<input type="text" name="date11" class="date11" id="date11"  value="'.$rows88["date1"].'"  style="width:100%;">
+	</td>
+	</tr>														
+	</table>
+	<table width="100%" align="center" height="10" cellpadding="0" cellspacing="0">
+	<tr>
+	<td align="center">											
+	</td>
+	</tr></table>
+	<table cellpadding="0" cellspacing="0" WIDTH="100%"; >
+	<tr>
+	<td  width="70%"> 
+	Signature of Applicant
+	</td>
+	<td  width="30%">
+	Date
+	</td>
+	</tr>														
+	</table>
+	<table cellpadding="0" cellspacing="0" WIDTH="100%"; style="border:2px solid #000;">
+	<tr>
+	<td  width="70%"> 
+	<input type="text" name="print_name" class="Cargo" id="print_name" value="'.$rows88["print_name"].'" style="width:100%;">
+	</td>
+	<td  width="30%">
+	<input type="text" name="title" class="Cargo" id="title" value="'.$rows88["date2"].'" style="width:100%;">
+	</td>
+	</tr>														
+	</table>
+	<table width="100%" align="center" height="10" cellpadding="0" cellspacing="0">
+	<tr>
+	<td align="center">											
+	</td>
+	</tr></table>
+	<table cellpadding="0" cellspacing="0" WIDTH="100%"; >
+	<tr>
+	<td  width="70%"> 
+	Print Name
+	</td>
+	<td  width="30%">
+	Title
+	</td>
+	</tr>														
+	</table>
+	<table cellpadding="0" cellspacing="0" WIDTH="100%"; style="border:2px solid #000;">
+	<tr>
+	<td  width="70%">
+	<input type="text" name="agent_sig" class="Cargo" id="agent_sig" value="'.$rows88["title"].'" style="width:100%;">
+	</td>
+	<td  width="30%">
+	<input type="text" name="date22" class="title" id="date22" value="'.$rows88["date2"].'"  style="width:100%;">
+	</td>
+	</tr>														
+	</table>
+	<table width="100%" align="center" height="10" cellpadding="0" cellspacing="0">
+	<tr>
+	<td align="center">											
+	</td>
+	</tr></table>
+		<table cellpadding="0" cellspacing="0" WIDTH="100%"; >
+	<tr>
+	<td  width="70%"> 
+	Signature of Agent
+	</td>
+	<td  width="30%">
+	Date
+	</td>
+	</tr>														
+	</table>
+	<table width="100%" align="center" height="10" cellpadding="0" cellspacing="0">
+	<tr>
+	<td align="center">											
+	</td>
+	</tr></table>
+
+<table>
+	<div class="alert save_success" style="display:none;color:green;" id="final_thanku_message" align="right" style="display:none">
+Thank you Form Data saved
+</div>
+</table>
+	<input type="hidden" name="contactId" value="'.$_GET["contact_id"].'" placeholder="Phone Number" required class="contactId" />
+	</td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	</td>
+		</tr>
+	</table>
+	</fieldset>
+  </div>
+  </form>
+</body>
+
+</html>
+';
+$pdf->writeHTML($html, true, false, true, false, '');
 $pdf->Output('example_006.pdf', 'I');
 	
 
