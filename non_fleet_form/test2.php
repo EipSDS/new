@@ -736,41 +736,7 @@ $pdf->AddPage();
 // writeHTMLCell($w, $h, $x, $y, $html='', $border=0, $ln=0, $fill=0, $reseth=true, $align='', $autopadding=true)
 
 // create some HTML content
-$html = '<html>
-<head>
-	<title>
-		Microsoft Word - 38118152_ATU+Non-Fleet+App+(1-5+units)
-	</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Free Web tutorials">
-	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-	body{
-	margin:0;
-	font-family: Arial;
-	}
-	  <script src="html2pdf.bundle.min.js"></script>
-	</style>
-<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
-         rel = "stylesheet">
-	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-	<script src="http://givesurance.herokuapp.com/non_fleet_form/js/script.js"></script>
-
-	</head>
-	<body>
-	<form action="" method="post">
-	<div id="invoice">
-	
-	<fieldset class="dataform">
-
-	<table width="100%" align="center" cellpadding="0" cellspacing="0">
+$html = '<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<tr>
 	<td>
 	<table width="100%" align="center" cellpadding="0" cellspacing="0">
