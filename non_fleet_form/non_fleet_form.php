@@ -3477,7 +3477,7 @@ Thank you Form Data saved
 
 </html>
 ';
-	echo $myhtml; die();
+	//echo $myhtml; die();
 $mpdf->WriteHTML($myhtml);
 $mpdf->WriteHTML($myhtml1);
 $mpdf->WriteHTML($myhtml2);
