@@ -701,7 +701,7 @@ if($row88>=1){
 	<table width="800" align="center" cellpadding="0" cellspacing="0">
 	<tr>
 	<td align="center" cellspacing="0">
-	<table width="100%" align="center" height="40" cellpadding="0" cellspacing="0">
+	<table width="100%" align="center" height="80" cellpadding="0" cellspacing="0">
 	<tr>
 	<td align="center">											
 	</td>
