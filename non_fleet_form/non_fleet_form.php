@@ -1626,7 +1626,7 @@ if($row88>=1){
 	</td>
 	</tr>
 	</table>
-	<table align="left" width="33.3%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+	<table align="left" width="40%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
 	<tr>
 	<td>
 	<table align="left" width="100%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
