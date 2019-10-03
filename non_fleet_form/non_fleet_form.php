@@ -2078,7 +2078,7 @@ $(document).ready(function(){
 	<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<tr>
 	<td>
-	<table width="100%" align="center" height="60" cellpadding="0" cellspacing="0" style="page-break-after: always;">
+	<table width="100%" align="center" height="40" cellpadding="0" cellspacing="0" style="page-break-after: always;">
 	<tr>
 	<td align="center">											
 	</td>
@@ -3221,7 +3221,7 @@ $(document).ready(function(){
 	<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<tr>
 	<td>
-	<table width="100%" align="center" height="40" cellpadding="0" cellspacing="0" style="page-break-after: always;">
+	<table width="100%" align="center" height="60" cellpadding="0" cellspacing="0" style="page-break-after: always;">
 	<tr>
 	<td align="center">											
 	</td>
