@@ -2128,7 +2128,7 @@ $(document).ready(function(){
 	<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#c6d9f1" style="border: 2px solid #000000;">
 	<tr>
 	<td>
-	<table align="left" width="27%" cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<table align="left" width="25%" cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
 	<tr>
 	<td>
 	<table align="left" height="42" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
