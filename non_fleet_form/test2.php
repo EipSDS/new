@@ -1626,7 +1626,7 @@ if($row88>=1){
 	</td>
 	</tr>
 	</table>
-	<table align="left" width="45.2%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+	<table align="left" width="45%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
 	<tr>
 	<td>
 	<table align="left" width="100%"  cellpadding="0" cellspacing="0" bgcolor="#ffffff">
@@ -2078,7 +2078,7 @@ $(document).ready(function(){
 	<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<tr>
 	<td>
-	<table width="100%" align="center" height="60" cellpadding="0" cellspacing="0" style="page-break-after: always;">
+	<table width="100%" align="center" height="40" cellpadding="0" cellspacing="0" style="page-break-after: always;">
 	<tr>
 	<td align="center">											
 	</td>
@@ -2128,7 +2128,7 @@ $(document).ready(function(){
 	<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#c6d9f1" style="border: 2px solid #000000;">
 	<tr>
 	<td>
-	<table align="left" width="25%" cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<table align="left" width="26%" cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
 	<tr>
 	<td>
 	<table align="left" height="42" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
@@ -2181,7 +2181,7 @@ $(document).ready(function(){
 	</td>
 	</tr>
 	</table>
-	<table align="left" width="5%" cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<table align="left" width="6%" cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
 	<tr>
 	<td>
 	<table align="left" width="100%" height="42"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
@@ -2331,7 +2331,7 @@ $(document).ready(function(){
 	</td>
 	</tr>
 	</table>
-	<table align="left" width="12%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<table align="left" width="11%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
 	<tr>
 	<td>
 	<table align="left" width="100%" height="42"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
@@ -2379,7 +2379,7 @@ $(document).ready(function(){
 	</td>
 	</tr>
 	</table>
-	<table align="left" width="10.9%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<table align="left" width="9%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
 	<tr>
 	<td>
 	<table align="left" width="100%" height="42"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
@@ -2427,7 +2427,7 @@ $(document).ready(function(){
 	</td>
 	</tr>
 	</table>
-	<table align="left" width="10%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
+	<table align="left" width="9%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
 	<tr>
 	<td>
 	<table align="left" width="100%" height="42"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
