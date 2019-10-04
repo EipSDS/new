@@ -691,10 +691,10 @@ if($row88>=1){
          });
       </script>
 	  <style>
-		@media (max-width: 1100px), print { 
-		 table {
-			 display: none !important;
-		 }
+		@media print {
+			table, tr, td, th, tbody, thead, tfoot {
+			page-break-inside: avoid !important;
+		}
 		}
 	  </style>
 	</head>
@@ -2085,12 +2085,12 @@ $(document).ready(function(){
 	<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<tr>
 	<td>
-	<table width="100%" align="center" height="40" cellpadding="0" cellspacing="0" style="page-break-after: always;">
+	<!-- table width="100%" align="center" height="40" cellpadding="0" cellspacing="0" style="page-break-after: always;">
 	<tr>
 	<td align="center">											
 	</td>
 	</tr>
-	</table>
+	</table-->
 	<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<tr>
 	<td>
@@ -3228,12 +3228,12 @@ $(document).ready(function(){
 	<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<tr>
 	<td>
-	<table width="100%" align="center" height="60" cellpadding="0" cellspacing="0" style="page-break-after: always;">
+	<!-- table width="100%" align="center" height="60" cellpadding="0" cellspacing="0" style="page-break-after: always;">
 	<tr>
 	<td align="center">											
 	</td>
 	</tr>
-	</table>
+	</table -->
 	<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<tr>
 	<td>
