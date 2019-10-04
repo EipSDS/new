@@ -691,7 +691,7 @@ if($row88>=1){
          });
       </script>
 	  <style>
-		@media print {
+		@media (max-width: 1100px), print { 
 		 table {
 			 display: none !important;
 		 }
