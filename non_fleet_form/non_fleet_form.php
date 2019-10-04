@@ -704,8 +704,8 @@ if($row88>=1){
             }
         }
 		 @page {
-			margin-top: 5cm;
-			margin-bottom: 5cm;
+			margin-top: 1cm;
+			margin-bottom: 1cm;
 		}
     </style>
 </head>
