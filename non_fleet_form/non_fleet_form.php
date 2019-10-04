@@ -690,6 +690,13 @@ if($row88>=1){
             $( "#effective_date" ).datepicker();
          });
       </script>
+	  <style>
+		@media print {
+		 table {
+			 display: none !important;
+		 }
+		}
+	  </style>
 	</head>
 	<body>
 	<form action="" method="post">
