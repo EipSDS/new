@@ -3350,6 +3350,7 @@ if($row88>=1){
                                                                 <table width="100%" align="center" height="10" cellpadding="0" cellspacing="0">
                                                                     <tr>
                                                                         <td>
+																		
                                                                             <table width="50%" align="left" height="10" cellpadding="0" cellspacing="0">
                                                                                 <tr>
                                                                                     <td align="left">
@@ -3375,6 +3376,9 @@ if($row88>=1){
                                                                             <table>
                                                                             </table>
                                                                             <table>
+																			<div id="process_img" style='display:none;'>
+																			<img src="/img/progress.png"/>  
+																			</div>
                                                                                 <div class="alert save_success" style='display:none;color:green;' id='final_thanku_message' align="right" style='display:none'>
                                                                                     Thank you Form Data saved
                                                                                 </div>

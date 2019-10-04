@@ -2,6 +2,12 @@
  
 	
   $('.save').click(function(){
+	          $(document).ajaxStart(function(){
+	    	$('#process_img').css("display", "block");
+	});
+	$(document).ajaxComplete(function(){
+		$('#process_img').css("display", "none");
+	});
 	var comprehensivetest =$("#comprehensive").prop('checked');
 	if( comprehensivetest == true){
 		var comprehensive = "checked";
