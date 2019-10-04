@@ -3377,7 +3377,7 @@ if($row88>=1){
                                                                             </table>
                                                                             <table>
 																			<div id="process_img" align="right" style='display:none;'>
-																			<img src="/img/progress.png"/>  
+																			<img src="/img/progress.gif"/>  
 																			</div>
                                                                                 <div class="alert save_success" style='display:none;color:green;' id='final_thanku_message' align="right" style='display:none'>
                                                                                     Thank you Form Data saved
