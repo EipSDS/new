@@ -1801,6 +1801,51 @@ $(document).ready(function(){
 	</td>
 	</tr>
 	</table>
+		<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="hidden" name="trailer1id" class='trailer1id' id="trailer1id" value="<?php echo $row9['id']; ?>"/>
+	<input type="text" name="trailer1" class='tractors' id="trailer1" value="<?php echo $row9['year']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	<input type="text" name="trailermake1" class='tractors' id="trailermake1" value="<?php echo $row9['make']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="hidden" name="trailer2id" class='trailer2id' id="trailer2id" value="<?php echo $arrid[0]; ?>"/>
+	<input type="text" name="trailer2" class='tractors' id="trailer2" value="<?php echo $arryear[0]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	<input type="text" name="trailermake2" class='tractors' id="trailermake2" value="<?php echo $arrmake[0]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="hidden" name="trailer3id" class='trailer3id' id="trailer3id" value="<?php echo $arrid[1]; ?>"/>
+	<input type="text" name="trailer3" class='tractors' id="trailer3" value="<?php echo $arryear[1]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	<input type="text" name="trailermake3" class='tractors' id="trailermake3" value="<?php echo $arrmake[1]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="hidden" name="trailer4id" class='trailer4id' id="trailer4id" value="<?php echo $arrid[2]; ?>"/>
+	<input type="text" name="trailer4" class='tractors' id="trailer4" value="<?php echo $arryear[2]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	<input type="text" name="trailermake4" class='tractors' id="trailermake4" value="<?php echo $arrmake[2]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="hidden" name="trailer5id" class='trailer5id' id="trailer5id" value="<?php echo $arrid[3]; ?>"/>
+	<input type="text" name="trailer5" class='tractors' id="trailer5" value="<?php echo $arryear[3]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	<input type="text" name="trailermake5" class="tractors" id="trailermake5" value="<?php echo $arrmake[3]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
 	</td>
 	</tr>
 	</table>
@@ -1854,133 +1899,7 @@ $(document).ready(function(){
 	</td>
 	</tr>
 	</table>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="25%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
-	<tr>
-	<td>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	Stated Amount 
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Stated1" class='Stated' id="Stated1" value="<?php echo $row6['value']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Stated2" class='tractors' id="Stated2" value="<?php echo $arrayvalue[0]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Stated3" class='tractors' id="Stated3" value="<?php echo $arrayvalue[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Stated4" class='tractors' id="Stated4" value="<?php echo  $arrayvalue[2]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="text" name="Stated5" class='tractors' id="Stated5" value="<?php echo  $arrayvalue[3]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	</td>
-	</tr>
-	</table>
-	</td>
-	</tr>
-	</table>
-	
-	<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#c6d9f1" style="border: 2px solid #000000;">
-	<tr>
-	<td>
-	<table align="left" width="45%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
-	<tr>
-	<td>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	Trailers (Year, Make)
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="hidden" name="trailer1id" class='trailer1id' id="trailer1id" value="<?php echo $row9['id']; ?>"/>
-	<input type="text" name="trailer1" class='tractors' id="trailer1" value="<?php echo $row9['year']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
-	<input type="text" name="trailermake1" class='tractors' id="trailermake1" value="<?php echo $row9['make']; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="hidden" name="trailer2id" class='trailer2id' id="trailer2id" value="<?php echo $arrid[0]; ?>"/>
-	<input type="text" name="trailer2" class='tractors' id="trailer2" value="<?php echo $arryear[0]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
-	<input type="text" name="trailermake2" class='tractors' id="trailermake2" value="<?php echo $arrmake[0]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="hidden" name="trailer3id" class='trailer3id' id="trailer3id" value="<?php echo $arrid[1]; ?>"/>
-	<input type="text" name="trailer3" class='tractors' id="trailer3" value="<?php echo $arryear[1]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
-	<input type="text" name="trailermake3" class='tractors' id="trailermake3" value="<?php echo $arrmake[1]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="hidden" name="trailer4id" class='trailer4id' id="trailer4id" value="<?php echo $arrid[2]; ?>"/>
-	<input type="text" name="trailer4" class='tractors' id="trailer4" value="<?php echo $arryear[2]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
-	<input type="text" name="trailermake4" class='tractors' id="trailermake4" value="<?php echo $arrmake[2]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	<input type="hidden" name="trailer5id" class='trailer5id' id="trailer5id" value="<?php echo $arrid[3]; ?>"/>
-	<input type="text" name="trailer5" class='tractors' id="trailer5" value="<?php echo $arryear[3]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
-	<input type="text" name="trailermake5" class="tractors" id="trailermake5" value="<?php echo $arrmake[3]; ?>" width="45%" style="width:45%;border: 0;font-size:14px;"/>
-	</td>
-	</tr>
-	</table>
-	</td>
-	</tr>
-	</table>
-<table align="left" width="30%"  cellpadding="0" cellspacing="0" bgcolor="#eeeeef">
-	<tr>
-	<td>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#eeeeef" style="font-size:12px;border: 1px solid #000000;">
-	<tr>
-	<td>
-	VIN 
-	</td>
-	</tr>
-	</table>
-	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+		<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
 
@@ -2038,6 +1957,41 @@ $(document).ready(function(){
 	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
 	<tr>
 	<td>
+	<input type="text" name="Stated1" class='Stated' id="Stated1" value="<?php echo $row6['value']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Stated2" class='tractors' id="Stated2" value="<?php echo $arrayvalue[0]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Stated3" class='tractors' id="Stated3" value="<?php echo $arrayvalue[1]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Stated4" class='tractors' id="Stated4" value="<?php echo  $arrayvalue[2]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+	<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
+	<input type="text" name="Stated5" class='tractors' id="Stated5" value="<?php echo  $arrayvalue[3]; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
+	</td>
+	</tr>
+	</table>
+		<table align="left" width="100%"  cellpadding="6" cellspacing="0" bgcolor="#ffffff" style="font-size:12px;border: 1px solid #000000;">
+	<tr>
+	<td>
 	<input type="text" name="Amount1" class='tractors' id="Amount1" value="<?php echo $row9['value']; ?>" width="100%" style="width:100%;border: 0;font-size:14px;"/>
 	</td>
 	</tr>
@@ -2085,7 +2039,7 @@ $(document).ready(function(){
 	</td>
 	</tr>
 	</table>
-	<!--table width="100%" align="center" cellpadding="0" cellspacing="0">
+	<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<tr>
 	<td>
 	<table width="50%" align="left" cellpadding="0" cellspacing="0">
@@ -2109,7 +2063,7 @@ $(document).ready(function(){
 	</table>
 	</td>
 	</tr>
-	</table-->
+	</table>
 	<table width="100%" align="center" height="6" cellpadding="0" cellspacing="0">
 	<tr>
 	<td align="center">											
