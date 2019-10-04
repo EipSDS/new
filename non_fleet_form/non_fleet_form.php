@@ -694,7 +694,7 @@ if($row88>=1){
 		@media print {
 			table, tr, td, th, tbody, thead, tfoot {
 			page-break-inside: avoid !important;
-		}
+			}
 		}
 	  </style>
 	</head>
@@ -2085,37 +2085,6 @@ $(document).ready(function(){
 	<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<tr>
 	<td>
-	<!-- table width="100%" align="center" height="40" cellpadding="0" cellspacing="0" style="page-break-after: always;">
-	<tr>
-	<td align="center">											
-	</td>
-	</tr>
-	</table-->
-	<table width="100%" align="center" cellpadding="0" cellspacing="0">
-	<tr>
-	<td>
-	<table width="50%" align="left" cellpadding="0" cellspacing="0">
-	<tr>
-	<td align="left">		
-	<img src="http://givesurance.herokuapp.com/non_fleet_form/img/logo.png" alt="logo"/>
-	</td>
-	</tr>
-	</table>
-	<table width="50%" align="right" cellpadding="0" cellspacing="0">
-	<tr>
-	<td align="right" style="font-size:18px;color: #5081bd;height: 30px;">		
-	<b>ATU Non-Fleet Application (1-5 Units)</b>
-	</td>
-	</tr>
-	<tr>
-	<td align="right" style="font-size: 14px;color: #5081bd;">		
-	<i>Auto Liability – Cargo – Physical Damage – General Liability </i>
-	</td>
-	</tr>
-	</table>
-	</td>
-	</tr>
-	</table>
 	<table width="100%" align="center" height="6" cellpadding="0" cellspacing="0">
 	<tr>
 	<td align="center">											
@@ -3228,37 +3197,6 @@ $(document).ready(function(){
 	<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<tr>
 	<td>
-	<!-- table width="100%" align="center" height="60" cellpadding="0" cellspacing="0" style="page-break-after: always;">
-	<tr>
-	<td align="center">											
-	</td>
-	</tr>
-	</table -->
-	<table width="100%" align="center" cellpadding="0" cellspacing="0">
-	<tr>
-	<td>
-	<table width="50%" align="left" cellpadding="0" cellspacing="0">
-	<tr>
-	<td align="left">		
-	<img src="http://givesurance.herokuapp.com/non_fleet_form/img/logo.png" alt="logo"/>
-	</td>
-	</tr>
-	</table>
-	<table width="50%" align="right" cellpadding="0" cellspacing="0">
-	<tr>
-	<td align="right" style="font-size:18px;color: #5081bd;height: 30px;">		
-	<b>ATU Non-Fleet Application (1-5 Units)</b>
-	</td>
-	</tr>
-	<tr>
-	<td align="right" style="font-size: 14px;color: #5081bd;">		
-	<i>Auto Liability – Cargo – Physical Damage – General Liability </i>
-	</td>
-	</tr>
-	</table>
-	</td>
-	</tr>
-	</table>
 	<table width="100%" align="center" height="10" cellpadding="0" cellspacing="0">
 	<tr>
 	<td align="center">											
