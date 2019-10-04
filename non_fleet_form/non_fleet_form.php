@@ -703,6 +703,10 @@ if($row88>=1){
                 page-break-inside: avoid !important;
             }
         }
+		 @page {
+			margin-top: 5cm;
+			margin-bottom: 5cm;
+		}
     </style>
 </head>
 
@@ -3209,7 +3213,7 @@ if($row88>=1){
                                     <table width="100%" align="center" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td>
-                                                <table width="100%" align="center" height="10" cellpadding="0" cellspacing="0">
+                                                <table width="100%" align="center" height="20" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td align="center">
                                                         </td>
