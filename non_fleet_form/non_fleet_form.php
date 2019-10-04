@@ -2084,7 +2084,7 @@ $(document).ready(function(){
 	</td>
 	</tr>
 	</table>
-	<!--table width="100%" align="center" cellpadding="0" cellspacing="0">
+	<table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<tr>
 	<td>
 	<table width="50%" align="left" cellpadding="0" cellspacing="0">
@@ -2108,7 +2108,7 @@ $(document).ready(function(){
 	</table>
 	</td>
 	</tr>
-	</table-->
+	</table>
 	<table width="100%" align="center" height="6" cellpadding="0" cellspacing="0">
 	<tr>
 	<td align="center">											
