@@ -3295,7 +3295,7 @@ if($row88>=1){
                                                                             <input type="text" name="print_name" class='Cargo' id="print_name" value="<?php echo $rows88['print_name'];; ?>" style="width:100%;">
                                                                         </td>
                                                                         <td width="30%">
-                                                                            <input type="text" name="title" class='Cargo' id="title" value="<?php echo $rows88['date2'];; ?>" style="width:100%;">
+                                                                            <input type="text" name="title" class='Cargo' id="title" value="<?php echo $rows88['title']; ?>" style="width:100%;">
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -3318,7 +3318,7 @@ if($row88>=1){
                                                                 <table cellpadding="0" cellspacing="0" WIDTH="100%" ; style="border:2px solid #000;">
                                                                     <tr>
                                                                         <td width="70%">
-                                                                            <input type="text" name="agent_sig" class='Cargo' id="agent_sig" value="<?php echo $rows88['title']; ?>" style="width:100%;">
+                                                                            <input type="text" name="agent_sig" class='Cargo' id="agent_sig" value="<?php echo $rows88['agent_sig']; ?>" style="width:100%;">
                                                                         </td>
                                                                         <td width="30%">
                                                                             <input type="text" name="date22" class='title' id="date22" value="<?php echo $rows88['date2']; ?>" style="width:100%;">
