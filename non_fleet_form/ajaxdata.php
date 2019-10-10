@@ -845,12 +845,12 @@ if(!empty($trailermake4) or !empty($VIN_new4)){
 	$rs121 = pg_query($query121);
 	$rows121 = pg_num_rows($rs121);
 	if($rows121>=1){
- 			echo $query122 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new4."', year='".$trailer4."', make='".$trailermake4."' WHERE contact_id='".$contact_Id."' AND id='".$trailer4id."'";
+ 			echo $query122 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new4."', year='".$trailer4."', make='".$trailermake4."', value='".$Amount4."'  WHERE contact_id='".$contact_Id."' AND id='".$trailer4id."'";
            $result121 = pg_query($query122);	
 	}
 	
 	else{
-	echo $query123 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make) VALUES ('$contact_Id','Trailer','$VIN_new4','$trailer4', '$trailermake4')";
+	echo $query123 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make,value) VALUES ('$contact_Id','Trailer','$VIN_new4','$trailer4', '$trailermake4','$Amount4')";
 	$result123 = pg_query($query123);
 			if($result123){
 			echo " 4 Record Created Sucessfully";
@@ -867,12 +867,12 @@ if(!empty($trailermake5) or !empty($VIN_new5)){
 	$rs125 = pg_query($query125);
 	$rows125 = pg_num_rows($rs125);
 	if($rows125>=1){
- 			$query126 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new5."', year='".$trailer5."', make='".$trailermake5."' WHERE contact_id='".$contact_Id."' AND id='".$trailer5id."'";
+ 			$query126 = "UPDATE  public.contact_vehicles SET vin='".$VIN_new5."', year='".$trailer5."', make='".$trailermake5."',value='".$Amount5."'  WHERE contact_id='".$contact_Id."' AND id='".$trailer5id."'";
            $result126 = pg_query($query126);	
 	}
 	
 	else{
-	echo $query127 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make) VALUES ('$contact_Id','Trailer','$VIN_new5','$trailer5', '$trailermake5')";
+	echo $query127 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make, value) VALUES ('$contact_Id','Trailer','$VIN_new5','$trailer5', '$trailermake5','$Amount5')";
 	$result127 = pg_query($query127);
 			if($result127){
 			echo " 4 Record Created Sucessfully";
