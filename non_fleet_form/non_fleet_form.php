@@ -925,7 +925,7 @@ if($row88>=1){
                                                                                     <table align="left" cellpadding="6" cellspacing="0">
                                                                                         <tr>
                                                                                             <td align="center">
-                                                                                                <input type="text" name="DOT" class='dot' id="dot" width="100%" value="<?php echo $USDOT_Assigned_to; ?>" style="width:125px;border: 0;font-size:14px;" />
+                                                                                                <input type="text" name="dot" class='dot' id="dot" width="100%" value="<?php echo $USDOT_Assigned_to; ?>" style="width:125px;border: 0;font-size:14px;" />
                                                                                             </td>
                                                                                         </tr>
                                                                                     </table>
