@@ -1410,7 +1410,7 @@ if($row88>=1){
                                                                         <table align="left" width="142" cellpadding="6" cellspacing="0">
                                                                             <tr>
                                                                                 <td align="center">
-                                                                                    <input type="text" name="limit" class="limit" id="limit" width="100%" value="<?php echo $row55[' cargo_limit']; ?>" style="width:100%;border: 0;font-size:14px;" />
+														<input type="text" name="limit" class="limit" id="limit" value="<?php echo $row55['cargo_limit']; ?>" width="100%"  style="width:100%;border: 0;font-size:14px;" />
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -1674,7 +1674,7 @@ if($row88>=1){
                                                                                     <table align="left" width="100" cellpadding="6" cellspacing="0">
                                                                                         <tr>
                                                                                             <td align="center">
-                                                                                                <input type="text" name="coverage_limit" class='coverage_limit' value="<?php echo $additional_coverage_limit; ?>" id="coverage_limit" width="100%" style="width:100%;border: 0;font-size:14px;" />
+																		<input type="text" name="coverage_limit" class='coverage_limit' value="<?php echo $additional_coverage_limit; ?>" id="coverage_limit" width="100%" style="width:100%;border: 0;font-size:14px;" />
                                                                                             </td>
                                                                                         </tr>
                                                                                     </table>
