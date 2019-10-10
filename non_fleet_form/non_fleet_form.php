@@ -201,7 +201,7 @@ else{
  $last_name=$check_token_valid['data'][0]['Last_Name'];
  $effective_date=$check_token_valid['data'][0]['Policy_Effective_Date'];
  $garaging_address=$check_token_valid['data'][0]['Home_Address'];
- $USDOT_Assigned_to=$check_token_valid['data'][0]['USDOT_Assigned_to'];
+ $USDOT_Assigned_to=$check_token_valid['data'][0]['USDOT_associated_with_the_insured_s_business'];
  $garaging_City=$check_token_valid['data'][0]['City'];
  $garaging_State=$check_token_valid['data'][0]['State'];
  $garaging_ZIP_Code=$check_token_valid['data'][0]['ZIP_Code'];
@@ -925,7 +925,7 @@ if($row88>=1){
                                                                                     <table align="left" cellpadding="6" cellspacing="0">
                                                                                         <tr>
                                                                                             <td align="center">
-                                                                                                <input type="text" name="dot" class="dot" id="dot" width="100%" value="<?php echo $USDOT_Assigned_to; ?>" style="width:125px;border: 0;font-size:14px;" />
+														<input type="text" name="dot" class="dot" id="dot" width="100%" value="<?php echo $USDOT_Assigned_to; ?>" style="width:125px;border: 0;font-size:14px;" />
                                                                                             </td>
                                                                                         </tr>
                                                                                     </table>
