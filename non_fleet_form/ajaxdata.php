@@ -224,6 +224,7 @@ $Stated_Amount2=$_POST['Stated_Amount2'];
 $Stated_Amount3=$_POST['Stated_Amount3'];
 $Stated_Amount4=$_POST['Stated_Amount4'];
 $Stated_Amount5=$_POST['Stated_Amount5'];
+$limit=$_POST['limit'];
 
 // INSERT INTO public."operation_history "(id, contact_id, of_power_units, total_miles, gross_receipts) VALUES (?, ?, ?, ?, ?);
 // UPDATE public."operation_history " SET id=?, contact_id=?, of_power_units=?, total_miles=?, gross_receipts=? WHERE <condition>;
