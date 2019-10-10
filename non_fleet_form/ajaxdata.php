@@ -737,12 +737,12 @@ if(!empty($make4) or !empty($vin4)){
 	$rs105 = pg_query($query105);
 	$rows105 = pg_num_rows($rs105);
 	if($rows105>=1){
- 			echo $query106 = "UPDATE  public.contact_vehicles SET vin='".$vin4."', year='".$Tractors4."', make='".$make4."' WHERE contact_id='".$contact_Id."' AND id='".$Tractors4id."'";
+ 			echo $query106 = "UPDATE  public.contact_vehicles SET vin='".$vin4."', year='".$Tractors4."', make='".$make4."', value='".$Stated4."' WHERE contact_id='".$contact_Id."' AND id='".$Tractors4id."'";
            $result106 = pg_query($query106);	
 	}
 	
 	else{
-	echo $query107 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make) VALUES ('$contact_Id','1981 or newer vehicle','$vin4','$Tractors4', '$make4')";
+	echo $query107 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make,value) VALUES ('$contact_Id','1981 or newer vehicle','$vin4','$Tractors4', '$make4','$Stated4')";
 	$result107 = pg_query($query107);
 			if($result107){
 			echo " 4 Record Created Sucessfully";
@@ -759,12 +759,12 @@ if(!empty($make5) or !empty($vin5)){
 	$rs201 = pg_query($query201);
 	$rows201 = pg_num_rows($rs201);
 	if($rows201>=1){
- 			echo $query202 = "UPDATE  public.contact_vehicles SET vin='".$vin5."', year='".$Tractors5."', make='".$make5."' WHERE contact_id='".$contact_Id."' AND id='".$Tractors5id."'";
+ 			echo $query202 = "UPDATE  public.contact_vehicles SET vin='".$vin5."', year='".$Tractors5."', make='".$make5."' , value='".$Stated5."' WHERE contact_id='".$contact_Id."' AND id='".$Tractors5id."'";
            $result201 = pg_query($query202);	
 	}
 	
 	else{
-	echo $query203 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make) VALUES ('$contact_Id','1981 or newer vehicle','$vin5','$Tractors5', '$make5')";
+	echo $query203 ="INSERT INTO public.contact_vehicles(contact_id, vehicle_type, vin, year, make,value) VALUES ('$contact_Id','1981 or newer vehicle','$vin5','$Tractors5', '$make5','$Stated5')";
 	$result204 = pg_query($query203);
 			if($result204){
 			echo " 4 Record Created Sucessfully";
