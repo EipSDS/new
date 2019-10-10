@@ -316,7 +316,7 @@ $testurl = "Contacts/".$_POST['contact_id'];
 $driversData = $testingdata['data'][0]['Drivers1'];	
 		
 $new_array=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo,"Name1"=>$_POST['Name1'],"Owner_Driver"=>$_POST['eo1'],"License_State"=>$_POST['License_State'],"Experience_Years"=>$_POST['Years_of_Experience1'],"Hire_Date"=>"".$date1.""
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo,"Name1"=>$_POST['Name1'],"Owner_Driver"=>$_POST['eo1'],"License_State"=>$_POST['License_State'],"Experience_Years"=>"".$Years_of_Experience1."","Hire_Date"=>"".$date1.""
 		);	
 	
 	$driversData[0]=$new_array;
