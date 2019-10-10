@@ -316,7 +316,7 @@ $testurl = "Contacts/".$_POST['contact_id'];
 $driversData = $testingdata['data'][0]['Drivers1'];	
 		
 $new_array=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo,"Name1"=>$_POST['Name1'],"Owner_Driver"=>$_POST['eo1'],"License_State"=>$_POST['License_State'],"Experience_Years"=>"".$Years_of_Experience1."","Hire_Date"=>$_POST['date1']
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo,"Name1"=>$_POST['Name1'],"Owner_Driver"=>$_POST['eo1'],"License_State"=>$_POST['License_State'],"Experience_Years"=>"".$Years_of_Experience1.""
 		);	
 	
 	$driversData[0]=$new_array;
@@ -339,7 +339,7 @@ $test1url = "Contacts/".$_POST['contact_id'];
 $driversnewData = $testing1data['data'][0]['Drivers1'];	
 		
 $new_arr=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo1,"Name1"=>$_POST['name2'],"Owner_Driver"=>$_POST['eo2'],"License_State"=>$_POST['License_State1'],"Experience_Years"=>"".$experience2."","Hire_Date"=>"".$date2.""
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo1,"Name1"=>$_POST['name2'],"Owner_Driver"=>$_POST['eo2'],"License_State"=>$_POST['License_State1'],"Experience_Years"=>"".$experience2.""
 		);	
 	$driversnewData[1]=$new_arr;
 	$dd1=json_encode($driversnewData);
@@ -358,7 +358,7 @@ $test2url = "Contacts/".$_POST['contact_id'];
 $drivers2Data = $testing2data['data'][0]['Drivers1'];	
 		
 $new1_arr=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo2,"Name1"=>$_POST['name3'],"Owner_Driver"=>$_POST['eo3'],"License_State"=>$_POST['License_State2'],"Experience_Years"=>$_POST['experience3'],"Hire_Date"=>"".$date3.""
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo2,"Name1"=>$_POST['name3'],"Owner_Driver"=>$_POST['eo3'],"License_State"=>$_POST['License_State2'],"Experience_Years"=>$_POST['experience3']
 		);	
 
 	$drivers2Data[2]=$new1_arr;
@@ -378,7 +378,7 @@ $test3url = "Contacts/".$_POST['contact_id'];
 $drivers3Data = $testing3data['data'][0]['Drivers1'];	
 		
 $new3_arr=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo3,"Name1"=>$_POST['name4'],"Owner_Driver"=>$_POST['eo4'],"License_State"=>$_POST['License_State3'],"Experience_Years"=>$_POST['experience4'],"Hire_Date"=>"".$date4.""
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo3,"Name1"=>$_POST['name4'],"Owner_Driver"=>$_POST['eo4'],"License_State"=>$_POST['License_State3'],"Experience_Years"=>$_POST['experience4']
 		);	
 
 
@@ -399,7 +399,7 @@ $test4url = "Contacts/".$_POST['contact_id'];
 $drivers4Data = $testing4data['data'][0]['Drivers1'];	
 		
 $new4_arr=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo4,"Name1"=>$_POST['name5'],"Owner_Driver"=>$_POST['eo5'],"License_State"=>$_POST['License_State4'],"Experience_Years"=>$_POST['experience5'],"Hire_Date"=>"".$date5.""
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo4,"Name1"=>$_POST['name5'],"Owner_Driver"=>$_POST['eo5'],"License_State"=>$_POST['License_State4'],"Experience_Years"=>$_POST['experience5']
 		);	
 
 
