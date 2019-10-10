@@ -690,6 +690,11 @@ if($row88>=1){
         $(function() {
             $("#effective_date").datepicker();
         });
+		        $(function() {
+            $("#date1").datepicker();
+        });
+		
+		
     </script>
     <style>
         @media print {
