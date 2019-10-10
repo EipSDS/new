@@ -149,7 +149,7 @@ $name5id=$_POST['name5id'];
  $state_license1=$_POST['state_license1'];
  $Years_of_Experience1=$_POST['Years_of_Experience1'];
 $birth1=$_POST['birth1'];
- $date1=$_POST['date1'];
+ $date1=date("Y-m-d", strtotime($_POST['date1']));
 $Violations1=$_POST['Violations1'];
  $License_State=$_POST['License_State'];
  $License_State1=$_POST['License_State1'];
@@ -168,7 +168,7 @@ $eo2=$_POST['eo2'];
 $state_license2=$_POST['state_license2'];
 $experience2=$_POST['experience2'];
 $birth2=$_POST['birth2'];
-$date2=$_POST['date2'];
+$date2=date("Y-m-d", strtotime($_POST['date2']));
 $Violations2=$_POST['Violations2'];
 //third
 $name3=$_POST['name3'];
@@ -176,7 +176,7 @@ $eo3=$_POST['eo3'];
 $state_license3=$_POST['state_license3'];
 $experience3=$_POST['experience3'];
 $birth3=$_POST['birth3'];
-$date3=$_POST['date3'];
+$date3=date("Y-m-d", strtotime($_POST['date3']));
 $Violations3=$_POST['Violations3'];
 //thrid
 $name4=$_POST['name4'];
@@ -184,7 +184,7 @@ $eo4=$_POST['eo4'];
 $state_license4=$_POST['state_license4'];
 $experience4=$_POST['experience4'];
 $birth4=$_POST['birth4'];
-$date4=$_POST['date4'];
+$date4=date("Y-m-d", strtotime($_POST['date4']));
 $Violations4=$_POST['Violations4'];
 //fourth
 $name5=$_POST['name5'];
@@ -192,7 +192,7 @@ $eo5=$_POST['eo5'];
 $state_license5=$_POST['state_license5'];
 $experience5=$_POST['experience5'];
 $birth5=$_POST['birth5'];
-$date5=$_POST['date5'];
+$date5=date("Y-m-d", strtotime($_POST['date5']));
 $Violations5=$_POST['Violations5'];
 
 //Insert data in contact_commodities
@@ -316,7 +316,7 @@ $testurl = "Contacts/".$_POST['contact_id'];
 $driversData = $testingdata['data'][0]['Drivers1'];	
 		
 $new_array=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo,"Name1"=>$_POST['Name1'],"Owner_Driver"=>$_POST['eo1'],"License_State"=>$_POST['License_State'],"Experience_Years"=>"".$Years_of_Experience1.""
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo,"Name1"=>$_POST['Name1'],"Owner_Driver"=>$_POST['eo1'],"License_State"=>$_POST['License_State'],"Experience_Years"=>"".$Years_of_Experience1."","Hire_Date"=>"".$date1.""
 		);	
 	
 	$driversData[0]=$new_array;
@@ -339,7 +339,7 @@ $test1url = "Contacts/".$_POST['contact_id'];
 $driversnewData = $testing1data['data'][0]['Drivers1'];	
 		
 $new_arr=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo1,"Name1"=>$_POST['name2'],"Owner_Driver"=>$_POST['eo2'],"License_State"=>$_POST['License_State1'],"Experience_Years"=>"".$experience2.""
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo1,"Name1"=>$_POST['name2'],"Owner_Driver"=>$_POST['eo2'],"License_State"=>$_POST['License_State1'],"Experience_Years"=>"".$experience2."","Hire_Date"=>"".$date2.""
 		);	
 	$driversnewData[1]=$new_arr;
 	$dd1=json_encode($driversnewData);
@@ -358,7 +358,7 @@ $test2url = "Contacts/".$_POST['contact_id'];
 $drivers2Data = $testing2data['data'][0]['Drivers1'];	
 		
 $new1_arr=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo2,"Name1"=>$_POST['name3'],"Owner_Driver"=>$_POST['eo3'],"License_State"=>$_POST['License_State2'],"Experience_Years"=>$_POST['experience3']
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo2,"Name1"=>$_POST['name3'],"Owner_Driver"=>$_POST['eo3'],"License_State"=>$_POST['License_State2'],"Experience_Years"=>$_POST['experience3'],"Hire_Date"=>"".$date3.""
 		);	
 
 	$drivers2Data[2]=$new1_arr;
@@ -378,7 +378,7 @@ $test3url = "Contacts/".$_POST['contact_id'];
 $drivers3Data = $testing3data['data'][0]['Drivers1'];	
 		
 $new3_arr=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo3,"Name1"=>$_POST['name4'],"Owner_Driver"=>$_POST['eo4'],"License_State"=>$_POST['License_State3'],"Experience_Years"=>$_POST['experience4']
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo3,"Name1"=>$_POST['name4'],"Owner_Driver"=>$_POST['eo4'],"License_State"=>$_POST['License_State3'],"Experience_Years"=>$_POST['experience4'],"Hire_Date"=>"".$date4.""
 		);	
 
 
@@ -399,7 +399,7 @@ $test4url = "Contacts/".$_POST['contact_id'];
 $drivers4Data = $testing4data['data'][0]['Drivers1'];	
 		
 $new4_arr=array(
-		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo4,"Name1"=>$_POST['name5'],"Owner_Driver"=>$_POST['eo5'],"License_State"=>$_POST['License_State4'],"Experience_Years"=>$_POST['experience5']
+		"DOB_Age_MaritalStatus_Points_LicenceNo"=>$DOB_Age_MaritalStatus_Points_LicenceNo4,"Name1"=>$_POST['name5'],"Owner_Driver"=>$_POST['eo5'],"License_State"=>$_POST['License_State4'],"Experience_Years"=>$_POST['experience5'],"Hire_Date"=>"".$date5.""
 		);	
 
 
