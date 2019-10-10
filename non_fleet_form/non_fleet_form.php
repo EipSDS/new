@@ -693,8 +693,18 @@ if($row88>=1){
 		        $(function() {
             $("#date1").datepicker();
         });
-		
-		
+        $(function() {
+            $("#date2").datepicker();
+        });		
+        $(function() {
+            $("#date3").datepicker();
+        });
+        $(function() {
+            $("#date4").datepicker();
+        });
+        $(function() {
+            $("#date5").datepicker();
+        });		
     </script>
     <style>
         @media print {
