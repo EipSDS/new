@@ -321,8 +321,8 @@ console.log(effective_date);
  var Cost_id=$("#Cost_id").val(); 
  var cslid=$("#cslid").val(); 
  var agency_id=$("#agency_id").val(); 
-console.log(Cost_id);
-console.log(cslid);
+console.log(date1);
+console.log(date1);
   var url = "http://givesurance.herokuapp.com/non_fleet_form/ajaxdata.php";
    $.ajax({
       type: "POST",
