@@ -1334,6 +1334,7 @@ function myFunction() {
 					<option value="Old Republic Insurance Co">Old Republic Insurance Co</option>
 					<option value="Phoenix Insurance Company">Phoenix Insurance Company</option>
 					<option value="Progressive Ins Co - Personal Auto Policy">Progressive Ins Co - Personal Auto Policy</option>
+					<option value="Progressive Commercial Auto">Progressive Commercial Auto</option>
 					<option value="Republic Western Ins Co">Republic Western Ins Co</option>
 					<option value="Safeco Ins Co Of America">Safeco Ins Co Of America</option>
 					<option value="Sagamore Insurance Co">Sagamore Insurance Co</option>
@@ -2166,9 +2167,9 @@ Physical Damage Losses
 <th>Number</th>
 <th>Amount</th>
 </tr><tr>
-<td><input type="text" class="datepickerDOB" name="policy_perid"  id='perid_id' placeholder='<?php echo date('m/d/Y');?>'>
+<td><input type="text" class="datepicker current_policy_Effective_date" name="policy_perid"  id='perid_id' placeholder='<?php echo date('m/d/Y');?>'>
 	To
-	<input type="text" class="datepickerDOB" name="policy_perid_two"  id='perid_id_two' placeholder='<?php echo date('m/d/Y');?>'>
+	<input type="text" class="datepicker current_policy_Effective_date" name="policy_perid_two"  id='perid_id_two' placeholder='<?php echo date('m/d/Y');?>'>
 </td>
 <td><input type="text" name="input_companyname4" value="" id="inputcompanyname1" class="input_companyname1"></td>
 <td><input type="number" name="input_liabilitylosses4" value=""id="liabilitylosses1" class="input_liabilitylosses1">
@@ -2178,9 +2179,9 @@ Physical Damage Losses
 <td><input type="text" name="physicaldamageammount" value="" id="physicaldamageammount" class="physicaldamageammount"></td>
 </tr>
 <tr>
-<td>		<input type="text" class="datepickerDOB" name="policy_perid_second" id='perid_id_second' placeholder='<?php echo date('m/d/Y');?>'>
+<td>		<input type="text" class="datepicker current_policy_Effective_date" name="policy_perid_second" id='perid_id_second' placeholder='<?php echo date('m/d/Y');?>'>
 	To
-	<input type="text" class="datepickerDOB" name="policy_perid_two_second" id='perid_id_two_second' placeholder='<?php echo date('m/d/Y');?>'></td>
+	<input type="text" class="datepicker current_policy_Effective_date" name="policy_perid_two_second" id='perid_id_two_second' placeholder='<?php echo date('m/d/Y');?>'></td>
 <td><input type="text" name="input_companyname5" value="" id="inputcompanyname2" class="input_companyname2"></td>
 <td><input type="number" name="input_liabilitylosses5" value=""id="liabilitylosses2" class="input_liabilitylosses2"></td>
 <td><input type="text" name="input_physicaldamage5" value="" id="physicaldamage2" class="input_physicaldamag4"></td>
@@ -2189,9 +2190,9 @@ Physical Damage Losses
 </tr>
 <tr>
 <td>		
-<input type="text" class="datepickerDOB" name="policy_perid_third" id='perid_id_third' placeholder='<?php echo date('m/d/Y');?>'>
+<input type="text" class="datepicker current_policy_Effective_date" name="policy_perid_third" id='perid_id_third' placeholder='<?php echo date('m/d/Y');?>'>
 	To
-	<input type="text" class="datepickerDOB" name="policy_perid_two_third"  id='perid_id_two_third' placeholder='<?php echo date('m/d/Y');?>'>
+	<input type="text" class="datepicker current_policy_Effective_date" name="policy_perid_two_third"  id='perid_id_two_third' placeholder='<?php echo date('m/d/Y');?>'>
 <td><input type="text" name="input_companyname6" value="" id="inputcompanyname3" class="input_companyname3"></td>
 <td><input type="number" name="input_liabilitylosses6" value=""id="liabilitylosses3" class="input_liabilitylosses3"></td>
 <td><input type="text" name="input_physicaldamage6" value="" id="physicaldamage3" class="input_physicaldamage6"></td>
@@ -3112,7 +3113,7 @@ Physical Damage Losses
 					</div>					
 					
 					<div class="form-group body_modifications" >
-					  <label for="Vehicle Sub-Type" class="control-label">What is the total value of all the equipments... *Is it between less than 2000 or more than 2000?* </label>
+					  <label for="Vehicle Sub-Type" class="control-label">What is the total value of all permanently attached equipment? Is it less than or more than $2,000? </label>
 						<div class='radio'>
 									<input type="radio" name="vehicle_modifications" class="form-control vehicle_modifications" value='$0 to $2,000' checked>
 									<label>$0 to $2,000</label>
@@ -3348,7 +3349,7 @@ Physical Damage Losses
 					
 					
 					<div class="form-group body_modifications" >
-					  <label for="Vehicle Sub-Type" class="control-label">What is the total value of all the equipments... *Is it between less than 2000 or more than 2000?*</label>
+					  <label for="Vehicle Sub-Type" class="control-label">What is the total value of all permanently attached equipment? Is it less than or more than $2,000?*</label>
 						<div class='radio'>
 									<input type="radio" name="vehicle_modifications" class="form-control vehicle_modifications" value='$0 to $2,000' checked>
 									<label>less than $2000</label>
