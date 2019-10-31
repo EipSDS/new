@@ -3128,7 +3128,19 @@ Physical Damage Losses
 								</div>
 					
 					</div>					
+					<div class="form-group body_vehicle_used" >
+					  <label for="Vehicle Sub-Type" class="control-label">Is there any permanently attached equipment?</label>
+					  <div class='radio'>
+									<input type="radio" name="attached_equipment" class="form-control vehicle_used_comprehensive" value='0'>
+									<label>Yes</label>
+								</div>
+								
+					<div class='radio'>
+									<input type="radio" name="attached_equipment" class="form-control vehicle_used_comprehensive" value='1' checked>
+									<label>No</label>
+								</div>
 					
+					</div>						
 					<div class="form-group body_modifications" >
 					  <label for="Vehicle Sub-Type" class="control-label">What is the total value of all permanently attached equipment? Is it less than or more than $2,000? </label>
 						<div class='radio'>
@@ -3363,8 +3375,19 @@ Physical Damage Losses
 								</div>
 					
 					</div>
+					<div class="form-group body_vehicle_used" >
+					  <label for="Vehicle Sub-Type" class="control-label">Is there any permanently attached equipment?</label>
+					  <div class='radio'>
+									<input type="radio" name="edit_attached_equipment" class="form-control vehicle_used_comprehensive" value='0'>
+									<label>Yes</label>
+								</div>
+								
+					<div class='radio'>
+									<input type="radio" name="edit_attached_equipment" class="form-control vehicle_used_comprehensive" value='1' checked>
+									<label>No</label>
+								</div>
 					
-					
+					</div>					
 					<div class="form-group body_modifications" >
 					  <label for="Vehicle Sub-Type" class="control-label">What is the total value of all permanently attached equipment? Is it less than or more than $2,000?*</label>
 						<div class='radio'>
