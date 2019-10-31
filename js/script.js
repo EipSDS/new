@@ -1537,7 +1537,7 @@ $(".violations_data_next").click(function(event ){
 	
 		var voilationsdata=JSON.stringify(mainarray);
 		
-	
+	console.log(voilationsdata);
 	 var contactId=$(".contactId").val();
 	 $(".overlay").show();
 		 $.ajax({
