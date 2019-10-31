@@ -585,7 +585,7 @@ function myFunction() {
 				
 				<div class="form-row">
 					<div class="form-holder w-100">			
-						<label>listed vehicles or the load require a placard?</label>
+						<label>Do any of the listed vehicles or the load require a placard?</label>
 						 <div class='radio'>
 						
 						 <input type="radio" name="is_vehicles_placard" class='is_vehicles_placard'  value='Yes'>
@@ -1179,7 +1179,7 @@ function myFunction() {
 	<table class="table" id='Violation_Table' style='display:none;'>
 			<thead>
 			<tr>
-				  <td class="td-padding" id='violation_header'>Was it your fault or somebody's fault?</td>
+				  <td class="td-padding" id='violation_header'>What was the violation? Were you found At Fault or Not At Fault?</td>
 				  <td class="text-center td-padding datepickerDOB">When did it happen?</td>
 				  <td class="td-padding"><button id='voilation_add' type='button'>Add</button></td>
 				</tr>
@@ -1245,7 +1245,7 @@ function myFunction() {
 			<h3 class="fs-subtitle"></h3>
 				<div class="form-row">
 					<div class="form-holder w-100">
-					<label>I am going to ask you some basic underwriting questions</label>
+					<label>Any Prior Insurance?</label>
 					
 					 <div class='radio'>
 						<input type="radio" name="currently_insured" class="currently_insured" value="Yes"><label>Yes</label>
@@ -1262,7 +1262,7 @@ function myFunction() {
 				<div id='showinsured_data' style='display:none;'>
 				<div class="form-row">
 					<div class="form-holder w-100">
-					 <label>Who are you insured with?</label>	
+					 <label>Who are you currently insured with?</label>	
 					 <select name='who_are_you_insured' class='who_are_you_insured'>
 					<option selected='selected' value="">---Select----</option>
 					<option value="Not Listed">Not Listed</option>
@@ -1697,11 +1697,14 @@ function myFunction() {
 				</div>
 				<div class="form-row">
 					<div class="form-holder w-100">
-					<label>State:</label>
+					<label>How many states are filings needed in?</label>
 				<select name="fil_State" id="fil_State" class="fil_State">
 				<option value=" ">Select State</option>
 				<option value="0">0</option>
 				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
 				
 				</select>
 					</div>
@@ -1778,7 +1781,7 @@ function myFunction() {
 				
 				<div class="form-row">
 					<div class="form-holder w-100">	
-				<label>Do you need non-trucking insurance? If yes, how much do you need?</label>
+				<label>Do you need non-trucking liability insurance? If yes, what is the limit you need?</label>
 				<select class="form-control select_Non_trucks" id="select_Non_trucks" name="select_Non_trucks">
   				<option value="None" selected>None</option>
 				<option value="100k">100k</option>
@@ -2027,7 +2030,7 @@ function myFunction() {
 	<h2 class="fs-title">Let me collect some information with your operation.</h2>
 		<h3 class="fs-subtitle"></h3>
 		<div class='col-md-12'>
-			<h2 class="fs-title">What percentage of your loads is in</h2>
+			<h2 class="fs-title">What percentage of your loads are within:</h2>
 				
 				<div class="form-row">
 					<div class="form-holder w-100">
@@ -2122,7 +2125,7 @@ function myFunction() {
 				
 				<div class="form-row">
 					<div class="form-holder w-100">
-					<label>You don't do household or commercial mover, right?</label>
+					<label>Are you a household or commercial mover?</label>
 						<div class='radio'>	
 						<input type="radio" name="Operations_radio" class="Operations_radio_Mover" value='Yes'><label> Yes</label>
 					</div>
@@ -2673,7 +2676,7 @@ Physical Damage Losses
 							</div>
 							
 							<div class="form-group">
-								<label for="username" class="control-label">Is the backup driver?</label>
+								<label for="username" class="control-label">Is this a backup driver?</label>
 								<select name="add_driver_Backup" id="add_driver_Backup" class='form-control'>
 										<option selected="selected" value="No">No</option>
 										<option value="Yes">Yes</option>
@@ -2683,7 +2686,7 @@ Physical Damage Losses
 							
 							
 							<div class="form-group">
-								<label for="username" class="control-label">Driver Owner</label>
+								<label for="username" class="control-label">Is this driver the owner?</label>
 								<select name="add_driver_Owner" id="add_driver_Owner" class='form-control'>
 										<option  value="No">No</option>
 										<option selected="selected" value="Yes">Yes</option>
@@ -2895,7 +2898,7 @@ Physical Damage Losses
 							</div>
 							
 							<div class="form-group">
-								<label for="username" class="control-label">Is the backup driver?</label>
+								<label for="username" class="control-label">Is this a backup driver?</label>
 								<select name="edit_driver_Backup" id="edit_driver_Backup" class='form-control'>
 										<option selected="selected" value="No">No</option>
 										<option value="Yes">Yes</option>
@@ -2905,7 +2908,7 @@ Physical Damage Losses
 							
 							
 							<div class="form-group">
-								<label for="username" class="control-label">Driver Owner</label>
+								<label for="username" class="control-label">Is this driver the owner?</label>
 								<select name="edit_driver_Owner" id="edit_driver_Owner" class='form-control'>
 										<option  value="No">No</option>
 										<option  value="Yes">Yes</option>
