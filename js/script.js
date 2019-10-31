@@ -2337,6 +2337,7 @@ $(document).on("click", "#voilation_add", function(event){
 			 tds += '		<option value="FRA">FRA - Failure to Report Accident</option>';
 			 tds += '		<option value="FTC">FTC - Following Too Close</option>';
 			 tds += '		<option value="FTY">FTY - Failure to Yield</option>';
+			 tds += '		<option value="FTD">FTD - Failure to comply w/ DIV 14.8</option>';
 			 tds += '		<option value="HOM">HOM - Homicide/Assault w/ Vehicle</option>';
 			 tds += '		<option value="IBK">IBK - Improper Backing</option>';
 			 tds += '		<option value="IP">IP  - Improper Passing</option>';
