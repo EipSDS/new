@@ -3109,22 +3109,7 @@ Physical Damage Losses
 									<label>No</label>
 								</div>
 					
-					</div>
-					<div class="form-group add_any_modification_div" >
-					  <label for="Vehicle Sub-Type" class="control-label">Do you want to add any modification in the insurance?</label>
-					  <div class='radio'>
-									<input type="radio" name="add_any_modification" class="form-control add_any_modification" value='Yes'>
-									<label>Yes</label>
-								</div>
-								
-					<div class='radio'>
-									<input type="radio" name="add_any_modification" class="form-control add_any_modification" value='No' checked>
-									<label>No</label>
-						</div>
-					
-					</div>
-					
-					
+					</div>					
 					
 					<div class="form-group body_modifications" >
 					  <label for="Vehicle Sub-Type" class="control-label">What is the total value of all the equipments... *Is it between less than 2000 or more than 2000?* </label>
@@ -3356,19 +3341,6 @@ Physical Damage Losses
 								
 					<div class='radio'>
 									<input type="radio" name="vehicle_used_comprehensive" class="form-control vehicle_used_comprehensive" value='No' checked>
-									<label>No</label>
-								</div>
-					
-					</div>
-					<div class="form-group add_any_modification_div" >
-					  <label for="Vehicle Sub-Type" class="control-label">Do you want to add any modification in the insurance?</label>
-					  <div class='radio'>
-									<input type="radio" name="add_any_modification" class="form-control add_any_modification" value='Yes'>
-									<label>Yes</label>
-								</div>
-								
-					<div class='radio'>
-									<input type="radio" name="add_any_modification" class="form-control add_any_modification" value='No' checked>
 									<label>No</label>
 								</div>
 					
