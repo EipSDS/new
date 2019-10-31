@@ -2167,9 +2167,9 @@ Physical Damage Losses
 <th>Number</th>
 <th>Amount</th>
 </tr><tr>
-<td><input type="text" class="datepicker current_policy_Effective_date" name="policy_perid"  id='perid_id' placeholder='<?php echo date('m/d/Y');?>'>
+<td><input type="text" class="datepicker" name="policy_perid"  id='perid_id' placeholder='<?php echo date('m/d/Y');?>'>
 	To
-	<input type="text" class="datepicker current_policy_Effective_date" name="policy_perid_two"  id='perid_id_two' placeholder='<?php echo date('m/d/Y');?>'>
+	<input type="text" class="datepicker" name="policy_perid_two"  id='perid_id_two' placeholder='<?php echo date('m/d/Y');?>'>
 </td>
 <td><input type="text" name="input_companyname4" value="" id="inputcompanyname1" class="input_companyname1"></td>
 <td><input type="number" name="input_liabilitylosses4" value=""id="liabilitylosses1" class="input_liabilitylosses1">
@@ -2179,9 +2179,9 @@ Physical Damage Losses
 <td><input type="text" name="physicaldamageammount" value="" id="physicaldamageammount" class="physicaldamageammount"></td>
 </tr>
 <tr>
-<td>		<input type="text" class="datepicker current_policy_Effective_date" name="policy_perid_second" id='perid_id_second' placeholder='<?php echo date('m/d/Y');?>'>
+<td>		<input type="text" class="datepicker" name="policy_perid_second" id='perid_id_second' placeholder='<?php echo date('m/d/Y');?>'>
 	To
-	<input type="text" class="datepicker current_policy_Effective_date" name="policy_perid_two_second" id='perid_id_two_second' placeholder='<?php echo date('m/d/Y');?>'></td>
+	<input type="text" class="datepicker" name="policy_perid_two_second" id='perid_id_two_second' placeholder='<?php echo date('m/d/Y');?>'></td>
 <td><input type="text" name="input_companyname5" value="" id="inputcompanyname2" class="input_companyname2"></td>
 <td><input type="number" name="input_liabilitylosses5" value=""id="liabilitylosses2" class="input_liabilitylosses2"></td>
 <td><input type="text" name="input_physicaldamage5" value="" id="physicaldamage2" class="input_physicaldamag4"></td>
@@ -2190,9 +2190,9 @@ Physical Damage Losses
 </tr>
 <tr>
 <td>		
-<input type="text" class="datepicker current_policy_Effective_date" name="policy_perid_third" id='perid_id_third' placeholder='<?php echo date('m/d/Y');?>'>
+<input type="text" class="datepicker" name="policy_perid_third" id='perid_id_third' placeholder='<?php echo date('m/d/Y');?>'>
 	To
-	<input type="text" class="datepicker current_policy_Effective_date" name="policy_perid_two_third"  id='perid_id_two_third' placeholder='<?php echo date('m/d/Y');?>'>
+	<input type="text" class="datepicker" name="policy_perid_two_third"  id='perid_id_two_third' placeholder='<?php echo date('m/d/Y');?>'>
 <td><input type="text" name="input_companyname6" value="" id="inputcompanyname3" class="input_companyname3"></td>
 <td><input type="number" name="input_liabilitylosses6" value=""id="liabilitylosses3" class="input_liabilitylosses3"></td>
 <td><input type="text" name="input_physicaldamage6" value="" id="physicaldamage3" class="input_physicaldamage6"></td>
