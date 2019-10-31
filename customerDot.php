@@ -1224,6 +1224,8 @@ function myFunction() {
 				</td>
 				 <td class="text-center td-padding"> <input type='text' value='' placeholder='When did it happen?' class='datepicker'  id='Accident_date_0'>				
 					</td>
+				<td class="text-center td-padding"> <input type='text' value='' placeholder='Voilation if not avaiable in list' class='voilation'  id='voilation0'>				
+					</td>	
 				  <td class="td-padding"></td>
 				</tbody> 
 				</table> 
