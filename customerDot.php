@@ -1139,7 +1139,7 @@ function myFunction() {
 				  <td class="text-right">Backup driver</td>
 				  <td class="text-right">Owner</td>
 				  <td class="text-right">SR22</td>
-				  <td class="text-right">Is there any points in the driving record? Do you know how many points?</td>
+				  <td class="text-right">Are there any points on the driving record? Do you know how many points?</td>
 				  <!--td class="text-right"></td-->
 				</tr>
 			</thead>
@@ -2667,7 +2667,7 @@ Physical Damage Losses
 					
 							</div>
 							<div class="form-group">
-								<label for="username" class="control-label">Is there any points in the driving record? Do you know how many points?</label>
+								<label for="username" class="control-label">Are there any points on the driving record? Do you know how many points?</label>
 								<input type="text" class="form-control" name="new_driver_points" id='new_driver_points'>
 					
 							</div>
@@ -2889,7 +2889,7 @@ Physical Damage Losses
 					
 							</div>
 							<div class="form-group">
-								<label for="username" class="control-label">Is there any points in the driving record? Do you know how many points?</label>
+								<label for="username" class="control-label">Are there any points on the driving record? Do you know how many points?</label>
 								<input type="text" class="form-control" name="edit_driver_points" id='edit_driver_points'>
 					
 							</div>
@@ -2989,7 +2989,7 @@ Physical Damage Losses
 					</div>
 					
 					<div class="form-group vehicle_Destination_City_div" id='vehicle_Destination_City_div'>
-					  <label for="City of Destination" class="control-label">Where is the city of destination?</label>
+					  <label for="City of Destination" class="control-label">Where is the furthest city of destination?</label>
 					  <input type="text" class="form-control" id="vehicle_Destination_City" name="vehicle_Destination_City" value="" required="">
 					  <span class="help-block"></span>
 					</div>
@@ -3224,7 +3224,7 @@ Physical Damage Losses
 					</div>
 					
 					<div class="form-group vehicle_Destination_City_div">
-					  <label for="City of Destination" class="control-label">Where is the city of destination?</label>
+					  <label for="City of Destination" class="control-label">Where is the furthest city of destination?</label>
 					  <input type="text" class="form-control" id="vehicle_Destination_City_edit" name="vehicle_Destination_City" value="" required="">
 					  <span class="help-block"></span>
 					</div>
