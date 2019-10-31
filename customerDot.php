@@ -2690,7 +2690,14 @@ Physical Damage Losses
 
 							</select>
 							</div>
-							
+							<div class="form-group">
+								<label for="username" class="control-label">Is this driver excluded?</label>
+								<select name="driver_excluded" id="driver_excluded" class='form-control'>
+										<option  value="No">No</option>
+										<option selected="selected" value="Yes">Yes</option>
+
+							</select>
+							</div>							
 							<div class="form-group">
 								<label for="username" class="control-label">Is an SR22 required?</label>
 								<div class='radio'>
@@ -2905,7 +2912,14 @@ Physical Damage Losses
 
 							</select>
 							</div>
-							
+							<div class="form-group">
+								<label for="username" class="control-label">Is this driver excluded?</label>
+								<select name="edit_driver_excluded" id="edit_driver_excluded" class='form-control'>
+										<option  value="No">No</option>
+										<option  value="Yes">Yes</option>
+
+							</select>
+							</div>							
 							<div class="form-group">
 								<label for="username" class="control-label">Is an SR22 required?</label>
 								<div class='radio'>
