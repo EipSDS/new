@@ -756,7 +756,7 @@ function myFunction() {
 			</div>
 			<div class='main_field_div'>
 			<div id="is-individual-business">
-				<h2 class="fs-title"> Who's gonna be in this insurance? Can you give me the first and last name?And do you have middle initial? </h2>
+				<h2 class="fs-title"> Who is responsible as the owner for this policy? What is their first and last name? </h2>
 				
 					<div class="form-row">
 						<div class="form-holder w-100">
