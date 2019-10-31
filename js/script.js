@@ -2358,6 +2358,8 @@ $(document).on("click", "#voilation_add", function(event){
 			 tds += '	</td>';
 			 tds += "<td class='text-center td-padding'> <input type='text'  placeholder='' class='datepicker' id='Accident_date_"+rowCount+"'>"				
 				 tds += "	</td>";
+				 tds += "<td class='text-center td-padding'> <input type='text'  placeholder='' class='' id='voilation"+rowCount+"'>"				
+				 tds += "	</td>";
 				 tds += "  <td class='td-padding'><button class='delete_voilation btn' data-id="+rowCount+"'>Delete</button></td>'";
         
          tds += '</tr>';
