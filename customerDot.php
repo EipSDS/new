@@ -1203,7 +1203,7 @@ function myFunction() {
 					<option value="FRA">FRA - Failure to Report Accident</option>
 					<option value="FTC">FTC - Following Too Close</option>
 					<option value="FTY">FTY - Failure to Yield</option>
-					<option value="FTD">Failure to comply w/ DIV 14.</option>
+					<option value="FTD">Failure to comply w/ DIV 14</option>
 					<option value="HOM">HOM - Homicide/Assault w/ Vehicle</option>
 					<option value="IBK">IBK - Improper Backing</option>
 					<option value="IP">IP  - Improper Passing</option>
