@@ -1927,7 +1927,7 @@ $(document).on("click", "#new_drive_add_button", function(event){
            dataType: 'json',
            data: ({new_drive_add: "success",contactId:contactId,dataform:dataform}),
             success:function(result){
-				
+				console.log(result);
 				if(result!==0){
 					var a=result.DOB_Age_MaritalStatus_Points_LicenceNo;
 					var d=a.split(',');
