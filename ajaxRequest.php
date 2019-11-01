@@ -449,6 +449,7 @@ $refresh_token = file_get_contents("refresh_token.txt");
 					<option value="FRA" <?php if($dd=='FRA'){echo 'selected';}?>>FRA - Failure to Report Accident</option>
 					<option value="FTC" <?php if($dd=='FTC'){echo 'selected';}?>>FTC - Following Too Close</option>
 					<option value="FTY" <?php if($dd=='FTY'){echo 'selected';}?>>FTY - Failure to Yield</option>
+					<option value="FTD" <?php if($dd=='FTD'){echo 'selected';}?>>FTD - Failure to comply w/ DIV 14.8</option>
 					<option value="HOM" <?php if($dd=='HOM'){echo 'selected';}?>>HOM - Homicide/Assault w/ Vehicle</option>
 					<option value="IBK" <?php if($dd=='IBK'){echo 'selected';}?>>IBK - Improper Backing</option>
 					<option value="IP" <?php if($dd=='IP'){echo 'selected';}?>>IP  - Improper Passing</option>

@@ -1203,6 +1203,7 @@ function myFunction() {
 					<option value="FRA">FRA - Failure to Report Accident</option>
 					<option value="FTC">FTC - Following Too Close</option>
 					<option value="FTY">FTY - Failure to Yield</option>
+					<option value="FTD">FTD - Failure to comply w/ DIV 14.8</option>
 					<option value="HOM">HOM - Homicide/Assault w/ Vehicle</option>
 					<option value="IBK">IBK - Improper Backing</option>
 					<option value="IP">IP  - Improper Passing</option>
@@ -1219,7 +1220,7 @@ function myFunction() {
 					<option value="SUS">SUS - Driving w/ Susp/Rev/Canc License</option>
 					<option value="WOC">WOC - Operate w/o Owner's Consent</option>
 					<option value="WSR">WSR - Wrong Side of Road</option>
-					<option value="FTD">FTD - Failure to comply w/ DIV 14.8</option>
+					
 				 </select>
 				</td>
 				 <td class="text-center td-padding"> <input type='text' value='' placeholder='When did it happen?' class='datepicker'  id='Accident_date_0'>				
